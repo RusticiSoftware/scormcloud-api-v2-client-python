@@ -16,7 +16,6 @@ import re  # noqa: F401
 
 import six
 
-from rustici_software_cloud_v2.models.activity_result_schema import ActivityResultSchema  # noqa: F401,E501
 from rustici_software_cloud_v2.models.completion_amount_schema import CompletionAmountSchema  # noqa: F401,E501
 from rustici_software_cloud_v2.models.objective_schema import ObjectiveSchema  # noqa: F401,E501
 from rustici_software_cloud_v2.models.runtime_schema import RuntimeSchema  # noqa: F401,E501
