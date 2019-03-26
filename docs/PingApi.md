@@ -1,6 +1,6 @@
 # rustici_software_cloud_v2.PingApi
 
-All URIs are relative to *https://dev.cloud.scorm.com/api/v2/*
+All URIs are relative to *https://cloud.scorm.com/api/v2/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,28 +12,31 @@ Method | HTTP request | Description
 
 Get back a message indicating that the API is working.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.PingApi()
+api_instance = rustici_software_cloud_v2.PingApi(rustici_software_cloud_v2.ApiClient(configuration))
 
-try: 
+try:
     # Get back a message indicating that the API is working.
     api_response = api_instance.ping_app_id()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling PingApi->ping_app_id: %s\n" % e
+    print("Exception when calling PingApi->ping_app_id: %s\n" % e)
 ```
 
 ### Parameters

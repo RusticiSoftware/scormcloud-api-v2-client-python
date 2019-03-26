@@ -1,6 +1,6 @@
 # rustici_software_cloud_v2.ApplicationManagementApi
 
-All URIs are relative to *https://dev.cloud.scorm.com/api/v2/*
+All URIs are relative to *https://cloud.scorm.com/api/v2/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,29 +21,32 @@ Method | HTTP request | Description
 
 Create a new application
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 application_name = 'application_name_example' # str | 
 
-try: 
+try:
     # Create a new application
     api_response = api_instance.create_application(application_name)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->create_application: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->create_application: %s\n" % e)
 ```
 
 ### Parameters
@@ -72,30 +75,33 @@ Name | Type | Description  | Notes
 
 Create credential
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 child_app_id = 'child_app_id_example' # str | 
 credential_request = rustici_software_cloud_v2.CredentialRequestSchema() # CredentialRequestSchema | 
 
-try: 
+try:
     # Create credential
     api_response = api_instance.create_credential(child_app_id, credential_request)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->create_credential: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->create_credential: %s\n" % e)
 ```
 
 ### Parameters
@@ -127,27 +133,29 @@ Create token
 
 Creates, signs and returns a token based on the provided permissions, if the credentials used to request the token have the permissions being requested. Note: the token is not stored and therefore can not be modified or deleted. The requested permissions are encoded in the token which is then signed. As long as the secret used to create it is not changed the token will be valid until it expires.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 token_request = rustici_software_cloud_v2.TokenRequestSchema() # TokenRequestSchema | 
 
-try: 
+try:
     # Create token
     api_response = api_instance.create_token(token_request)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->create_token: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->create_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -176,28 +184,31 @@ Name | Type | Description  | Notes
 
 Delete an application.  If the application contains content, it must first be manually removed before calling this method, else an error will be thrown.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 child_app_id = 'child_app_id_example' # str | 
 
-try: 
+try:
     # Delete an application.  If the application contains content, it must first be manually removed before calling this method, else an error will be thrown.
     api_instance.delete_application(child_app_id)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->delete_application: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->delete_application: %s\n" % e)
 ```
 
 ### Parameters
@@ -226,29 +237,32 @@ void (empty response body)
 
 Removes `credentialId` credentials
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 child_app_id = 'child_app_id_example' # str | 
 credential_id = 'credential_id_example' # str | 
 
-try: 
+try:
     # Removes `credentialId` credentials
     api_instance.delete_credential(child_app_id, credential_id)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->delete_credential: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->delete_credential: %s\n" % e)
 ```
 
 ### Parameters
@@ -278,31 +292,34 @@ void (empty response body)
 
 Returns all configuration settings for this level
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 learning_standard = 'learning_standard_example' # str | If specified, the request will be scoped to the provided learning standard. (optional)
 single_sco = true # bool | Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
 include_metadata = false # bool |  (optional) (default to false)
 
-try: 
+try:
     # Returns all configuration settings for this level
     api_response = api_instance.get_application_configuration(learning_standard=learning_standard, single_sco=single_sco, include_metadata=include_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->get_application_configuration: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->get_application_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -333,28 +350,31 @@ Name | Type | Description  | Notes
 
 Get list of all applications in this realm.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 
-try: 
+try:
     # Get list of all applications in this realm.
     api_response = api_instance.get_application_list()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->get_application_list: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->get_application_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -380,29 +400,32 @@ This endpoint does not need any parameter.
 
 List of credentials
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 child_app_id = 'child_app_id_example' # str | 
 
-try: 
+try:
     # List of credentials
     api_response = api_instance.get_credentials(child_app_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->get_credentials: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->get_credentials: %s\n" % e)
 ```
 
 ### Parameters
@@ -431,30 +454,33 @@ Name | Type | Description  | Notes
 
 Set configuration settings for this level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 configuration_settings = rustici_software_cloud_v2.SettingsPostSchema() # SettingsPostSchema | 
 learning_standard = 'learning_standard_example' # str | If specified, the request will be scoped to the provided learning standard. (optional)
 single_sco = true # bool | Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
 
-try: 
+try:
     # Set configuration settings for this level.
     api_instance.set_application_configuration(configuration_settings, learning_standard=learning_standard, single_sco=single_sco)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->set_application_configuration: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->set_application_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -485,30 +511,33 @@ void (empty response body)
 
 Update the name or status associated with `credentialId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.ApplicationManagementApi()
+api_instance = rustici_software_cloud_v2.ApplicationManagementApi(rustici_software_cloud_v2.ApiClient(configuration))
 child_app_id = 'child_app_id_example' # str | 
 credential_id = 'credential_id_example' # str | 
 credential_update = rustici_software_cloud_v2.CredentialRequestSchema() # CredentialRequestSchema | 
 
-try: 
+try:
     # Update the name or status associated with `credentialId`
     api_instance.update_credential(child_app_id, credential_id, credential_update)
 except ApiException as e:
-    print "Exception when calling ApplicationManagementApi->update_credential: %s\n" % e
+    print("Exception when calling ApplicationManagementApi->update_credential: %s\n" % e)
 ```
 
 ### Parameters

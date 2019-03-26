@@ -1,6 +1,6 @@
 # rustici_software_cloud_v2.CourseApi
 
-All URIs are relative to *https://dev.cloud.scorm.com/api/v2/*
+All URIs are relative to *https://cloud.scorm.com/api/v2/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,17 +10,21 @@ Method | HTTP request | Description
 [**create_upload_and_import_course_job**](CourseApi.md#create_upload_and_import_course_job) | **POST** /courses/importJobs/upload | Upload a course and start an import job for it.
 [**delete_course**](CourseApi.md#delete_course) | **DELETE** /courses/{courseId} | Delete &#x60;courseId&#x60;
 [**delete_course_configuration_setting**](CourseApi.md#delete_course_configuration_setting) | **DELETE** /courses/{courseId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course
+[**delete_course_tags**](CourseApi.md#delete_course_tags) | **DELETE** /courses/{courseId}/tags | Delete tags for this course
 [**delete_course_version**](CourseApi.md#delete_course_version) | **DELETE** /courses/{courseId}/versions/{versionId} | Delete version &#x60;versionId&#x60; of &#x60;courseId&#x60;
 [**delete_course_version_configuration_setting**](CourseApi.md#delete_course_version_configuration_setting) | **DELETE** /courses/{courseId}/versions/{versionId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course and version.
 [**get_course**](CourseApi.md#get_course) | **GET** /courses/{courseId} | Get information about &#x60;courseId&#x60;
 [**get_course_configuration**](CourseApi.md#get_course_configuration) | **GET** /courses/{courseId}/configuration | Returns all configuration settings for this course
 [**get_course_statements**](CourseApi.md#get_course_statements) | **GET** /courses/{courseId}/xAPIStatements | Get xAPI statements for &#x60;courseId&#x60;
+[**get_course_tags**](CourseApi.md#get_course_tags) | **GET** /courses/{courseId}/tags | Get the tags for this course
 [**get_course_version_configuration**](CourseApi.md#get_course_version_configuration) | **GET** /courses/{courseId}/versions/{versionId}/configuration | Returns all configuration settings for this course and version.
 [**get_course_version_info**](CourseApi.md#get_course_version_info) | **GET** /courses/{courseId}/versions/{versionId} | Get version &#x60;versionId&#x60; of &#x60;courseId&#x60;
 [**get_course_version_statements**](CourseApi.md#get_course_version_statements) | **GET** /courses/{courseId}/versions/{versionId}/xAPIStatements | Get xAPI statements for version &#x60;versionId&#x60; of &#x60;courseId&#x60;
 [**get_course_versions**](CourseApi.md#get_course_versions) | **GET** /courses/{courseId}/versions | Get all versions of &#x60;courseId&#x60;
 [**get_courses**](CourseApi.md#get_courses) | **GET** /courses | Get all courses for &#x60;appId&#x60;
 [**get_import_job_status**](CourseApi.md#get_import_job_status) | **GET** /courses/importJobs/{importJobId} | Check the status of an import job.
+[**put_course_tags**](CourseApi.md#put_course_tags) | **PUT** /courses/{courseId}/tags | Set the tags for this course
+[**put_course_tags_batch**](CourseApi.md#put_course_tags_batch) | **PUT** /courses/tags | Sets all of the provided tags on all of the provided courses
 [**set_course_configuration**](CourseApi.md#set_course_configuration) | **POST** /courses/{courseId}/configuration | Set configuration settings for this course.
 [**set_course_title**](CourseApi.md#set_course_title) | **PUT** /courses/{courseId}/title | Sets the course title for &#x60;courseId&#x60;
 [**set_course_version_configuration**](CourseApi.md#set_course_version_configuration) | **POST** /courses/{courseId}/versions/{versionId}/configuration | Set configuration settings for this course and version.
@@ -31,31 +35,34 @@ Method | HTTP request | Description
 
 Returns the launch link to use to preview this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 launch_link_request = rustici_software_cloud_v2.LaunchLinkRequestSchema() # LaunchLinkRequestSchema | 
 css_url = 'css_url_example' # str |  (optional)
 
-try: 
+try:
     # Returns the launch link to use to preview this course
     api_response = api_instance.build_course_preview_launch_link(course_id, launch_link_request, css_url=css_url)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->build_course_preview_launch_link: %s\n" % e
+    print("Exception when calling CourseApi->build_course_preview_launch_link: %s\n" % e)
 ```
 
 ### Parameters
@@ -86,31 +93,34 @@ Name | Type | Description  | Notes
 
 Returns the link to use to preview this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 launch_link_request = rustici_software_cloud_v2.LaunchLinkRequestSchema() # LaunchLinkRequestSchema | 
 
-try: 
+try:
     # Returns the link to use to preview this course
     api_response = api_instance.build_course_preview_launch_link_with_version(course_id, version_id, launch_link_request)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->build_course_preview_launch_link_with_version: %s\n" % e
+    print("Exception when calling CourseApi->build_course_preview_launch_link_with_version: %s\n" % e)
 ```
 
 ### Parameters
@@ -143,32 +153,35 @@ Start a job to fetch and import a course.
 
 An import job will be started to fetch and import the referenced file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.\"
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
 import_request = rustici_software_cloud_v2.ImportFetchRequestSchema() # ImportFetchRequestSchema | 
 may_create_new_version = false # bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist. (optional) (default to false)
 postback_url = 'postback_url_example' # str | An optional parameter that specifies a URL to send a postback to when the course has finished uploading. (optional)
 
-try: 
+try:
     # Start a job to fetch and import a course.
     api_response = api_instance.create_fetch_and_import_course_job(course_id, import_request, may_create_new_version=may_create_new_version, postback_url=postback_url)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->create_fetch_and_import_course_job: %s\n" % e
+    print("Exception when calling CourseApi->create_fetch_and_import_course_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -202,32 +215,35 @@ Upload a course and start an import job for it.
 
 An import job will be started to import the posted file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
 may_create_new_version = false # bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist. (optional) (default to false)
 file = '/path/to/file.txt' # file | The zip file of the course contents to import. (optional)
 postback_url = 'postback_url_example' # str | An optional parameter that specifies a URL to send a postback to when the course has finished uploading. (optional)
 
-try: 
+try:
     # Upload a course and start an import job for it.
     api_response = api_instance.create_upload_and_import_course_job(course_id, may_create_new_version=may_create_new_version, file=file, postback_url=postback_url)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->create_upload_and_import_course_job: %s\n" % e
+    print("Exception when calling CourseApi->create_upload_and_import_course_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -259,28 +275,31 @@ Name | Type | Description  | Notes
 
 Delete `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 
-try: 
+try:
     # Delete `courseId`
     api_instance.delete_course(course_id)
 except ApiException as e:
-    print "Exception when calling CourseApi->delete_course: %s\n" % e
+    print("Exception when calling CourseApi->delete_course: %s\n" % e)
 ```
 
 ### Parameters
@@ -309,29 +328,32 @@ void (empty response body)
 
 Clears the `settingId` value for this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 setting_id = 'setting_id_example' # str | 
 
-try: 
+try:
     # Clears the `settingId` value for this course
     api_instance.delete_course_configuration_setting(course_id, setting_id)
 except ApiException as e:
-    print "Exception when calling CourseApi->delete_course_configuration_setting: %s\n" % e
+    print("Exception when calling CourseApi->delete_course_configuration_setting: %s\n" % e)
 ```
 
 ### Parameters
@@ -356,34 +378,92 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_course_version**
-> delete_course_version(course_id, version_id)
+# **delete_course_tags**
+> delete_course_tags(course_id, tags)
 
-Delete version `versionId` of `courseId`
+Delete tags for this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
+course_id = 'course_id_example' # str | 
+tags = rustici_software_cloud_v2.TagListSchema() # TagListSchema | 
+
+try:
+    # Delete tags for this course
+    api_instance.delete_course_tags(course_id, tags)
+except ApiException as e:
+    print("Exception when calling CourseApi->delete_course_tags: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **course_id** | **str**|  | 
+ **tags** | [**TagListSchema**](TagListSchema.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[APP_NORMAL](../README.md#APP_NORMAL), [OAUTH](../README.md#OAUTH)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_course_version**
+> delete_course_version(course_id, version_id)
+
+Delete version `versionId` of `courseId`
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rustici_software_cloud_v2
+from rustici_software_cloud_v2.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: APP_NORMAL
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure OAuth2 access token for authorization: OAUTH
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 
-try: 
+try:
     # Delete version `versionId` of `courseId`
     api_instance.delete_course_version(course_id, version_id)
 except ApiException as e:
-    print "Exception when calling CourseApi->delete_course_version: %s\n" % e
+    print("Exception when calling CourseApi->delete_course_version: %s\n" % e)
 ```
 
 ### Parameters
@@ -413,30 +493,33 @@ void (empty response body)
 
 Clears the `settingId` value for this course and version.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 setting_id = 'setting_id_example' # str | 
 
-try: 
+try:
     # Clears the `settingId` value for this course and version.
     api_instance.delete_course_version_configuration_setting(course_id, version_id, setting_id)
 except ApiException as e:
-    print "Exception when calling CourseApi->delete_course_version_configuration_setting: %s\n" % e
+    print("Exception when calling CourseApi->delete_course_version_configuration_setting: %s\n" % e)
 ```
 
 ### Parameters
@@ -467,31 +550,34 @@ void (empty response body)
 
 Get information about `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 include_registration_count = false # bool | Include the registration count in the results (optional) (default to false)
 include_course_metadata = false # bool | Include course metadata in the results. If the course has no metadata, adding this parameter has no effect. (optional) (default to false)
 
-try: 
+try:
     # Get information about `courseId`
     api_response = api_instance.get_course(course_id, include_registration_count=include_registration_count, include_course_metadata=include_course_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course: %s\n" % e
+    print("Exception when calling CourseApi->get_course: %s\n" % e)
 ```
 
 ### Parameters
@@ -522,30 +608,33 @@ Name | Type | Description  | Notes
 
 Returns all configuration settings for this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 include_metadata = false # bool |  (optional) (default to false)
 
-try: 
+try:
     # Returns all configuration settings for this course
     api_response = api_instance.get_course_configuration(course_id, include_metadata=include_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_configuration: %s\n" % e
+    print("Exception when calling CourseApi->get_course_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -575,33 +664,36 @@ Name | Type | Description  | Notes
 
 Get xAPI statements for `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 learner_id = 'learner_id_example' # str | Only entries for the specified learner id will be included. (optional)
 since = '2013-10-20T19:20:30+01:00' # datetime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 until = '2013-10-20T19:20:30+01:00' # datetime | Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 more = 'more_example' # str | Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
 
-try: 
+try:
     # Get xAPI statements for `courseId`
     api_response = api_instance.get_course_statements(course_id, learner_id=learner_id, since=since, until=until, more=more)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_statements: %s\n" % e
+    print("Exception when calling CourseApi->get_course_statements: %s\n" % e)
 ```
 
 ### Parameters
@@ -629,36 +721,93 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_course_version_configuration**
-> SettingListSchema get_course_version_configuration(course_id, version_id, include_metadata=include_metadata)
+# **get_course_tags**
+> TagListSchema get_course_tags(course_id)
 
-Returns all configuration settings for this course and version.
+Get the tags for this course
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
+course_id = 'course_id_example' # str | 
+
+try:
+    # Get the tags for this course
+    api_response = api_instance.get_course_tags(course_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CourseApi->get_course_tags: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **course_id** | **str**|  | 
+
+### Return type
+
+[**TagListSchema**](TagListSchema.md)
+
+### Authorization
+
+[APP_NORMAL](../README.md#APP_NORMAL), [OAUTH](../README.md#OAUTH)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_course_version_configuration**
+> SettingListSchema get_course_version_configuration(course_id, version_id, include_metadata=include_metadata)
+
+Returns all configuration settings for this course and version.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rustici_software_cloud_v2
+from rustici_software_cloud_v2.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: APP_NORMAL
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure OAuth2 access token for authorization: OAUTH
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 include_metadata = false # bool |  (optional) (default to false)
 
-try: 
+try:
     # Returns all configuration settings for this course and version.
     api_response = api_instance.get_course_version_configuration(course_id, version_id, include_metadata=include_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_version_configuration: %s\n" % e
+    print("Exception when calling CourseApi->get_course_version_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -689,32 +838,35 @@ Name | Type | Description  | Notes
 
 Get version `versionId` of `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 include_registration_count = false # bool | Include the registration count in the results (optional) (default to false)
 include_course_metadata = false # bool | Include course metadata in the results. If the course has no metadata, adding this parameter has no effect. (optional) (default to false)
 
-try: 
+try:
     # Get version `versionId` of `courseId`
     api_response = api_instance.get_course_version_info(course_id, version_id, include_registration_count=include_registration_count, include_course_metadata=include_course_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_version_info: %s\n" % e
+    print("Exception when calling CourseApi->get_course_version_info: %s\n" % e)
 ```
 
 ### Parameters
@@ -746,21 +898,24 @@ Name | Type | Description  | Notes
 
 Get xAPI statements for version `versionId` of `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 learner_id = 'learner_id_example' # str | Only entries for the specified learner id will be included. (optional)
@@ -768,12 +923,12 @@ since = '2013-10-20T19:20:30+01:00' # datetime | Only items updated since the sp
 until = '2013-10-20T19:20:30+01:00' # datetime | Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 more = 'more_example' # str | Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
 
-try: 
+try:
     # Get xAPI statements for version `versionId` of `courseId`
     api_response = api_instance.get_course_version_statements(course_id, version_id, learner_id=learner_id, since=since, until=until, more=more)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_version_statements: %s\n" % e
+    print("Exception when calling CourseApi->get_course_version_statements: %s\n" % e)
 ```
 
 ### Parameters
@@ -807,33 +962,36 @@ Name | Type | Description  | Notes
 
 Get all versions of `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 since = '2013-10-20T19:20:30+01:00' # datetime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 until = '2013-10-20T19:20:30+01:00' # datetime | Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 include_registration_count = false # bool | Include the registration count in the results (optional) (default to false)
 include_course_metadata = false # bool | Include course metadata in the results. If the course has no metadata, adding this parameter has no effect. (optional) (default to false)
 
-try: 
+try:
     # Get all versions of `courseId`
     api_response = api_instance.get_course_versions(course_id, since=since, until=until, include_registration_count=include_registration_count, include_course_metadata=include_course_metadata)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_course_versions: %s\n" % e
+    print("Exception when calling CourseApi->get_course_versions: %s\n" % e)
 ```
 
 ### Parameters
@@ -866,21 +1024,24 @@ Name | Type | Description  | Notes
 
 Get all courses for `appId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 more = 'more_example' # str | Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
 since = '2013-10-20T19:20:30+01:00' # datetime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
 until = '2013-10-20T19:20:30+01:00' # datetime | Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
@@ -891,12 +1052,12 @@ include_registration_count = false # bool | Include the registration count in th
 include_course_metadata = false # bool | Include course metadata in the results. If the course has no metadata, adding this parameter has no effect. (optional) (default to false)
 tags = ['tags_example'] # list[str] |  (optional)
 
-try: 
+try:
     # Get all courses for `appId`
     api_response = api_instance.get_courses(more=more, since=since, until=until, filter=filter, filter_by=filter_by, order_by=order_by, include_registration_count=include_registration_count, include_course_metadata=include_course_metadata, tags=tags)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_courses: %s\n" % e
+    print("Exception when calling CourseApi->get_courses: %s\n" % e)
 ```
 
 ### Parameters
@@ -929,33 +1090,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_import_job_status**
-> ImportResultSchema get_import_job_status(import_job_id)
+> ImportJobResultSchema get_import_job_status(import_job_id)
 
 Check the status of an import job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 import_job_id = 'import_job_id_example' # str | Id received when the import job was submitted to the importJobs resource.
 
-try: 
+try:
     # Check the status of an import job.
     api_response = api_instance.get_import_job_status(import_job_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->get_import_job_status: %s\n" % e
+    print("Exception when calling CourseApi->get_import_job_status: %s\n" % e)
 ```
 
 ### Parameters
@@ -966,7 +1130,115 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImportResultSchema**](ImportResultSchema.md)
+[**ImportJobResultSchema**](ImportJobResultSchema.md)
+
+### Authorization
+
+[APP_NORMAL](../README.md#APP_NORMAL), [OAUTH](../README.md#OAUTH)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_course_tags**
+> put_course_tags(course_id, tags)
+
+Set the tags for this course
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rustici_software_cloud_v2
+from rustici_software_cloud_v2.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: APP_NORMAL
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure OAuth2 access token for authorization: OAUTH
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
+course_id = 'course_id_example' # str | 
+tags = rustici_software_cloud_v2.TagListSchema() # TagListSchema | 
+
+try:
+    # Set the tags for this course
+    api_instance.put_course_tags(course_id, tags)
+except ApiException as e:
+    print("Exception when calling CourseApi->put_course_tags: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **course_id** | **str**|  | 
+ **tags** | [**TagListSchema**](TagListSchema.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[APP_NORMAL](../README.md#APP_NORMAL), [OAUTH](../README.md#OAUTH)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_course_tags_batch**
+> put_course_tags_batch(batch)
+
+Sets all of the provided tags on all of the provided courses
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rustici_software_cloud_v2
+from rustici_software_cloud_v2.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: APP_NORMAL
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure OAuth2 access token for authorization: OAUTH
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
+batch = rustici_software_cloud_v2.CourseTagsBatchSchema() # CourseTagsBatchSchema | 
+
+try:
+    # Sets all of the provided tags on all of the provided courses
+    api_instance.put_course_tags_batch(batch)
+except ApiException as e:
+    print("Exception when calling CourseApi->put_course_tags_batch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **batch** | [**CourseTagsBatchSchema**](CourseTagsBatchSchema.md)|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -984,29 +1256,32 @@ Name | Type | Description  | Notes
 
 Set configuration settings for this course.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 configuration_settings = rustici_software_cloud_v2.SettingsPostSchema() # SettingsPostSchema | 
 
-try: 
+try:
     # Set configuration settings for this course.
     api_instance.set_course_configuration(course_id, configuration_settings)
 except ApiException as e:
-    print "Exception when calling CourseApi->set_course_configuration: %s\n" % e
+    print("Exception when calling CourseApi->set_course_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -1036,30 +1311,33 @@ void (empty response body)
 
 Sets the course title for `courseId`
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 title = rustici_software_cloud_v2.TitleSchema() # TitleSchema | 
 
-try: 
+try:
     # Sets the course title for `courseId`
     api_response = api_instance.set_course_title(course_id, title)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CourseApi->set_course_title: %s\n" % e
+    print("Exception when calling CourseApi->set_course_title: %s\n" % e)
 ```
 
 ### Parameters
@@ -1089,30 +1367,33 @@ Name | Type | Description  | Notes
 
 Set configuration settings for this course and version.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 # Configure OAuth2 access token for authorization: OAUTH
-rustici_software_cloud_v2.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.CourseApi()
+api_instance = rustici_software_cloud_v2.CourseApi(rustici_software_cloud_v2.ApiClient(configuration))
 course_id = 'course_id_example' # str | 
 version_id = 56 # int | The course version
 configuration_settings = rustici_software_cloud_v2.SettingsPostSchema() # SettingsPostSchema | 
 
-try: 
+try:
     # Set configuration settings for this course and version.
     api_instance.set_course_version_configuration(course_id, version_id, configuration_settings)
 except ApiException as e:
-    print "Exception when calling CourseApi->set_course_version_configuration: %s\n" % e
+    print("Exception when calling CourseApi->set_course_version_configuration: %s\n" % e)
 ```
 
 ### Parameters

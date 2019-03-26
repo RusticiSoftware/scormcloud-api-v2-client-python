@@ -1,6 +1,6 @@
 # rustici_software_cloud_v2.AuthenticationApi
 
-All URIs are relative to *https://dev.cloud.scorm.com/api/v2/*
+All URIs are relative to *https://cloud.scorm.com/api/v2/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,28 +12,30 @@ Method | HTTP request | Description
 
 Authenticates for a oauth token
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
 import rustici_software_cloud_v2
 from rustici_software_cloud_v2.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: APP_NORMAL
-rustici_software_cloud_v2.configuration.username = 'YOUR_USERNAME'
-rustici_software_cloud_v2.configuration.password = 'YOUR_PASSWORD'
+configuration = rustici_software_cloud_v2.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = rustici_software_cloud_v2.AuthenticationApi()
+api_instance = rustici_software_cloud_v2.AuthenticationApi(rustici_software_cloud_v2.ApiClient(configuration))
 scope = 'scope_example' # str | 
 expiration = 300 # int |  (optional) (default to 300)
 
-try: 
+try:
     # Authenticates for a oauth token
     api_response = api_instance.get_app_token(scope, expiration=expiration)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthenticationApi->get_app_token: %s\n" % e
+    print("Exception when calling AuthenticationApi->get_app_token: %s\n" % e)
 ```
 
 ### Parameters
