@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "rustici-software-cloud-v2"
-VERSION = "1.0.0-beta"
+VERSION = "1.0.1-beta"
 # To install the library, run the following
 #
 # python setup.py install

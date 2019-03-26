@@ -21,7 +21,6 @@ from rustici_software_cloud_v2.models.xapi_agent_group import XapiAgentGroup  # 
 from rustici_software_cloud_v2.models.xapi_attachment import XapiAttachment  # noqa: F401,E501
 from rustici_software_cloud_v2.models.xapi_context import XapiContext  # noqa: F401,E501
 from rustici_software_cloud_v2.models.xapi_result import XapiResult  # noqa: F401,E501
-from rustici_software_cloud_v2.models.xapi_statement import XapiStatement  # noqa: F401,E501
 from rustici_software_cloud_v2.models.xapi_statement_reference import XapiStatementReference  # noqa: F401,E501
 from rustici_software_cloud_v2.models.xapi_verb import XapiVerb  # noqa: F401,E501
 

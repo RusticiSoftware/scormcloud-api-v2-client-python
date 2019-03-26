@@ -17,7 +17,6 @@ import re  # noqa: F401
 import six
 
 from rustici_software_cloud_v2.models.xapi_account import XapiAccount  # noqa: F401,E501
-from rustici_software_cloud_v2.models.xapi_agent_group import XapiAgentGroup  # noqa: F401,E501
 
 
 class XapiAgentGroup(object):
