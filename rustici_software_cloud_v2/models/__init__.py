@@ -54,6 +54,8 @@ from .invitation_job_status_schema import InvitationJobStatusSchema
 from .invitation_summary_list import InvitationSummaryList
 from .invitation_summary_schema import InvitationSummarySchema
 from .item_value_pair_schema import ItemValuePairSchema
+from .launch_auth_options_schema import LaunchAuthOptionsSchema
+from .launch_auth_schema import LaunchAuthSchema
 from .launch_history_list_schema import LaunchHistoryListSchema
 from .launch_history_schema import LaunchHistorySchema
 from .launch_link_request_schema import LaunchLinkRequestSchema
@@ -109,6 +111,7 @@ from .xapi_context_activity import XapiContextActivity
 from .xapi_credential_auth_type_schema import XapiCredentialAuthTypeSchema
 from .xapi_credential_permissions_level_schema import XapiCredentialPermissionsLevelSchema
 from .xapi_credential_post_schema import XapiCredentialPostSchema
+from .xapi_credential_put_schema import XapiCredentialPutSchema
 from .xapi_credential_schema import XapiCredentialSchema
 from .xapi_credentials_list_schema import XapiCredentialsListSchema
 from .xapi_endpoint_schema import XapiEndpointSchema
@@ -118,6 +121,7 @@ from .xapi_score import XapiScore
 from .xapi_statement import XapiStatement
 from .xapi_statement_pipe_list_schema import XapiStatementPipeListSchema
 from .xapi_statement_pipe_post_schema import XapiStatementPipePostSchema
+from .xapi_statement_pipe_put_schema import XapiStatementPipePutSchema
 from .xapi_statement_pipe_schema import XapiStatementPipeSchema
 from .xapi_statement_reference import XapiStatementReference
 from .xapi_statement_result import XapiStatementResult

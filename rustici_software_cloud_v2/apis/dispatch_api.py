@@ -150,6 +150,7 @@ class DispatchApi(object):
     def create_dispatches(self, dispatch_list, **kwargs):
         """
         Create dispatches.
+        Create multiple dispatches at once. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -175,6 +176,7 @@ class DispatchApi(object):
     def create_dispatches_with_http_info(self, dispatch_list, **kwargs):
         """
         Create dispatches.
+        Create multiple dispatches at once. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -254,8 +256,8 @@ class DispatchApi(object):
 
     def delete_destination(self, destination_id, **kwargs):
         """
-        DestinationsByTenantAndDestinationId
-        Delete the destination with destinationId = {destinationId}.
+        Delete destination 
+        Delete the destination with `destinationId` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -280,8 +282,8 @@ class DispatchApi(object):
 
     def delete_destination_with_http_info(self, destination_id, **kwargs):
         """
-        DestinationsByTenantAndDestinationId
-        Delete the destination with destinationId = {destinationId}.
+        Delete destination 
+        Delete the destination with `destinationId` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -361,8 +363,8 @@ class DispatchApi(object):
 
     def delete_destination_dispatches(self, destination_id, **kwargs):
         """
-        DestinationsDispatchesByTenant
-        Delete all related dispatches.
+        Delete dispatches in destination 
+        Delete the dispatches in a destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -387,8 +389,8 @@ class DispatchApi(object):
 
     def delete_destination_dispatches_with_http_info(self, destination_id, **kwargs):
         """
-        DestinationsDispatchesByTenant
-        Delete all related dispatches.
+        Delete dispatches in destination 
+        Delete the dispatches in a destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -468,7 +470,8 @@ class DispatchApi(object):
 
     def delete_destination_tags(self, destination_id, tags, **kwargs):
         """
-        Delete tags for this destination
+        Delete the tags for this destination 
+        Delete the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -494,7 +497,8 @@ class DispatchApi(object):
 
     def delete_destination_tags_with_http_info(self, destination_id, tags, **kwargs):
         """
-        Delete tags for this destination
+        Delete the tags for this destination 
+        Delete the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -580,8 +584,8 @@ class DispatchApi(object):
 
     def delete_dispatch(self, dispatch_id, **kwargs):
         """
-        DispatchesByTenantAndDispatchId
-        Delete the dispatch with dispatchId = {dispatchId}.
+        Delete the dispatch with `dispatchId`. 
+        Delete the dispatch with `dispatchId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -606,8 +610,8 @@ class DispatchApi(object):
 
     def delete_dispatch_with_http_info(self, dispatch_id, **kwargs):
         """
-        DispatchesByTenantAndDispatchId
-        Delete the dispatch with dispatchId = {dispatchId}.
+        Delete the dispatch with `dispatchId`. 
+        Delete the dispatch with `dispatchId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -688,7 +692,7 @@ class DispatchApi(object):
     def delete_dispatch_postback_info(self, dispatch_id, **kwargs):
         """
         DispatchesByTenantAndDispatchId
-        Delete the postback info dispatch with dispatchId = {dispatchId}.
+        Delete the postback info dispatch with 'dispatchId'. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -714,7 +718,7 @@ class DispatchApi(object):
     def delete_dispatch_postback_info_with_http_info(self, dispatch_id, **kwargs):
         """
         DispatchesByTenantAndDispatchId
-        Delete the postback info dispatch with dispatchId = {dispatchId}.
+        Delete the postback info dispatch with 'dispatchId'. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -794,7 +798,8 @@ class DispatchApi(object):
 
     def delete_dispatch_tags(self, dispatch_id, tags, **kwargs):
         """
-        Delete tags for this dispatch
+        Delete the tags for this dispatch. 
+        Delete the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -820,7 +825,8 @@ class DispatchApi(object):
 
     def delete_dispatch_tags_with_http_info(self, dispatch_id, tags, **kwargs):
         """
-        Delete tags for this dispatch
+        Delete the tags for this dispatch. 
+        Delete the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1597,7 +1603,8 @@ class DispatchApi(object):
 
     def get_destination_tags(self, destination_id, **kwargs):
         """
-        Get the tags for this destination
+        Get the tags for this destination 
+        Get the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1622,7 +1629,8 @@ class DispatchApi(object):
 
     def get_destination_tags_with_http_info(self, destination_id, **kwargs):
         """
-        Get the tags for this destination
+        Get the tags for this destination 
+        Get the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1938,8 +1946,8 @@ class DispatchApi(object):
 
     def get_dispatch_enabled(self, dispatch_id, **kwargs):
         """
-        DispatchesEnabledByTenantAndDispatchId
-        True if the dispatch is enabled, or false if it is disabled.
+        Get the `enabled` status for `dispatchId`. 
+        Get the `enabled` status for `dispatchId`.  True if the dispatch is enabled, or false if it is disabled. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1964,8 +1972,8 @@ class DispatchApi(object):
 
     def get_dispatch_enabled_with_http_info(self, dispatch_id, **kwargs):
         """
-        DispatchesEnabledByTenantAndDispatchId
-        True if the dispatch is enabled, or false if it is disabled.
+        Get the `enabled` status for `dispatchId`. 
+        Get the `enabled` status for `dispatchId`.  True if the dispatch is enabled, or false if it is disabled. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2046,7 +2054,7 @@ class DispatchApi(object):
     def get_dispatch_hash_user_info(self, dispatch_id, **kwargs):
         """
         Get if this dispatch has PII hashing enabled.
-        True if the dispatch is set to hash user info, or false if it is disabled.
+        Get if this dispatch has PII hashing enabled. True if the dispatch is set to hash user info, or false if it is disabled. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2072,7 +2080,7 @@ class DispatchApi(object):
     def get_dispatch_hash_user_info_with_http_info(self, dispatch_id, **kwargs):
         """
         Get if this dispatch has PII hashing enabled.
-        True if the dispatch is set to hash user info, or false if it is disabled.
+        Get if this dispatch has PII hashing enabled. True if the dispatch is set to hash user info, or false if it is disabled. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2152,8 +2160,8 @@ class DispatchApi(object):
 
     def get_dispatch_registration_count(self, dispatch_id, **kwargs):
         """
-        DispatchesRegistrationCountByTenant
-        Get the registration count for this dispatch, and the date and time of the last count reset, if any.
+        Get the registration count for `dispatchId`. 
+        Get the registration count for this dispatch, and the date and time of the last count reset, if any. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2178,8 +2186,8 @@ class DispatchApi(object):
 
     def get_dispatch_registration_count_with_http_info(self, dispatch_id, **kwargs):
         """
-        DispatchesRegistrationCountByTenant
-        Get the registration count for this dispatch, and the date and time of the last count reset, if any.
+        Get the registration count for `dispatchId`. 
+        Get the registration count for this dispatch, and the date and time of the last count reset, if any. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2259,7 +2267,8 @@ class DispatchApi(object):
 
     def get_dispatch_tags(self, dispatch_id, **kwargs):
         """
-        Get the tags for this dispatch
+        Get the tags for this dispatch. 
+        Get the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2284,7 +2293,8 @@ class DispatchApi(object):
 
     def get_dispatch_tags_with_http_info(self, dispatch_id, **kwargs):
         """
-        Get the tags for this dispatch
+        Get the tags for this dispatch. 
+        Get the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2365,7 +2375,7 @@ class DispatchApi(object):
     def get_dispatch_zip(self, dispatch_id, **kwargs):
         """
         Get the ZIP for the dispatchId.
-        Get the ZIP for the dispatch with dispatchId = {dispatchId}.
+        Get the ZIP for the dispatch with `dispatchId` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2393,7 +2403,7 @@ class DispatchApi(object):
     def get_dispatch_zip_with_http_info(self, dispatch_id, **kwargs):
         """
         Get the ZIP for the dispatchId.
-        Get the ZIP for the dispatch with dispatchId = {dispatchId}.
+        Get the ZIP for the dispatch with `dispatchId` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2608,7 +2618,8 @@ class DispatchApi(object):
 
     def put_destination_tags(self, destination_id, tags, **kwargs):
         """
-        Set the tags for this destination
+        Set the tags for this destination 
+        Set the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2634,7 +2645,8 @@ class DispatchApi(object):
 
     def put_destination_tags_with_http_info(self, destination_id, tags, **kwargs):
         """
-        Set the tags for this destination
+        Set the tags for this destination 
+        Set the tags for this destination 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2721,6 +2733,7 @@ class DispatchApi(object):
     def put_destination_tags_batch(self, batch, **kwargs):
         """
         Sets all of the provided tags on all of the provided destinations
+        Sets all of the provided tags on all of the provided destinations
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2745,6 +2758,7 @@ class DispatchApi(object):
 
     def put_destination_tags_batch_with_http_info(self, batch, **kwargs):
         """
+        Sets all of the provided tags on all of the provided destinations
         Sets all of the provided tags on all of the provided destinations
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -2825,7 +2839,8 @@ class DispatchApi(object):
 
     def put_dispatch_tags(self, dispatch_id, tags, **kwargs):
         """
-        Set the tags for this dispatch
+        Set the tags for this dispatch. 
+        Set the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2851,7 +2866,8 @@ class DispatchApi(object):
 
     def put_dispatch_tags_with_http_info(self, dispatch_id, tags, **kwargs):
         """
-        Set the tags for this dispatch
+        Set the tags for this dispatch. 
+        Set the tags for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2937,7 +2953,8 @@ class DispatchApi(object):
 
     def put_dispatch_tags_batch(self, batch, **kwargs):
         """
-        Sets all of the provided tags on all of the provided dispatches
+        Sets all of the provided tags on all of the provided dispatches 
+        Sets all of the provided tags on all of the provided dispatches 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2962,7 +2979,8 @@ class DispatchApi(object):
 
     def put_dispatch_tags_batch_with_http_info(self, batch, **kwargs):
         """
-        Sets all of the provided tags on all of the provided dispatches
+        Sets all of the provided tags on all of the provided dispatches 
+        Sets all of the provided tags on all of the provided dispatches 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3149,8 +3167,8 @@ class DispatchApi(object):
 
     def reset_dispatch_registration_count(self, dispatch_id, **kwargs):
         """
-        DispatchesRegistrationCountByTenant
-        Reset the registration count for this dispatch.
+        Reset registration count. 
+        Reset the registration count for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3175,8 +3193,8 @@ class DispatchApi(object):
 
     def reset_dispatch_registration_count_with_http_info(self, dispatch_id, **kwargs):
         """
-        DispatchesRegistrationCountByTenant
-        Reset the registration count for this dispatch.
+        Reset registration count. 
+        Reset the registration count for this dispatch. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3256,7 +3274,7 @@ class DispatchApi(object):
 
     def set_destination(self, destination_id, destination, **kwargs):
         """
-        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown. You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination.
+        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3282,7 +3300,7 @@ class DispatchApi(object):
 
     def set_destination_with_http_info(self, destination_id, destination, **kwargs):
         """
-        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown. You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination.
+        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3482,8 +3500,8 @@ class DispatchApi(object):
 
     def set_dispatch_enabled(self, dispatch_id, enabled, **kwargs):
         """
-        DispatchesEnabledByTenantAndDispatchId
-        Enable or disabled the dispatch.
+        Set the `enabled` status for `dispatchId`. 
+        Set the `enabled` status for `dispatchId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3509,8 +3527,8 @@ class DispatchApi(object):
 
     def set_dispatch_enabled_with_http_info(self, dispatch_id, enabled, **kwargs):
         """
-        DispatchesEnabledByTenantAndDispatchId
-        Enable or disabled the dispatch.
+        Set the `enabled` status for `dispatchId`. 
+        Set the `enabled` status for `dispatchId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

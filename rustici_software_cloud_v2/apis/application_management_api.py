@@ -128,7 +128,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'POST',
                                         path_params,
@@ -240,7 +240,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'POST',
                                         path_params,
@@ -450,7 +450,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'DELETE',
                                         path_params,
@@ -677,7 +677,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'DELETE',
                                         path_params,
@@ -806,6 +806,7 @@ class ApplicationManagementApi(object):
 
     def get_application_list(self, **kwargs):
         """
+        Get a list of all applications for the realm.
         Get list of all applications in this realm.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -830,6 +831,7 @@ class ApplicationManagementApi(object):
 
     def get_application_list_with_http_info(self, **kwargs):
         """
+        Get a list of all applications for the realm.
         Get list of all applications in this realm.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -884,7 +886,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'GET',
                                         path_params,
@@ -903,7 +905,7 @@ class ApplicationManagementApi(object):
 
     def get_credentials(self, child_app_id, **kwargs):
         """
-        Retrieve a list of all credentials (aka secret keys) and their statuses. 
+        Retrieve a list of all credentials (aka secret keys) belonging to `childAppId` and their statuses. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -928,7 +930,7 @@ class ApplicationManagementApi(object):
 
     def get_credentials_with_http_info(self, child_app_id, **kwargs):
         """
-        Retrieve a list of all credentials (aka secret keys) and their statuses. 
+        Retrieve a list of all credentials (aka secret keys) belonging to `childAppId` and their statuses. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -989,7 +991,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'GET',
                                         path_params,
@@ -1008,7 +1010,7 @@ class ApplicationManagementApi(object):
 
     def set_application_configuration(self, configuration_settings, **kwargs):
         """
-        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults.
+        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1035,7 +1037,7 @@ class ApplicationManagementApi(object):
 
     def set_application_configuration_with_http_info(self, configuration_settings, **kwargs):
         """
-        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults.
+        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1221,7 +1223,7 @@ class ApplicationManagementApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['APP_NORMAL', 'OAUTH']
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'PUT',
                                         path_params,

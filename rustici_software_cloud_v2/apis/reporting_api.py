@@ -43,6 +43,7 @@ class ReportingApi(object):
     def get_account_info(self, **kwargs):
         """
         Get all of the account information specified by the given app ID
+        Get all of the account information specified by the given app ID
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -66,6 +67,7 @@ class ReportingApi(object):
 
     def get_account_info_with_http_info(self, **kwargs):
         """
+        Get all of the account information specified by the given app ID
         Get all of the account information specified by the given app ID
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -140,6 +142,7 @@ class ReportingApi(object):
     def get_reportage_auth_token(self, nav_permission, **kwargs):
         """
         Get a session authentication token to use when launching Reportage
+        Get a session authentication token to use when launching Reportage
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -165,6 +168,7 @@ class ReportingApi(object):
 
     def get_reportage_auth_token_with_http_info(self, nav_permission, **kwargs):
         """
+        Get a session authentication token to use when launching Reportage
         Get a session authentication token to use when launching Reportage
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -249,6 +253,7 @@ class ReportingApi(object):
     def get_reportage_link(self, auth, report_url, **kwargs):
         """
         Get the link to a page in Reportage with the given authentication and permissions
+        Get the link to a page in Reportage with the given authentication and permissions
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -274,6 +279,7 @@ class ReportingApi(object):
 
     def get_reportage_link_with_http_info(self, auth, report_url, **kwargs):
         """
+        Get the link to a page in Reportage with the given authentication and permissions
         Get the link to a page in Reportage with the given authentication and permissions
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

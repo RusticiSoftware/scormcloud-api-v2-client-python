@@ -43,6 +43,7 @@ class XapiApi(object):
     def create_statement_pipe(self, xapi_statement_pipe, **kwargs):
         """
         Create an xAPI statement pipe.
+        Create an xAPI statement pipe.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -67,6 +68,7 @@ class XapiApi(object):
 
     def create_statement_pipe_with_http_info(self, xapi_statement_pipe, **kwargs):
         """
+        Create an xAPI statement pipe.
         Create an xAPI statement pipe.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -148,6 +150,7 @@ class XapiApi(object):
     def create_xapi_credential(self, xapi_credential, **kwargs):
         """
         Create a xAPI credential.
+        Create a xAPI credential.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -172,6 +175,7 @@ class XapiApi(object):
 
     def create_xapi_credential_with_http_info(self, xapi_credential, **kwargs):
         """
+        Create a xAPI credential.
         Create a xAPI credential.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -253,7 +257,7 @@ class XapiApi(object):
     def delete_statement_pipe(self, statement_pipe_id, **kwargs):
         """
         Deletes this xAPI pipe.
-        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor.
+        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -279,7 +283,7 @@ class XapiApi(object):
     def delete_statement_pipe_with_http_info(self, statement_pipe_id, **kwargs):
         """
         Deletes this xAPI pipe.
-        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor.
+        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -360,6 +364,7 @@ class XapiApi(object):
     def delete_xapi_credential(self, xapi_credential_id, **kwargs):
         """
         Deletes the xAPI credentials specified by the xAPI credentials id
+        Deletes the xAPI credentials specified by the xAPI credentials id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -384,6 +389,7 @@ class XapiApi(object):
 
     def delete_xapi_credential_with_http_info(self, xapi_credential_id, **kwargs):
         """
+        Deletes the xAPI credentials specified by the xAPI credentials id
         Deletes the xAPI credentials specified by the xAPI credentials id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -465,6 +471,7 @@ class XapiApi(object):
     def get_statement_pipe(self, statement_pipe_id, **kwargs):
         """
         Retrieves xAPI pipe for `xapiPipeId`
+        Retrieves xAPI pipe for `xapiPipeId`
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -489,6 +496,7 @@ class XapiApi(object):
 
     def get_statement_pipe_with_http_info(self, statement_pipe_id, **kwargs):
         """
+        Retrieves xAPI pipe for `xapiPipeId`
         Retrieves xAPI pipe for `xapiPipeId`
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -570,6 +578,7 @@ class XapiApi(object):
     def get_statement_pipes(self, **kwargs):
         """
         Get all of the xapiPipes for `appId`
+        Get all of the xapiPipes for `appId`
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -593,6 +602,7 @@ class XapiApi(object):
 
     def get_statement_pipes_with_http_info(self, **kwargs):
         """
+        Get all of the xapiPipes for `appId`
         Get all of the xapiPipes for `appId`
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -667,6 +677,7 @@ class XapiApi(object):
     def get_xapi_credential(self, xapi_credential_id, **kwargs):
         """
         Retrieves the xAPI credentials specified by the xAPI credentials id.
+        Retrieves the xAPI credentials specified by the xAPI credentials id.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -691,6 +702,7 @@ class XapiApi(object):
 
     def get_xapi_credential_with_http_info(self, xapi_credential_id, **kwargs):
         """
+        Retrieves the xAPI credentials specified by the xAPI credentials id.
         Retrieves the xAPI credentials specified by the xAPI credentials id.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -772,6 +784,7 @@ class XapiApi(object):
     def get_xapi_credentials(self, **kwargs):
         """
         Get the list of xapiCredentials
+        Get the list of xapiCredentials
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -797,6 +810,7 @@ class XapiApi(object):
 
     def get_xapi_credentials_with_http_info(self, **kwargs):
         """
+        Get the list of xapiCredentials
         Get the list of xapiCredentials
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -878,7 +892,7 @@ class XapiApi(object):
     def set_statement_pipe(self, statement_pipe_id, xapi_statement_pipe, **kwargs):
         """
         Edit an existing xAPI pipe or create a new one.
-        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409.
+        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -890,7 +904,7 @@ class XapiApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str statement_pipe_id: id for this xAPI statement pipe (required)
-        :param XapiStatementPipeSchema xapi_statement_pipe: (required)
+        :param XapiStatementPipePutSchema xapi_statement_pipe: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -905,7 +919,7 @@ class XapiApi(object):
     def set_statement_pipe_with_http_info(self, statement_pipe_id, xapi_statement_pipe, **kwargs):
         """
         Edit an existing xAPI pipe or create a new one.
-        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409.
+        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -917,7 +931,7 @@ class XapiApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str statement_pipe_id: id for this xAPI statement pipe (required)
-        :param XapiStatementPipeSchema xapi_statement_pipe: (required)
+        :param XapiStatementPipePutSchema xapi_statement_pipe: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -992,6 +1006,7 @@ class XapiApi(object):
     def set_xapi_credential(self, xapi_credential_id, xapi_credential, **kwargs):
         """
         Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id
+        Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1017,6 +1032,7 @@ class XapiApi(object):
 
     def set_xapi_credential_with_http_info(self, xapi_credential_id, xapi_credential, **kwargs):
         """
+        Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id
         Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

@@ -54,6 +54,8 @@ from .models.invitation_job_status_schema import InvitationJobStatusSchema
 from .models.invitation_summary_list import InvitationSummaryList
 from .models.invitation_summary_schema import InvitationSummarySchema
 from .models.item_value_pair_schema import ItemValuePairSchema
+from .models.launch_auth_options_schema import LaunchAuthOptionsSchema
+from .models.launch_auth_schema import LaunchAuthSchema
 from .models.launch_history_list_schema import LaunchHistoryListSchema
 from .models.launch_history_schema import LaunchHistorySchema
 from .models.launch_link_request_schema import LaunchLinkRequestSchema
@@ -109,6 +111,7 @@ from .models.xapi_context_activity import XapiContextActivity
 from .models.xapi_credential_auth_type_schema import XapiCredentialAuthTypeSchema
 from .models.xapi_credential_permissions_level_schema import XapiCredentialPermissionsLevelSchema
 from .models.xapi_credential_post_schema import XapiCredentialPostSchema
+from .models.xapi_credential_put_schema import XapiCredentialPutSchema
 from .models.xapi_credential_schema import XapiCredentialSchema
 from .models.xapi_credentials_list_schema import XapiCredentialsListSchema
 from .models.xapi_endpoint_schema import XapiEndpointSchema
@@ -118,6 +121,7 @@ from .models.xapi_score import XapiScore
 from .models.xapi_statement import XapiStatement
 from .models.xapi_statement_pipe_list_schema import XapiStatementPipeListSchema
 from .models.xapi_statement_pipe_post_schema import XapiStatementPipePostSchema
+from .models.xapi_statement_pipe_put_schema import XapiStatementPipePutSchema
 from .models.xapi_statement_pipe_schema import XapiStatementPipeSchema
 from .models.xapi_statement_reference import XapiStatementReference
 from .models.xapi_statement_result import XapiStatementResult
@@ -127,7 +131,6 @@ from .models.zoomi_course_options_schema import ZoomiCourseOptionsSchema
 
 # import apis into sdk package
 from .apis.about_api import AboutApi
-from .apis.admin_api import AdminApi
 from .apis.application_management_api import ApplicationManagementApi
 from .apis.authentication_api import AuthenticationApi
 from .apis.course_api import CourseApi
@@ -137,8 +140,8 @@ from .apis.learner_api import LearnerApi
 from .apis.ping_api import PingApi
 from .apis.registration_api import RegistrationApi
 from .apis.reporting_api import ReportingApi
-from .apis.website_api import WebsiteApi
 from .apis.xapi_api import XapiApi
+from .apis.zoomi_api import ZoomiApi
 
 # import ApiClient
 from .api_client import ApiClient
