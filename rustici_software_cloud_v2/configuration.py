@@ -219,13 +219,6 @@ class Configuration(object):
                     'key': 'Authorization',
                     'value': self.get_basic_auth_token()
                 },
-            'LAUNCH_TOKEN':
-                {
-                    'type': 'api_key',
-                    'in': 'query',
-                    'key': 'launchToken',
-                    'value': self.get_api_key_with_prefix('launchToken')
-                },
 
             'OAUTH':
                 {
@@ -233,13 +226,6 @@ class Configuration(object):
                     'in': 'header',
                     'key': 'Authorization',
                     'value': 'Bearer ' + self.access_token
-                },
-            'URL_TOKEN':
-                {
-                    'type': 'api_key',
-                    'in': 'query',
-                    'key': 'authtoken',
-                    'value': self.get_api_key_with_prefix('authtoken')
                 },
 
         }

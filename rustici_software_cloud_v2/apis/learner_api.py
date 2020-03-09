@@ -42,7 +42,8 @@ class LearnerApi(object):
 
     def delete_all_learner_data(self, learner_id, user_email, **kwargs):
         """
-        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners.
+        Deletes all of the information associated with a learner in an application, by learner id. 
+        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -55,7 +56,7 @@ class LearnerApi(object):
             for asynchronous request. (optional)
         :param str learner_id: The id of the learner for which to remove all data from an application (required)
         :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in. (required)
-        :return: str
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -68,7 +69,8 @@ class LearnerApi(object):
 
     def delete_all_learner_data_with_http_info(self, learner_id, user_email, **kwargs):
         """
-        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners.
+        Deletes all of the information associated with a learner in an application, by learner id. 
+        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -81,7 +83,7 @@ class LearnerApi(object):
             for asynchronous request. (optional)
         :param str learner_id: The id of the learner for which to remove all data from an application (required)
         :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in. (required)
-        :return: str
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -144,7 +146,7 @@ class LearnerApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='str',
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -154,7 +156,8 @@ class LearnerApi(object):
 
     def delete_learner_tags(self, learner_id, tags, **kwargs):
         """
-        Delete tags for this learner
+        Delete the tags for this learner 
+        Delete the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -180,7 +183,8 @@ class LearnerApi(object):
 
     def delete_learner_tags_with_http_info(self, learner_id, tags, **kwargs):
         """
-        Delete tags for this learner
+        Delete the tags for this learner 
+        Delete the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -266,7 +270,8 @@ class LearnerApi(object):
 
     def get_learner_tags(self, learner_id, **kwargs):
         """
-        Get the tags for this learner
+        Get the tags for this learner 
+        Get the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -291,7 +296,8 @@ class LearnerApi(object):
 
     def get_learner_tags_with_http_info(self, learner_id, **kwargs):
         """
-        Get the tags for this learner
+        Get the tags for this learner 
+        Get the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -371,7 +377,8 @@ class LearnerApi(object):
 
     def put_learner_tags(self, learner_id, tags, **kwargs):
         """
-        Set the tags for this learner
+        Set the tags for this learner 
+        Set the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -397,7 +404,8 @@ class LearnerApi(object):
 
     def put_learner_tags_with_http_info(self, learner_id, tags, **kwargs):
         """
-        Set the tags for this learner
+        Set the tags for this learner 
+        Set the tags for this learner 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -467,6 +475,227 @@ class LearnerApi(object):
         auth_settings = ['APP_NORMAL', 'OAUTH']
 
         return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def put_learner_tags_batch(self, batch, **kwargs):
+        """
+        Sets all of the provided tags on all of the provided learners
+        Sets all of the provided tags on all of the provided learners 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_learner_tags_batch(batch, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_learner_tags_batch_with_http_info(batch, **kwargs)
+        else:
+            (data) = self.put_learner_tags_batch_with_http_info(batch, **kwargs)
+            return data
+
+    def put_learner_tags_batch_with_http_info(self, batch, **kwargs):
+        """
+        Sets all of the provided tags on all of the provided learners
+        Sets all of the provided tags on all of the provided learners 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_learner_tags_batch_with_http_info(batch, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['batch']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_learner_tags_batch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'batch' is set
+        if ('batch' not in params) or (params['batch'] is None):
+            raise ValueError("Missing the required parameter `batch` when calling `put_learner_tags_batch`")
+
+
+        collection_formats = {}
+
+        resource_path = '/learner/tags'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'batch' in params:
+            body_params = params['batch']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_learner_info(self, learner_id, learner_info, **kwargs):
+        """
+        Update a learner's info on all of their registrations.
+        A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations. This method will update the information on each of the registrations that the provided `learnerId` is attached to.  You may update any of the values available in the LearnerSchema which is posted.  Any values you do not wish to alter, omit from the post.  Depending on the field, providing something like an empty string may have unintended consequences.  Lastly, it's important to note that this method is asynchronous.  A success status will be returned, and that signifies that a background process has been spun up to alter the learner's info.  As such, you may find a short period of delay in seeing the changes shown on all registrations. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_learner_info(learner_id, learner_info, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str learner_id: The id of the learner to be updated (required)
+        :param LearnerSchema learner_info: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_learner_info_with_http_info(learner_id, learner_info, **kwargs)
+        else:
+            (data) = self.update_learner_info_with_http_info(learner_id, learner_info, **kwargs)
+            return data
+
+    def update_learner_info_with_http_info(self, learner_id, learner_info, **kwargs):
+        """
+        Update a learner's info on all of their registrations.
+        A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations. This method will update the information on each of the registrations that the provided `learnerId` is attached to.  You may update any of the values available in the LearnerSchema which is posted.  Any values you do not wish to alter, omit from the post.  Depending on the field, providing something like an empty string may have unintended consequences.  Lastly, it's important to note that this method is asynchronous.  A success status will be returned, and that signifies that a background process has been spun up to alter the learner's info.  As such, you may find a short period of delay in seeing the changes shown on all registrations. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_learner_info_with_http_info(learner_id, learner_info, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str learner_id: The id of the learner to be updated (required)
+        :param LearnerSchema learner_info: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['learner_id', 'learner_info']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_learner_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'learner_id' is set
+        if ('learner_id' not in params) or (params['learner_id'] is None):
+            raise ValueError("Missing the required parameter `learner_id` when calling `update_learner_info`")
+        # verify the required parameter 'learner_info' is set
+        if ('learner_info' not in params) or (params['learner_info'] is None):
+            raise ValueError("Missing the required parameter `learner_info` when calling `update_learner_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/learner/{learnerId}/updateInfo'.replace('{format}', 'json')
+        path_params = {}
+        if 'learner_id' in params:
+            path_params['learnerId'] = params['learner_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'learner_info' in params:
+            body_params = params['learner_info']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']
+
+        return self.api_client.call_api(resource_path, 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -256,7 +256,8 @@ class InvitationsApi(object):
 
     def delete_invitation_tags(self, invitation_id, tags, **kwargs):
         """
-        Delete tags for this invitation
+        Delete the tags for this invitation 
+        Delete the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -282,7 +283,8 @@ class InvitationsApi(object):
 
     def delete_invitation_tags_with_http_info(self, invitation_id, tags, **kwargs):
         """
-        Delete tags for this invitation
+        Delete the tags for this invitation 
+        Delete the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -493,7 +495,8 @@ class InvitationsApi(object):
 
     def get_invitation_tags(self, invitation_id, **kwargs):
         """
-        Get the tags for this invitation
+        Get the tags for this invitation 
+        Get the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -518,7 +521,8 @@ class InvitationsApi(object):
 
     def get_invitation_tags_with_http_info(self, invitation_id, **kwargs):
         """
-        Get the tags for this invitation
+        Get the tags for this invitation 
+        Get the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1423,7 +1427,8 @@ class InvitationsApi(object):
 
     def put_invitation_tags(self, invitation_id, tags, **kwargs):
         """
-        Set the tags for this invitation
+        Set the tags for this invitation 
+        Set the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1449,7 +1454,8 @@ class InvitationsApi(object):
 
     def put_invitation_tags_with_http_info(self, invitation_id, tags, **kwargs):
         """
-        Set the tags for this invitation
+        Set the tags for this invitation 
+        Set the tags for this invitation 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1535,7 +1541,8 @@ class InvitationsApi(object):
 
     def put_invitation_tags_batch(self, batch, **kwargs):
         """
-        Sets all of the provided tags on all of the provided invitations
+        Sets all of the provided tags on all of the provided invitations 
+        Sets all of the provided tags on all of the provided invitations 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1560,7 +1567,8 @@ class InvitationsApi(object):
 
     def put_invitation_tags_batch_with_http_info(self, batch, **kwargs):
         """
-        Sets all of the provided tags on all of the provided invitations
+        Sets all of the provided tags on all of the provided invitations 
+        Sets all of the provided tags on all of the provided invitations 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

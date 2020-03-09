@@ -42,7 +42,8 @@ class AboutApi(object):
 
     def get_about(self, **kwargs):
         """
-        Get back the version and platform of the running instance of Engine
+        Get back the API version and application name. 
+        Get back the API version and application name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -66,7 +67,8 @@ class AboutApi(object):
 
     def get_about_with_http_info(self, **kwargs):
         """
-        Get back the version and platform of the running instance of Engine
+        Get back the API version and application name. 
+        Get back the API version and application name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
