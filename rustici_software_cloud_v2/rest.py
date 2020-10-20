@@ -198,9 +198,6 @@ class RESTClientObject(object):
             if PY3 and content_type != "application/zip":
                 r.data = r.data.decode('utf8')
 
-            if PY3:
-                r.data = r.data.decode('utf8')
-
             # log response body
             logger.debug("response body: %s", r.data)
 
