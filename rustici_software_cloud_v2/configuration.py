@@ -225,7 +225,7 @@ class Configuration(object):
                     'type': 'oauth2',
                     'in': 'header',
                     'key': 'Authorization',
-                    'value': None
+                    'value': 'Bearer ' + self.access_token if len(self.access_token)>0 else None
                 },
 
         }
