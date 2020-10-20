@@ -538,7 +538,7 @@ class ApiClient(object):
 
         content_type = response.getheader("Content-Type")
         mode = "w"
-        if content_type == "application/zip:
+        if content_type == "application/zip":
           mode = "wb"
         with open(path, mode) as f:
             f.write(response.data)
