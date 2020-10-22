@@ -3,7 +3,7 @@
 """
     SCORM Cloud Rest API
 
-    REST API used for SCORM Cloud integrations.
+    REST API used for SCORM Cloud integrations.  # noqa: E501
 
     OpenAPI spec version: 2.0
     Contact: systems@rusticisoftware.com
