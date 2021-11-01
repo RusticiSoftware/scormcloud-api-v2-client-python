@@ -50,7 +50,6 @@ class LaunchLinkSchema(object):
     def launch_link(self):
         """Gets the launch_link of this LaunchLinkSchema.  # noqa: E501
 
-
         :return: The launch_link of this LaunchLinkSchema.  # noqa: E501
         :rtype: str
         """
@@ -59,7 +58,6 @@ class LaunchLinkSchema(object):
     @launch_link.setter
     def launch_link(self, launch_link):
         """Sets the launch_link of this LaunchLinkSchema.
-
 
         :param launch_link: The launch_link of this LaunchLinkSchema.  # noqa: E501
         :type: str

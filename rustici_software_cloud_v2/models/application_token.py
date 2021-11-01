@@ -61,7 +61,6 @@ class ApplicationToken(object):
     def access_token(self):
         """Gets the access_token of this ApplicationToken.  # noqa: E501
 
-
         :return: The access_token of this ApplicationToken.  # noqa: E501
         :rtype: str
         """
@@ -70,7 +69,6 @@ class ApplicationToken(object):
     @access_token.setter
     def access_token(self, access_token):
         """Sets the access_token of this ApplicationToken.
-
 
         :param access_token: The access_token of this ApplicationToken.  # noqa: E501
         :type: str
@@ -82,7 +80,6 @@ class ApplicationToken(object):
     def expires_in(self):
         """Gets the expires_in of this ApplicationToken.  # noqa: E501
 
-
         :return: The expires_in of this ApplicationToken.  # noqa: E501
         :rtype: int
         """
@@ -91,7 +88,6 @@ class ApplicationToken(object):
     @expires_in.setter
     def expires_in(self, expires_in):
         """Sets the expires_in of this ApplicationToken.
-
 
         :param expires_in: The expires_in of this ApplicationToken.  # noqa: E501
         :type: int
@@ -103,7 +99,6 @@ class ApplicationToken(object):
     def token_type(self):
         """Gets the token_type of this ApplicationToken.  # noqa: E501
 
-
         :return: The token_type of this ApplicationToken.  # noqa: E501
         :rtype: str
         """
@@ -112,7 +107,6 @@ class ApplicationToken(object):
     @token_type.setter
     def token_type(self, token_type):
         """Sets the token_type of this ApplicationToken.
-
 
         :param token_type: The token_type of this ApplicationToken.  # noqa: E501
         :type: str

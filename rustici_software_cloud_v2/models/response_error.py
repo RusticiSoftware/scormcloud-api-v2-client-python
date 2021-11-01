@@ -50,7 +50,6 @@ class ResponseError(object):
     def message(self):
         """Gets the message of this ResponseError.  # noqa: E501
 
-
         :return: The message of this ResponseError.  # noqa: E501
         :rtype: str
         """
@@ -59,7 +58,6 @@ class ResponseError(object):
     @message.setter
     def message(self, message):
         """Sets the message of this ResponseError.
-
 
         :param message: The message of this ResponseError.  # noqa: E501
         :type: str

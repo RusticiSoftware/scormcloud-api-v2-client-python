@@ -76,7 +76,6 @@ class StaticPropertiesSchema(object):
     def completion_threshold(self):
         """Gets the completion_threshold of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The completion_threshold of this StaticPropertiesSchema.  # noqa: E501
         :rtype: str
         """
@@ -85,7 +84,6 @@ class StaticPropertiesSchema(object):
     @completion_threshold.setter
     def completion_threshold(self, completion_threshold):
         """Sets the completion_threshold of this StaticPropertiesSchema.
-
 
         :param completion_threshold: The completion_threshold of this StaticPropertiesSchema.  # noqa: E501
         :type: str
@@ -97,7 +95,6 @@ class StaticPropertiesSchema(object):
     def launch_data(self):
         """Gets the launch_data of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The launch_data of this StaticPropertiesSchema.  # noqa: E501
         :rtype: str
         """
@@ -106,7 +103,6 @@ class StaticPropertiesSchema(object):
     @launch_data.setter
     def launch_data(self, launch_data):
         """Sets the launch_data of this StaticPropertiesSchema.
-
 
         :param launch_data: The launch_data of this StaticPropertiesSchema.  # noqa: E501
         :type: str
@@ -118,7 +114,6 @@ class StaticPropertiesSchema(object):
     def max_time_allowed(self):
         """Gets the max_time_allowed of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The max_time_allowed of this StaticPropertiesSchema.  # noqa: E501
         :rtype: str
         """
@@ -127,7 +122,6 @@ class StaticPropertiesSchema(object):
     @max_time_allowed.setter
     def max_time_allowed(self, max_time_allowed):
         """Sets the max_time_allowed of this StaticPropertiesSchema.
-
 
         :param max_time_allowed: The max_time_allowed of this StaticPropertiesSchema.  # noqa: E501
         :type: str
@@ -139,7 +133,6 @@ class StaticPropertiesSchema(object):
     def scaled_passing_score(self):
         """Gets the scaled_passing_score of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The scaled_passing_score of this StaticPropertiesSchema.  # noqa: E501
         :rtype: float
         """
@@ -148,7 +141,6 @@ class StaticPropertiesSchema(object):
     @scaled_passing_score.setter
     def scaled_passing_score(self, scaled_passing_score):
         """Sets the scaled_passing_score of this StaticPropertiesSchema.
-
 
         :param scaled_passing_score: The scaled_passing_score of this StaticPropertiesSchema.  # noqa: E501
         :type: float
@@ -160,7 +152,6 @@ class StaticPropertiesSchema(object):
     def scaled_passing_score_used(self):
         """Gets the scaled_passing_score_used of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The scaled_passing_score_used of this StaticPropertiesSchema.  # noqa: E501
         :rtype: bool
         """
@@ -169,7 +160,6 @@ class StaticPropertiesSchema(object):
     @scaled_passing_score_used.setter
     def scaled_passing_score_used(self, scaled_passing_score_used):
         """Sets the scaled_passing_score_used of this StaticPropertiesSchema.
-
 
         :param scaled_passing_score_used: The scaled_passing_score_used of this StaticPropertiesSchema.  # noqa: E501
         :type: bool
@@ -181,7 +171,6 @@ class StaticPropertiesSchema(object):
     def time_limit_action(self):
         """Gets the time_limit_action of this StaticPropertiesSchema.  # noqa: E501
 
-
         :return: The time_limit_action of this StaticPropertiesSchema.  # noqa: E501
         :rtype: str
         """
@@ -190,7 +179,6 @@ class StaticPropertiesSchema(object):
     @time_limit_action.setter
     def time_limit_action(self, time_limit_action):
         """Sets the time_limit_action of this StaticPropertiesSchema.
-
 
         :param time_limit_action: The time_limit_action of this StaticPropertiesSchema.  # noqa: E501
         :type: str

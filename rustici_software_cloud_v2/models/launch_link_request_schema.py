@@ -123,7 +123,7 @@ class LaunchLinkRequestSchema(object):
     def redirect_on_exit_url(self):
         """Gets the redirect_on_exit_url of this LaunchLinkRequestSchema.  # noqa: E501
 
-        The URL the application should redirect to when the learner exits a course. If not specified, configured value will be used.  # noqa: E501
+        The URL the application should redirect to when the learner exits a course.  Alternatively one of the following keywords can be used to redirect to: - `closer` - A page that automatically tries to close the browser tab/window - `blank` - A blank page - `message` - A page with a message about the course being complete  If an empty string is specified, the configured setting will be used (default www.scorm.com). If an invalid url is specified, the Message.html page will be loaded.   # noqa: E501
 
         :return: The redirect_on_exit_url of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: str
@@ -134,7 +134,7 @@ class LaunchLinkRequestSchema(object):
     def redirect_on_exit_url(self, redirect_on_exit_url):
         """Sets the redirect_on_exit_url of this LaunchLinkRequestSchema.
 
-        The URL the application should redirect to when the learner exits a course. If not specified, configured value will be used.  # noqa: E501
+        The URL the application should redirect to when the learner exits a course.  Alternatively one of the following keywords can be used to redirect to: - `closer` - A page that automatically tries to close the browser tab/window - `blank` - A blank page - `message` - A page with a message about the course being complete  If an empty string is specified, the configured setting will be used (default www.scorm.com). If an invalid url is specified, the Message.html page will be loaded.   # noqa: E501
 
         :param redirect_on_exit_url: The redirect_on_exit_url of this LaunchLinkRequestSchema.  # noqa: E501
         :type: str
@@ -148,7 +148,7 @@ class LaunchLinkRequestSchema(object):
     def tracking(self):
         """Gets the tracking of this LaunchLinkRequestSchema.  # noqa: E501
 
-        Should this launch be tracked? If false, Engine will avoid tracking to the extent possible for the standard being used.  # noqa: E501
+        Should this launch be tracked? If false, SCORM Cloud will avoid tracking to the extent possible for the standard being used.  # noqa: E501
 
         :return: The tracking of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: bool
@@ -159,7 +159,7 @@ class LaunchLinkRequestSchema(object):
     def tracking(self, tracking):
         """Sets the tracking of this LaunchLinkRequestSchema.
 
-        Should this launch be tracked? If false, Engine will avoid tracking to the extent possible for the standard being used.  # noqa: E501
+        Should this launch be tracked? If false, SCORM Cloud will avoid tracking to the extent possible for the standard being used.  # noqa: E501
 
         :param tracking: The tracking of this LaunchLinkRequestSchema.  # noqa: E501
         :type: bool
@@ -240,7 +240,6 @@ class LaunchLinkRequestSchema(object):
     def learner_tags(self):
         """Gets the learner_tags of this LaunchLinkRequestSchema.  # noqa: E501
 
-
         :return: The learner_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -249,7 +248,6 @@ class LaunchLinkRequestSchema(object):
     @learner_tags.setter
     def learner_tags(self, learner_tags):
         """Sets the learner_tags of this LaunchLinkRequestSchema.
-
 
         :param learner_tags: The learner_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :type: list[str]
@@ -261,7 +259,6 @@ class LaunchLinkRequestSchema(object):
     def course_tags(self):
         """Gets the course_tags of this LaunchLinkRequestSchema.  # noqa: E501
 
-
         :return: The course_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -270,7 +267,6 @@ class LaunchLinkRequestSchema(object):
     @course_tags.setter
     def course_tags(self, course_tags):
         """Sets the course_tags of this LaunchLinkRequestSchema.
-
 
         :param course_tags: The course_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :type: list[str]
@@ -282,7 +278,6 @@ class LaunchLinkRequestSchema(object):
     def registration_tags(self):
         """Gets the registration_tags of this LaunchLinkRequestSchema.  # noqa: E501
 
-
         :return: The registration_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -291,7 +286,6 @@ class LaunchLinkRequestSchema(object):
     @registration_tags.setter
     def registration_tags(self, registration_tags):
         """Sets the registration_tags of this LaunchLinkRequestSchema.
-
 
         :param registration_tags: The registration_tags of this LaunchLinkRequestSchema.  # noqa: E501
         :type: list[str]
@@ -303,7 +297,6 @@ class LaunchLinkRequestSchema(object):
     def additionalvalues(self):
         """Gets the additionalvalues of this LaunchLinkRequestSchema.  # noqa: E501
 
-
         :return: The additionalvalues of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: list[ItemValuePairSchema]
         """
@@ -312,7 +305,6 @@ class LaunchLinkRequestSchema(object):
     @additionalvalues.setter
     def additionalvalues(self, additionalvalues):
         """Sets the additionalvalues of this LaunchLinkRequestSchema.
-
 
         :param additionalvalues: The additionalvalues of this LaunchLinkRequestSchema.  # noqa: E501
         :type: list[ItemValuePairSchema]
@@ -324,7 +316,6 @@ class LaunchLinkRequestSchema(object):
     def launch_auth(self):
         """Gets the launch_auth of this LaunchLinkRequestSchema.  # noqa: E501
 
-
         :return: The launch_auth of this LaunchLinkRequestSchema.  # noqa: E501
         :rtype: LaunchAuthSchema
         """
@@ -333,7 +324,6 @@ class LaunchLinkRequestSchema(object):
     @launch_auth.setter
     def launch_auth(self, launch_auth):
         """Sets the launch_auth of this LaunchLinkRequestSchema.
-
 
         :param launch_auth: The launch_auth of this LaunchLinkRequestSchema.  # noqa: E501
         :type: LaunchAuthSchema

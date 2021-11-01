@@ -66,7 +66,6 @@ class XapiContextActivity(object):
     def parent(self):
         """Gets the parent of this XapiContextActivity.  # noqa: E501
 
-
         :return: The parent of this XapiContextActivity.  # noqa: E501
         :rtype: list[XapiActivity]
         """
@@ -75,7 +74,6 @@ class XapiContextActivity(object):
     @parent.setter
     def parent(self, parent):
         """Sets the parent of this XapiContextActivity.
-
 
         :param parent: The parent of this XapiContextActivity.  # noqa: E501
         :type: list[XapiActivity]
@@ -87,7 +85,6 @@ class XapiContextActivity(object):
     def grouping(self):
         """Gets the grouping of this XapiContextActivity.  # noqa: E501
 
-
         :return: The grouping of this XapiContextActivity.  # noqa: E501
         :rtype: list[XapiActivity]
         """
@@ -96,7 +93,6 @@ class XapiContextActivity(object):
     @grouping.setter
     def grouping(self, grouping):
         """Sets the grouping of this XapiContextActivity.
-
 
         :param grouping: The grouping of this XapiContextActivity.  # noqa: E501
         :type: list[XapiActivity]
@@ -108,7 +104,6 @@ class XapiContextActivity(object):
     def category(self):
         """Gets the category of this XapiContextActivity.  # noqa: E501
 
-
         :return: The category of this XapiContextActivity.  # noqa: E501
         :rtype: list[XapiActivity]
         """
@@ -117,7 +112,6 @@ class XapiContextActivity(object):
     @category.setter
     def category(self, category):
         """Sets the category of this XapiContextActivity.
-
 
         :param category: The category of this XapiContextActivity.  # noqa: E501
         :type: list[XapiActivity]
@@ -129,7 +123,6 @@ class XapiContextActivity(object):
     def other(self):
         """Gets the other of this XapiContextActivity.  # noqa: E501
 
-
         :return: The other of this XapiContextActivity.  # noqa: E501
         :rtype: list[XapiActivity]
         """
@@ -138,7 +131,6 @@ class XapiContextActivity(object):
     @other.setter
     def other(self, other):
         """Sets the other of this XapiContextActivity.
-
 
         :param other: The other of this XapiContextActivity.  # noqa: E501
         :type: list[XapiActivity]

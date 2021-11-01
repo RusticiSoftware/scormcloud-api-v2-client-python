@@ -56,7 +56,6 @@ class ImportRequestSchema(object):
     def fetch_request(self):
         """Gets the fetch_request of this ImportRequestSchema.  # noqa: E501
 
-
         :return: The fetch_request of this ImportRequestSchema.  # noqa: E501
         :rtype: ImportFetchRequestSchema
         """
@@ -65,7 +64,6 @@ class ImportRequestSchema(object):
     @fetch_request.setter
     def fetch_request(self, fetch_request):
         """Sets the fetch_request of this ImportRequestSchema.
-
 
         :param fetch_request: The fetch_request of this ImportRequestSchema.  # noqa: E501
         :type: ImportFetchRequestSchema
@@ -77,7 +75,6 @@ class ImportRequestSchema(object):
     def media_file_reference_request(self):
         """Gets the media_file_reference_request of this ImportRequestSchema.  # noqa: E501
 
-
         :return: The media_file_reference_request of this ImportRequestSchema.  # noqa: E501
         :rtype: ImportMediaFileReferenceRequestSchema
         """
@@ -86,7 +83,6 @@ class ImportRequestSchema(object):
     @media_file_reference_request.setter
     def media_file_reference_request(self, media_file_reference_request):
         """Sets the media_file_reference_request of this ImportRequestSchema.
-
 
         :param media_file_reference_request: The media_file_reference_request of this ImportRequestSchema.  # noqa: E501
         :type: ImportMediaFileReferenceRequestSchema

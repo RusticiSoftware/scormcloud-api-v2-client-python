@@ -6,7 +6,6 @@ from __future__ import absolute_import
 from rustici_software_cloud_v2.api.about_api import AboutApi
 from rustici_software_cloud_v2.api.application_management_api import ApplicationManagementApi
 from rustici_software_cloud_v2.api.authentication_api import AuthenticationApi
-from rustici_software_cloud_v2.api.content_connectors_api import ContentConnectorsApi
 from rustici_software_cloud_v2.api.course_api import CourseApi
 from rustici_software_cloud_v2.api.dispatch_api import DispatchApi
 from rustici_software_cloud_v2.api.invitations_api import InvitationsApi

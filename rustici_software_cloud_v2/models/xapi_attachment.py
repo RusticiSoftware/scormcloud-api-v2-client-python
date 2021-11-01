@@ -76,7 +76,6 @@ class XapiAttachment(object):
     def usage_type(self):
         """Gets the usage_type of this XapiAttachment.  # noqa: E501
 
-
         :return: The usage_type of this XapiAttachment.  # noqa: E501
         :rtype: str
         """
@@ -85,7 +84,6 @@ class XapiAttachment(object):
     @usage_type.setter
     def usage_type(self, usage_type):
         """Sets the usage_type of this XapiAttachment.
-
 
         :param usage_type: The usage_type of this XapiAttachment.  # noqa: E501
         :type: str
@@ -99,7 +97,6 @@ class XapiAttachment(object):
     def display(self):
         """Gets the display of this XapiAttachment.  # noqa: E501
 
-
         :return: The display of this XapiAttachment.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -108,7 +105,6 @@ class XapiAttachment(object):
     @display.setter
     def display(self, display):
         """Sets the display of this XapiAttachment.
-
 
         :param display: The display of this XapiAttachment.  # noqa: E501
         :type: dict(str, str)
@@ -122,7 +118,6 @@ class XapiAttachment(object):
     def description(self):
         """Gets the description of this XapiAttachment.  # noqa: E501
 
-
         :return: The description of this XapiAttachment.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -131,7 +126,6 @@ class XapiAttachment(object):
     @description.setter
     def description(self, description):
         """Sets the description of this XapiAttachment.
-
 
         :param description: The description of this XapiAttachment.  # noqa: E501
         :type: dict(str, str)
@@ -143,7 +137,6 @@ class XapiAttachment(object):
     def content_type(self):
         """Gets the content_type of this XapiAttachment.  # noqa: E501
 
-
         :return: The content_type of this XapiAttachment.  # noqa: E501
         :rtype: str
         """
@@ -152,7 +145,6 @@ class XapiAttachment(object):
     @content_type.setter
     def content_type(self, content_type):
         """Sets the content_type of this XapiAttachment.
-
 
         :param content_type: The content_type of this XapiAttachment.  # noqa: E501
         :type: str
@@ -166,7 +158,6 @@ class XapiAttachment(object):
     def length(self):
         """Gets the length of this XapiAttachment.  # noqa: E501
 
-
         :return: The length of this XapiAttachment.  # noqa: E501
         :rtype: int
         """
@@ -175,7 +166,6 @@ class XapiAttachment(object):
     @length.setter
     def length(self, length):
         """Sets the length of this XapiAttachment.
-
 
         :param length: The length of this XapiAttachment.  # noqa: E501
         :type: int
@@ -189,7 +179,6 @@ class XapiAttachment(object):
     def sha2(self):
         """Gets the sha2 of this XapiAttachment.  # noqa: E501
 
-
         :return: The sha2 of this XapiAttachment.  # noqa: E501
         :rtype: str
         """
@@ -198,7 +187,6 @@ class XapiAttachment(object):
     @sha2.setter
     def sha2(self, sha2):
         """Sets the sha2 of this XapiAttachment.
-
 
         :param sha2: The sha2 of this XapiAttachment.  # noqa: E501
         :type: str
@@ -212,7 +200,6 @@ class XapiAttachment(object):
     def file_url(self):
         """Gets the file_url of this XapiAttachment.  # noqa: E501
 
-
         :return: The file_url of this XapiAttachment.  # noqa: E501
         :rtype: str
         """
@@ -221,7 +208,6 @@ class XapiAttachment(object):
     @file_url.setter
     def file_url(self, file_url):
         """Sets the file_url of this XapiAttachment.
-
 
         :param file_url: The file_url of this XapiAttachment.  # noqa: E501
         :type: str

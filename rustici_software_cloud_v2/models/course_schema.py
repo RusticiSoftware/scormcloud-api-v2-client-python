@@ -111,7 +111,6 @@ class CourseSchema(object):
     def id(self):
         """Gets the id of this CourseSchema.  # noqa: E501
 
-
         :return: The id of this CourseSchema.  # noqa: E501
         :rtype: str
         """
@@ -120,7 +119,6 @@ class CourseSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this CourseSchema.
-
 
         :param id: The id of this CourseSchema.  # noqa: E501
         :type: str
@@ -132,7 +130,6 @@ class CourseSchema(object):
     def title(self):
         """Gets the title of this CourseSchema.  # noqa: E501
 
-
         :return: The title of this CourseSchema.  # noqa: E501
         :rtype: str
         """
@@ -141,7 +138,6 @@ class CourseSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this CourseSchema.
-
 
         :param title: The title of this CourseSchema.  # noqa: E501
         :type: str
@@ -176,7 +172,6 @@ class CourseSchema(object):
     def created(self):
         """Gets the created of this CourseSchema.  # noqa: E501
 
-
         :return: The created of this CourseSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -185,7 +180,6 @@ class CourseSchema(object):
     @created.setter
     def created(self, created):
         """Sets the created of this CourseSchema.
-
 
         :param created: The created of this CourseSchema.  # noqa: E501
         :type: datetime
@@ -197,7 +191,6 @@ class CourseSchema(object):
     def updated(self):
         """Gets the updated of this CourseSchema.  # noqa: E501
 
-
         :return: The updated of this CourseSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -206,7 +199,6 @@ class CourseSchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this CourseSchema.
-
 
         :param updated: The updated of this CourseSchema.  # noqa: E501
         :type: datetime
@@ -218,7 +210,6 @@ class CourseSchema(object):
     def version(self):
         """Gets the version of this CourseSchema.  # noqa: E501
 
-
         :return: The version of this CourseSchema.  # noqa: E501
         :rtype: int
         """
@@ -227,7 +218,6 @@ class CourseSchema(object):
     @version.setter
     def version(self, version):
         """Sets the version of this CourseSchema.
-
 
         :param version: The version of this CourseSchema.  # noqa: E501
         :type: int
@@ -239,7 +229,6 @@ class CourseSchema(object):
     def registration_count(self):
         """Gets the registration_count of this CourseSchema.  # noqa: E501
 
-
         :return: The registration_count of this CourseSchema.  # noqa: E501
         :rtype: int
         """
@@ -248,7 +237,6 @@ class CourseSchema(object):
     @registration_count.setter
     def registration_count(self, registration_count):
         """Sets the registration_count of this CourseSchema.
-
 
         :param registration_count: The registration_count of this CourseSchema.  # noqa: E501
         :type: int
@@ -260,7 +248,6 @@ class CourseSchema(object):
     def activity_id(self):
         """Gets the activity_id of this CourseSchema.  # noqa: E501
 
-
         :return: The activity_id of this CourseSchema.  # noqa: E501
         :rtype: str
         """
@@ -269,7 +256,6 @@ class CourseSchema(object):
     @activity_id.setter
     def activity_id(self, activity_id):
         """Sets the activity_id of this CourseSchema.
-
 
         :param activity_id: The activity_id of this CourseSchema.  # noqa: E501
         :type: str
@@ -281,6 +267,7 @@ class CourseSchema(object):
     def course_learning_standard(self):
         """Gets the course_learning_standard of this CourseSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5"]  # noqa: E501
 
         :return: The course_learning_standard of this CourseSchema.  # noqa: E501
         :rtype: str
@@ -291,23 +278,17 @@ class CourseSchema(object):
     def course_learning_standard(self, course_learning_standard):
         """Sets the course_learning_standard of this CourseSchema.
 
+        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5"]  # noqa: E501
 
         :param course_learning_standard: The course_learning_standard of this CourseSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5"]  # noqa: E501
-        if course_learning_standard not in allowed_values:
-            raise ValueError(
-                "Invalid value for `course_learning_standard` ({0}), must be one of {1}"  # noqa: E501
-                .format(course_learning_standard, allowed_values)
-            )
 
         self._course_learning_standard = course_learning_standard
 
     @property
     def tags(self):
         """Gets the tags of this CourseSchema.  # noqa: E501
-
 
         :return: The tags of this CourseSchema.  # noqa: E501
         :rtype: list[str]
@@ -317,7 +298,6 @@ class CourseSchema(object):
     @tags.setter
     def tags(self, tags):
         """Sets the tags of this CourseSchema.
-
 
         :param tags: The tags of this CourseSchema.  # noqa: E501
         :type: list[str]
@@ -329,7 +309,6 @@ class CourseSchema(object):
     def dispatched(self):
         """Gets the dispatched of this CourseSchema.  # noqa: E501
 
-
         :return: The dispatched of this CourseSchema.  # noqa: E501
         :rtype: bool
         """
@@ -338,7 +317,6 @@ class CourseSchema(object):
     @dispatched.setter
     def dispatched(self, dispatched):
         """Sets the dispatched of this CourseSchema.
-
 
         :param dispatched: The dispatched of this CourseSchema.  # noqa: E501
         :type: bool
@@ -350,7 +328,6 @@ class CourseSchema(object):
     def metadata(self):
         """Gets the metadata of this CourseSchema.  # noqa: E501
 
-
         :return: The metadata of this CourseSchema.  # noqa: E501
         :rtype: MetadataSchema
         """
@@ -359,7 +336,6 @@ class CourseSchema(object):
     @metadata.setter
     def metadata(self, metadata):
         """Sets the metadata of this CourseSchema.
-
 
         :param metadata: The metadata of this CourseSchema.  # noqa: E501
         :type: MetadataSchema
@@ -371,7 +347,6 @@ class CourseSchema(object):
     def root_activity(self):
         """Gets the root_activity of this CourseSchema.  # noqa: E501
 
-
         :return: The root_activity of this CourseSchema.  # noqa: E501
         :rtype: CourseActivitySchema
         """
@@ -380,7 +355,6 @@ class CourseSchema(object):
     @root_activity.setter
     def root_activity(self, root_activity):
         """Sets the root_activity of this CourseSchema.
-
 
         :param root_activity: The root_activity of this CourseSchema.  # noqa: E501
         :type: CourseActivitySchema

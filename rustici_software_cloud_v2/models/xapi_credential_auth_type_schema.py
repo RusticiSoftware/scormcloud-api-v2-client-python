@@ -51,6 +51,7 @@ class XapiCredentialAuthTypeSchema(object):
     def xapi_credential_auth_type(self):
         """Gets the xapi_credential_auth_type of this XapiCredentialAuthTypeSchema.  # noqa: E501
 
+        allowed_values = ["BASICAUTH", "OAUTH"]  # noqa: E501
 
         :return: The xapi_credential_auth_type of this XapiCredentialAuthTypeSchema.  # noqa: E501
         :rtype: str
@@ -61,16 +62,11 @@ class XapiCredentialAuthTypeSchema(object):
     def xapi_credential_auth_type(self, xapi_credential_auth_type):
         """Sets the xapi_credential_auth_type of this XapiCredentialAuthTypeSchema.
 
+        allowed_values = ["BASICAUTH", "OAUTH"]  # noqa: E501
 
         :param xapi_credential_auth_type: The xapi_credential_auth_type of this XapiCredentialAuthTypeSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["BASICAUTH", "OAUTH"]  # noqa: E501
-        if xapi_credential_auth_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `xapi_credential_auth_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(xapi_credential_auth_type, allowed_values)
-            )
 
         self._xapi_credential_auth_type = xapi_credential_auth_type
 

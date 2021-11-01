@@ -66,7 +66,6 @@ class XapiScore(object):
     def scaled(self):
         """Gets the scaled of this XapiScore.  # noqa: E501
 
-
         :return: The scaled of this XapiScore.  # noqa: E501
         :rtype: float
         """
@@ -75,7 +74,6 @@ class XapiScore(object):
     @scaled.setter
     def scaled(self, scaled):
         """Sets the scaled of this XapiScore.
-
 
         :param scaled: The scaled of this XapiScore.  # noqa: E501
         :type: float
@@ -87,7 +85,6 @@ class XapiScore(object):
     def raw(self):
         """Gets the raw of this XapiScore.  # noqa: E501
 
-
         :return: The raw of this XapiScore.  # noqa: E501
         :rtype: float
         """
@@ -96,7 +93,6 @@ class XapiScore(object):
     @raw.setter
     def raw(self, raw):
         """Sets the raw of this XapiScore.
-
 
         :param raw: The raw of this XapiScore.  # noqa: E501
         :type: float
@@ -108,7 +104,6 @@ class XapiScore(object):
     def min(self):
         """Gets the min of this XapiScore.  # noqa: E501
 
-
         :return: The min of this XapiScore.  # noqa: E501
         :rtype: float
         """
@@ -117,7 +112,6 @@ class XapiScore(object):
     @min.setter
     def min(self, min):
         """Sets the min of this XapiScore.
-
 
         :param min: The min of this XapiScore.  # noqa: E501
         :type: float
@@ -129,7 +123,6 @@ class XapiScore(object):
     def max(self):
         """Gets the max of this XapiScore.  # noqa: E501
 
-
         :return: The max of this XapiScore.  # noqa: E501
         :rtype: float
         """
@@ -138,7 +131,6 @@ class XapiScore(object):
     @max.setter
     def max(self, max):
         """Sets the max of this XapiScore.
-
 
         :param max: The max of this XapiScore.  # noqa: E501
         :type: float

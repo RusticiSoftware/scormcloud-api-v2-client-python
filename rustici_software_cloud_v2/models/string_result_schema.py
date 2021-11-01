@@ -50,7 +50,6 @@ class StringResultSchema(object):
     def result(self):
         """Gets the result of this StringResultSchema.  # noqa: E501
 
-
         :return: The result of this StringResultSchema.  # noqa: E501
         :rtype: str
         """
@@ -59,7 +58,6 @@ class StringResultSchema(object):
     @result.setter
     def result(self, result):
         """Sets the result of this StringResultSchema.
-
 
         :param result: The result of this StringResultSchema.  # noqa: E501
         :type: str

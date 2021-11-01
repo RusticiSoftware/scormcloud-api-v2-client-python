@@ -56,7 +56,6 @@ class AboutSchema(object):
     def version(self):
         """Gets the version of this AboutSchema.  # noqa: E501
 
-
         :return: The version of this AboutSchema.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class AboutSchema(object):
     @version.setter
     def version(self, version):
         """Sets the version of this AboutSchema.
-
 
         :param version: The version of this AboutSchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class AboutSchema(object):
     def distribution(self):
         """Gets the distribution of this AboutSchema.  # noqa: E501
 
-
         :return: The distribution of this AboutSchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class AboutSchema(object):
     @distribution.setter
     def distribution(self, distribution):
         """Sets the distribution of this AboutSchema.
-
 
         :param distribution: The distribution of this AboutSchema.  # noqa: E501
         :type: str

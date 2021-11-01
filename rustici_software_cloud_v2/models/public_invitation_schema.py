@@ -147,7 +147,7 @@ class PublicInvitationSchema(object):
     def allow_launch(self):
         """Gets the allow_launch of this PublicInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :return: The allow_launch of this PublicInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -158,7 +158,7 @@ class PublicInvitationSchema(object):
     def allow_launch(self, allow_launch):
         """Sets the allow_launch of this PublicInvitationSchema.
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :param allow_launch: The allow_launch of this PublicInvitationSchema.  # noqa: E501
         :type: bool
@@ -170,7 +170,7 @@ class PublicInvitationSchema(object):
     def allow_new_registrations(self):
         """Gets the allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :return: The allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -181,7 +181,7 @@ class PublicInvitationSchema(object):
     def allow_new_registrations(self, allow_new_registrations):
         """Sets the allow_new_registrations of this PublicInvitationSchema.
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :param allow_new_registrations: The allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
         :type: bool
@@ -239,7 +239,6 @@ class PublicInvitationSchema(object):
     def updated(self):
         """Gets the updated of this PublicInvitationSchema.  # noqa: E501
 
-
         :return: The updated of this PublicInvitationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -248,7 +247,6 @@ class PublicInvitationSchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this PublicInvitationSchema.
-
 
         :param updated: The updated of this PublicInvitationSchema.  # noqa: E501
         :type: datetime
@@ -283,7 +281,7 @@ class PublicInvitationSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this PublicInvitationSchema.  # noqa: E501
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this PublicInvitationSchema.  # noqa: E501
         :rtype: datetime
@@ -294,7 +292,7 @@ class PublicInvitationSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this PublicInvitationSchema.
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this PublicInvitationSchema.  # noqa: E501
         :type: datetime

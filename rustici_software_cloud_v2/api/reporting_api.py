@@ -34,9 +34,9 @@ class ReportingApi(object):
         self.api_client = api_client
 
     def get_account_info(self, **kwargs):  # noqa: E501
-        """Get all of the account information specified by the given app ID  # noqa: E501
+        """Get account information   # noqa: E501
 
-        Get all of the account information specified by the given app ID  # noqa: E501
+        Returns all of the account information for the specified application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_account_info(async_req=True)
@@ -55,9 +55,9 @@ class ReportingApi(object):
             return data
 
     def get_account_info_with_http_info(self, **kwargs):  # noqa: E501
-        """Get all of the account information specified by the given app ID  # noqa: E501
+        """Get account information   # noqa: E501
 
-        Get all of the account information specified by the given app ID  # noqa: E501
+        Returns all of the account information for the specified application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_account_info_with_http_info(async_req=True)
@@ -125,9 +125,9 @@ class ReportingApi(object):
             collection_formats=collection_formats)
 
     def get_reportage_auth_token(self, nav_permission, **kwargs):  # noqa: E501
-        """Get a session authentication token to use when launching Reportage  # noqa: E501
+        """Get a Reportage session authentication token   # noqa: E501
 
-        Get a session authentication token to use when launching Reportage  # noqa: E501
+        Returns a session authentication token to use when launching Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_reportage_auth_token(nav_permission, async_req=True)
@@ -148,9 +148,9 @@ class ReportingApi(object):
             return data
 
     def get_reportage_auth_token_with_http_info(self, nav_permission, **kwargs):  # noqa: E501
-        """Get a session authentication token to use when launching Reportage  # noqa: E501
+        """Get a Reportage session authentication token   # noqa: E501
 
-        Get a session authentication token to use when launching Reportage  # noqa: E501
+        Returns a session authentication token to use when launching Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_reportage_auth_token_with_http_info(nav_permission, async_req=True)
@@ -228,17 +228,17 @@ class ReportingApi(object):
             collection_formats=collection_formats)
 
     def get_reportage_link(self, auth, report_url, **kwargs):  # noqa: E501
-        """Get the link to a page in Reportage with the given authentication and permissions  # noqa: E501
+        """Get a link to a page in Reportage with the given permissions   # noqa: E501
 
-        Get the link to a page in Reportage with the given authentication and permissions  # noqa: E501
+        Returns the link to use for viewing Reportage.  In order to generate a link, GetReportageAuthToken will need to be called to generate an auth token with the necessary permissions.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_reportage_link(auth, report_url, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str auth: The reportage authentication token retrieved from a previous call to `GET reportageAuth` (required)
-        :param str report_url: The Reportage URL to try and access (required)
+        :param str auth: The Reportage authentication token retrieved from a previous call to `GET reportageAuth` (required)
+        :param str report_url: The Reportage URL to try and access.  Common values are the Reportage homepage `https://cloud.scorm.com/Reportage/reportage.php?appId={{your appId}}` or a URL pointing to a specific report within Reportage.  The latter type of URL includes lots of parameters of the report, such as the date range, demographic (via tags), specific course or learner, and so on.  (required)
         :return: ReportageLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -251,17 +251,17 @@ class ReportingApi(object):
             return data
 
     def get_reportage_link_with_http_info(self, auth, report_url, **kwargs):  # noqa: E501
-        """Get the link to a page in Reportage with the given authentication and permissions  # noqa: E501
+        """Get a link to a page in Reportage with the given permissions   # noqa: E501
 
-        Get the link to a page in Reportage with the given authentication and permissions  # noqa: E501
+        Returns the link to use for viewing Reportage.  In order to generate a link, GetReportageAuthToken will need to be called to generate an auth token with the necessary permissions.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_reportage_link_with_http_info(auth, report_url, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str auth: The reportage authentication token retrieved from a previous call to `GET reportageAuth` (required)
-        :param str report_url: The Reportage URL to try and access (required)
+        :param str auth: The Reportage authentication token retrieved from a previous call to `GET reportageAuth` (required)
+        :param str report_url: The Reportage URL to try and access.  Common values are the Reportage homepage `https://cloud.scorm.com/Reportage/reportage.php?appId={{your appId}}` or a URL pointing to a specific report within Reportage.  The latter type of URL includes lots of parameters of the report, such as the date range, demographic (via tags), specific course or learner, and so on.  (required)
         :return: ReportageLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.

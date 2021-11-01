@@ -54,7 +54,6 @@ class BatchTagsSchema(object):
     def ids(self):
         """Gets the ids of this BatchTagsSchema.  # noqa: E501
 
-
         :return: The ids of this BatchTagsSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -63,7 +62,6 @@ class BatchTagsSchema(object):
     @ids.setter
     def ids(self, ids):
         """Sets the ids of this BatchTagsSchema.
-
 
         :param ids: The ids of this BatchTagsSchema.  # noqa: E501
         :type: list[str]
@@ -77,7 +75,6 @@ class BatchTagsSchema(object):
     def tags(self):
         """Gets the tags of this BatchTagsSchema.  # noqa: E501
 
-
         :return: The tags of this BatchTagsSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -86,7 +83,6 @@ class BatchTagsSchema(object):
     @tags.setter
     def tags(self, tags):
         """Sets the tags of this BatchTagsSchema.
-
 
         :param tags: The tags of this BatchTagsSchema.  # noqa: E501
         :type: list[str]

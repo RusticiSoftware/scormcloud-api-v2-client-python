@@ -96,7 +96,6 @@ class LaunchHistorySchema(object):
     def id(self):
         """Gets the id of this LaunchHistorySchema.  # noqa: E501
 
-
         :return: The id of this LaunchHistorySchema.  # noqa: E501
         :rtype: str
         """
@@ -105,7 +104,6 @@ class LaunchHistorySchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this LaunchHistorySchema.
-
 
         :param id: The id of this LaunchHistorySchema.  # noqa: E501
         :type: str
@@ -117,7 +115,6 @@ class LaunchHistorySchema(object):
     def instance(self):
         """Gets the instance of this LaunchHistorySchema.  # noqa: E501
 
-
         :return: The instance of this LaunchHistorySchema.  # noqa: E501
         :rtype: int
         """
@@ -126,7 +123,6 @@ class LaunchHistorySchema(object):
     @instance.setter
     def instance(self, instance):
         """Sets the instance of this LaunchHistorySchema.
-
 
         :param instance: The instance of this LaunchHistorySchema.  # noqa: E501
         :type: int
@@ -138,7 +134,6 @@ class LaunchHistorySchema(object):
     def score(self):
         """Gets the score of this LaunchHistorySchema.  # noqa: E501
 
-
         :return: The score of this LaunchHistorySchema.  # noqa: E501
         :rtype: ScoreSchema
         """
@@ -147,7 +142,6 @@ class LaunchHistorySchema(object):
     @score.setter
     def score(self, score):
         """Sets the score of this LaunchHistorySchema.
-
 
         :param score: The score of this LaunchHistorySchema.  # noqa: E501
         :type: ScoreSchema
@@ -159,6 +153,7 @@ class LaunchHistorySchema(object):
     def completion_status(self):
         """Gets the completion_status of this LaunchHistorySchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :return: The completion_status of this LaunchHistorySchema.  # noqa: E501
         :rtype: str
@@ -169,16 +164,11 @@ class LaunchHistorySchema(object):
     def completion_status(self, completion_status):
         """Sets the completion_status of this LaunchHistorySchema.
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :param completion_status: The completion_status of this LaunchHistorySchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
-        if completion_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `completion_status` ({0}), must be one of {1}"  # noqa: E501
-                .format(completion_status, allowed_values)
-            )
 
         self._completion_status = completion_status
 
@@ -186,6 +176,7 @@ class LaunchHistorySchema(object):
     def success_status(self):
         """Gets the success_status of this LaunchHistorySchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The success_status of this LaunchHistorySchema.  # noqa: E501
         :rtype: str
@@ -196,23 +187,17 @@ class LaunchHistorySchema(object):
     def success_status(self, success_status):
         """Sets the success_status of this LaunchHistorySchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param success_status: The success_status of this LaunchHistorySchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if success_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `success_status` ({0}), must be one of {1}"  # noqa: E501
-                .format(success_status, allowed_values)
-            )
 
         self._success_status = success_status
 
     @property
     def history_log(self):
         """Gets the history_log of this LaunchHistorySchema.  # noqa: E501
-
 
         :return: The history_log of this LaunchHistorySchema.  # noqa: E501
         :rtype: str
@@ -222,7 +207,6 @@ class LaunchHistorySchema(object):
     @history_log.setter
     def history_log(self, history_log):
         """Sets the history_log of this LaunchHistorySchema.
-
 
         :param history_log: The history_log of this LaunchHistorySchema.  # noqa: E501
         :type: str
@@ -234,7 +218,6 @@ class LaunchHistorySchema(object):
     def total_seconds_tracked(self):
         """Gets the total_seconds_tracked of this LaunchHistorySchema.  # noqa: E501
 
-
         :return: The total_seconds_tracked of this LaunchHistorySchema.  # noqa: E501
         :rtype: float
         """
@@ -243,7 +226,6 @@ class LaunchHistorySchema(object):
     @total_seconds_tracked.setter
     def total_seconds_tracked(self, total_seconds_tracked):
         """Sets the total_seconds_tracked of this LaunchHistorySchema.
-
 
         :param total_seconds_tracked: The total_seconds_tracked of this LaunchHistorySchema.  # noqa: E501
         :type: float

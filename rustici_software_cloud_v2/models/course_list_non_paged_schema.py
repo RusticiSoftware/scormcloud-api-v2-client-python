@@ -51,7 +51,6 @@ class CourseListNonPagedSchema(object):
     def courses(self):
         """Gets the courses of this CourseListNonPagedSchema.  # noqa: E501
 
-
         :return: The courses of this CourseListNonPagedSchema.  # noqa: E501
         :rtype: list[CourseSchema]
         """
@@ -60,7 +59,6 @@ class CourseListNonPagedSchema(object):
     @courses.setter
     def courses(self, courses):
         """Sets the courses of this CourseListNonPagedSchema.
-
 
         :param courses: The courses of this CourseListNonPagedSchema.  # noqa: E501
         :type: list[CourseSchema]

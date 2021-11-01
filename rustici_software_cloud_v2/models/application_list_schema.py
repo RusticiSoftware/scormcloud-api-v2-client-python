@@ -51,7 +51,6 @@ class ApplicationListSchema(object):
     def applications(self):
         """Gets the applications of this ApplicationListSchema.  # noqa: E501
 
-
         :return: The applications of this ApplicationListSchema.  # noqa: E501
         :rtype: list[ApplicationSchema]
         """
@@ -60,7 +59,6 @@ class ApplicationListSchema(object):
     @applications.setter
     def applications(self, applications):
         """Sets the applications of this ApplicationListSchema.
-
 
         :param applications: The applications of this ApplicationListSchema.  # noqa: E501
         :type: list[ApplicationSchema]

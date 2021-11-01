@@ -108,7 +108,6 @@ class ImportFetchRequestSchema(object):
     def media_file_metadata(self):
         """Gets the media_file_metadata of this ImportFetchRequestSchema.  # noqa: E501
 
-
         :return: The media_file_metadata of this ImportFetchRequestSchema.  # noqa: E501
         :rtype: MediaFileMetadataSchema
         """
@@ -117,7 +116,6 @@ class ImportFetchRequestSchema(object):
     @media_file_metadata.setter
     def media_file_metadata(self, media_file_metadata):
         """Sets the media_file_metadata of this ImportFetchRequestSchema.
-
 
         :param media_file_metadata: The media_file_metadata of this ImportFetchRequestSchema.  # noqa: E501
         :type: MediaFileMetadataSchema

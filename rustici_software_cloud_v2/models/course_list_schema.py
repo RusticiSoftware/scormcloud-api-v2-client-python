@@ -56,7 +56,6 @@ class CourseListSchema(object):
     def courses(self):
         """Gets the courses of this CourseListSchema.  # noqa: E501
 
-
         :return: The courses of this CourseListSchema.  # noqa: E501
         :rtype: list[CourseSchema]
         """
@@ -65,7 +64,6 @@ class CourseListSchema(object):
     @courses.setter
     def courses(self, courses):
         """Sets the courses of this CourseListSchema.
-
 
         :param courses: The courses of this CourseListSchema.  # noqa: E501
         :type: list[CourseSchema]
@@ -77,6 +75,7 @@ class CourseListSchema(object):
     def more(self):
         """Gets the more of this CourseListSchema.  # noqa: E501
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :return: The more of this CourseListSchema.  # noqa: E501
         :rtype: str
@@ -87,6 +86,7 @@ class CourseListSchema(object):
     def more(self, more):
         """Sets the more of this CourseListSchema.
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :param more: The more of this CourseListSchema.  # noqa: E501
         :type: str

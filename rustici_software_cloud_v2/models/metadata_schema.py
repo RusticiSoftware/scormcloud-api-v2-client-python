@@ -81,7 +81,6 @@ class MetadataSchema(object):
     def title(self):
         """Gets the title of this MetadataSchema.  # noqa: E501
 
-
         :return: The title of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -90,7 +89,6 @@ class MetadataSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this MetadataSchema.
-
 
         :param title: The title of this MetadataSchema.  # noqa: E501
         :type: str
@@ -102,7 +100,6 @@ class MetadataSchema(object):
     def title_language(self):
         """Gets the title_language of this MetadataSchema.  # noqa: E501
 
-
         :return: The title_language of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -111,7 +108,6 @@ class MetadataSchema(object):
     @title_language.setter
     def title_language(self, title_language):
         """Sets the title_language of this MetadataSchema.
-
 
         :param title_language: The title_language of this MetadataSchema.  # noqa: E501
         :type: str
@@ -123,7 +119,6 @@ class MetadataSchema(object):
     def description(self):
         """Gets the description of this MetadataSchema.  # noqa: E501
 
-
         :return: The description of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -132,7 +127,6 @@ class MetadataSchema(object):
     @description.setter
     def description(self, description):
         """Sets the description of this MetadataSchema.
-
 
         :param description: The description of this MetadataSchema.  # noqa: E501
         :type: str
@@ -144,7 +138,6 @@ class MetadataSchema(object):
     def description_language(self):
         """Gets the description_language of this MetadataSchema.  # noqa: E501
 
-
         :return: The description_language of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -153,7 +146,6 @@ class MetadataSchema(object):
     @description_language.setter
     def description_language(self, description_language):
         """Sets the description_language of this MetadataSchema.
-
 
         :param description_language: The description_language of this MetadataSchema.  # noqa: E501
         :type: str
@@ -165,7 +157,6 @@ class MetadataSchema(object):
     def duration(self):
         """Gets the duration of this MetadataSchema.  # noqa: E501
 
-
         :return: The duration of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -174,7 +165,6 @@ class MetadataSchema(object):
     @duration.setter
     def duration(self, duration):
         """Sets the duration of this MetadataSchema.
-
 
         :param duration: The duration of this MetadataSchema.  # noqa: E501
         :type: str
@@ -186,7 +176,6 @@ class MetadataSchema(object):
     def typical_time(self):
         """Gets the typical_time of this MetadataSchema.  # noqa: E501
 
-
         :return: The typical_time of this MetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -195,7 +184,6 @@ class MetadataSchema(object):
     @typical_time.setter
     def typical_time(self, typical_time):
         """Sets the typical_time of this MetadataSchema.
-
 
         :param typical_time: The typical_time of this MetadataSchema.  # noqa: E501
         :type: str
@@ -207,7 +195,6 @@ class MetadataSchema(object):
     def keywords(self):
         """Gets the keywords of this MetadataSchema.  # noqa: E501
 
-
         :return: The keywords of this MetadataSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -216,7 +203,6 @@ class MetadataSchema(object):
     @keywords.setter
     def keywords(self, keywords):
         """Sets the keywords of this MetadataSchema.
-
 
         :param keywords: The keywords of this MetadataSchema.  # noqa: E501
         :type: list[str]

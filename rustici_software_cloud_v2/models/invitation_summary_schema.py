@@ -163,7 +163,6 @@ class InvitationSummarySchema(object):
     def updated(self):
         """Gets the updated of this InvitationSummarySchema.  # noqa: E501
 
-
         :return: The updated of this InvitationSummarySchema.  # noqa: E501
         :rtype: datetime
         """
@@ -172,7 +171,6 @@ class InvitationSummarySchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this InvitationSummarySchema.
-
 
         :param updated: The updated of this InvitationSummarySchema.  # noqa: E501
         :type: datetime

@@ -33,45 +33,45 @@ class ApplicationManagementApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_application(self, application_name, **kwargs):  # noqa: E501
-        """create_application  # noqa: E501
+    def create_application(self, application_request, **kwargs):  # noqa: E501
+        """Use the Application Management App to create a new Application   # noqa: E501
 
-        A call to this method will create a new application and return a basic object describing it.  # noqa: E501
+        Creates an application.  Applications are how resources are grouped together in SCORM Cloud.  Any courses, registrations, etc. will only be accessible via the credentials for the application they belong to.  >**Note:** >Application IDs are unique in that we do not allow the user to supply a custom value for this field.  The ID of the newly created application will be specified in the response from this method.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_application(application_name, async_req=True)
+        >>> thread = api.create_application(application_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ApplicationSchema application_name: (required)
+        :param ApplicationRequestSchema application_request: (required)
         :return: ApplicationSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_application_with_http_info(application_name, **kwargs)  # noqa: E501
+            return self.create_application_with_http_info(application_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_application_with_http_info(application_name, **kwargs)  # noqa: E501
+            (data) = self.create_application_with_http_info(application_request, **kwargs)  # noqa: E501
             return data
 
-    def create_application_with_http_info(self, application_name, **kwargs):  # noqa: E501
-        """create_application  # noqa: E501
+    def create_application_with_http_info(self, application_request, **kwargs):  # noqa: E501
+        """Use the Application Management App to create a new Application   # noqa: E501
 
-        A call to this method will create a new application and return a basic object describing it.  # noqa: E501
+        Creates an application.  Applications are how resources are grouped together in SCORM Cloud.  Any courses, registrations, etc. will only be accessible via the credentials for the application they belong to.  >**Note:** >Application IDs are unique in that we do not allow the user to supply a custom value for this field.  The ID of the newly created application will be specified in the response from this method.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_application_with_http_info(application_name, async_req=True)
+        >>> thread = api.create_application_with_http_info(application_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ApplicationSchema application_name: (required)
+        :param ApplicationRequestSchema application_request: (required)
         :return: ApplicationSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['application_name']  # noqa: E501
+        all_params = ['application_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -86,10 +86,10 @@ class ApplicationManagementApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'application_name' is set
-        if ('application_name' not in params or
-                params['application_name'] is None):
-            raise ValueError("Missing the required parameter `application_name` when calling `create_application`")  # noqa: E501
+        # verify the required parameter 'application_request' is set
+        if ('application_request' not in params or
+                params['application_request'] is None):
+            raise ValueError("Missing the required parameter `application_request` when calling `create_application`")  # noqa: E501
 
         collection_formats = {}
 
@@ -103,8 +103,8 @@ class ApplicationManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'application_name' in params:
-            body_params = params['application_name']
+        if 'application_request' in params:
+            body_params = params['application_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -133,9 +133,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def create_credential(self, child_app_id, credential_request, **kwargs):  # noqa: E501
-        """create_credential  # noqa: E501
+        """Use the Application Manager App to create a new secret key for an Application   # noqa: E501
 
-        Create a new credential (aka secret key) for use with the `childAppId`.   # noqa: E501
+        Creates a new credential (aka secret key) for use with the child application.  The credential will be used alongside the `childAppId` for basic auth requests.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_credential(child_app_id, credential_request, async_req=True)
@@ -156,9 +156,9 @@ class ApplicationManagementApi(object):
             return data
 
     def create_credential_with_http_info(self, child_app_id, credential_request, **kwargs):  # noqa: E501
-        """create_credential  # noqa: E501
+        """Use the Application Manager App to create a new secret key for an Application   # noqa: E501
 
-        Create a new credential (aka secret key) for use with the `childAppId`.   # noqa: E501
+        Creates a new credential (aka secret key) for use with the child application.  The credential will be used alongside the `childAppId` for basic auth requests.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_credential_with_http_info(child_app_id, credential_request, async_req=True)
@@ -240,9 +240,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def create_token(self, token_request, **kwargs):  # noqa: E501
-        """create_token  # noqa: E501
+        """Obtain an OAuth token for scoped access to an Application   # noqa: E501
 
-        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested. Note: the token is not stored and therefore can not be modified or deleted. The requested permissions are encoded in the token which is then signed. As long as the secret used to create it is not changed the token will be valid until it expires.  # noqa: E501
+        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >**Note:** >The token is not stored and therefore can not be modified or deleted.  The requested permissions are encoded in the token which is then signed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_token(token_request, async_req=True)
@@ -262,9 +262,9 @@ class ApplicationManagementApi(object):
             return data
 
     def create_token_with_http_info(self, token_request, **kwargs):  # noqa: E501
-        """create_token  # noqa: E501
+        """Obtain an OAuth token for scoped access to an Application   # noqa: E501
 
-        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested. Note: the token is not stored and therefore can not be modified or deleted. The requested permissions are encoded in the token which is then signed. As long as the secret used to create it is not changed the token will be valid until it expires.  # noqa: E501
+        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >**Note:** >The token is not stored and therefore can not be modified or deleted.  The requested permissions are encoded in the token which is then signed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_token_with_http_info(token_request, async_req=True)
@@ -339,9 +339,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def delete_application(self, child_app_id, **kwargs):  # noqa: E501
-        """delete_application  # noqa: E501
+        """Use the Application Management App to delete an Application   # noqa: E501
 
-        Delete an application.  If the application contains content, it must first be manually removed before calling this method, else an error will be thrown.  # noqa: E501
+        Deletes the specified application.  All content within an application must be removed in order to allow deletion.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application(child_app_id, async_req=True)
@@ -361,9 +361,9 @@ class ApplicationManagementApi(object):
             return data
 
     def delete_application_with_http_info(self, child_app_id, **kwargs):  # noqa: E501
-        """delete_application  # noqa: E501
+        """Use the Application Management App to delete an Application   # noqa: E501
 
-        Delete an application.  If the application contains content, it must first be manually removed before calling this method, else an error will be thrown.  # noqa: E501
+        Deletes the specified application.  All content within an application must be removed in order to allow deletion.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application_with_http_info(child_app_id, async_req=True)
@@ -438,9 +438,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def delete_application_configuration_setting(self, setting_id, **kwargs):  # noqa: E501
-        """Clears the `settingId` value for this level   # noqa: E501
+        """Delete a configuration setting explicitly set for an Application   # noqa: E501
 
-        Clears the setting value at this level.  This is effectively reverting the setting to the system level default.   # noqa: E501
+        Clears the specified setting from the application.  This causes the setting to inherit a value from a higher level (e.g. system default if deleting from application, application level if deleting from learning standard). If the configuration setting was not set at the application level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application_configuration_setting(setting_id, async_req=True)
@@ -449,7 +449,7 @@ class ApplicationManagementApi(object):
         :param async_req bool
         :param str setting_id: (required)
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -462,9 +462,9 @@ class ApplicationManagementApi(object):
             return data
 
     def delete_application_configuration_setting_with_http_info(self, setting_id, **kwargs):  # noqa: E501
-        """Clears the `settingId` value for this level   # noqa: E501
+        """Delete a configuration setting explicitly set for an Application   # noqa: E501
 
-        Clears the setting value at this level.  This is effectively reverting the setting to the system level default.   # noqa: E501
+        Clears the specified setting from the application.  This causes the setting to inherit a value from a higher level (e.g. system default if deleting from application, application level if deleting from learning standard). If the configuration setting was not set at the application level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application_configuration_setting_with_http_info(setting_id, async_req=True)
@@ -473,7 +473,7 @@ class ApplicationManagementApi(object):
         :param async_req bool
         :param str setting_id: (required)
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -545,9 +545,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def delete_credential(self, child_app_id, credential_id, **kwargs):  # noqa: E501
-        """delete_credential  # noqa: E501
+        """Use the Application Management App to delete a secret key from an Application   # noqa: E501
 
-        Delete `credentialId` from the system.  Note: if an application's last secret key is deleted it will not be able to use the SCORM Cloud api until another key is granted to it via `CreateCredential`.  Removing the last secret key may also disable some priviledges in the website.   # noqa: E501
+        Deletes a credential belonging to the child application.  >**Caution:** >If the last secret key for an application is deleted it will not be able to use the SCORM Cloud API until another key is granted to it via `CreateCredential`.  It may also disable some website privileges.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_credential(child_app_id, credential_id, async_req=True)
@@ -568,9 +568,9 @@ class ApplicationManagementApi(object):
             return data
 
     def delete_credential_with_http_info(self, child_app_id, credential_id, **kwargs):  # noqa: E501
-        """delete_credential  # noqa: E501
+        """Use the Application Management App to delete a secret key from an Application   # noqa: E501
 
-        Delete `credentialId` from the system.  Note: if an application's last secret key is deleted it will not be able to use the SCORM Cloud api until another key is granted to it via `CreateCredential`.  Removing the last secret key may also disable some priviledges in the website.   # noqa: E501
+        Deletes a credential belonging to the child application.  >**Caution:** >If the last secret key for an application is deleted it will not be able to use the SCORM Cloud API until another key is granted to it via `CreateCredential`.  It may also disable some website privileges.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_credential_with_http_info(child_app_id, credential_id, async_req=True)
@@ -652,9 +652,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def get_application_configuration(self, **kwargs):  # noqa: E501
-        """get_application_configuration  # noqa: E501
+        """Get effective configuration settings for an Application   # noqa: E501
 
-        Returns all configuration settings for this level. These settings will only affect items within this application which do not have that setting themselves.  >Note -----  >This resource actually represents 2 distinct levels which are:  >- ALL content in an application.  This is achieved by leaving `learningStandard` and `singleSco`   as `null`.  Anything set at the learningStandard/singleSco level will take precedence over these   settings. - Content falling into a learningStandard/singleSco category.  This allows setting more specific   defaults for a particular learningStandard/singleSco combination.  Note: both `learningStandard`   and `singleSco` must be provided, as this level is considered to be identified by those items   joined.   # noqa: E501
+        Returns the effective configuration settings for the application.  Configuration settings at the application level will apply to all items within that application (courses, registrations, etc.).  If there is a configuration setting present at a more specific level (course, registration, etc.), that setting will override the one set at the application level.  >**Note:** >This resource lists configuration for two groupings of content: >- ALL content in an application.  This is achieved by leaving `learningStandard` and   `singleSco` as `null`.  Anything set at the learningStandard/singleSco level will take precedence over these   settings. >- Content falling into a learningStandard/singleSco category.  This allows setting more specific   defaults for a particular learningStandard/singleSco combination.   _Note: both `learningStandard` and `singleSco` must be provided, as this level is considered to be   identified by those items joined._   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_configuration(async_req=True)
@@ -662,7 +662,7 @@ class ApplicationManagementApi(object):
 
         :param async_req bool
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -676,9 +676,9 @@ class ApplicationManagementApi(object):
             return data
 
     def get_application_configuration_with_http_info(self, **kwargs):  # noqa: E501
-        """get_application_configuration  # noqa: E501
+        """Get effective configuration settings for an Application   # noqa: E501
 
-        Returns all configuration settings for this level. These settings will only affect items within this application which do not have that setting themselves.  >Note -----  >This resource actually represents 2 distinct levels which are:  >- ALL content in an application.  This is achieved by leaving `learningStandard` and `singleSco`   as `null`.  Anything set at the learningStandard/singleSco level will take precedence over these   settings. - Content falling into a learningStandard/singleSco category.  This allows setting more specific   defaults for a particular learningStandard/singleSco combination.  Note: both `learningStandard`   and `singleSco` must be provided, as this level is considered to be identified by those items   joined.   # noqa: E501
+        Returns the effective configuration settings for the application.  Configuration settings at the application level will apply to all items within that application (courses, registrations, etc.).  If there is a configuration setting present at a more specific level (course, registration, etc.), that setting will override the one set at the application level.  >**Note:** >This resource lists configuration for two groupings of content: >- ALL content in an application.  This is achieved by leaving `learningStandard` and   `singleSco` as `null`.  Anything set at the learningStandard/singleSco level will take precedence over these   settings. >- Content falling into a learningStandard/singleSco category.  This allows setting more specific   defaults for a particular learningStandard/singleSco combination.   _Note: both `learningStandard` and `singleSco` must be provided, as this level is considered to be   identified by those items joined._   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_configuration_with_http_info(async_req=True)
@@ -686,7 +686,7 @@ class ApplicationManagementApi(object):
 
         :param async_req bool
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -754,10 +754,117 @@ class ApplicationManagementApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_application_list(self, **kwargs):  # noqa: E501
-        """Get a list of all applications for the realm.  # noqa: E501
+    def get_application_info(self, child_app_id, **kwargs):  # noqa: E501
+        """Use the Application Management App to get detailed information about an Application   # noqa: E501
 
-        Get list of all applications in this realm.  # noqa: E501
+        Returns detailed information about the application.  This includes name, create date, and delete permissions.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_application_info(child_app_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str child_app_id: (required)
+        :param bool include_course_count: Include a count of courses for the application.
+        :param bool include_registration_count: Include a count of registrations created for the application during the current billing period.
+        :return: ApplicationInfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_application_info_with_http_info(child_app_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_application_info_with_http_info(child_app_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_application_info_with_http_info(self, child_app_id, **kwargs):  # noqa: E501
+        """Use the Application Management App to get detailed information about an Application   # noqa: E501
+
+        Returns detailed information about the application.  This includes name, create date, and delete permissions.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_application_info_with_http_info(child_app_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str child_app_id: (required)
+        :param bool include_course_count: Include a count of courses for the application.
+        :param bool include_registration_count: Include a count of registrations created for the application during the current billing period.
+        :return: ApplicationInfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['child_app_id', 'include_course_count', 'include_registration_count']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_application_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'child_app_id' is set
+        if ('child_app_id' not in params or
+                params['child_app_id'] is None):
+            raise ValueError("Missing the required parameter `child_app_id` when calling `get_application_info`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'child_app_id' in params:
+            path_params['childAppId'] = params['child_app_id']  # noqa: E501
+
+        query_params = []
+        if 'include_course_count' in params:
+            query_params.append(('includeCourseCount', params['include_course_count']))  # noqa: E501
+        if 'include_registration_count' in params:
+            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/appManagement/applications/{childAppId}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ApplicationInfoSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_application_list(self, **kwargs):  # noqa: E501
+        """Use the Application Management App to get a list of Applications   # noqa: E501
+
+        Returns a list of all applications which are in this Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_list(async_req=True)
@@ -776,9 +883,9 @@ class ApplicationManagementApi(object):
             return data
 
     def get_application_list_with_http_info(self, **kwargs):  # noqa: E501
-        """Get a list of all applications for the realm.  # noqa: E501
+        """Use the Application Management App to get a list of Applications   # noqa: E501
 
-        Get list of all applications in this realm.  # noqa: E501
+        Returns a list of all applications which are in this Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_list_with_http_info(async_req=True)
@@ -846,9 +953,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def get_credentials(self, child_app_id, **kwargs):  # noqa: E501
-        """get_credentials  # noqa: E501
+        """Use the Application Manager App to get a list of secret keys for an Application   # noqa: E501
 
-        Retrieve a list of all credentials (aka secret keys) belonging to `childAppId` and their statuses.   # noqa: E501
+        Returns a list of all the credentials (aka secret keys) belonging to the child application.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_credentials(child_app_id, async_req=True)
@@ -868,9 +975,9 @@ class ApplicationManagementApi(object):
             return data
 
     def get_credentials_with_http_info(self, child_app_id, **kwargs):  # noqa: E501
-        """get_credentials  # noqa: E501
+        """Use the Application Manager App to get a list of secret keys for an Application   # noqa: E501
 
-        Retrieve a list of all credentials (aka secret keys) belonging to `childAppId` and their statuses.   # noqa: E501
+        Returns a list of all the credentials (aka secret keys) belonging to the child application.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_credentials_with_http_info(child_app_id, async_req=True)
@@ -945,9 +1052,9 @@ class ApplicationManagementApi(object):
             collection_formats=collection_formats)
 
     def set_application_configuration(self, configuration_settings, **kwargs):  # noqa: E501
-        """set_application_configuration  # noqa: E501
+        """Update configuration settings for an Application   # noqa: E501
 
-        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults.   # noqa: E501
+        Updates configuration settings at the application level.  This will explicitly set a value at the applicaiton level.  These settings will affect all items within the application which do not have their own explicit configuration set.  This can effectively be used to set application level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_application_configuration(configuration_settings, async_req=True)
@@ -956,7 +1063,7 @@ class ApplicationManagementApi(object):
         :param async_req bool
         :param SettingsPostSchema configuration_settings: (required)
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -969,9 +1076,9 @@ class ApplicationManagementApi(object):
             return data
 
     def set_application_configuration_with_http_info(self, configuration_settings, **kwargs):  # noqa: E501
-        """set_application_configuration  # noqa: E501
+        """Update configuration settings for an Application   # noqa: E501
 
-        Set configuration settings for the application level.  These settings will only affect items within the application which do not have their own configuration set.  This can be used to effectively set application level defaults.   # noqa: E501
+        Updates configuration settings at the application level.  This will explicitly set a value at the applicaiton level.  These settings will affect all items within the application which do not have their own explicit configuration set.  This can effectively be used to set application level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_application_configuration_with_http_info(configuration_settings, async_req=True)
@@ -980,7 +1087,7 @@ class ApplicationManagementApi(object):
         :param async_req bool
         :param SettingsPostSchema configuration_settings: (required)
         :param str learning_standard: If specified, the request will be scoped to the provided learning standard.
-        :param bool single_sco: Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
+        :param bool single_sco: Required if `learningStandard` is specified. Scopes settings to either single or multi-SCO content. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1051,10 +1158,117 @@ class ApplicationManagementApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_credential(self, child_app_id, credential_id, credential_update, **kwargs):  # noqa: E501
-        """update_credential  # noqa: E501
+    def update_application(self, child_app_id, application_properties, **kwargs):  # noqa: E501
+        """Use the Application Management App to update information about an Application   # noqa: E501
 
-        Update the name or status associated with `credentialId`.  If the status is updated to disabled, the credential will no longer be valid for authorization through the API.  If the last (or only) key for an application is disabled it may affect some website priviledges   # noqa: E501
+        Updates information about the application, such as the name and enabling/ disabling deletion operations for the application.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_application(child_app_id, application_properties, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str child_app_id: (required)
+        :param UpdateApplicationSchema application_properties: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_application_with_http_info(child_app_id, application_properties, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_application_with_http_info(child_app_id, application_properties, **kwargs)  # noqa: E501
+            return data
+
+    def update_application_with_http_info(self, child_app_id, application_properties, **kwargs):  # noqa: E501
+        """Use the Application Management App to update information about an Application   # noqa: E501
+
+        Updates information about the application, such as the name and enabling/ disabling deletion operations for the application.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_application_with_http_info(child_app_id, application_properties, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str child_app_id: (required)
+        :param UpdateApplicationSchema application_properties: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['child_app_id', 'application_properties']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_application" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'child_app_id' is set
+        if ('child_app_id' not in params or
+                params['child_app_id'] is None):
+            raise ValueError("Missing the required parameter `child_app_id` when calling `update_application`")  # noqa: E501
+        # verify the required parameter 'application_properties' is set
+        if ('application_properties' not in params or
+                params['application_properties'] is None):
+            raise ValueError("Missing the required parameter `application_properties` when calling `update_application`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'child_app_id' in params:
+            path_params['childAppId'] = params['child_app_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'application_properties' in params:
+            body_params = params['application_properties']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/appManagement/applications/{childAppId}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_credential(self, child_app_id, credential_id, credential_update, **kwargs):  # noqa: E501
+        """Use the Application Manager App to update an existing secret key for an Application   # noqa: E501
+
+        Updates the name or status associated with the credential.  Disabling a credential will cause it to no longer be valid for authorization through the API.  >**Caution:** >If the last (or only) key for an application is disabled it may affect some website privileges.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_credential(child_app_id, credential_id, credential_update, async_req=True)
@@ -1076,9 +1290,9 @@ class ApplicationManagementApi(object):
             return data
 
     def update_credential_with_http_info(self, child_app_id, credential_id, credential_update, **kwargs):  # noqa: E501
-        """update_credential  # noqa: E501
+        """Use the Application Manager App to update an existing secret key for an Application   # noqa: E501
 
-        Update the name or status associated with `credentialId`.  If the status is updated to disabled, the credential will no longer be valid for authorization through the API.  If the last (or only) key for an application is disabled it may affect some website priviledges   # noqa: E501
+        Updates the name or status associated with the credential.  Disabling a credential will cause it to no longer be valid for authorization through the API.  >**Caution:** >If the last (or only) key for an application is disabled it may affect some website privileges.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_credential_with_http_info(child_app_id, credential_id, credential_update, async_req=True)

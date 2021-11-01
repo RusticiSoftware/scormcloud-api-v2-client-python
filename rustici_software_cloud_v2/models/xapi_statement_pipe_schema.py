@@ -81,7 +81,6 @@ class XapiStatementPipeSchema(object):
     def id(self):
         """Gets the id of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The id of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: str
         """
@@ -90,7 +89,6 @@ class XapiStatementPipeSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiStatementPipeSchema.
-
 
         :param id: The id of this XapiStatementPipeSchema.  # noqa: E501
         :type: str
@@ -102,7 +100,6 @@ class XapiStatementPipeSchema(object):
     def last_forwarded_statement_date(self):
         """Gets the last_forwarded_statement_date of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The last_forwarded_statement_date of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: str
         """
@@ -111,7 +108,6 @@ class XapiStatementPipeSchema(object):
     @last_forwarded_statement_date.setter
     def last_forwarded_statement_date(self, last_forwarded_statement_date):
         """Sets the last_forwarded_statement_date of this XapiStatementPipeSchema.
-
 
         :param last_forwarded_statement_date: The last_forwarded_statement_date of this XapiStatementPipeSchema.  # noqa: E501
         :type: str
@@ -123,7 +119,6 @@ class XapiStatementPipeSchema(object):
     def more_url(self):
         """Gets the more_url of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The more_url of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: str
         """
@@ -132,7 +127,6 @@ class XapiStatementPipeSchema(object):
     @more_url.setter
     def more_url(self, more_url):
         """Sets the more_url of this XapiStatementPipeSchema.
-
 
         :param more_url: The more_url of this XapiStatementPipeSchema.  # noqa: E501
         :type: str
@@ -144,7 +138,6 @@ class XapiStatementPipeSchema(object):
     def attempts(self):
         """Gets the attempts of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The attempts of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: int
         """
@@ -153,7 +146,6 @@ class XapiStatementPipeSchema(object):
     @attempts.setter
     def attempts(self, attempts):
         """Sets the attempts of this XapiStatementPipeSchema.
-
 
         :param attempts: The attempts of this XapiStatementPipeSchema.  # noqa: E501
         :type: int
@@ -165,7 +157,6 @@ class XapiStatementPipeSchema(object):
     def visible_after(self):
         """Gets the visible_after of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The visible_after of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: str
         """
@@ -174,7 +165,6 @@ class XapiStatementPipeSchema(object):
     @visible_after.setter
     def visible_after(self, visible_after):
         """Sets the visible_after of this XapiStatementPipeSchema.
-
 
         :param visible_after: The visible_after of this XapiStatementPipeSchema.  # noqa: E501
         :type: str
@@ -186,7 +176,6 @@ class XapiStatementPipeSchema(object):
     def source(self):
         """Gets the source of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The source of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: XapiEndpointSchema
         """
@@ -195,7 +184,6 @@ class XapiStatementPipeSchema(object):
     @source.setter
     def source(self, source):
         """Sets the source of this XapiStatementPipeSchema.
-
 
         :param source: The source of this XapiStatementPipeSchema.  # noqa: E501
         :type: XapiEndpointSchema
@@ -207,7 +195,6 @@ class XapiStatementPipeSchema(object):
     def target(self):
         """Gets the target of this XapiStatementPipeSchema.  # noqa: E501
 
-
         :return: The target of this XapiStatementPipeSchema.  # noqa: E501
         :rtype: XapiEndpointSchema
         """
@@ -216,7 +203,6 @@ class XapiStatementPipeSchema(object):
     @target.setter
     def target(self, target):
         """Sets the target of this XapiStatementPipeSchema.
-
 
         :param target: The target of this XapiStatementPipeSchema.  # noqa: E501
         :type: XapiEndpointSchema

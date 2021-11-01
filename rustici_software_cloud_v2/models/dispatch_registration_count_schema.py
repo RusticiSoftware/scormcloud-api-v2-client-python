@@ -56,7 +56,6 @@ class DispatchRegistrationCountSchema(object):
     def registration_count(self):
         """Gets the registration_count of this DispatchRegistrationCountSchema.  # noqa: E501
 
-
         :return: The registration_count of this DispatchRegistrationCountSchema.  # noqa: E501
         :rtype: int
         """
@@ -65,7 +64,6 @@ class DispatchRegistrationCountSchema(object):
     @registration_count.setter
     def registration_count(self, registration_count):
         """Sets the registration_count of this DispatchRegistrationCountSchema.
-
 
         :param registration_count: The registration_count of this DispatchRegistrationCountSchema.  # noqa: E501
         :type: int
@@ -77,7 +75,6 @@ class DispatchRegistrationCountSchema(object):
     def last_reset_date(self):
         """Gets the last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
 
-
         :return: The last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -86,7 +83,6 @@ class DispatchRegistrationCountSchema(object):
     @last_reset_date.setter
     def last_reset_date(self, last_reset_date):
         """Sets the last_reset_date of this DispatchRegistrationCountSchema.
-
 
         :param last_reset_date: The last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
         :type: datetime

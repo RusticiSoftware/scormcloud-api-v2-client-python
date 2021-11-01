@@ -91,7 +91,6 @@ class ReportageAccountInfoSchema(object):
     def email(self):
         """Gets the email of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The email of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: str
         """
@@ -100,7 +99,6 @@ class ReportageAccountInfoSchema(object):
     @email.setter
     def email(self, email):
         """Sets the email of this ReportageAccountInfoSchema.
-
 
         :param email: The email of this ReportageAccountInfoSchema.  # noqa: E501
         :type: str
@@ -112,7 +110,6 @@ class ReportageAccountInfoSchema(object):
     def first_name(self):
         """Gets the first_name of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The first_name of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: str
         """
@@ -121,7 +118,6 @@ class ReportageAccountInfoSchema(object):
     @first_name.setter
     def first_name(self, first_name):
         """Sets the first_name of this ReportageAccountInfoSchema.
-
 
         :param first_name: The first_name of this ReportageAccountInfoSchema.  # noqa: E501
         :type: str
@@ -133,7 +129,6 @@ class ReportageAccountInfoSchema(object):
     def last_name(self):
         """Gets the last_name of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The last_name of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: str
         """
@@ -142,7 +137,6 @@ class ReportageAccountInfoSchema(object):
     @last_name.setter
     def last_name(self, last_name):
         """Sets the last_name of this ReportageAccountInfoSchema.
-
 
         :param last_name: The last_name of this ReportageAccountInfoSchema.  # noqa: E501
         :type: str
@@ -154,7 +148,6 @@ class ReportageAccountInfoSchema(object):
     def company(self):
         """Gets the company of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The company of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: str
         """
@@ -163,7 +156,6 @@ class ReportageAccountInfoSchema(object):
     @company.setter
     def company(self, company):
         """Sets the company of this ReportageAccountInfoSchema.
-
 
         :param company: The company of this ReportageAccountInfoSchema.  # noqa: E501
         :type: str
@@ -175,7 +167,6 @@ class ReportageAccountInfoSchema(object):
     def account_type(self):
         """Gets the account_type of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The account_type of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: str
         """
@@ -184,7 +175,6 @@ class ReportageAccountInfoSchema(object):
     @account_type.setter
     def account_type(self, account_type):
         """Sets the account_type of this ReportageAccountInfoSchema.
-
 
         :param account_type: The account_type of this ReportageAccountInfoSchema.  # noqa: E501
         :type: str
@@ -196,7 +186,6 @@ class ReportageAccountInfoSchema(object):
     def reg_limit(self):
         """Gets the reg_limit of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The reg_limit of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: int
         """
@@ -205,7 +194,6 @@ class ReportageAccountInfoSchema(object):
     @reg_limit.setter
     def reg_limit(self, reg_limit):
         """Sets the reg_limit of this ReportageAccountInfoSchema.
-
 
         :param reg_limit: The reg_limit of this ReportageAccountInfoSchema.  # noqa: E501
         :type: int
@@ -217,7 +205,6 @@ class ReportageAccountInfoSchema(object):
     def strict_limit(self):
         """Gets the strict_limit of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The strict_limit of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: bool
         """
@@ -226,7 +213,6 @@ class ReportageAccountInfoSchema(object):
     @strict_limit.setter
     def strict_limit(self, strict_limit):
         """Sets the strict_limit of this ReportageAccountInfoSchema.
-
 
         :param strict_limit: The strict_limit of this ReportageAccountInfoSchema.  # noqa: E501
         :type: bool
@@ -238,7 +224,6 @@ class ReportageAccountInfoSchema(object):
     def create_date(self):
         """Gets the create_date of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The create_date of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -247,7 +232,6 @@ class ReportageAccountInfoSchema(object):
     @create_date.setter
     def create_date(self, create_date):
         """Sets the create_date of this ReportageAccountInfoSchema.
-
 
         :param create_date: The create_date of this ReportageAccountInfoSchema.  # noqa: E501
         :type: datetime
@@ -259,7 +243,6 @@ class ReportageAccountInfoSchema(object):
     def usage(self):
         """Gets the usage of this ReportageAccountInfoSchema.  # noqa: E501
 
-
         :return: The usage of this ReportageAccountInfoSchema.  # noqa: E501
         :rtype: ReportageAccountInfoUsageSchema
         """
@@ -268,7 +251,6 @@ class ReportageAccountInfoSchema(object):
     @usage.setter
     def usage(self, usage):
         """Sets the usage of this ReportageAccountInfoSchema.
-
 
         :param usage: The usage of this ReportageAccountInfoSchema.  # noqa: E501
         :type: ReportageAccountInfoUsageSchema

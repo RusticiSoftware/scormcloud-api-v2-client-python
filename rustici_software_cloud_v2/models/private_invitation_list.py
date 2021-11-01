@@ -79,6 +79,7 @@ class PrivateInvitationList(object):
     def more(self):
         """Gets the more of this PrivateInvitationList.  # noqa: E501
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :return: The more of this PrivateInvitationList.  # noqa: E501
         :rtype: str
@@ -89,6 +90,7 @@ class PrivateInvitationList(object):
     def more(self, more):
         """Sets the more of this PrivateInvitationList.
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :param more: The more of this PrivateInvitationList.  # noqa: E501
         :type: str

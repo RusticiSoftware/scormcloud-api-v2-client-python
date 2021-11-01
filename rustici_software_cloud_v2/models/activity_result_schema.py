@@ -111,7 +111,6 @@ class ActivityResultSchema(object):
     def id(self):
         """Gets the id of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The id of this ActivityResultSchema.  # noqa: E501
         :rtype: str
         """
@@ -120,7 +119,6 @@ class ActivityResultSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this ActivityResultSchema.
-
 
         :param id: The id of this ActivityResultSchema.  # noqa: E501
         :type: str
@@ -132,7 +130,6 @@ class ActivityResultSchema(object):
     def title(self):
         """Gets the title of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The title of this ActivityResultSchema.  # noqa: E501
         :rtype: str
         """
@@ -141,7 +138,6 @@ class ActivityResultSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this ActivityResultSchema.
-
 
         :param title: The title of this ActivityResultSchema.  # noqa: E501
         :type: str
@@ -153,7 +149,6 @@ class ActivityResultSchema(object):
     def attempts(self):
         """Gets the attempts of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The attempts of this ActivityResultSchema.  # noqa: E501
         :rtype: int
         """
@@ -162,7 +157,6 @@ class ActivityResultSchema(object):
     @attempts.setter
     def attempts(self, attempts):
         """Sets the attempts of this ActivityResultSchema.
-
 
         :param attempts: The attempts of this ActivityResultSchema.  # noqa: E501
         :type: int
@@ -174,6 +168,7 @@ class ActivityResultSchema(object):
     def activity_completion(self):
         """Gets the activity_completion of this ActivityResultSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :return: The activity_completion of this ActivityResultSchema.  # noqa: E501
         :rtype: str
@@ -184,16 +179,11 @@ class ActivityResultSchema(object):
     def activity_completion(self, activity_completion):
         """Sets the activity_completion of this ActivityResultSchema.
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :param activity_completion: The activity_completion of this ActivityResultSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
-        if activity_completion not in allowed_values:
-            raise ValueError(
-                "Invalid value for `activity_completion` ({0}), must be one of {1}"  # noqa: E501
-                .format(activity_completion, allowed_values)
-            )
 
         self._activity_completion = activity_completion
 
@@ -201,6 +191,7 @@ class ActivityResultSchema(object):
     def activity_success(self):
         """Gets the activity_success of this ActivityResultSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The activity_success of this ActivityResultSchema.  # noqa: E501
         :rtype: str
@@ -211,23 +202,17 @@ class ActivityResultSchema(object):
     def activity_success(self, activity_success):
         """Sets the activity_success of this ActivityResultSchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param activity_success: The activity_success of this ActivityResultSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if activity_success not in allowed_values:
-            raise ValueError(
-                "Invalid value for `activity_success` ({0}), must be one of {1}"  # noqa: E501
-                .format(activity_success, allowed_values)
-            )
 
         self._activity_success = activity_success
 
     @property
     def score(self):
         """Gets the score of this ActivityResultSchema.  # noqa: E501
-
 
         :return: The score of this ActivityResultSchema.  # noqa: E501
         :rtype: ScoreSchema
@@ -237,7 +222,6 @@ class ActivityResultSchema(object):
     @score.setter
     def score(self, score):
         """Sets the score of this ActivityResultSchema.
-
 
         :param score: The score of this ActivityResultSchema.  # noqa: E501
         :type: ScoreSchema
@@ -249,7 +233,6 @@ class ActivityResultSchema(object):
     def time_tracked(self):
         """Gets the time_tracked of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The time_tracked of this ActivityResultSchema.  # noqa: E501
         :rtype: str
         """
@@ -258,7 +241,6 @@ class ActivityResultSchema(object):
     @time_tracked.setter
     def time_tracked(self, time_tracked):
         """Sets the time_tracked of this ActivityResultSchema.
-
 
         :param time_tracked: The time_tracked of this ActivityResultSchema.  # noqa: E501
         :type: str
@@ -270,7 +252,6 @@ class ActivityResultSchema(object):
     def completion_amount(self):
         """Gets the completion_amount of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The completion_amount of this ActivityResultSchema.  # noqa: E501
         :rtype: CompletionAmountSchema
         """
@@ -279,7 +260,6 @@ class ActivityResultSchema(object):
     @completion_amount.setter
     def completion_amount(self, completion_amount):
         """Sets the completion_amount of this ActivityResultSchema.
-
 
         :param completion_amount: The completion_amount of this ActivityResultSchema.  # noqa: E501
         :type: CompletionAmountSchema
@@ -291,7 +271,6 @@ class ActivityResultSchema(object):
     def suspended(self):
         """Gets the suspended of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The suspended of this ActivityResultSchema.  # noqa: E501
         :rtype: bool
         """
@@ -300,7 +279,6 @@ class ActivityResultSchema(object):
     @suspended.setter
     def suspended(self, suspended):
         """Sets the suspended of this ActivityResultSchema.
-
 
         :param suspended: The suspended of this ActivityResultSchema.  # noqa: E501
         :type: bool
@@ -312,7 +290,6 @@ class ActivityResultSchema(object):
     def children(self):
         """Gets the children of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The children of this ActivityResultSchema.  # noqa: E501
         :rtype: list[ActivityResultSchema]
         """
@@ -321,7 +298,6 @@ class ActivityResultSchema(object):
     @children.setter
     def children(self, children):
         """Sets the children of this ActivityResultSchema.
-
 
         :param children: The children of this ActivityResultSchema.  # noqa: E501
         :type: list[ActivityResultSchema]
@@ -333,7 +309,6 @@ class ActivityResultSchema(object):
     def objectives(self):
         """Gets the objectives of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The objectives of this ActivityResultSchema.  # noqa: E501
         :rtype: list[ObjectiveSchema]
         """
@@ -342,7 +317,6 @@ class ActivityResultSchema(object):
     @objectives.setter
     def objectives(self, objectives):
         """Sets the objectives of this ActivityResultSchema.
-
 
         :param objectives: The objectives of this ActivityResultSchema.  # noqa: E501
         :type: list[ObjectiveSchema]
@@ -354,7 +328,6 @@ class ActivityResultSchema(object):
     def static_properties(self):
         """Gets the static_properties of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The static_properties of this ActivityResultSchema.  # noqa: E501
         :rtype: StaticPropertiesSchema
         """
@@ -363,7 +336,6 @@ class ActivityResultSchema(object):
     @static_properties.setter
     def static_properties(self, static_properties):
         """Sets the static_properties of this ActivityResultSchema.
-
 
         :param static_properties: The static_properties of this ActivityResultSchema.  # noqa: E501
         :type: StaticPropertiesSchema
@@ -375,7 +347,6 @@ class ActivityResultSchema(object):
     def runtime(self):
         """Gets the runtime of this ActivityResultSchema.  # noqa: E501
 
-
         :return: The runtime of this ActivityResultSchema.  # noqa: E501
         :rtype: RuntimeSchema
         """
@@ -384,7 +355,6 @@ class ActivityResultSchema(object):
     @runtime.setter
     def runtime(self, runtime):
         """Sets the runtime of this ActivityResultSchema.
-
 
         :param runtime: The runtime of this ActivityResultSchema.  # noqa: E501
         :type: RuntimeSchema

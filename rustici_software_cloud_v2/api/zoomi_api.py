@@ -34,9 +34,9 @@ class ZoomiApi(object):
         self.api_client = api_client
 
     def delete_application_zoomi_keys(self, **kwargs):  # noqa: E501
-        """Delete the Zoomi keys for an application.  # noqa: E501
+        """Delete the Zoomi keys for an Application   # noqa: E501
 
-        Delete the Zoomi keys for an application.  # noqa: E501
+        Deletes the Zoomi keys for an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application_zoomi_keys(async_req=True)
@@ -55,9 +55,9 @@ class ZoomiApi(object):
             return data
 
     def delete_application_zoomi_keys_with_http_info(self, **kwargs):  # noqa: E501
-        """Delete the Zoomi keys for an application.  # noqa: E501
+        """Delete the Zoomi keys for an Application   # noqa: E501
 
-        Delete the Zoomi keys for an application.  # noqa: E501
+        Deletes the Zoomi keys for an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_application_zoomi_keys_with_http_info(async_req=True)
@@ -125,9 +125,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def delete_zoomi_course(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Deletes the course in Zoomi but not in cloud  # noqa: E501
+        """Delete the Course from Zoomi   # noqa: E501
 
-        Deletes the course in Zoomi but not in cloud  # noqa: E501
+        Deletes the course from Zoomi, but the course will remain in SCORM Cloud.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_zoomi_course(course_id, version_id, async_req=True)
@@ -135,7 +135,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -148,9 +148,9 @@ class ZoomiApi(object):
             return data
 
     def delete_zoomi_course_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Deletes the course in Zoomi but not in cloud  # noqa: E501
+        """Delete the Course from Zoomi   # noqa: E501
 
-        Deletes the course in Zoomi but not in cloud  # noqa: E501
+        Deletes the course from Zoomi, but the course will remain in SCORM Cloud.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_zoomi_course_with_http_info(course_id, version_id, async_req=True)
@@ -158,7 +158,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -232,9 +232,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def get_application_zoomi_company_id(self, **kwargs):  # noqa: E501
-        """Gets the Zoomi company id of an application.  # noqa: E501
+        """Get the Zoomi company ID of an Application   # noqa: E501
 
-        Gets the Zoomi company id of an application.  # noqa: E501
+        Returns the Zoomi company ID of an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_zoomi_company_id(async_req=True)
@@ -253,9 +253,9 @@ class ZoomiApi(object):
             return data
 
     def get_application_zoomi_company_id_with_http_info(self, **kwargs):  # noqa: E501
-        """Gets the Zoomi company id of an application.  # noqa: E501
+        """Get the Zoomi company ID of an Application   # noqa: E501
 
-        Gets the Zoomi company id of an application.  # noqa: E501
+        Returns the Zoomi company ID of an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_zoomi_company_id_with_http_info(async_req=True)
@@ -323,9 +323,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def get_application_zoomi_public_key(self, **kwargs):  # noqa: E501
-        """Gets the Zoomi public key for an application.  # noqa: E501
+        """Get the Zoomi public key for an Application   # noqa: E501
 
-        Gets the Zoomi public key for an application.  # noqa: E501
+        Returns the Zoomi public key for an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_zoomi_public_key(async_req=True)
@@ -344,9 +344,9 @@ class ZoomiApi(object):
             return data
 
     def get_application_zoomi_public_key_with_http_info(self, **kwargs):  # noqa: E501
-        """Gets the Zoomi public key for an application.  # noqa: E501
+        """Get the Zoomi public key for an Application   # noqa: E501
 
-        Gets the Zoomi public key for an application.  # noqa: E501
+        Returns the Zoomi public key for an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_zoomi_public_key_with_http_info(async_req=True)
@@ -414,9 +414,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def get_course_zoomi_enabled(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Gets the Zoomi enabled value of a course version  # noqa: E501
+        """Get the Zoomi enabled value of a Course Version   # noqa: E501
 
-        Gets the Zoomi enabled value of a course version  # noqa: E501
+        Returns the Zoomi enabled value of a course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_zoomi_enabled(course_id, version_id, async_req=True)
@@ -424,7 +424,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: EnabledSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -437,9 +437,9 @@ class ZoomiApi(object):
             return data
 
     def get_course_zoomi_enabled_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Gets the Zoomi enabled value of a course version  # noqa: E501
+        """Get the Zoomi enabled value of a Course Version   # noqa: E501
 
-        Gets the Zoomi enabled value of a course version  # noqa: E501
+        Returns the Zoomi enabled value of a course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_zoomi_enabled_with_http_info(course_id, version_id, async_req=True)
@@ -447,7 +447,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: EnabledSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -521,9 +521,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def get_zoomi_course_status(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Gets the status for a course from Zoomi  # noqa: E501
+        """Get the status for a Course from Zoomi   # noqa: E501
 
-        Gets the status for a course and starts the upload process to Zoomi if not started.  # noqa: E501
+        Returns the status for a course and starts the upload process to Zoomi if not started.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zoomi_course_status(course_id, version_id, async_req=True)
@@ -531,7 +531,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -544,9 +544,9 @@ class ZoomiApi(object):
             return data
 
     def get_zoomi_course_status_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Gets the status for a course from Zoomi  # noqa: E501
+        """Get the status for a Course from Zoomi   # noqa: E501
 
-        Gets the status for a course and starts the upload process to Zoomi if not started.  # noqa: E501
+        Returns the status for a course and starts the upload process to Zoomi if not started.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zoomi_course_status_with_http_info(course_id, version_id, async_req=True)
@@ -554,7 +554,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -628,9 +628,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def import_course_version_to_zoomi(self, course_id, version_id, zoomi_course_options, **kwargs):  # noqa: E501
-        """Begin the import process with Zoomi.  # noqa: E501
+        """Begin the import process with Zoomi   # noqa: E501
 
-        Begin the import process with Zoomi. Must be followed up by a status call.  # noqa: E501
+        Begins the import process with Zoomi.  Must be followed up by a status call.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_course_version_to_zoomi(course_id, version_id, zoomi_course_options, async_req=True)
@@ -638,7 +638,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param ZoomiCourseOptionsSchema zoomi_course_options: (required)
         :return: None
                  If the method is called asynchronously,
@@ -652,9 +652,9 @@ class ZoomiApi(object):
             return data
 
     def import_course_version_to_zoomi_with_http_info(self, course_id, version_id, zoomi_course_options, **kwargs):  # noqa: E501
-        """Begin the import process with Zoomi.  # noqa: E501
+        """Begin the import process with Zoomi   # noqa: E501
 
-        Begin the import process with Zoomi. Must be followed up by a status call.  # noqa: E501
+        Begins the import process with Zoomi.  Must be followed up by a status call.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_course_version_to_zoomi_with_http_info(course_id, version_id, zoomi_course_options, async_req=True)
@@ -662,7 +662,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param ZoomiCourseOptionsSchema zoomi_course_options: (required)
         :return: None
                  If the method is called asynchronously,
@@ -743,9 +743,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def set_application_zoomi_company_id(self, zoomi_company_id, **kwargs):  # noqa: E501
-        """Set the Zoomi company id value of an application.  # noqa: E501
+        """Set the Zoomi company ID of an Application   # noqa: E501
 
-        Set the Zoomi company id value of an application.  # noqa: E501
+        Sets the Zoomi company ID value of an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_application_zoomi_company_id(zoomi_company_id, async_req=True)
@@ -765,9 +765,9 @@ class ZoomiApi(object):
             return data
 
     def set_application_zoomi_company_id_with_http_info(self, zoomi_company_id, **kwargs):  # noqa: E501
-        """Set the Zoomi company id value of an application.  # noqa: E501
+        """Set the Zoomi company ID of an Application   # noqa: E501
 
-        Set the Zoomi company id value of an application.  # noqa: E501
+        Sets the Zoomi company ID value of an application.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_application_zoomi_company_id_with_http_info(zoomi_company_id, async_req=True)
@@ -842,9 +842,9 @@ class ZoomiApi(object):
             collection_formats=collection_formats)
 
     def set_course_zoomi_enabled(self, course_id, version_id, enabled, **kwargs):  # noqa: E501
-        """Set the Zoomi enabled value of a course version.  # noqa: E501
+        """Set the Zoomi enabled value of a Course Version   # noqa: E501
 
-        Set the Zoomi enabled value of a course version.  # noqa: E501
+        Sets the Zoomi enabled value of a course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_zoomi_enabled(course_id, version_id, enabled, async_req=True)
@@ -852,7 +852,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param EnabledSchema enabled: (required)
         :return: None
                  If the method is called asynchronously,
@@ -866,9 +866,9 @@ class ZoomiApi(object):
             return data
 
     def set_course_zoomi_enabled_with_http_info(self, course_id, version_id, enabled, **kwargs):  # noqa: E501
-        """Set the Zoomi enabled value of a course version.  # noqa: E501
+        """Set the Zoomi enabled value of a Course Version   # noqa: E501
 
-        Set the Zoomi enabled value of a course version.  # noqa: E501
+        Sets the Zoomi enabled value of a course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_zoomi_enabled_with_http_info(course_id, version_id, enabled, async_req=True)
@@ -876,7 +876,7 @@ class ZoomiApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param EnabledSchema enabled: (required)
         :return: None
                  If the method is called asynchronously,

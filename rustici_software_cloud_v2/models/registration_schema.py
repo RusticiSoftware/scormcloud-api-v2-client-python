@@ -151,7 +151,6 @@ class RegistrationSchema(object):
     def id(self):
         """Gets the id of this RegistrationSchema.  # noqa: E501
 
-
         :return: The id of this RegistrationSchema.  # noqa: E501
         :rtype: str
         """
@@ -160,7 +159,6 @@ class RegistrationSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this RegistrationSchema.
-
 
         :param id: The id of this RegistrationSchema.  # noqa: E501
         :type: str
@@ -172,7 +170,6 @@ class RegistrationSchema(object):
     def instance(self):
         """Gets the instance of this RegistrationSchema.  # noqa: E501
 
-
         :return: The instance of this RegistrationSchema.  # noqa: E501
         :rtype: int
         """
@@ -181,7 +178,6 @@ class RegistrationSchema(object):
     @instance.setter
     def instance(self, instance):
         """Sets the instance of this RegistrationSchema.
-
 
         :param instance: The instance of this RegistrationSchema.  # noqa: E501
         :type: int
@@ -239,7 +235,6 @@ class RegistrationSchema(object):
     def updated(self):
         """Gets the updated of this RegistrationSchema.  # noqa: E501
 
-
         :return: The updated of this RegistrationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -248,7 +243,6 @@ class RegistrationSchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this RegistrationSchema.
-
 
         :param updated: The updated of this RegistrationSchema.  # noqa: E501
         :type: datetime
@@ -260,7 +254,6 @@ class RegistrationSchema(object):
     def registration_completion(self):
         """Gets the registration_completion of this RegistrationSchema.  # noqa: E501
 
-
         :return: The registration_completion of this RegistrationSchema.  # noqa: E501
         :rtype: RegistrationCompletion
         """
@@ -269,7 +262,6 @@ class RegistrationSchema(object):
     @registration_completion.setter
     def registration_completion(self, registration_completion):
         """Sets the registration_completion of this RegistrationSchema.
-
 
         :param registration_completion: The registration_completion of this RegistrationSchema.  # noqa: E501
         :type: RegistrationCompletion
@@ -281,7 +273,6 @@ class RegistrationSchema(object):
     def registration_completion_amount(self):
         """Gets the registration_completion_amount of this RegistrationSchema.  # noqa: E501
 
-
         :return: The registration_completion_amount of this RegistrationSchema.  # noqa: E501
         :rtype: float
         """
@@ -290,7 +281,6 @@ class RegistrationSchema(object):
     @registration_completion_amount.setter
     def registration_completion_amount(self, registration_completion_amount):
         """Sets the registration_completion_amount of this RegistrationSchema.
-
 
         :param registration_completion_amount: The registration_completion_amount of this RegistrationSchema.  # noqa: E501
         :type: float
@@ -302,7 +292,6 @@ class RegistrationSchema(object):
     def registration_success(self):
         """Gets the registration_success of this RegistrationSchema.  # noqa: E501
 
-
         :return: The registration_success of this RegistrationSchema.  # noqa: E501
         :rtype: RegistrationSuccess
         """
@@ -311,7 +300,6 @@ class RegistrationSchema(object):
     @registration_success.setter
     def registration_success(self, registration_success):
         """Sets the registration_success of this RegistrationSchema.
-
 
         :param registration_success: The registration_success of this RegistrationSchema.  # noqa: E501
         :type: RegistrationSuccess
@@ -323,7 +311,6 @@ class RegistrationSchema(object):
     def score(self):
         """Gets the score of this RegistrationSchema.  # noqa: E501
 
-
         :return: The score of this RegistrationSchema.  # noqa: E501
         :rtype: ScoreSchema
         """
@@ -332,7 +319,6 @@ class RegistrationSchema(object):
     @score.setter
     def score(self, score):
         """Sets the score of this RegistrationSchema.
-
 
         :param score: The score of this RegistrationSchema.  # noqa: E501
         :type: ScoreSchema
@@ -344,7 +330,6 @@ class RegistrationSchema(object):
     def total_seconds_tracked(self):
         """Gets the total_seconds_tracked of this RegistrationSchema.  # noqa: E501
 
-
         :return: The total_seconds_tracked of this RegistrationSchema.  # noqa: E501
         :rtype: float
         """
@@ -353,7 +338,6 @@ class RegistrationSchema(object):
     @total_seconds_tracked.setter
     def total_seconds_tracked(self, total_seconds_tracked):
         """Sets the total_seconds_tracked of this RegistrationSchema.
-
 
         :param total_seconds_tracked: The total_seconds_tracked of this RegistrationSchema.  # noqa: E501
         :type: float
@@ -365,7 +349,6 @@ class RegistrationSchema(object):
     def first_access_date(self):
         """Gets the first_access_date of this RegistrationSchema.  # noqa: E501
 
-
         :return: The first_access_date of this RegistrationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -374,7 +357,6 @@ class RegistrationSchema(object):
     @first_access_date.setter
     def first_access_date(self, first_access_date):
         """Sets the first_access_date of this RegistrationSchema.
-
 
         :param first_access_date: The first_access_date of this RegistrationSchema.  # noqa: E501
         :type: datetime
@@ -386,7 +368,6 @@ class RegistrationSchema(object):
     def last_access_date(self):
         """Gets the last_access_date of this RegistrationSchema.  # noqa: E501
 
-
         :return: The last_access_date of this RegistrationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -395,7 +376,6 @@ class RegistrationSchema(object):
     @last_access_date.setter
     def last_access_date(self, last_access_date):
         """Sets the last_access_date of this RegistrationSchema.
-
 
         :param last_access_date: The last_access_date of this RegistrationSchema.  # noqa: E501
         :type: datetime
@@ -407,7 +387,6 @@ class RegistrationSchema(object):
     def completed_date(self):
         """Gets the completed_date of this RegistrationSchema.  # noqa: E501
 
-
         :return: The completed_date of this RegistrationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -416,7 +395,6 @@ class RegistrationSchema(object):
     @completed_date.setter
     def completed_date(self, completed_date):
         """Sets the completed_date of this RegistrationSchema.
-
 
         :param completed_date: The completed_date of this RegistrationSchema.  # noqa: E501
         :type: datetime
@@ -428,7 +406,6 @@ class RegistrationSchema(object):
     def created_date(self):
         """Gets the created_date of this RegistrationSchema.  # noqa: E501
 
-
         :return: The created_date of this RegistrationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -437,7 +414,6 @@ class RegistrationSchema(object):
     @created_date.setter
     def created_date(self, created_date):
         """Sets the created_date of this RegistrationSchema.
-
 
         :param created_date: The created_date of this RegistrationSchema.  # noqa: E501
         :type: datetime
@@ -449,7 +425,6 @@ class RegistrationSchema(object):
     def course(self):
         """Gets the course of this RegistrationSchema.  # noqa: E501
 
-
         :return: The course of this RegistrationSchema.  # noqa: E501
         :rtype: CourseReferenceSchema
         """
@@ -458,7 +433,6 @@ class RegistrationSchema(object):
     @course.setter
     def course(self, course):
         """Sets the course of this RegistrationSchema.
-
 
         :param course: The course of this RegistrationSchema.  # noqa: E501
         :type: CourseReferenceSchema
@@ -470,7 +444,6 @@ class RegistrationSchema(object):
     def learner(self):
         """Gets the learner of this RegistrationSchema.  # noqa: E501
 
-
         :return: The learner of this RegistrationSchema.  # noqa: E501
         :rtype: LearnerSchema
         """
@@ -479,7 +452,6 @@ class RegistrationSchema(object):
     @learner.setter
     def learner(self, learner):
         """Sets the learner of this RegistrationSchema.
-
 
         :param learner: The learner of this RegistrationSchema.  # noqa: E501
         :type: LearnerSchema
@@ -491,7 +463,6 @@ class RegistrationSchema(object):
     def tags(self):
         """Gets the tags of this RegistrationSchema.  # noqa: E501
 
-
         :return: The tags of this RegistrationSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -500,7 +471,6 @@ class RegistrationSchema(object):
     @tags.setter
     def tags(self, tags):
         """Sets the tags of this RegistrationSchema.
-
 
         :param tags: The tags of this RegistrationSchema.  # noqa: E501
         :type: list[str]
@@ -512,7 +482,6 @@ class RegistrationSchema(object):
     def global_objectives(self):
         """Gets the global_objectives of this RegistrationSchema.  # noqa: E501
 
-
         :return: The global_objectives of this RegistrationSchema.  # noqa: E501
         :rtype: list[ObjectiveSchema]
         """
@@ -521,7 +490,6 @@ class RegistrationSchema(object):
     @global_objectives.setter
     def global_objectives(self, global_objectives):
         """Sets the global_objectives of this RegistrationSchema.
-
 
         :param global_objectives: The global_objectives of this RegistrationSchema.  # noqa: E501
         :type: list[ObjectiveSchema]
@@ -533,7 +501,6 @@ class RegistrationSchema(object):
     def shared_data(self):
         """Gets the shared_data of this RegistrationSchema.  # noqa: E501
 
-
         :return: The shared_data of this RegistrationSchema.  # noqa: E501
         :rtype: list[SharedDataEntrySchema]
         """
@@ -542,7 +509,6 @@ class RegistrationSchema(object):
     @shared_data.setter
     def shared_data(self, shared_data):
         """Sets the shared_data of this RegistrationSchema.
-
 
         :param shared_data: The shared_data of this RegistrationSchema.  # noqa: E501
         :type: list[SharedDataEntrySchema]
@@ -554,7 +520,6 @@ class RegistrationSchema(object):
     def suspended_activity_id(self):
         """Gets the suspended_activity_id of this RegistrationSchema.  # noqa: E501
 
-
         :return: The suspended_activity_id of this RegistrationSchema.  # noqa: E501
         :rtype: str
         """
@@ -563,7 +528,6 @@ class RegistrationSchema(object):
     @suspended_activity_id.setter
     def suspended_activity_id(self, suspended_activity_id):
         """Sets the suspended_activity_id of this RegistrationSchema.
-
 
         :param suspended_activity_id: The suspended_activity_id of this RegistrationSchema.  # noqa: E501
         :type: str
@@ -575,7 +539,6 @@ class RegistrationSchema(object):
     def activity_details(self):
         """Gets the activity_details of this RegistrationSchema.  # noqa: E501
 
-
         :return: The activity_details of this RegistrationSchema.  # noqa: E501
         :rtype: ActivityResultSchema
         """
@@ -584,7 +547,6 @@ class RegistrationSchema(object):
     @activity_details.setter
     def activity_details(self, activity_details):
         """Sets the activity_details of this RegistrationSchema.
-
 
         :param activity_details: The activity_details of this RegistrationSchema.  # noqa: E501
         :type: ActivityResultSchema

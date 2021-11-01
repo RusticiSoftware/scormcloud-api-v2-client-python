@@ -145,7 +145,6 @@ class UserInvitationSchema(object):
     def updated(self):
         """Gets the updated of this UserInvitationSchema.  # noqa: E501
 
-
         :return: The updated of this UserInvitationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -154,7 +153,6 @@ class UserInvitationSchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this UserInvitationSchema.
-
 
         :param updated: The updated of this UserInvitationSchema.  # noqa: E501
         :type: datetime
@@ -189,7 +187,6 @@ class UserInvitationSchema(object):
     def registration_report(self):
         """Gets the registration_report of this UserInvitationSchema.  # noqa: E501
 
-
         :return: The registration_report of this UserInvitationSchema.  # noqa: E501
         :rtype: UserInvitationSchemaRegistrationReport
         """
@@ -198,7 +195,6 @@ class UserInvitationSchema(object):
     @registration_report.setter
     def registration_report(self, registration_report):
         """Sets the registration_report of this UserInvitationSchema.
-
 
         :param registration_report: The registration_report of this UserInvitationSchema.  # noqa: E501
         :type: UserInvitationSchemaRegistrationReport

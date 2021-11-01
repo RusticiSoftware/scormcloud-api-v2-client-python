@@ -79,7 +79,6 @@ class DestinationIdSchema(object):
     def data(self):
         """Gets the data of this DestinationIdSchema.  # noqa: E501
 
-
         :return: The data of this DestinationIdSchema.  # noqa: E501
         :rtype: DestinationSchema
         """
@@ -88,7 +87,6 @@ class DestinationIdSchema(object):
     @data.setter
     def data(self, data):
         """Sets the data of this DestinationIdSchema.
-
 
         :param data: The data of this DestinationIdSchema.  # noqa: E501
         :type: DestinationSchema

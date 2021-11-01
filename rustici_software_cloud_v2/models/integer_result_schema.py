@@ -50,7 +50,6 @@ class IntegerResultSchema(object):
     def result(self):
         """Gets the result of this IntegerResultSchema.  # noqa: E501
 
-
         :return: The result of this IntegerResultSchema.  # noqa: E501
         :rtype: int
         """
@@ -59,7 +58,6 @@ class IntegerResultSchema(object):
     @result.setter
     def result(self, result):
         """Sets the result of this IntegerResultSchema.
-
 
         :param result: The result of this IntegerResultSchema.  # noqa: E501
         :type: int

@@ -137,7 +137,7 @@ class PrivateInvitationSchema(object):
     def allow_launch(self):
         """Gets the allow_launch of this PrivateInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :return: The allow_launch of this PrivateInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -148,7 +148,7 @@ class PrivateInvitationSchema(object):
     def allow_launch(self, allow_launch):
         """Sets the allow_launch of this PrivateInvitationSchema.
 
-        If true, then new registrations can be created for this dispatch.  # noqa: E501
+        If true, then new registrations can be created for this invitation.  # noqa: E501
 
         :param allow_launch: The allow_launch of this PrivateInvitationSchema.  # noqa: E501
         :type: bool
@@ -160,7 +160,6 @@ class PrivateInvitationSchema(object):
     def invitation_email(self):
         """Gets the invitation_email of this PrivateInvitationSchema.  # noqa: E501
 
-
         :return: The invitation_email of this PrivateInvitationSchema.  # noqa: E501
         :rtype: InvitationEmailSchema
         """
@@ -169,7 +168,6 @@ class PrivateInvitationSchema(object):
     @invitation_email.setter
     def invitation_email(self, invitation_email):
         """Sets the invitation_email of this PrivateInvitationSchema.
-
 
         :param invitation_email: The invitation_email of this PrivateInvitationSchema.  # noqa: E501
         :type: InvitationEmailSchema
@@ -204,7 +202,6 @@ class PrivateInvitationSchema(object):
     def updated(self):
         """Gets the updated of this PrivateInvitationSchema.  # noqa: E501
 
-
         :return: The updated of this PrivateInvitationSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -213,7 +210,6 @@ class PrivateInvitationSchema(object):
     @updated.setter
     def updated(self, updated):
         """Sets the updated of this PrivateInvitationSchema.
-
 
         :param updated: The updated of this PrivateInvitationSchema.  # noqa: E501
         :type: datetime
@@ -248,7 +244,7 @@ class PrivateInvitationSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this PrivateInvitationSchema.  # noqa: E501
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this PrivateInvitationSchema.  # noqa: E501
         :rtype: datetime
@@ -259,7 +255,7 @@ class PrivateInvitationSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this PrivateInvitationSchema.
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this PrivateInvitationSchema.  # noqa: E501
         :type: datetime

@@ -34,7 +34,7 @@ class PingApi(object):
         self.api_client = api_client
 
     def ping_app_id(self, **kwargs):  # noqa: E501
-        """ping_app_id  # noqa: E501
+        """Ping the API   # noqa: E501
 
         Get back a message indicating that the API is working.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -55,7 +55,7 @@ class PingApi(object):
             return data
 
     def ping_app_id_with_http_info(self, **kwargs):  # noqa: E501
-        """ping_app_id  # noqa: E501
+        """Ping the API   # noqa: E501
 
         Get back a message indicating that the API is working.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

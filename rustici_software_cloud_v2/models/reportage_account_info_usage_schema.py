@@ -66,7 +66,6 @@ class ReportageAccountInfoUsageSchema(object):
     def month_start(self):
         """Gets the month_start of this ReportageAccountInfoUsageSchema.  # noqa: E501
 
-
         :return: The month_start of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -75,7 +74,6 @@ class ReportageAccountInfoUsageSchema(object):
     @month_start.setter
     def month_start(self, month_start):
         """Sets the month_start of this ReportageAccountInfoUsageSchema.
-
 
         :param month_start: The month_start of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :type: datetime
@@ -87,7 +85,6 @@ class ReportageAccountInfoUsageSchema(object):
     def reg_count(self):
         """Gets the reg_count of this ReportageAccountInfoUsageSchema.  # noqa: E501
 
-
         :return: The reg_count of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :rtype: int
         """
@@ -96,7 +93,6 @@ class ReportageAccountInfoUsageSchema(object):
     @reg_count.setter
     def reg_count(self, reg_count):
         """Sets the reg_count of this ReportageAccountInfoUsageSchema.
-
 
         :param reg_count: The reg_count of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :type: int
@@ -108,7 +104,6 @@ class ReportageAccountInfoUsageSchema(object):
     def total_registrations(self):
         """Gets the total_registrations of this ReportageAccountInfoUsageSchema.  # noqa: E501
 
-
         :return: The total_registrations of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :rtype: int
         """
@@ -117,7 +112,6 @@ class ReportageAccountInfoUsageSchema(object):
     @total_registrations.setter
     def total_registrations(self, total_registrations):
         """Sets the total_registrations of this ReportageAccountInfoUsageSchema.
-
 
         :param total_registrations: The total_registrations of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :type: int
@@ -129,7 +123,6 @@ class ReportageAccountInfoUsageSchema(object):
     def total_courses(self):
         """Gets the total_courses of this ReportageAccountInfoUsageSchema.  # noqa: E501
 
-
         :return: The total_courses of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :rtype: int
         """
@@ -138,7 +131,6 @@ class ReportageAccountInfoUsageSchema(object):
     @total_courses.setter
     def total_courses(self, total_courses):
         """Sets the total_courses of this ReportageAccountInfoUsageSchema.
-
 
         :param total_courses: The total_courses of this ReportageAccountInfoUsageSchema.  # noqa: E501
         :type: int

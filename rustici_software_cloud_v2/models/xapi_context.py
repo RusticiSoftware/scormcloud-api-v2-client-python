@@ -91,7 +91,6 @@ class XapiContext(object):
     def registration(self):
         """Gets the registration of this XapiContext.  # noqa: E501
 
-
         :return: The registration of this XapiContext.  # noqa: E501
         :rtype: str
         """
@@ -100,7 +99,6 @@ class XapiContext(object):
     @registration.setter
     def registration(self, registration):
         """Sets the registration of this XapiContext.
-
 
         :param registration: The registration of this XapiContext.  # noqa: E501
         :type: str
@@ -112,7 +110,6 @@ class XapiContext(object):
     def instructor(self):
         """Gets the instructor of this XapiContext.  # noqa: E501
 
-
         :return: The instructor of this XapiContext.  # noqa: E501
         :rtype: XapiAgentGroup
         """
@@ -121,7 +118,6 @@ class XapiContext(object):
     @instructor.setter
     def instructor(self, instructor):
         """Sets the instructor of this XapiContext.
-
 
         :param instructor: The instructor of this XapiContext.  # noqa: E501
         :type: XapiAgentGroup
@@ -133,7 +129,6 @@ class XapiContext(object):
     def team(self):
         """Gets the team of this XapiContext.  # noqa: E501
 
-
         :return: The team of this XapiContext.  # noqa: E501
         :rtype: XapiAgentGroup
         """
@@ -142,7 +137,6 @@ class XapiContext(object):
     @team.setter
     def team(self, team):
         """Sets the team of this XapiContext.
-
 
         :param team: The team of this XapiContext.  # noqa: E501
         :type: XapiAgentGroup
@@ -154,7 +148,6 @@ class XapiContext(object):
     def context_activities(self):
         """Gets the context_activities of this XapiContext.  # noqa: E501
 
-
         :return: The context_activities of this XapiContext.  # noqa: E501
         :rtype: XapiContextActivity
         """
@@ -163,7 +156,6 @@ class XapiContext(object):
     @context_activities.setter
     def context_activities(self, context_activities):
         """Sets the context_activities of this XapiContext.
-
 
         :param context_activities: The context_activities of this XapiContext.  # noqa: E501
         :type: XapiContextActivity
@@ -175,7 +167,6 @@ class XapiContext(object):
     def revision(self):
         """Gets the revision of this XapiContext.  # noqa: E501
 
-
         :return: The revision of this XapiContext.  # noqa: E501
         :rtype: str
         """
@@ -184,7 +175,6 @@ class XapiContext(object):
     @revision.setter
     def revision(self, revision):
         """Sets the revision of this XapiContext.
-
 
         :param revision: The revision of this XapiContext.  # noqa: E501
         :type: str
@@ -196,7 +186,6 @@ class XapiContext(object):
     def platform(self):
         """Gets the platform of this XapiContext.  # noqa: E501
 
-
         :return: The platform of this XapiContext.  # noqa: E501
         :rtype: str
         """
@@ -205,7 +194,6 @@ class XapiContext(object):
     @platform.setter
     def platform(self, platform):
         """Sets the platform of this XapiContext.
-
 
         :param platform: The platform of this XapiContext.  # noqa: E501
         :type: str
@@ -217,7 +205,6 @@ class XapiContext(object):
     def language(self):
         """Gets the language of this XapiContext.  # noqa: E501
 
-
         :return: The language of this XapiContext.  # noqa: E501
         :rtype: str
         """
@@ -226,7 +213,6 @@ class XapiContext(object):
     @language.setter
     def language(self, language):
         """Sets the language of this XapiContext.
-
 
         :param language: The language of this XapiContext.  # noqa: E501
         :type: str
@@ -238,7 +224,6 @@ class XapiContext(object):
     def statement(self):
         """Gets the statement of this XapiContext.  # noqa: E501
 
-
         :return: The statement of this XapiContext.  # noqa: E501
         :rtype: XapiStatementReference
         """
@@ -247,7 +232,6 @@ class XapiContext(object):
     @statement.setter
     def statement(self, statement):
         """Sets the statement of this XapiContext.
-
 
         :param statement: The statement of this XapiContext.  # noqa: E501
         :type: XapiStatementReference
@@ -259,7 +243,6 @@ class XapiContext(object):
     def extensions(self):
         """Gets the extensions of this XapiContext.  # noqa: E501
 
-
         :return: The extensions of this XapiContext.  # noqa: E501
         :rtype: dict(str, object)
         """
@@ -268,7 +251,6 @@ class XapiContext(object):
     @extensions.setter
     def extensions(self, extensions):
         """Sets the extensions of this XapiContext.
-
 
         :param extensions: The extensions of this XapiContext.  # noqa: E501
         :type: dict(str, object)

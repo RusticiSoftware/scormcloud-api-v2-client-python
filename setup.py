@@ -11,11 +11,10 @@
 """
 
 
-import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "rustici_software_cloud_v2"
-VERSION = "1.0.2"
+VERSION = "2.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,7 +22,12 @@ VERSION = "1.0.2"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+REQUIRES = [
+     "certifi>=2017.4.17",
+     "python-dateutil>=2.1",
+     "six>=1.10",
+     "urllib3>=1.23"
+ ]
 
 setup(
     name=NAME,
@@ -36,6 +40,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    REST API used for SCORM Cloud integrations.
+    REST API used for SCORM Cloud integrations.  # noqa: E501
     """
 )

@@ -34,9 +34,9 @@ class DispatchApi(object):
         self.api_client = api_client
 
     def create_destinations(self, destinations_list, **kwargs):  # noqa: E501
-        """DestinationsByTenant  # noqa: E501
+        """Create a group of Destinations   # noqa: E501
 
-        Create multiple destinations.  # noqa: E501
+        Creates a group of destinations.  A destination is a label used to identify an entity outside of SCORM Cloud, such as an LMS.  Used in conjunction with dispatches to provide access control mechanisms for the courses distributed to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_destinations(destinations_list, async_req=True)
@@ -56,9 +56,9 @@ class DispatchApi(object):
             return data
 
     def create_destinations_with_http_info(self, destinations_list, **kwargs):  # noqa: E501
-        """DestinationsByTenant  # noqa: E501
+        """Create a group of Destinations   # noqa: E501
 
-        Create multiple destinations.  # noqa: E501
+        Creates a group of destinations.  A destination is a label used to identify an entity outside of SCORM Cloud, such as an LMS.  Used in conjunction with dispatches to provide access control mechanisms for the courses distributed to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_destinations_with_http_info(destinations_list, async_req=True)
@@ -133,9 +133,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def create_dispatches(self, dispatch_list, **kwargs):  # noqa: E501
-        """Create dispatches.  # noqa: E501
+        """Create a group of Dispatches   # noqa: E501
 
-        Create multiple dispatches at once.   # noqa: E501
+        Creates a group of dispatches.  Dispatches are the connection between a course and a destination.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud.  As an extension, dispatches allow for limiting access control even after the zip file has been given to the destination.  >**Caution:** >Only one dispatch can exist for a given course-destination combination.  If calling this method with the same course and destination supplied, the old one will be loaded for modification.  An exception to this is if a dispatchId is passed in the body, the request will fail with a 400 response warning that the dispatch already exists.  This is to prevent confusion over which dispatchId is to be used in future requests.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_dispatches(dispatch_list, async_req=True)
@@ -155,9 +155,9 @@ class DispatchApi(object):
             return data
 
     def create_dispatches_with_http_info(self, dispatch_list, **kwargs):  # noqa: E501
-        """Create dispatches.  # noqa: E501
+        """Create a group of Dispatches   # noqa: E501
 
-        Create multiple dispatches at once.   # noqa: E501
+        Creates a group of dispatches.  Dispatches are the connection between a course and a destination.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud.  As an extension, dispatches allow for limiting access control even after the zip file has been given to the destination.  >**Caution:** >Only one dispatch can exist for a given course-destination combination.  If calling this method with the same course and destination supplied, the old one will be loaded for modification.  An exception to this is if a dispatchId is passed in the body, the request will fail with a 400 response warning that the dispatch already exists.  This is to prevent confusion over which dispatchId is to be used in future requests.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_dispatches_with_http_info(dispatch_list, async_req=True)
@@ -232,9 +232,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_destination(self, destination_id, **kwargs):  # noqa: E501
-        """Delete destination   # noqa: E501
+        """Delete a Destination   # noqa: E501
 
-        Delete the destination with `destinationId`   # noqa: E501
+        Deletes the specified destination.  >**Caution:** >This will also delete all dispatches belonging to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination(destination_id, async_req=True)
@@ -254,9 +254,9 @@ class DispatchApi(object):
             return data
 
     def delete_destination_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Delete destination   # noqa: E501
+        """Delete a Destination   # noqa: E501
 
-        Delete the destination with `destinationId`   # noqa: E501
+        Deletes the specified destination.  >**Caution:** >This will also delete all dispatches belonging to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination_with_http_info(destination_id, async_req=True)
@@ -331,9 +331,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_destination_dispatches(self, destination_id, **kwargs):  # noqa: E501
-        """Delete dispatches in destination   # noqa: E501
+        """Delete a Destination's Dispatches   # noqa: E501
 
-        Delete the dispatches in a destination   # noqa: E501
+        Deletes all the dispatches from the destination.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination_dispatches(destination_id, async_req=True)
@@ -353,9 +353,9 @@ class DispatchApi(object):
             return data
 
     def delete_destination_dispatches_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Delete dispatches in destination   # noqa: E501
+        """Delete a Destination's Dispatches   # noqa: E501
 
-        Delete the dispatches in a destination   # noqa: E501
+        Deletes all the dispatches from the destination.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination_dispatches_with_http_info(destination_id, async_req=True)
@@ -430,9 +430,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_destination_tags(self, destination_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this destination   # noqa: E501
+        """Delete tags from a Destination   # noqa: E501
 
-        Delete the tags for this destination   # noqa: E501
+        Deletes the specified tags from the destination.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination_tags(destination_id, tags, async_req=True)
@@ -453,9 +453,9 @@ class DispatchApi(object):
             return data
 
     def delete_destination_tags_with_http_info(self, destination_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this destination   # noqa: E501
+        """Delete tags from a Destination   # noqa: E501
 
-        Delete the tags for this destination   # noqa: E501
+        Deletes the specified tags from the destination.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_destination_tags_with_http_info(destination_id, tags, async_req=True)
@@ -537,9 +537,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_dispatch(self, dispatch_id, **kwargs):  # noqa: E501
-        """Delete the dispatch with `dispatchId`.   # noqa: E501
+        """Delete a Dispatch   # noqa: E501
 
-        Delete the dispatch with `dispatchId`.   # noqa: E501
+        Deletes the specified dispatch.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch(dispatch_id, async_req=True)
@@ -559,9 +559,9 @@ class DispatchApi(object):
             return data
 
     def delete_dispatch_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Delete the dispatch with `dispatchId`.   # noqa: E501
+        """Delete a Dispatch   # noqa: E501
 
-        Delete the dispatch with `dispatchId`.   # noqa: E501
+        Deletes the specified dispatch.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch_with_http_info(dispatch_id, async_req=True)
@@ -636,9 +636,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_dispatch_postback_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """DispatchesByTenantAndDispatchId  # noqa: E501
+        """Delete postback information from a Dispatch   # noqa: E501
 
-        Delete the postback info dispatch with 'dispatchId'.   # noqa: E501
+        Clears the postback settings from the dispatch.  This causes the postback settings to inherit a value from a higher level (e.g. application).  If there is no setting at the application level, this will disable postbacks for the dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch_postback_info(dispatch_id, async_req=True)
@@ -658,9 +658,9 @@ class DispatchApi(object):
             return data
 
     def delete_dispatch_postback_info_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """DispatchesByTenantAndDispatchId  # noqa: E501
+        """Delete postback information from a Dispatch   # noqa: E501
 
-        Delete the postback info dispatch with 'dispatchId'.   # noqa: E501
+        Clears the postback settings from the dispatch.  This causes the postback settings to inherit a value from a higher level (e.g. application).  If there is no setting at the application level, this will disable postbacks for the dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch_postback_info_with_http_info(dispatch_id, async_req=True)
@@ -735,9 +735,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def delete_dispatch_tags(self, dispatch_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this dispatch.   # noqa: E501
+        """Delete tags from a Dispatch   # noqa: E501
 
-        Delete the tags for this dispatch.   # noqa: E501
+        Deletes the specified tags from the dispatch.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch_tags(dispatch_id, tags, async_req=True)
@@ -758,9 +758,9 @@ class DispatchApi(object):
             return data
 
     def delete_dispatch_tags_with_http_info(self, dispatch_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this dispatch.   # noqa: E501
+        """Delete tags from a Dispatch   # noqa: E501
 
-        Delete the tags for this dispatch.   # noqa: E501
+        Deletes the specified tags from the dispatch.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dispatch_tags_with_http_info(dispatch_id, tags, async_req=True)
@@ -841,10 +841,130 @@ class DispatchApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def enable_registration_instancing(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationInstancing  # noqa: E501
+    def delete_dispatches(self, **kwargs):  # noqa: E501
+        """Delete a group of Dispatches   # noqa: E501
 
-        Enable or disable registration instancing.  # noqa: E501
+        Deletes the specified group of dispatches.  Can be filtered using the request parameters to provide a subset of results.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.  >**Note:** >One of the filter parameters (i.e. `courseId`, `since`/`until`, `tags`, or `filter`) needs to be provided.  This is to prevent accidental deletion of all dispatches.  If you do wish to update all dispatches, try setting the since parameter to a value prior to the creation of any dispatches.  >**Info:** >If using one of our client libraries, refer to its README for additional information on how to work with the `X-Total-Count` header.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_dispatches(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.delete_dispatches_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.delete_dispatches_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def delete_dispatches_with_http_info(self, **kwargs):  # noqa: E501
+        """Delete a group of Dispatches   # noqa: E501
+
+        Deletes the specified group of dispatches.  Can be filtered using the request parameters to provide a subset of results.  >**Caution:** >This will invalidate any existing dispatch packages, rendering them unlaunchable.  >**Note:** >One of the filter parameters (i.e. `courseId`, `since`/`until`, `tags`, or `filter`) needs to be provided.  This is to prevent accidental deletion of all dispatches.  If you do wish to update all dispatches, try setting the since parameter to a value prior to the creation of any dispatches.  >**Info:** >If using one of our client libraries, refer to its README for additional information on how to work with the `X-Total-Count` header.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_dispatches_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_dispatches" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'course_id' in params:
+            query_params.append(('courseId', params['course_id']))  # noqa: E501
+        if 'since' in params:
+            query_params.append(('since', params['since']))  # noqa: E501
+        if 'until' in params:
+            query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/dispatches', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def enable_registration_instancing(self, destination_id, enabled, **kwargs):  # noqa: E501
+        """Update registration instancing status for a Destination's Dispatches   # noqa: E501
+
+        Updates the restration instancing status for all dispatches distributed to the destination.  Registration instancing is the default for dispatches, in order to support versioning of dispatches.  A small portion of users may experience duplicate registrations with content dispatched to some LMS platforms.  If you happen to be dispatching content to an LMS with this issue, disabling registration instancing here will resolve the problems. However, dispatch versioning will also be disabled.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.enable_registration_instancing(destination_id, enabled, async_req=True)
@@ -865,9 +985,9 @@ class DispatchApi(object):
             return data
 
     def enable_registration_instancing_with_http_info(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationInstancing  # noqa: E501
+        """Update registration instancing status for a Destination's Dispatches   # noqa: E501
 
-        Enable or disable registration instancing.  # noqa: E501
+        Updates the restration instancing status for all dispatches distributed to the destination.  Registration instancing is the default for dispatches, in order to support versioning of dispatches.  A small portion of users may experience duplicate registrations with content dispatched to some LMS platforms.  If you happen to be dispatching content to an LMS with this issue, disabling registration instancing here will resolve the problems. However, dispatch versioning will also be disabled.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.enable_registration_instancing_with_http_info(destination_id, enabled, async_req=True)
@@ -949,9 +1069,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination(self, destination_id, **kwargs):  # noqa: E501
-        """Get destination information by destinationId.  # noqa: E501
+        """Get detailed information about a Destination   # noqa: E501
 
-        Gets detailed information about a destination belonging to a destinationId.  # noqa: E501
+        Returns detailed information about the destination.  This includes name, tags, and launchAuth information.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination(destination_id, async_req=True)
@@ -971,9 +1091,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Get destination information by destinationId.  # noqa: E501
+        """Get detailed information about a Destination   # noqa: E501
 
-        Gets detailed information about a destination belonging to a destinationId.  # noqa: E501
+        Returns detailed information about the destination.  This includes name, tags, and launchAuth information.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_with_http_info(destination_id, async_req=True)
@@ -1048,9 +1168,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination_dispatch_registration_count(self, destination_id, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationCount  # noqa: E501
+        """Get registration count for a Destination's Dispatches   # noqa: E501
 
-        Get an aggregate count of all related dispatch registrations.  # noqa: E501
+        Returns the registration count for all dispatches distributed to the destination.  >**Note:** >The count here is a convenience counter.  Since it has the capability of being reset, it may not match the actual billed registration count for a dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatch_registration_count(destination_id, async_req=True)
@@ -1070,9 +1190,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_dispatch_registration_count_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationCount  # noqa: E501
+        """Get registration count for a Destination's Dispatches   # noqa: E501
 
-        Get an aggregate count of all related dispatch registrations.  # noqa: E501
+        Returns the registration count for all dispatches distributed to the destination.  >**Note:** >The count here is a convenience counter.  Since it has the capability of being reset, it may not match the actual billed registration count for a dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatch_registration_count_with_http_info(destination_id, async_req=True)
@@ -1147,9 +1267,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination_dispatch_zip(self, destination_id, **kwargs):  # noqa: E501
-        """Get a ZIP of related dispatches.  # noqa: E501
+        """Download a zip file for a Destination's Dispatches   # noqa: E501
 
-        Returns a zip file containing all of the dispatch packages for a destination.  # noqa: E501
+        Downloads a zip file containing all of the dispatch packages for the destination.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatch_zip(destination_id, async_req=True)
@@ -1157,9 +1277,9 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :param str type: The type of dispatch package to export (SCORM12 only supported in cloud today)
+        :param str type: The type of dispatch package to export (SCORM_12 only supported in SCORM Cloud today)
         :param str css_url:
-        :param list[str] tags:
+        :param list[str] tags: Filter items matching any tag provided (not all)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1172,9 +1292,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_dispatch_zip_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Get a ZIP of related dispatches.  # noqa: E501
+        """Download a zip file for a Destination's Dispatches   # noqa: E501
 
-        Returns a zip file containing all of the dispatch packages for a destination.  # noqa: E501
+        Downloads a zip file containing all of the dispatch packages for the destination.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatch_zip_with_http_info(destination_id, async_req=True)
@@ -1182,9 +1302,9 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :param str type: The type of dispatch package to export (SCORM12 only supported in cloud today)
+        :param str type: The type of dispatch package to export (SCORM_12 only supported in SCORM Cloud today)
         :param str css_url:
-        :param list[str] tags:
+        :param list[str] tags: Filter items matching any tag provided (not all)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1259,9 +1379,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination_dispatches(self, destination_id, **kwargs):  # noqa: E501
-        """Get a list of dispatches in this destination  # noqa: E501
+        """Get a list of a Destination's Dispatches   # noqa: E501
 
-        Get a list of related dispatches.  # noqa: E501
+        Returns a list of dispatches belonging to the destination.  Can be filtered using the request parameters to provide a subset of results.  Using the `courseId` filter should only ever yield 0 or 1 results, as a dispatch is the intersection of a course and a destination.  This can be useful for identifying if a certain course is dispatched to the destination.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatches(destination_id, async_req=True)
@@ -1269,13 +1389,15 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by:
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1288,9 +1410,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_dispatches_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Get a list of dispatches in this destination  # noqa: E501
+        """Get a list of a Destination's Dispatches   # noqa: E501
 
-        Get a list of related dispatches.  # noqa: E501
+        Returns a list of dispatches belonging to the destination.  Can be filtered using the request parameters to provide a subset of results.  Using the `courseId` filter should only ever yield 0 or 1 results, as a dispatch is the intersection of a course and a destination.  This can be useful for identifying if a certain course is dispatched to the destination.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_dispatches_with_http_info(destination_id, async_req=True)
@@ -1298,19 +1420,21 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by:
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['destination_id', 'course_id', 'more', 'since', 'until', 'tags', 'datetime_filter', 'order_by']  # noqa: E501
+        all_params = ['destination_id', 'course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1339,19 +1463,23 @@ class DispatchApi(object):
         query_params = []
         if 'course_id' in params:
             query_params.append(('courseId', params['course_id']))  # noqa: E501
-        if 'more' in params:
-            query_params.append(('more', params['more']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
-        if 'datetime_filter' in params:
-            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
         if 'order_by' in params:
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
+        if 'more' in params:
+            query_params.append(('more', params['more']))  # noqa: E501
 
         header_params = {}
 
@@ -1387,9 +1515,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination_hash_user_info(self, destination_id, **kwargs):  # noqa: E501
-        """True if the destination is set to hash user info, or false if it is disabled.  # noqa: E501
+        """Get user PII hashing status for a Destination   # noqa: E501
 
-        True if the destination is set to hash user info, or false if it is disabled.  # noqa: E501
+        Returns whether or not user PII hashing is enabled for the destination.  Enabling it will cause all user PII to be hashed.  Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_hash_user_info(destination_id, async_req=True)
@@ -1409,9 +1537,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_hash_user_info_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """True if the destination is set to hash user info, or false if it is disabled.  # noqa: E501
+        """Get user PII hashing status for a Destination   # noqa: E501
 
-        True if the destination is set to hash user info, or false if it is disabled.  # noqa: E501
+        Returns whether or not user PII hashing is enabled for the destination.  Enabling it will cause all user PII to be hashed.  Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_hash_user_info_with_http_info(destination_id, async_req=True)
@@ -1486,9 +1614,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destination_tags(self, destination_id, **kwargs):  # noqa: E501
-        """Get the tags for this destination   # noqa: E501
+        """Get tags for a Destination   # noqa: E501
 
-        Get the tags for this destination   # noqa: E501
+        Returns the tags for the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_tags(destination_id, async_req=True)
@@ -1508,9 +1636,9 @@ class DispatchApi(object):
             return data
 
     def get_destination_tags_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """Get the tags for this destination   # noqa: E501
+        """Get tags for a Destination   # noqa: E501
 
-        Get the tags for this destination   # noqa: E501
+        Returns the tags for the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destination_tags_with_http_info(destination_id, async_req=True)
@@ -1585,22 +1713,24 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_destinations(self, **kwargs):  # noqa: E501
-        """getAllDestinations  # noqa: E501
+        """Get a list of Destinations   # noqa: E501
 
-        Get a list of destinations.  # noqa: E501
+        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destinations(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to updated_asc
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DestinationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1613,28 +1743,30 @@ class DispatchApi(object):
             return data
 
     def get_destinations_with_http_info(self, **kwargs):  # noqa: E501
-        """getAllDestinations  # noqa: E501
+        """Get a list of Destinations   # noqa: E501
 
-        Get a list of destinations.  # noqa: E501
+        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destinations_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to updated_asc
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DestinationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'more', 'since', 'until', 'tags', 'datetime_filter', 'order_by']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1657,19 +1789,23 @@ class DispatchApi(object):
         query_params = []
         if 'course_id' in params:
             query_params.append(('courseId', params['course_id']))  # noqa: E501
-        if 'more' in params:
-            query_params.append(('more', params['more']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
-        if 'datetime_filter' in params:
-            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
         if 'order_by' in params:
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
+        if 'more' in params:
+            query_params.append(('more', params['more']))  # noqa: E501
 
         header_params = {}
 
@@ -1705,9 +1841,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get dispatch by id.  # noqa: E501
+        """Get detailed information about a Dispatch   # noqa: E501
 
-        Get the dispatch with `dispatchId`.   # noqa: E501
+        Returns detailed information about the dispatch.  This includes destination and course IDs, as well as registration count.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch(dispatch_id, async_req=True)
@@ -1727,9 +1863,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get dispatch by id.  # noqa: E501
+        """Get detailed information about a Dispatch   # noqa: E501
 
-        Get the dispatch with `dispatchId`.   # noqa: E501
+        Returns detailed information about the dispatch.  This includes destination and course IDs, as well as registration count.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_with_http_info(dispatch_id, async_req=True)
@@ -1804,9 +1940,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch_enabled(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the `enabled` status for `dispatchId`.   # noqa: E501
+        """Get enabled status of a Dispatch   # noqa: E501
 
-        Get the `enabled` status for `dispatchId`.  True if the dispatch is enabled, or false if it is disabled.   # noqa: E501
+        Returns the enabled status for the dispatch.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_enabled(dispatch_id, async_req=True)
@@ -1826,9 +1962,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_enabled_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the `enabled` status for `dispatchId`.   # noqa: E501
+        """Get enabled status of a Dispatch   # noqa: E501
 
-        Get the `enabled` status for `dispatchId`.  True if the dispatch is enabled, or false if it is disabled.   # noqa: E501
+        Returns the enabled status for the dispatch.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_enabled_with_http_info(dispatch_id, async_req=True)
@@ -1903,9 +2039,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch_hash_user_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get if this dispatch has PII hashing enabled.  # noqa: E501
+        """Get user PII hashing status for a Dispatch   # noqa: E501
 
-        Get if this dispatch has PII hashing enabled. True if the dispatch is set to hash user info, or false if it is disabled.   # noqa: E501
+        Returns whether or not user PII hashing is enabled for the dispatch.  Enabling it will cause all user PII to be hashed.  Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_hash_user_info(dispatch_id, async_req=True)
@@ -1925,9 +2061,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_hash_user_info_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get if this dispatch has PII hashing enabled.  # noqa: E501
+        """Get user PII hashing status for a Dispatch   # noqa: E501
 
-        Get if this dispatch has PII hashing enabled. True if the dispatch is set to hash user info, or false if it is disabled.   # noqa: E501
+        Returns whether or not user PII hashing is enabled for the dispatch.  Enabling it will cause all user PII to be hashed.  Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_hash_user_info_with_http_info(dispatch_id, async_req=True)
@@ -2002,9 +2138,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch_registration_count(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the registration count for `dispatchId`.   # noqa: E501
+        """Get registration count for a Dispatch   # noqa: E501
 
-        Get the registration count for this dispatch, and the date and time of the last count reset, if any.   # noqa: E501
+        Returns the registration count for the dispatch, as well as the date and time of the last count reset, if any.  >**Note:** >The count here is a convenience counter.  Since it has the capability of being reset, it may not match the actual billed registration count for a dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_registration_count(dispatch_id, async_req=True)
@@ -2024,9 +2160,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_registration_count_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the registration count for `dispatchId`.   # noqa: E501
+        """Get registration count for a Dispatch   # noqa: E501
 
-        Get the registration count for this dispatch, and the date and time of the last count reset, if any.   # noqa: E501
+        Returns the registration count for the dispatch, as well as the date and time of the last count reset, if any.  >**Note:** >The count here is a convenience counter.  Since it has the capability of being reset, it may not match the actual billed registration count for a dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_registration_count_with_http_info(dispatch_id, async_req=True)
@@ -2101,9 +2237,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch_tags(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the tags for this dispatch.   # noqa: E501
+        """Get tags for a Dispatch   # noqa: E501
 
-        Get the tags for this dispatch.   # noqa: E501
+        Returns the tags for the dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_tags(dispatch_id, async_req=True)
@@ -2123,9 +2259,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_tags_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the tags for this dispatch.   # noqa: E501
+        """Get tags for a Dispatch   # noqa: E501
 
-        Get the tags for this dispatch.   # noqa: E501
+        Returns the tags for the dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_tags_with_http_info(dispatch_id, async_req=True)
@@ -2200,9 +2336,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatch_zip(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the ZIP for the dispatchId.  # noqa: E501
+        """Download a zip package for a Dispatch   # noqa: E501
 
-        Get the ZIP for the dispatch with `dispatchId`   # noqa: E501
+        Downloads a zip package for the dispatch.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud. As an extension, dispatches allow for limiting access control even after the zip file has been given to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_zip(dispatch_id, async_req=True)
@@ -2210,8 +2346,8 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str dispatch_id: Identifier for the dispatch (required)
-        :param str type: The type of dispatch package to export (SCORM12 only supported in cloud today)
-        :param str css_url:
+        :param str type: The type of dispatch package to export (currently only SCORM_12 available)
+        :param str css_url: Custom CSS to apply to the dispatch package
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2224,9 +2360,9 @@ class DispatchApi(object):
             return data
 
     def get_dispatch_zip_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Get the ZIP for the dispatchId.  # noqa: E501
+        """Download a zip package for a Dispatch   # noqa: E501
 
-        Get the ZIP for the dispatch with `dispatchId`   # noqa: E501
+        Downloads a zip package for the dispatch.  A dispatch zip package is a distributable course stub which, upon launch in a third-party LMS, will reference and launch the underlying course in SCORM Cloud. As an extension, dispatches allow for limiting access control even after the zip file has been given to the destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatch_zip_with_http_info(dispatch_id, async_req=True)
@@ -2234,8 +2370,8 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str dispatch_id: Identifier for the dispatch (required)
-        :param str type: The type of dispatch package to export (SCORM12 only supported in cloud today)
-        :param str css_url:
+        :param str type: The type of dispatch package to export (currently only SCORM_12 available)
+        :param str css_url: Custom CSS to apply to the dispatch package
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2307,22 +2443,24 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def get_dispatches(self, **kwargs):  # noqa: E501
-        """All Dispatches in the system for an AppId  # noqa: E501
+        """Get a list of Dispatches   # noqa: E501
 
-        Get a list of dispatches.  # noqa: E501
+        Returns a list of dispatches.  Can be filtered using the request parameters to provide a subset of results.  Using the `courseId` filter will allow for viewing which destinations the course has been dispatched to.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatches(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to updated_asc
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2335,28 +2473,30 @@ class DispatchApi(object):
             return data
 
     def get_dispatches_with_http_info(self, **kwargs):  # noqa: E501
-        """All Dispatches in the system for an AppId  # noqa: E501
+        """Get a list of Dispatches   # noqa: E501
 
-        Get a list of dispatches.  # noqa: E501
+        Returns a list of dispatches.  Can be filtered using the request parameters to provide a subset of results.  Using the `courseId` filter will allow for viewing which destinations the course has been dispatched to.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dispatches_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only retreive resources having `courseId` 
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param list[str] tags:
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to updated_asc
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'more', 'since', 'until', 'tags', 'datetime_filter', 'order_by']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2379,19 +2519,23 @@ class DispatchApi(object):
         query_params = []
         if 'course_id' in params:
             query_params.append(('courseId', params['course_id']))  # noqa: E501
-        if 'more' in params:
-            query_params.append(('more', params['more']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
-        if 'datetime_filter' in params:
-            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
         if 'order_by' in params:
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
+        if 'more' in params:
+            query_params.append(('more', params['more']))  # noqa: E501
 
         header_params = {}
 
@@ -2426,10 +2570,107 @@ class DispatchApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def put_destination_tags(self, destination_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this destination   # noqa: E501
+    def get_lti_dispatch(self, dispatch_id, **kwargs):  # noqa: E501
+        """Get the information necessary to launch this dispatch using the IMS LTI 1.1 specification.   # noqa: E501
 
-        Set the tags for this destination   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti_dispatch(dispatch_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :return: DispatchLtiInfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_lti_dispatch_with_http_info(dispatch_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_lti_dispatch_with_http_info(dispatch_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_lti_dispatch_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
+        """Get the information necessary to launch this dispatch using the IMS LTI 1.1 specification.   # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti_dispatch_with_http_info(dispatch_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :return: DispatchLtiInfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['dispatch_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_lti_dispatch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'dispatch_id' is set
+        if ('dispatch_id' not in params or
+                params['dispatch_id'] is None):
+            raise ValueError("Missing the required parameter `dispatch_id` when calling `get_lti_dispatch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'dispatch_id' in params:
+            path_params['dispatchId'] = params['dispatch_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/dispatches/{dispatchId}/lti', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DispatchLtiInfoSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def put_destination_tags(self, destination_id, tags, **kwargs):  # noqa: E501
+        """Add tags to a Destination   # noqa: E501
+
+        Applies the provided tags to the destination.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDestinations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_destination_tags(destination_id, tags, async_req=True)
@@ -2450,9 +2691,9 @@ class DispatchApi(object):
             return data
 
     def put_destination_tags_with_http_info(self, destination_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this destination   # noqa: E501
+        """Add tags to a Destination   # noqa: E501
 
-        Set the tags for this destination   # noqa: E501
+        Applies the provided tags to the destination.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDestinations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_destination_tags_with_http_info(destination_id, tags, async_req=True)
@@ -2534,16 +2775,16 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def put_destination_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided destinations  # noqa: E501
+        """Add a group of tags to a group of Destinations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided destinations  # noqa: E501
+        Applies all of the provided tags on all of the provided destinations.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDestinations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_destination_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2556,16 +2797,16 @@ class DispatchApi(object):
             return data
 
     def put_destination_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided destinations  # noqa: E501
+        """Add a group of tags to a group of Destinations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided destinations  # noqa: E501
+        Applies all of the provided tags on all of the provided destinations.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDestinations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_destination_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2633,9 +2874,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def put_dispatch_tags(self, dispatch_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this dispatch.   # noqa: E501
+        """Add tags to a Dispatch   # noqa: E501
 
-        Set the tags for this dispatch.   # noqa: E501
+        Applies the provided tags to the dispatch.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDispatches).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_dispatch_tags(dispatch_id, tags, async_req=True)
@@ -2656,9 +2897,9 @@ class DispatchApi(object):
             return data
 
     def put_dispatch_tags_with_http_info(self, dispatch_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this dispatch.   # noqa: E501
+        """Add tags to a Dispatch   # noqa: E501
 
-        Set the tags for this dispatch.   # noqa: E501
+        Applies the provided tags to the dispatch.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDispatches).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_dispatch_tags_with_http_info(dispatch_id, tags, async_req=True)
@@ -2740,16 +2981,16 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def put_dispatch_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided dispatches   # noqa: E501
+        """Add a group of tags to a group of Dispatches   # noqa: E501
 
-        Sets all of the provided tags on all of the provided dispatches   # noqa: E501
+        Applies all of the provided tags on all of the provided dispatches.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDispatches).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_dispatch_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2762,16 +3003,16 @@ class DispatchApi(object):
             return data
 
     def put_dispatch_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided dispatches   # noqa: E501
+        """Add a group of tags to a group of Dispatches   # noqa: E501
 
-        Sets all of the provided tags on all of the provided dispatches   # noqa: E501
+        Applies all of the provided tags on all of the provided dispatches.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetDispatches).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_dispatch_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2839,9 +3080,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def reset_destination_dispatch_registration_count(self, destination_id, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationCount  # noqa: E501
+        """Reset registration counts for a Destination's Dispatches   # noqa: E501
 
-        Reset registration counts for all related dispatches.  # noqa: E501
+        Clears the registration count for all dispatches distributed to the destination.  This resets the registration counter on the dispatch itself, but has no effect on the existing registrations.  Can be used in situations where the license for the course material has been renewed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.reset_destination_dispatch_registration_count(destination_id, async_req=True)
@@ -2861,9 +3102,9 @@ class DispatchApi(object):
             return data
 
     def reset_destination_dispatch_registration_count_with_http_info(self, destination_id, **kwargs):  # noqa: E501
-        """DestinationsDispatchesRegistrationCount  # noqa: E501
+        """Reset registration counts for a Destination's Dispatches   # noqa: E501
 
-        Reset registration counts for all related dispatches.  # noqa: E501
+        Clears the registration count for all dispatches distributed to the destination.  This resets the registration counter on the dispatch itself, but has no effect on the existing registrations.  Can be used in situations where the license for the course material has been renewed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.reset_destination_dispatch_registration_count_with_http_info(destination_id, async_req=True)
@@ -2938,9 +3179,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def reset_dispatch_registration_count(self, dispatch_id, **kwargs):  # noqa: E501
-        """Reset registration count.   # noqa: E501
+        """Reset registration count for a Dispatch   # noqa: E501
 
-        Reset the registration count for this dispatch.   # noqa: E501
+        Clears the registration count for the dispatch.  This resets the registration counter on the dispatch itself, but has no effect on the existing registrations.  Can be used in situations where the license for the course material has been renewed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.reset_dispatch_registration_count(dispatch_id, async_req=True)
@@ -2960,9 +3201,9 @@ class DispatchApi(object):
             return data
 
     def reset_dispatch_registration_count_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
-        """Reset registration count.   # noqa: E501
+        """Reset registration count for a Dispatch   # noqa: E501
 
-        Reset the registration count for this dispatch.   # noqa: E501
+        Clears the registration count for the dispatch.  This resets the registration counter on the dispatch itself, but has no effect on the existing registrations.  Can be used in situations where the license for the course material has been renewed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.reset_dispatch_registration_count_with_http_info(dispatch_id, async_req=True)
@@ -3037,9 +3278,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def set_destination(self, destination_id, destination, **kwargs):  # noqa: E501
-        """set_destination  # noqa: E501
+        """Create or update a Destination   # noqa: E501
 
-        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination.   # noqa: E501
+        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination(destination_id, destination, async_req=True)
@@ -3060,9 +3301,9 @@ class DispatchApi(object):
             return data
 
     def set_destination_with_http_info(self, destination_id, destination, **kwargs):  # noqa: E501
-        """set_destination  # noqa: E501
+        """Create or update a Destination   # noqa: E501
 
-        Creates or updates the destination identified by the `destinationId` provided in the path. If the destination is being created, a name should be provided in the DestinationSchema, else an error will be thrown.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account. If you do not supply an e-mail address upon the creation of a destination, the owner of the Realm will be used.  This can, of course, also be changed via calling this method to update an existing destination.   # noqa: E501
+        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination_with_http_info(destination_id, destination, async_req=True)
@@ -3144,9 +3385,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def set_destination_dispatch_enabled(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """DestinationsDispatchesEnabledByTenant  # noqa: E501
+        """Update enabled status for a Destination's Dispatches   # noqa: E501
 
-        Enable or disable all related dispatches.  # noqa: E501
+        Updates the enabled status for all dispatches distributed to the destination.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination_dispatch_enabled(destination_id, enabled, async_req=True)
@@ -3167,9 +3408,9 @@ class DispatchApi(object):
             return data
 
     def set_destination_dispatch_enabled_with_http_info(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """DestinationsDispatchesEnabledByTenant  # noqa: E501
+        """Update enabled status for a Destination's Dispatches   # noqa: E501
 
-        Enable or disable all related dispatches.  # noqa: E501
+        Updates the enabled status for all dispatches distributed to the destination.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination_dispatch_enabled_with_http_info(destination_id, enabled, async_req=True)
@@ -3251,9 +3492,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def set_dispatch_enabled(self, dispatch_id, enabled, **kwargs):  # noqa: E501
-        """Set the `enabled` status for `dispatchId`.   # noqa: E501
+        """Update enabled status for a Dispatch   # noqa: E501
 
-        Set the `enabled` status for `dispatchId`.   # noqa: E501
+        Updates the enabled status for the dispatch.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_dispatch_enabled(dispatch_id, enabled, async_req=True)
@@ -3274,9 +3515,9 @@ class DispatchApi(object):
             return data
 
     def set_dispatch_enabled_with_http_info(self, dispatch_id, enabled, **kwargs):  # noqa: E501
-        """Set the `enabled` status for `dispatchId`.   # noqa: E501
+        """Update enabled status for a Dispatch   # noqa: E501
 
-        Set the `enabled` status for `dispatchId`.   # noqa: E501
+        Updates the enabled status for the dispatch.  This is an access control measure allowing you to turn access to a previously distributed dispatch packages on or off.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_dispatch_enabled_with_http_info(dispatch_id, enabled, async_req=True)
@@ -3358,9 +3599,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def update_destination_hash_user_info(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """Enable or disable hashing of the user info for the destination.  # noqa: E501
+        """Update user PII hashing status for a Destination  # noqa: E501
 
-        Enable or disable hashing of the user info for the destination.  # noqa: E501
+        Updates user PII hashing status for the destination.  Enabling it will cause all user PII to be hashed. Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_destination_hash_user_info(destination_id, enabled, async_req=True)
@@ -3381,9 +3622,9 @@ class DispatchApi(object):
             return data
 
     def update_destination_hash_user_info_with_http_info(self, destination_id, enabled, **kwargs):  # noqa: E501
-        """Enable or disable hashing of the user info for the destination.  # noqa: E501
+        """Update user PII hashing status for a Destination  # noqa: E501
 
-        Enable or disable hashing of the user info for the destination.  # noqa: E501
+        Updates user PII hashing status for the destination.  Enabling it will cause all user PII to be hashed. Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_destination_hash_user_info_with_http_info(destination_id, enabled, async_req=True)
@@ -3465,9 +3706,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def update_dispatch(self, dispatch_id, dispatch_properties, **kwargs):  # noqa: E501
-        """Update the dispatch with `dispatchId`.   # noqa: E501
+        """Update information about a Dispatch   # noqa: E501
 
-        Update the dispatch with `dispatchId`.   # noqa: E501
+        Updates information about the dispatch, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_dispatch(dispatch_id, dispatch_properties, async_req=True)
@@ -3488,9 +3729,9 @@ class DispatchApi(object):
             return data
 
     def update_dispatch_with_http_info(self, dispatch_id, dispatch_properties, **kwargs):  # noqa: E501
-        """Update the dispatch with `dispatchId`.   # noqa: E501
+        """Update information about a Dispatch   # noqa: E501
 
-        Update the dispatch with `dispatchId`.   # noqa: E501
+        Updates information about the dispatch, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_dispatch_with_http_info(dispatch_id, dispatch_properties, async_req=True)
@@ -3572,9 +3813,9 @@ class DispatchApi(object):
             collection_formats=collection_formats)
 
     def update_dispatch_hash_user_info(self, dispatch_id, enabled, **kwargs):  # noqa: E501
-        """Enable or disable hashing of the user info for the dispatch.  # noqa: E501
+        """Update user PII hashing status for a Dispatch  # noqa: E501
 
-        Enable or disable hashing of the user info for the dispatch.  # noqa: E501
+        Updates user PII hashing status for the dispatch.  Enabling it will cause all user PII to be hashed. Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_dispatch_hash_user_info(dispatch_id, enabled, async_req=True)
@@ -3595,9 +3836,9 @@ class DispatchApi(object):
             return data
 
     def update_dispatch_hash_user_info_with_http_info(self, dispatch_id, enabled, **kwargs):  # noqa: E501
-        """Enable or disable hashing of the user info for the dispatch.  # noqa: E501
+        """Update user PII hashing status for a Dispatch  # noqa: E501
 
-        Enable or disable hashing of the user info for the dispatch.  # noqa: E501
+        Updates user PII hashing status for the dispatch.  Enabling it will cause all user PII to be hashed. Hashing PII will anonymize the learner data from the dispatched course.  This will make looking up specific details about a learner difficult.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_dispatch_hash_user_info_with_http_info(dispatch_id, enabled, async_req=True)
@@ -3664,6 +3905,134 @@ class DispatchApi(object):
 
         return self.api_client.call_api(
             '/dispatch/dispatches/{dispatchId}/hashUserInfo', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_dispatches(self, dispatch_properties, **kwargs):  # noqa: E501
+        """Update a group of Dispatches   # noqa: E501
+
+        Updates information about a group of dispatches, such as registration cap, expiration date, and postback information. Can be filtered using the request parameters to provide a subset of results.  >**Note:** >One of the filter parameters (i.e. `courseId`, `since`/`until`, `tags`, or `filter`) needs to be provided.  This is to prevent accidental modification of all dispatches.  If you do wish to update all dispatches, try setting the since parameter to a value prior to the creation of any dispatches.  >**Info:** >If using one of our client libraries, refer to its README for additional information on how to work with the `X-Total-Count` header.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_dispatches(dispatch_properties, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UpdateDispatchSchema dispatch_properties: (required)
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_dispatches_with_http_info(dispatch_properties, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_dispatches_with_http_info(dispatch_properties, **kwargs)  # noqa: E501
+            return data
+
+    def update_dispatches_with_http_info(self, dispatch_properties, **kwargs):  # noqa: E501
+        """Update a group of Dispatches   # noqa: E501
+
+        Updates information about a group of dispatches, such as registration cap, expiration date, and postback information. Can be filtered using the request parameters to provide a subset of results.  >**Note:** >One of the filter parameters (i.e. `courseId`, `since`/`until`, `tags`, or `filter`) needs to be provided.  This is to prevent accidental modification of all dispatches.  If you do wish to update all dispatches, try setting the since parameter to a value prior to the creation of any dispatches.  >**Info:** >If using one of our client libraries, refer to its README for additional information on how to work with the `X-Total-Count` header.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_dispatches_with_http_info(dispatch_properties, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UpdateDispatchSchema dispatch_properties: (required)
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['dispatch_properties', 'course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_dispatches" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'dispatch_properties' is set
+        if ('dispatch_properties' not in params or
+                params['dispatch_properties'] is None):
+            raise ValueError("Missing the required parameter `dispatch_properties` when calling `update_dispatches`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'course_id' in params:
+            query_params.append(('courseId', params['course_id']))  # noqa: E501
+        if 'since' in params:
+            query_params.append(('since', params['since']))  # noqa: E501
+        if 'until' in params:
+            query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'dispatch_properties' in params:
+            body_params = params['dispatch_properties']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/dispatches', 'PUT',
             path_params,
             query_params,
             header_params,

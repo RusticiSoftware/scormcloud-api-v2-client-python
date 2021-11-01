@@ -34,6 +34,7 @@ class UpdateDispatchSchema(object):
         'allow_new_registrations': 'bool',
         'instanced': 'bool',
         'registration_cap': 'int',
+        'registration_count': 'int',
         'expiration_date': 'datetime',
         'enabled': 'bool',
         'email': 'str',
@@ -45,6 +46,7 @@ class UpdateDispatchSchema(object):
         'allow_new_registrations': 'allowNewRegistrations',
         'instanced': 'instanced',
         'registration_cap': 'registrationCap',
+        'registration_count': 'registrationCount',
         'expiration_date': 'expirationDate',
         'enabled': 'enabled',
         'email': 'email',
@@ -52,12 +54,13 @@ class UpdateDispatchSchema(object):
         'post_back': 'postBack'
     }
 
-    def __init__(self, allow_new_registrations=None, instanced=None, registration_cap=None, expiration_date=None, enabled=None, email=None, notes=None, post_back=None):  # noqa: E501
+    def __init__(self, allow_new_registrations=None, instanced=None, registration_cap=None, registration_count=None, expiration_date=None, enabled=None, email=None, notes=None, post_back=None):  # noqa: E501
         """UpdateDispatchSchema - a model defined in Swagger"""  # noqa: E501
 
         self._allow_new_registrations = None
         self._instanced = None
         self._registration_cap = None
+        self._registration_count = None
         self._expiration_date = None
         self._enabled = None
         self._email = None
@@ -71,6 +74,8 @@ class UpdateDispatchSchema(object):
             self.instanced = instanced
         if registration_cap is not None:
             self.registration_cap = registration_cap
+        if registration_count is not None:
+            self.registration_count = registration_count
         if expiration_date is not None:
             self.expiration_date = expiration_date
         if enabled is not None:
@@ -152,10 +157,33 @@ class UpdateDispatchSchema(object):
         self._registration_cap = registration_cap
 
     @property
+    def registration_count(self):
+        """Gets the registration_count of this UpdateDispatchSchema.  # noqa: E501
+
+        The current number of registrations that have been created for this dispatch.   # noqa: E501
+
+        :return: The registration_count of this UpdateDispatchSchema.  # noqa: E501
+        :rtype: int
+        """
+        return self._registration_count
+
+    @registration_count.setter
+    def registration_count(self, registration_count):
+        """Sets the registration_count of this UpdateDispatchSchema.
+
+        The current number of registrations that have been created for this dispatch.   # noqa: E501
+
+        :param registration_count: The registration_count of this UpdateDispatchSchema.  # noqa: E501
+        :type: int
+        """
+
+        self._registration_count = registration_count
+
+    @property
     def expiration_date(self):
         """Gets the expiration_date of this UpdateDispatchSchema.  # noqa: E501
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or not present for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this UpdateDispatchSchema.  # noqa: E501
         :rtype: datetime
@@ -166,7 +194,7 @@ class UpdateDispatchSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this UpdateDispatchSchema.
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or not present for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this UpdateDispatchSchema.  # noqa: E501
         :type: datetime

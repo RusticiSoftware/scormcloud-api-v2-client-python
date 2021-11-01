@@ -34,9 +34,9 @@ class CourseApi(object):
         self.api_client = api_client
 
     def build_course_preview_launch_link(self, course_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get a link to preview a course.   # noqa: E501
+        """Get a launch link to preview a Course   # noqa: E501
 
-        Returns the launch link to use to preview this course.   # noqa: E501
+        Returns the launch link to use to preview the course.  Course preview does not require an underlying registration. As such, no interactions will be tracked during the preview launch.  Previews are meant to be a way to confirm the course looks and acts the way it should.  >**Note:** >The cmi5 standard does not support the ability to preview a course.  A launch link can be built for a cmi5 course, but visiting the link will result in an error page.  More details can be found in this [article explaining the complications behind cmi5 preview launches](https://support.scorm.com/hc/en-us/articles/1260805676710).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_course_preview_launch_link(course_id, launch_link_request, async_req=True)
@@ -45,7 +45,6 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
-        :param str css_url:
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -58,9 +57,9 @@ class CourseApi(object):
             return data
 
     def build_course_preview_launch_link_with_http_info(self, course_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get a link to preview a course.   # noqa: E501
+        """Get a launch link to preview a Course   # noqa: E501
 
-        Returns the launch link to use to preview this course.   # noqa: E501
+        Returns the launch link to use to preview the course.  Course preview does not require an underlying registration. As such, no interactions will be tracked during the preview launch.  Previews are meant to be a way to confirm the course looks and acts the way it should.  >**Note:** >The cmi5 standard does not support the ability to preview a course.  A launch link can be built for a cmi5 course, but visiting the link will result in an error page.  More details can be found in this [article explaining the complications behind cmi5 preview launches](https://support.scorm.com/hc/en-us/articles/1260805676710).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_course_preview_launch_link_with_http_info(course_id, launch_link_request, async_req=True)
@@ -69,13 +68,12 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
-        :param str css_url:
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'launch_link_request', 'css_url']  # noqa: E501
+        all_params = ['course_id', 'launch_link_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -106,8 +104,6 @@ class CourseApi(object):
             path_params['courseId'] = params['course_id']  # noqa: E501
 
         query_params = []
-        if 'css_url' in params:
-            query_params.append(('cssUrl', params['css_url']))  # noqa: E501
 
         header_params = {}
 
@@ -145,9 +141,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def build_course_preview_launch_link_with_version(self, course_id, version_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get a link to preview a particular course version.   # noqa: E501
+        """Get a launch link to preview a Course Version   # noqa: E501
 
-        Returns the link to use to preview a particular version of a course.   # noqa: E501
+        Returns the launch link to use to preview the course version.  Course preview does not require an underlying registration.  As such, no interactions will be tracked during the preview launch.  Previews are meant to be a way to confirm the course looks and acts the way it should.  >**Note:** >The cmi5 standard does not support the ability to preview a course.  A launch link can be built for a cmi5 course, but visiting the link will result in an error page.  More details can be found in this [article explaining the complications behind cmi5 preview launches](https://support.scorm.com/hc/en-us/articles/1260805676710).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_course_preview_launch_link_with_version(course_id, version_id, launch_link_request, async_req=True)
@@ -155,7 +151,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
@@ -169,9 +165,9 @@ class CourseApi(object):
             return data
 
     def build_course_preview_launch_link_with_version_with_http_info(self, course_id, version_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get a link to preview a particular course version.   # noqa: E501
+        """Get a launch link to preview a Course Version   # noqa: E501
 
-        Returns the link to use to preview a particular version of a course.   # noqa: E501
+        Returns the launch link to use to preview the course version.  Course preview does not require an underlying registration.  As such, no interactions will be tracked during the preview launch.  Previews are meant to be a way to confirm the course looks and acts the way it should.  >**Note:** >The cmi5 standard does not support the ability to preview a course.  A launch link can be built for a cmi5 course, but visiting the link will result in an error page.  More details can be found in this [article explaining the complications behind cmi5 preview launches](https://support.scorm.com/hc/en-us/articles/1260805676710).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_course_preview_launch_link_with_version_with_http_info(course_id, version_id, launch_link_request, async_req=True)
@@ -179,7 +175,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
@@ -260,9 +256,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def create_fetch_and_import_course_job(self, course_id, import_request, **kwargs):  # noqa: E501
-        """Fetch and import a course.   # noqa: E501
+        """Create a Course from a package fetched from an external source   # noqa: E501
 
-        An import job will be started to fetch and import the referenced file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.  To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from a package fetched and imported from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud.  An import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_fetch_and_import_course_job(course_id, import_request, async_req=True)
@@ -285,9 +281,9 @@ class CourseApi(object):
             return data
 
     def create_fetch_and_import_course_job_with_http_info(self, course_id, import_request, **kwargs):  # noqa: E501
-        """Fetch and import a course.   # noqa: E501
+        """Create a Course from a package fetched from an external source   # noqa: E501
 
-        An import job will be started to fetch and import the referenced file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.  To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from a package fetched and imported from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud.  An import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_fetch_and_import_course_job_with_http_info(course_id, import_request, async_req=True)
@@ -375,9 +371,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def create_no_upload_and_import_course_job(self, course_id, import_request, **kwargs):  # noqa: E501
-        """Import a course that fetches or references an external media file   # noqa: E501
+        """Create a Course from a fetched or referenced external media file   # noqa: E501
 
-        An import job will be started to import the course by fetching the course or with a reference to an external file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided. To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from one of two methods, fetchRequest or mediaFileReferenceRequest.  In either case, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_no_upload_and_import_course_job(course_id, import_request, async_req=True)
@@ -400,9 +396,9 @@ class CourseApi(object):
             return data
 
     def create_no_upload_and_import_course_job_with_http_info(self, course_id, import_request, **kwargs):  # noqa: E501
-        """Import a course that fetches or references an external media file   # noqa: E501
+        """Create a Course from a fetched or referenced external media file   # noqa: E501
 
-        An import job will be started to import the course by fetching the course or with a reference to an external file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided. To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from one of two methods, fetchRequest or mediaFileReferenceRequest.  In either case, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_no_upload_and_import_course_job_with_http_info(course_id, import_request, async_req=True)
@@ -490,9 +486,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def create_upload_and_import_course_job(self, course_id, **kwargs):  # noqa: E501
-        """Upload and import a course.  # noqa: E501
+        """Create a Course from an uploaded package   # noqa: E501
 
-        An import job will be started to import the posted file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.  To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from a package uploaded from your file system.  The package will be sent as part of the request and will be stored in SCORM Cloud.  An import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_upload_and_import_course_job(course_id, async_req=True)
@@ -504,7 +500,7 @@ class CourseApi(object):
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
         :param str uploaded_content_type: The MIME type identifier for the content to be uploaded. This is required if uploading a media file (.pdf, .mp3, or .mp4).
         :param str content_metadata: Serialized 'mediaFileMetadata' schema.
-        :param file file: The zip file of the course contents to import.
+        :param file file: The zip file of the course contents to import. 
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -517,9 +513,9 @@ class CourseApi(object):
             return data
 
     def create_upload_and_import_course_job_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Upload and import a course.  # noqa: E501
+        """Create a Course from an uploaded package   # noqa: E501
 
-        An import job will be started to import the posted file, and the import job ID will be returned. If the import is successful, the imported course will be registered using the courseId provided.  To check the progress of the import job, GetImportJobStatus should be called with the job ID returned from this call.   # noqa: E501
+        Creates a course from a package uploaded from your file system.  The package will be sent as part of the request and will be stored in SCORM Cloud.  An import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_upload_and_import_course_job_with_http_info(course_id, async_req=True)
@@ -531,7 +527,7 @@ class CourseApi(object):
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
         :param str uploaded_content_type: The MIME type identifier for the content to be uploaded. This is required if uploading a media file (.pdf, .mp3, or .mp4).
         :param str content_metadata: Serialized 'mediaFileMetadata' schema.
-        :param file file: The zip file of the course contents to import.
+        :param file file: The zip file of the course contents to import. 
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -609,9 +605,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def delete_course(self, course_id, **kwargs):  # noqa: E501
-        """Delete a course.   # noqa: E501
+        """Delete a Course   # noqa: E501
 
-        Delete course identified by `courseId`.  When a course is deleted, so is everything connected to this course.  This includes:  - Registrations - Invitations - Dispatches - Debug Logs   # noqa: E501
+        Deletes the specified course.  >**Caution:** >When a course is deleted, so is everything connected to the course.  This includes: >- Registrations >- Invitations >- Dispatches >- Debug Logs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course(course_id, async_req=True)
@@ -631,9 +627,9 @@ class CourseApi(object):
             return data
 
     def delete_course_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Delete a course.   # noqa: E501
+        """Delete a Course   # noqa: E501
 
-        Delete course identified by `courseId`.  When a course is deleted, so is everything connected to this course.  This includes:  - Registrations - Invitations - Dispatches - Debug Logs   # noqa: E501
+        Deletes the specified course.  >**Caution:** >When a course is deleted, so is everything connected to the course.  This includes: >- Registrations >- Invitations >- Dispatches >- Debug Logs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_with_http_info(course_id, async_req=True)
@@ -707,10 +703,117 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_course_configuration_setting(self, course_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a course configuration.   # noqa: E501
+    def delete_course_asset(self, course_id, relative_path, **kwargs):  # noqa: E501
+        """Delete an asset file from a Course   # noqa: E501
 
-        Clears the value of the given `settingId` for this course.  The effective setting value will become any value set at the application level (if this value is set at the application level) or the default setting.   # noqa: E501
+        Deletes the asset file at the specified relative path from the latest version of the course. GetCourseFileList can be used to find the relative path of the file.  >**Caution:** >This may have unintended consequences if the asset is still being linked to in other files in the course.  Make sure that other files relying on this asset are modified or removed as well.  This can be done with the ImportCourseAssetFile or UploadCourseAssetFile endpoints.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_course_asset(course_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.delete_course_asset_with_http_info(course_id, relative_path, **kwargs)  # noqa: E501
+        else:
+            (data) = self.delete_course_asset_with_http_info(course_id, relative_path, **kwargs)  # noqa: E501
+            return data
+
+    def delete_course_asset_with_http_info(self, course_id, relative_path, **kwargs):  # noqa: E501
+        """Delete an asset file from a Course   # noqa: E501
+
+        Deletes the asset file at the specified relative path from the latest version of the course. GetCourseFileList can be used to find the relative path of the file.  >**Caution:** >This may have unintended consequences if the asset is still being linked to in other files in the course.  Make sure that other files relying on this asset are modified or removed as well.  This can be done with the ImportCourseAssetFile or UploadCourseAssetFile endpoints.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_course_asset_with_http_info(course_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'relative_path']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_course_asset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `delete_course_asset`")  # noqa: E501
+        # verify the required parameter 'relative_path' is set
+        if ('relative_path' not in params or
+                params['relative_path'] is None):
+            raise ValueError("Missing the required parameter `relative_path` when calling `delete_course_asset`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+        if 'relative_path' in params:
+            query_params.append(('relativePath', params['relative_path']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/asset', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_course_configuration_setting(self, course_id, setting_id, **kwargs):  # noqa: E501
+        """Delete a configuration setting explicitly set for a Course   # noqa: E501
+
+        Clears the specified setting from the course.  This causes the setting to inherit a value from a higher level (e.g. application).  If the configuration setting was not set at the course level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_configuration_setting(course_id, setting_id, async_req=True)
@@ -731,9 +834,9 @@ class CourseApi(object):
             return data
 
     def delete_course_configuration_setting_with_http_info(self, course_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a course configuration.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Course   # noqa: E501
 
-        Clears the value of the given `settingId` for this course.  The effective setting value will become any value set at the application level (if this value is set at the application level) or the default setting.   # noqa: E501
+        Clears the specified setting from the course.  This causes the setting to inherit a value from a higher level (e.g. application).  If the configuration setting was not set at the course level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_configuration_setting_with_http_info(course_id, setting_id, async_req=True)
@@ -815,9 +918,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def delete_course_tags(self, course_id, tags, **kwargs):  # noqa: E501
-        """Delete course tags.   # noqa: E501
+        """Delete tags from a Course   # noqa: E501
 
-        Delete the provided tags from this course.   # noqa: E501
+        Deletes the specified tags from the course.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_tags(course_id, tags, async_req=True)
@@ -838,9 +941,9 @@ class CourseApi(object):
             return data
 
     def delete_course_tags_with_http_info(self, course_id, tags, **kwargs):  # noqa: E501
-        """Delete course tags.   # noqa: E501
+        """Delete tags from a Course   # noqa: E501
 
-        Delete the provided tags from this course.   # noqa: E501
+        Deletes the specified tags from the course.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_tags_with_http_info(course_id, tags, async_req=True)
@@ -922,9 +1025,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def delete_course_version(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Delete a course version.   # noqa: E501
+        """Delete a Course Version   # noqa: E501
 
-        Delete `versionId` of `courseId`.  If this is the last remaining version of this course, the course itself will be deleted and no longer accessible.   # noqa: E501
+        Deletes the specified version of the course.  If deleting the last remaining version of the course, the course itself will be deleted and no longer accessible.  >**Caution:** >When a course is deleted, so is everything connected to this course.  This includes: >- Registrations >- Invitations >- Dispatches >- Debug Logs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_version(course_id, version_id, async_req=True)
@@ -932,7 +1035,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -945,9 +1048,9 @@ class CourseApi(object):
             return data
 
     def delete_course_version_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Delete a course version.   # noqa: E501
+        """Delete a Course Version   # noqa: E501
 
-        Delete `versionId` of `courseId`.  If this is the last remaining version of this course, the course itself will be deleted and no longer accessible.   # noqa: E501
+        Deletes the specified version of the course.  If deleting the last remaining version of the course, the course itself will be deleted and no longer accessible.  >**Caution:** >When a course is deleted, so is everything connected to this course.  This includes: >- Registrations >- Invitations >- Dispatches >- Debug Logs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_version_with_http_info(course_id, version_id, async_req=True)
@@ -955,7 +1058,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1028,10 +1131,125 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_course_version_configuration_setting(self, course_id, version_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a configuration setting for a version of a course.   # noqa: E501
+    def delete_course_version_asset(self, course_id, version_id, relative_path, **kwargs):  # noqa: E501
+        """Delete an asset file from a Course Version   # noqa: E501
 
-        Clears the `settingId` value for this course and version.   # noqa: E501
+        Deletes the asset file at the specified relative path from the course version.  GetCourseVersionFileList can be used to find the relative path of the file.  >**Caution:** >This may have unintended consequences if the asset is still being linked to in other files in the course.  Make sure that other files relying on this asset are modified or removed as well.  This can be done with the ImportCourseVersionAssetFile or UploadCourseVersionAssetFile endpoints.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_course_version_asset(course_id, version_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.delete_course_version_asset_with_http_info(course_id, version_id, relative_path, **kwargs)  # noqa: E501
+        else:
+            (data) = self.delete_course_version_asset_with_http_info(course_id, version_id, relative_path, **kwargs)  # noqa: E501
+            return data
+
+    def delete_course_version_asset_with_http_info(self, course_id, version_id, relative_path, **kwargs):  # noqa: E501
+        """Delete an asset file from a Course Version   # noqa: E501
+
+        Deletes the asset file at the specified relative path from the course version.  GetCourseVersionFileList can be used to find the relative path of the file.  >**Caution:** >This may have unintended consequences if the asset is still being linked to in other files in the course.  Make sure that other files relying on this asset are modified or removed as well.  This can be done with the ImportCourseVersionAssetFile or UploadCourseVersionAssetFile endpoints.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_course_version_asset_with_http_info(course_id, version_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id', 'relative_path']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_course_version_asset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `delete_course_version_asset`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `delete_course_version_asset`")  # noqa: E501
+        # verify the required parameter 'relative_path' is set
+        if ('relative_path' not in params or
+                params['relative_path'] is None):
+            raise ValueError("Missing the required parameter `relative_path` when calling `delete_course_version_asset`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+        if 'relative_path' in params:
+            query_params.append(('relativePath', params['relative_path']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/asset', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_course_version_configuration_setting(self, course_id, version_id, setting_id, **kwargs):  # noqa: E501
+        """Delete a configuration setting explicitly set for a Course Version   # noqa: E501
+
+        Clears the specified setting from the course version.  This causes the setting to inherit a value from a higher level (e.g. application).  If the configuration setting was not set at the course level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_version_configuration_setting(course_id, version_id, setting_id, async_req=True)
@@ -1039,7 +1257,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1053,9 +1271,9 @@ class CourseApi(object):
             return data
 
     def delete_course_version_configuration_setting_with_http_info(self, course_id, version_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a configuration setting for a version of a course.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Course Version   # noqa: E501
 
-        Clears the `settingId` value for this course and version.   # noqa: E501
+        Clears the specified setting from the course version.  This causes the setting to inherit a value from a higher level (e.g. application).  If the configuration setting was not set at the course level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_course_version_configuration_setting_with_http_info(course_id, version_id, setting_id, async_req=True)
@@ -1063,7 +1281,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1144,9 +1362,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_course(self, course_id, **kwargs):  # noqa: E501
-        """Get course details.   # noqa: E501
+        """Get detailed information about a Course   # noqa: E501
 
-        Get detailed information about `courseId`.  Futher detail can be obtained with the optional query parameters flags.   # noqa: E501
+        Returns detailed information about the course.  This includes title, update date, learning standard, and version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course(course_id, async_req=True)
@@ -1168,9 +1386,9 @@ class CourseApi(object):
             return data
 
     def get_course_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Get course details.   # noqa: E501
+        """Get detailed information about a Course   # noqa: E501
 
-        Get detailed information about `courseId`.  Futher detail can be obtained with the optional query parameters flags.   # noqa: E501
+        Returns detailed information about the course.  This includes title, update date, learning standard, and version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_with_http_info(course_id, async_req=True)
@@ -1250,10 +1468,117 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_course_configuration(self, course_id, **kwargs):  # noqa: E501
-        """Get course configuration.   # noqa: E501
+    def get_course_asset(self, course_id, relative_path, **kwargs):  # noqa: E501
+        """Download an asset file from a Course   # noqa: E501
 
-        Returns all effective configuration settings for this course.  For any setting which is not explicitly set at the course level, the effective value will be either the value set at the application level (if there is one) or the default value for the setting.   # noqa: E501
+        Downloads the asset file at the specified relative path from the latest version of the course. GetCourseFileList can be used to find the relative path of the file.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_asset(course_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_course_asset_with_http_info(course_id, relative_path, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_course_asset_with_http_info(course_id, relative_path, **kwargs)  # noqa: E501
+            return data
+
+    def get_course_asset_with_http_info(self, course_id, relative_path, **kwargs):  # noqa: E501
+        """Download an asset file from a Course   # noqa: E501
+
+        Downloads the asset file at the specified relative path from the latest version of the course. GetCourseFileList can be used to find the relative path of the file.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_asset_with_http_info(course_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'relative_path']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_course_asset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_course_asset`")  # noqa: E501
+        # verify the required parameter 'relative_path' is set
+        if ('relative_path' not in params or
+                params['relative_path'] is None):
+            raise ValueError("Missing the required parameter `relative_path` when calling `get_course_asset`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+        if 'relative_path' in params:
+            query_params.append(('relativePath', params['relative_path']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/octet-stream'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/asset', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='file',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_course_configuration(self, course_id, **kwargs):  # noqa: E501
+        """Get effective configuration settings for a Course   # noqa: E501
+
+        Returns the effective configuration settings for the course.  If not set at the course level, the setting will inherit a value from a higher level (e.g. application).  If there is a configuration setting present at a more specific level, that setting will override the one set at the course level.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_configuration(course_id, async_req=True)
@@ -1274,9 +1599,9 @@ class CourseApi(object):
             return data
 
     def get_course_configuration_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Get course configuration.   # noqa: E501
+        """Get effective configuration settings for a Course   # noqa: E501
 
-        Returns all effective configuration settings for this course.  For any setting which is not explicitly set at the course level, the effective value will be either the value set at the application level (if there is one) or the default value for the setting.   # noqa: E501
+        Returns the effective configuration settings for the course.  If not set at the course level, the setting will inherit a value from a higher level (e.g. application).  If there is a configuration setting present at a more specific level, that setting will override the one set at the course level.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_configuration_with_http_info(course_id, async_req=True)
@@ -1353,10 +1678,109 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_course_statements(self, course_id, **kwargs):  # noqa: E501
-        """Get course xAPI statements.   # noqa: E501
+    def get_course_file_list(self, course_id, **kwargs):  # noqa: E501
+        """Get a list of asset files in a Course   # noqa: E501
 
-        Get xAPI statements for `courseId`.   # noqa: E501
+        Returns a list of asset files in the course.  Included will be the relative path to use for the other course asset manipulation calls.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_file_list(course_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :return: FileListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_course_file_list_with_http_info(course_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_course_file_list_with_http_info(course_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_course_file_list_with_http_info(self, course_id, **kwargs):  # noqa: E501
+        """Get a list of asset files in a Course   # noqa: E501
+
+        Returns a list of asset files in the course.  Included will be the relative path to use for the other course asset manipulation calls.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_file_list_with_http_info(course_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :return: FileListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_course_file_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_course_file_list`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/asset/list', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='FileListSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_course_statements(self, course_id, **kwargs):  # noqa: E501
+        """Get xAPI statements for a Course   # noqa: E501
+
+        Returns xAPI statements for the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_statements(course_id, async_req=True)
@@ -1365,9 +1789,9 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param str learner_id: Only entries for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1380,9 +1804,9 @@ class CourseApi(object):
             return data
 
     def get_course_statements_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Get course xAPI statements.   # noqa: E501
+        """Get xAPI statements for a Course   # noqa: E501
 
-        Get xAPI statements for `courseId`.   # noqa: E501
+        Returns xAPI statements for the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_statements_with_http_info(course_id, async_req=True)
@@ -1391,9 +1815,9 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param str learner_id: Only entries for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1469,9 +1893,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_course_tags(self, course_id, **kwargs):  # noqa: E501
-        """Get course tags.   # noqa: E501
+        """Get tags for a Course   # noqa: E501
 
-        Get a list of the tags for this course.   # noqa: E501
+        Returns the tags for the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_tags(course_id, async_req=True)
@@ -1491,9 +1915,9 @@ class CourseApi(object):
             return data
 
     def get_course_tags_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Get course tags.   # noqa: E501
+        """Get tags for a Course   # noqa: E501
 
-        Get a list of the tags for this course.   # noqa: E501
+        Returns the tags for the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_tags_with_http_info(course_id, async_req=True)
@@ -1567,10 +1991,125 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_course_version_configuration(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get configuration for a version of a course.   # noqa: E501
+    def get_course_version_asset(self, course_id, version_id, relative_path, **kwargs):  # noqa: E501
+        """Download an asset file from a specific Course Version   # noqa: E501
 
-        Returns all configuration settings for this course and version.   # noqa: E501
+        Downloads the asset file at the provided relative path from the course version.  GetCourseVersionFileList can be used to find the relative path of the file.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_version_asset(course_id, version_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_course_version_asset_with_http_info(course_id, version_id, relative_path, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_course_version_asset_with_http_info(course_id, version_id, relative_path, **kwargs)  # noqa: E501
+            return data
+
+    def get_course_version_asset_with_http_info(self, course_id, version_id, relative_path, **kwargs):  # noqa: E501
+        """Download an asset file from a specific Course Version   # noqa: E501
+
+        Downloads the asset file at the provided relative path from the course version.  GetCourseVersionFileList can be used to find the relative path of the file.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_version_asset_with_http_info(course_id, version_id, relative_path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str relative_path: Relative path of the asset within the course.  (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id', 'relative_path']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_course_version_asset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_course_version_asset`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `get_course_version_asset`")  # noqa: E501
+        # verify the required parameter 'relative_path' is set
+        if ('relative_path' not in params or
+                params['relative_path'] is None):
+            raise ValueError("Missing the required parameter `relative_path` when calling `get_course_version_asset`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+        if 'relative_path' in params:
+            query_params.append(('relativePath', params['relative_path']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/octet-stream'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/asset', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='file',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_course_version_configuration(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Get effective configuration settings for a Course Version   # noqa: E501
+
+        Returns the effective configuration settings for the course version.  If not set at the course level, the setting will inherit a value from a higher level (e.g. application).  If there is a configuration setting present at a more specific level, that setting will override the one set at the course level.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_configuration(course_id, version_id, async_req=True)
@@ -1578,7 +2117,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1592,9 +2131,9 @@ class CourseApi(object):
             return data
 
     def get_course_version_configuration_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get configuration for a version of a course.   # noqa: E501
+        """Get effective configuration settings for a Course Version   # noqa: E501
 
-        Returns all configuration settings for this course and version.   # noqa: E501
+        Returns the effective configuration settings for the course version.  If not set at the course level, the setting will inherit a value from a higher level (e.g. application).  If there is a configuration setting present at a more specific level, that setting will override the one set at the course level.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_configuration_with_http_info(course_id, version_id, async_req=True)
@@ -1602,7 +2141,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1678,10 +2217,117 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_course_version_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get details on a course version.   # noqa: E501
+    def get_course_version_file_list(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Get a list of asset files in a Course Version   # noqa: E501
 
-        Get specific version `versionId` of `courseId`   # noqa: E501
+        Returns a list of asset files in the course version.  Included will be the relative path to use for the other course asset manipulation calls.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_version_file_list(course_id, version_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :return: FileListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_course_version_file_list_with_http_info(course_id, version_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_course_version_file_list_with_http_info(course_id, version_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_course_version_file_list_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Get a list of asset files in a Course Version   # noqa: E501
+
+        Returns a list of asset files in the course version.  Included will be the relative path to use for the other course asset manipulation calls.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_version_file_list_with_http_info(course_id, version_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :return: FileListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_course_version_file_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_course_version_file_list`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `get_course_version_file_list`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/asset/list', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='FileListSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_course_version_info(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Get detailed information about a Course Version   # noqa: E501
+
+        Returns detailed information about the course version.  This includes update date and registration count (if optional value is passed in).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_info(course_id, version_id, async_req=True)
@@ -1689,7 +2335,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :return: CourseSchema
@@ -1704,9 +2350,9 @@ class CourseApi(object):
             return data
 
     def get_course_version_info_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get details on a course version.   # noqa: E501
+        """Get detailed information about a Course Version   # noqa: E501
 
-        Get specific version `versionId` of `courseId`   # noqa: E501
+        Returns detailed information about the course version.  This includes update date and registration count (if optional value is passed in).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_info_with_http_info(course_id, version_id, async_req=True)
@@ -1714,7 +2360,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :return: CourseSchema
@@ -1794,9 +2440,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_course_version_statements(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for a course version.   # noqa: E501
+        """Get xAPI statements for a Course Version   # noqa: E501
 
-        Get xAPI statements for version `versionId` of `courseId`   # noqa: E501
+        Returns xAPI statements for the course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_statements(course_id, version_id, async_req=True)
@@ -1804,11 +2450,11 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param str learner_id: Only entries for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1821,9 +2467,9 @@ class CourseApi(object):
             return data
 
     def get_course_version_statements_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for a course version.   # noqa: E501
+        """Get xAPI statements for a Course Version   # noqa: E501
 
-        Get xAPI statements for version `versionId` of `courseId`   # noqa: E501
+        Returns xAPI statements for the course version.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_version_statements_with_http_info(course_id, version_id, async_req=True)
@@ -1831,11 +2477,11 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param str learner_id: Only entries for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1917,9 +2563,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_course_versions(self, course_id, **kwargs):  # noqa: E501
-        """Get details on a course's versions.   # noqa: E501
+        """Get a list of a Course's Versions   # noqa: E501
 
-        Get information about all versions of `courseId`.  This can be useful to see information such as registration counts and modification times across the versions of a course.   # noqa: E501
+        Returns information about all versions of the course.  This can be useful to see information such as registration counts and modification times across the versions of a course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_versions(course_id, async_req=True)
@@ -1927,8 +2573,8 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param bool include_registration_count: Include the registration count in the results
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :return: CourseListNonPagedSchema
@@ -1943,9 +2589,9 @@ class CourseApi(object):
             return data
 
     def get_course_versions_with_http_info(self, course_id, **kwargs):  # noqa: E501
-        """Get details on a course's versions.   # noqa: E501
+        """Get a list of a Course's Versions   # noqa: E501
 
-        Get information about all versions of `courseId`.  This can be useful to see information such as registration counts and modification times across the versions of a course.   # noqa: E501
+        Returns information about all versions of the course.  This can be useful to see information such as registration counts and modification times across the versions of a course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_course_versions_with_http_info(course_id, async_req=True)
@@ -1953,8 +2599,8 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param bool include_registration_count: Include the registration count in the results
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :return: CourseListNonPagedSchema
@@ -2032,24 +2678,25 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_courses(self, **kwargs):  # noqa: E501
-        """Get all courses.   # noqa: E501
+        """Get a list of Courses   # noqa: E501
 
-        Get all courses for the `appId` which was used to authenticate this call.   # noqa: E501
+        Returns a list of courses.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_courses(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
         :param str filter: Optional string which filters results by a specified field (described by filterBy).
-        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter.  Defaults to course_id.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to creation_date_desc.
-        :param bool include_registration_count: Include the registration count in the results
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
-        :param list[str] tags:
+        :param bool include_registration_count: Include the registration count in the results
         :return: CourseListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2062,30 +2709,31 @@ class CourseApi(object):
             return data
 
     def get_courses_with_http_info(self, **kwargs):  # noqa: E501
-        """Get all courses.   # noqa: E501
+        """Get a list of Courses   # noqa: E501
 
-        Get all courses for the `appId` which was used to authenticate this call.   # noqa: E501
+        Returns a list of courses.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_courses_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
         :param str filter: Optional string which filters results by a specified field (described by filterBy).
-        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter.  Defaults to course_id.
-        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results.  Defaults to creation_date_desc.
-        :param bool include_registration_count: Include the registration count in the results
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
-        :param list[str] tags:
+        :param bool include_registration_count: Include the registration count in the results
         :return: CourseListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['more', 'since', 'until', 'filter', 'filter_by', 'order_by', 'include_registration_count', 'include_course_metadata', 'tags']  # noqa: E501
+        all_params = ['since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_course_metadata', 'include_registration_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2106,25 +2754,27 @@ class CourseApi(object):
         path_params = {}
 
         query_params = []
-        if 'more' in params:
-            query_params.append(('more', params['more']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
         if 'filter' in params:
             query_params.append(('filter', params['filter']))  # noqa: E501
         if 'filter_by' in params:
             query_params.append(('filterBy', params['filter_by']))  # noqa: E501
         if 'order_by' in params:
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
-        if 'include_registration_count' in params:
-            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
+        if 'more' in params:
+            query_params.append(('more', params['more']))  # noqa: E501
         if 'include_course_metadata' in params:
             query_params.append(('includeCourseMetadata', params['include_course_metadata']))  # noqa: E501
-        if 'tags' in params:
-            query_params.append(('tags', params['tags']))  # noqa: E501
-            collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'include_registration_count' in params:
+            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
 
         header_params = {}
 
@@ -2160,9 +2810,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def get_import_job_status(self, import_job_id, **kwargs):  # noqa: E501
-        """Get course import job status.   # noqa: E501
+        """Get import job status for a Course   # noqa: E501
 
-        Check the status of an import job.  This can be called incrementally to check to progress of a call to either of the import options.   # noqa: E501
+        Check the status of a course import.  This can be called incrementally to check the progress of a call to any of the import options.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_import_job_status(import_job_id, async_req=True)
@@ -2182,9 +2832,9 @@ class CourseApi(object):
             return data
 
     def get_import_job_status_with_http_info(self, import_job_id, **kwargs):  # noqa: E501
-        """Get course import job status.   # noqa: E501
+        """Get import job status for a Course   # noqa: E501
 
-        Check the status of an import job.  This can be called incrementally to check to progress of a call to either of the import options.   # noqa: E501
+        Check the status of a course import.  This can be called incrementally to check the progress of a call to any of the import options.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_import_job_status_with_http_info(import_job_id, async_req=True)
@@ -2258,10 +2908,240 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def put_course_tags(self, course_id, tags, **kwargs):  # noqa: E501
-        """Set course tags.   # noqa: E501
+    def import_course_asset_file(self, course_id, asset_schema, **kwargs):  # noqa: E501
+        """Import an asset file for a Course   # noqa: E501
 
-        Set the tags for this course.  Note: any tags currently on this course will be overwritten with the new array of tags.   # noqa: E501
+        Creates or updates an asset file fetched from the provided url into the course.  The file will be downloaded from the url and stored in SCORM Cloud.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_course_asset_file(course_id, asset_schema, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param ImportAssetRequestSchema asset_schema: (required)
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_course_asset_file_with_http_info(course_id, asset_schema, **kwargs)  # noqa: E501
+        else:
+            (data) = self.import_course_asset_file_with_http_info(course_id, asset_schema, **kwargs)  # noqa: E501
+            return data
+
+    def import_course_asset_file_with_http_info(self, course_id, asset_schema, **kwargs):  # noqa: E501
+        """Import an asset file for a Course   # noqa: E501
+
+        Creates or updates an asset file fetched from the provided url into the course.  The file will be downloaded from the url and stored in SCORM Cloud.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_course_asset_file_with_http_info(course_id, asset_schema, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param ImportAssetRequestSchema asset_schema: (required)
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'asset_schema', 'update_asset_policy']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_course_asset_file" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `import_course_asset_file`")  # noqa: E501
+        # verify the required parameter 'asset_schema' is set
+        if ('asset_schema' not in params or
+                params['asset_schema'] is None):
+            raise ValueError("Missing the required parameter `asset_schema` when calling `import_course_asset_file`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+        if 'update_asset_policy' in params:
+            query_params.append(('updateAssetPolicy', params['update_asset_policy']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'asset_schema' in params:
+            body_params = params['asset_schema']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/asset', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AssetFileSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_course_version_asset_file(self, course_id, version_id, asset_schema, **kwargs):  # noqa: E501
+        """Import an asset file for a Course Version   # noqa: E501
+
+        Creates or updates an asset file fetched from the provided url into the course version.  The file will be downloaded from the url and stored in SCORM Cloud.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_course_version_asset_file(course_id, version_id, asset_schema, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param ImportAssetRequestSchema asset_schema: (required)
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_course_version_asset_file_with_http_info(course_id, version_id, asset_schema, **kwargs)  # noqa: E501
+        else:
+            (data) = self.import_course_version_asset_file_with_http_info(course_id, version_id, asset_schema, **kwargs)  # noqa: E501
+            return data
+
+    def import_course_version_asset_file_with_http_info(self, course_id, version_id, asset_schema, **kwargs):  # noqa: E501
+        """Import an asset file for a Course Version   # noqa: E501
+
+        Creates or updates an asset file fetched from the provided url into the course version.  The file will be downloaded from the url and stored in SCORM Cloud.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_course_version_asset_file_with_http_info(course_id, version_id, asset_schema, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param ImportAssetRequestSchema asset_schema: (required)
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id', 'asset_schema', 'update_asset_policy']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_course_version_asset_file" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `import_course_version_asset_file`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `import_course_version_asset_file`")  # noqa: E501
+        # verify the required parameter 'asset_schema' is set
+        if ('asset_schema' not in params or
+                params['asset_schema'] is None):
+            raise ValueError("Missing the required parameter `asset_schema` when calling `import_course_version_asset_file`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+        if 'update_asset_policy' in params:
+            query_params.append(('updateAssetPolicy', params['update_asset_policy']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'asset_schema' in params:
+            body_params = params['asset_schema']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/asset', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AssetFileSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def put_course_tags(self, course_id, tags, **kwargs):  # noqa: E501
+        """Add tags to a Course   # noqa: E501
+
+        Applies the provided tags to the course.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetCourses).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_course_tags(course_id, tags, async_req=True)
@@ -2282,9 +3162,9 @@ class CourseApi(object):
             return data
 
     def put_course_tags_with_http_info(self, course_id, tags, **kwargs):  # noqa: E501
-        """Set course tags.   # noqa: E501
+        """Add tags to a Course   # noqa: E501
 
-        Set the tags for this course.  Note: any tags currently on this course will be overwritten with the new array of tags.   # noqa: E501
+        Applies the provided tags to the course.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetCourses).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_course_tags_with_http_info(course_id, tags, async_req=True)
@@ -2366,16 +3246,16 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def put_course_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Set tags on courses.   # noqa: E501
+        """Add a group of tags to a group of Courses   # noqa: E501
 
-        Sets all of the provided tags on all of the provided courses.   # noqa: E501
+        Applies all of the provided tags on all of the provided courses.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetCourses).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_course_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2388,16 +3268,16 @@ class CourseApi(object):
             return data
 
     def put_course_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Set tags on courses.   # noqa: E501
+        """Add a group of tags to a group of Courses   # noqa: E501
 
-        Sets all of the provided tags on all of the provided courses.   # noqa: E501
+        Applies all of the provided tags on all of the provided courses.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetCourses).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_course_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2465,9 +3345,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def set_course_configuration(self, course_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set course configuration.   # noqa: E501
+        """Update configuration settings for a Course   # noqa: E501
 
-        Set configuration settings for this course.  Setting a value at this level will override any value which is set at the application level.   # noqa: E501
+        Updates configuration settings at the course level.  This will explicitly set a value at the course level and override any settings from a higher level.  These settings will affect all items within the course which do not have their own explicit configuration set.  This can effectively be used to set course level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_configuration(course_id, configuration_settings, async_req=True)
@@ -2488,9 +3368,9 @@ class CourseApi(object):
             return data
 
     def set_course_configuration_with_http_info(self, course_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set course configuration.   # noqa: E501
+        """Update configuration settings for a Course   # noqa: E501
 
-        Set configuration settings for this course.  Setting a value at this level will override any value which is set at the application level.   # noqa: E501
+        Updates configuration settings at the course level.  This will explicitly set a value at the course level and override any settings from a higher level.  These settings will affect all items within the course which do not have their own explicit configuration set.  This can effectively be used to set course level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_configuration_with_http_info(course_id, configuration_settings, async_req=True)
@@ -2572,9 +3452,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def set_course_title(self, course_id, title, **kwargs):  # noqa: E501
-        """Set the title of a course.   # noqa: E501
+        """Update title for a Course   # noqa: E501
 
-        Sets the course title for the provided courseId.   # noqa: E501
+        Updates the title of the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_title(course_id, title, async_req=True)
@@ -2595,9 +3475,9 @@ class CourseApi(object):
             return data
 
     def set_course_title_with_http_info(self, course_id, title, **kwargs):  # noqa: E501
-        """Set the title of a course.   # noqa: E501
+        """Update title for a Course   # noqa: E501
 
-        Sets the course title for the provided courseId.   # noqa: E501
+        Updates the title of the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_title_with_http_info(course_id, title, async_req=True)
@@ -2679,9 +3559,9 @@ class CourseApi(object):
             collection_formats=collection_formats)
 
     def set_course_version_configuration(self, course_id, version_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set configuration for a version of a course.   # noqa: E501
+        """Update configuration settings for a Course Version   # noqa: E501
 
-        Set configuration settings for this course and version.   # noqa: E501
+        Updates configuration settings at the course level.  This will explicitly set a value at the course level and override any settings from a higher level.  These settings will affect all items within the course which do not have their own explicit configuration set.  This can effectively be used to set course level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_version_configuration(course_id, version_id, configuration_settings, async_req=True)
@@ -2689,7 +3569,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2703,9 +3583,9 @@ class CourseApi(object):
             return data
 
     def set_course_version_configuration_with_http_info(self, course_id, version_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set configuration for a version of a course.   # noqa: E501
+        """Update configuration settings for a Course Version   # noqa: E501
 
-        Set configuration settings for this course and version.   # noqa: E501
+        Updates configuration settings at the course level.  This will explicitly set a value at the course level and override any settings from a higher level.  These settings will affect all items within the course which do not have their own explicit configuration set.  This can effectively be used to set course level defaults.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_course_version_configuration_with_http_info(course_id, version_id, configuration_settings, async_req=True)
@@ -2713,7 +3593,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param int version_id: The course version (required)
+        :param int version_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2786,6 +3666,244 @@ class CourseApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def upload_course_asset_file(self, course_id, destination, **kwargs):  # noqa: E501
+        """Upload an asset file for a Course   # noqa: E501
+
+        Creates or updates an asset file uploaded from your file system into the course.  The file will be sent as part of the request and will be stored in SCORM Cloud alongside the course.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.upload_course_asset_file(course_id, destination, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str destination: Relative path from the course's base directory where the asset file will be uploaded. `/Etiquette/Course.html` will upload the file into the Etiquette folder of the course.  (required)
+        :param file file: The asset file to import into the course. 
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.upload_course_asset_file_with_http_info(course_id, destination, **kwargs)  # noqa: E501
+        else:
+            (data) = self.upload_course_asset_file_with_http_info(course_id, destination, **kwargs)  # noqa: E501
+            return data
+
+    def upload_course_asset_file_with_http_info(self, course_id, destination, **kwargs):  # noqa: E501
+        """Upload an asset file for a Course   # noqa: E501
+
+        Creates or updates an asset file uploaded from your file system into the course.  The file will be sent as part of the request and will be stored in SCORM Cloud alongside the course.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.upload_course_asset_file_with_http_info(course_id, destination, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param str destination: Relative path from the course's base directory where the asset file will be uploaded. `/Etiquette/Course.html` will upload the file into the Etiquette folder of the course.  (required)
+        :param file file: The asset file to import into the course. 
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'destination', 'file', 'update_asset_policy']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method upload_course_asset_file" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `upload_course_asset_file`")  # noqa: E501
+        # verify the required parameter 'destination' is set
+        if ('destination' not in params or
+                params['destination'] is None):
+            raise ValueError("Missing the required parameter `destination` when calling `upload_course_asset_file`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+        if 'update_asset_policy' in params:
+            query_params.append(('updateAssetPolicy', params['update_asset_policy']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            local_var_files['file'] = params['file']  # noqa: E501
+        if 'destination' in params:
+            form_params.append(('destination', params['destination']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/asset/upload', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AssetFileSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def upload_course_version_asset_file(self, course_id, version_id, destination, **kwargs):  # noqa: E501
+        """Upload an asset file for Course Version   # noqa: E501
+
+        Creates or updates an asset file uploaded from your file system into the course version.  The file will be sent as part of the request and will be stored in SCORM Cloud alongside the course.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.upload_course_version_asset_file(course_id, version_id, destination, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str destination: Relative path from the course's base directory where the asset file will be uploaded. `/Etiquette/Course.html` will upload the file into the Etiquette folder of the course.  (required)
+        :param file file: The asset file to import into the course. 
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.upload_course_version_asset_file_with_http_info(course_id, version_id, destination, **kwargs)  # noqa: E501
+        else:
+            (data) = self.upload_course_version_asset_file_with_http_info(course_id, version_id, destination, **kwargs)  # noqa: E501
+            return data
+
+    def upload_course_version_asset_file_with_http_info(self, course_id, version_id, destination, **kwargs):  # noqa: E501
+        """Upload an asset file for Course Version   # noqa: E501
+
+        Creates or updates an asset file uploaded from your file system into the course version.  The file will be sent as part of the request and will be stored in SCORM Cloud alongside the course.  This is a useful way to modify the course structure without needing to reimport the whole course after you've made changes.  >**Info:** >If the course structure is being heavily modified, consider creating a new version instead.  This can be done by calling one of the course import jobs while passing true for `mayCreateNewVersion`.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.upload_course_version_asset_file_with_http_info(course_id, version_id, destination, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :param str destination: Relative path from the course's base directory where the asset file will be uploaded. `/Etiquette/Course.html` will upload the file into the Etiquette folder of the course.  (required)
+        :param file file: The asset file to import into the course. 
+        :param str update_asset_policy: Describes how SCORM Cloud should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). 
+        :return: AssetFileSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id', 'destination', 'file', 'update_asset_policy']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method upload_course_version_asset_file" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `upload_course_version_asset_file`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `upload_course_version_asset_file`")  # noqa: E501
+        # verify the required parameter 'destination' is set
+        if ('destination' not in params or
+                params['destination'] is None):
+            raise ValueError("Missing the required parameter `destination` when calling `upload_course_version_asset_file`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+        if 'update_asset_policy' in params:
+            query_params.append(('updateAssetPolicy', params['update_asset_policy']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            local_var_files['file'] = params['file']  # noqa: E501
+        if 'destination' in params:
+            form_params.append(('destination', params['destination']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/asset/upload', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AssetFileSchema',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

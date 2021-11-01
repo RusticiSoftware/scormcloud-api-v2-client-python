@@ -34,9 +34,9 @@ class InvitationsApi(object):
         self.api_client = api_client
 
     def create_private_invitation(self, private_invitation_request, **kwargs):  # noqa: E501
-        """Create a private invitation to a course.  # noqa: E501
+        """Create a Private Invitation to a Course   # noqa: E501
 
-        Create a private invitation to a course.  The provided information will be used to create new registrations for all of the provided e-mail addresses, and send asynchronously send e-mails to those addresses inviting them to the course.  To check the status of this process, a subsequent call to `/invitations/private/{invitationId}/status` must be made.  # noqa: E501
+        Creates a private invitation job which sends emails with a link to the course.  Invitations are meant as a way to provide access to your content.  Registrations will be created from the provided email addresses.  The email job will asynchronously send emails to those addresses inviting them to the course.  When the learners visit the link in the email, the course will be launched with the already created registration.  The private invitation ID can be used with GetPrivateInvitationJobStatus to view the status of the email job.  >**Info:** >While invitations are a way to provide access to your content, the majority of use cases would be better suited by creating a registration and building a launch link with the registration endpoints instead.  Invitations build upon registrations by grouping a set of registrations together and adding access control measures to said group. Invitations could be used to pass yearly compliance training to an entire company.  Invitations also have an associated expiration date which determines when the course will no longer be launchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_private_invitation(private_invitation_request, async_req=True)
@@ -56,9 +56,9 @@ class InvitationsApi(object):
             return data
 
     def create_private_invitation_with_http_info(self, private_invitation_request, **kwargs):  # noqa: E501
-        """Create a private invitation to a course.  # noqa: E501
+        """Create a Private Invitation to a Course   # noqa: E501
 
-        Create a private invitation to a course.  The provided information will be used to create new registrations for all of the provided e-mail addresses, and send asynchronously send e-mails to those addresses inviting them to the course.  To check the status of this process, a subsequent call to `/invitations/private/{invitationId}/status` must be made.  # noqa: E501
+        Creates a private invitation job which sends emails with a link to the course.  Invitations are meant as a way to provide access to your content.  Registrations will be created from the provided email addresses.  The email job will asynchronously send emails to those addresses inviting them to the course.  When the learners visit the link in the email, the course will be launched with the already created registration.  The private invitation ID can be used with GetPrivateInvitationJobStatus to view the status of the email job.  >**Info:** >While invitations are a way to provide access to your content, the majority of use cases would be better suited by creating a registration and building a launch link with the registration endpoints instead.  Invitations build upon registrations by grouping a set of registrations together and adding access control measures to said group. Invitations could be used to pass yearly compliance training to an entire company.  Invitations also have an associated expiration date which determines when the course will no longer be launchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_private_invitation_with_http_info(private_invitation_request, async_req=True)
@@ -133,9 +133,9 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def create_public_invitation(self, public_invitation_request, **kwargs):  # noqa: E501
-        """Create a publicly accessible invitation to a course.  # noqa: E501
+        """Create a Public Invitation to a Course   # noqa: E501
 
-        Create a publicly accessible invitation to a course.  # noqa: E501
+        Creates an invitation link to the course which can then be publicly distributed.  Invitations are meant as a way to provide access to your content.  When a learner visits the link, they will be prompted for name and email, a registration will be created from the information provided, and they will be redirected to the course.  Since anyone visiting the link will create a registration, it is highly advised that you set the `registrationCap` parameter when calling this method.  >**Info:** >While invitations are a way to provide access to your content, the majority of use cases would be better suited by creating a registration and building a launch link with the registration endpoints instead.  Invitations build upon registrations by grouping a set of registrations together and adding access control measures to said group. Invitations could be used to pass yearly compliance training to an entire company.  Invitations also have an associated expiration date which determines when the course will no longer be launchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_public_invitation(public_invitation_request, async_req=True)
@@ -155,9 +155,9 @@ class InvitationsApi(object):
             return data
 
     def create_public_invitation_with_http_info(self, public_invitation_request, **kwargs):  # noqa: E501
-        """Create a publicly accessible invitation to a course.  # noqa: E501
+        """Create a Public Invitation to a Course   # noqa: E501
 
-        Create a publicly accessible invitation to a course.  # noqa: E501
+        Creates an invitation link to the course which can then be publicly distributed.  Invitations are meant as a way to provide access to your content.  When a learner visits the link, they will be prompted for name and email, a registration will be created from the information provided, and they will be redirected to the course.  Since anyone visiting the link will create a registration, it is highly advised that you set the `registrationCap` parameter when calling this method.  >**Info:** >While invitations are a way to provide access to your content, the majority of use cases would be better suited by creating a registration and building a launch link with the registration endpoints instead.  Invitations build upon registrations by grouping a set of registrations together and adding access control measures to said group. Invitations could be used to pass yearly compliance training to an entire company.  Invitations also have an associated expiration date which determines when the course will no longer be launchable.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_public_invitation_with_http_info(public_invitation_request, async_req=True)
@@ -232,16 +232,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def delete_invitation_tags(self, invitation_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this invitation   # noqa: E501
+        """Delete tags from an Invitation   # noqa: E501
 
-        Delete the tags for this invitation   # noqa: E501
+        Deletes the specified tags from the invitation.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_invitation_tags(invitation_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -255,16 +255,16 @@ class InvitationsApi(object):
             return data
 
     def delete_invitation_tags_with_http_info(self, invitation_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this invitation   # noqa: E501
+        """Delete tags from an Invitation   # noqa: E501
 
-        Delete the tags for this invitation   # noqa: E501
+        Deletes the specified tags from the invitation.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_invitation_tags_with_http_info(invitation_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -339,21 +339,24 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_all_invitations(self, **kwargs):  # noqa: E501
-        """Get a list of invitation summaries.  # noqa: E501
+        """Get a list of Invitations   # noqa: E501
 
-        Get a summary of all the invitations for an appId, both public and private.  # noqa: E501
+        Returns a list of invitations (both public and private).  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_invitations(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: InvitationSummaryList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -366,27 +369,30 @@ class InvitationsApi(object):
             return data
 
     def get_all_invitations_with_http_info(self, **kwargs):  # noqa: E501
-        """Get a list of invitation summaries.  # noqa: E501
+        """Get a list of Invitations   # noqa: E501
 
-        Get a summary of all the invitations for an appId, both public and private.  # noqa: E501
+        Returns a list of invitations (both public and private).  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_invitations_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: InvitationSummaryList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'more']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -418,6 +424,12 @@ class InvitationsApi(object):
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
 
@@ -455,16 +467,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_invitation_tags(self, invitation_id, **kwargs):  # noqa: E501
-        """Get the tags for this invitation   # noqa: E501
+        """Get tags for an Invitation   # noqa: E501
 
-        Get the tags for this invitation   # noqa: E501
+        Returns the tags for the invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_invitation_tags(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -477,16 +489,16 @@ class InvitationsApi(object):
             return data
 
     def get_invitation_tags_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get the tags for this invitation   # noqa: E501
+        """Get tags for an Invitation   # noqa: E501
 
-        Get the tags for this invitation   # noqa: E501
+        Returns the tags for the invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_invitation_tags_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -554,16 +566,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_private_invitation(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a information about a private invitation.  # noqa: E501
+        """Get detailed information about a Private Invitation   # noqa: E501
 
-        Get a information about a private invitation.  # noqa: E501
+        Returns detailed information about the private invitation.  This includes the email sent, course ID, and whether new the invitation can still be launched or not.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitation(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :return: PrivateInvitationSchema
                  If the method is called asynchronously,
@@ -577,16 +589,16 @@ class InvitationsApi(object):
             return data
 
     def get_private_invitation_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a information about a private invitation.  # noqa: E501
+        """Get detailed information about a Private Invitation   # noqa: E501
 
-        Get a information about a private invitation.  # noqa: E501
+        Returns detailed information about the private invitation.  This includes the email sent, course ID, and whether new the invitation can still be launched or not.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitation_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :return: PrivateInvitationSchema
                  If the method is called asynchronously,
@@ -657,16 +669,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_private_invitation_job_status(self, invitation_id, **kwargs):  # noqa: E501
-        """Get the status of an invitation job.  # noqa: E501
+        """Get email job status for a Private Invitation   # noqa: E501
 
-        Get the status of a job to send out private invitations.  # noqa: E501
+        Check the status of a private invitation email job.  This can be called incrementally to check the progress of the emails.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitation_job_status(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :return: InvitationJobStatusSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -679,16 +691,16 @@ class InvitationsApi(object):
             return data
 
     def get_private_invitation_job_status_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get the status of an invitation job.  # noqa: E501
+        """Get email job status for a Private Invitation   # noqa: E501
 
-        Get the status of a job to send out private invitations.  # noqa: E501
+        Check the status of a private invitation email job.  This can be called incrementally to check the progress of the emails.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitation_job_status_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :return: InvitationJobStatusSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -756,21 +768,24 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_private_invitations(self, **kwargs):  # noqa: E501
-        """Get a list of all private invitations.  # noqa: E501
+        """Get a list of Private Invitations   # noqa: E501
 
-        Retrieves a list of all private invitations, optionally filtered by the given parameters.  # noqa: E501
+        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitations(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: PrivateInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -783,27 +798,30 @@ class InvitationsApi(object):
             return data
 
     def get_private_invitations_with_http_info(self, **kwargs):  # noqa: E501
-        """Get a list of all private invitations.  # noqa: E501
+        """Get a list of Private Invitations   # noqa: E501
 
-        Retrieves a list of all private invitations, optionally filtered by the given parameters.  # noqa: E501
+        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitations_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: PrivateInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'more']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -835,6 +853,12 @@ class InvitationsApi(object):
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
 
@@ -872,20 +896,24 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_private_user_invitations(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a list of user invitations.  # noqa: E501
+        """Get a list of Private User Invitations   # noqa: E501
 
-        Get a list of objects which contain the specific information about each user to whom this invitation was sent.  # noqa: E501
+        Get a list of user who were invited to view the course.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_user_invitations(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param bool include_registration_report:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str invitation_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_report: Optional flag to include basic registration information
         :return: UserInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -898,26 +926,30 @@ class InvitationsApi(object):
             return data
 
     def get_private_user_invitations_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a list of user invitations.  # noqa: E501
+        """Get a list of Private User Invitations   # noqa: E501
 
-        Get a list of objects which contain the specific information about each user to whom this invitation was sent.  # noqa: E501
+        Get a list of user who were invited to view the course.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_user_invitations_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param bool include_registration_report:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str invitation_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_report: Optional flag to include basic registration information
         :return: UserInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['invitation_id', 'since', 'until', 'include_registration_report', 'more']  # noqa: E501
+        all_params = ['invitation_id', 'since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more', 'include_registration_report']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -948,10 +980,18 @@ class InvitationsApi(object):
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
-        if 'include_registration_report' in params:
-            query_params.append(('includeRegistrationReport', params['include_registration_report']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_registration_report' in params:
+            query_params.append(('includeRegistrationReport', params['include_registration_report']))  # noqa: E501
 
         header_params = {}
 
@@ -987,16 +1027,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_public_invitation(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a information about a public invitation.  # noqa: E501
+        """Get detailed information about a Public Invitation   # noqa: E501
 
-        Get a information about a public invitation.  # noqa: E501
+        Returns detailed information about the public invitation.  This includes url, registration cap, and whether new learners can accept the invitation or not.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitation(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :return: PublicInvitationSchema
                  If the method is called asynchronously,
@@ -1010,16 +1050,16 @@ class InvitationsApi(object):
             return data
 
     def get_public_invitation_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a information about a public invitation.  # noqa: E501
+        """Get detailed information about a Public Invitation   # noqa: E501
 
-        Get a information about a public invitation.  # noqa: E501
+        Returns detailed information about the public invitation.  This includes url, registration cap, and whether new learners can accept the invitation or not.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitation_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param bool include_registration_count: Include the registration count in the results
         :return: PublicInvitationSchema
                  If the method is called asynchronously,
@@ -1090,21 +1130,24 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_public_invitations(self, **kwargs):  # noqa: E501
-        """Get a list of all public invitations.  # noqa: E501
+        """Get a list of Public Invitations   # noqa: E501
 
-        Retrieves a list of all public invitations, optionally filtered by the given parameters.  # noqa: E501
+        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitations(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: PublicInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1117,27 +1160,30 @@ class InvitationsApi(object):
             return data
 
     def get_public_invitations_with_http_info(self, **kwargs):  # noqa: E501
-        """Get a list of all public invitations.  # noqa: E501
+        """Get a list of Public Invitations   # noqa: E501
 
-        Retrieves a list of all public invitations, optionally filtered by the given parameters.  # noqa: E501
+        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitations_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Limit the results to invitations with courseIds that match the filter.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str datetime_filter: A string describing what the since/until parameters will be applied to. Options are: 'created' or 'updated'.  If not provided, it will default to `updated`.
-        :param list[str] tags:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: PublicInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'more']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1169,6 +1215,12 @@ class InvitationsApi(object):
         if 'tags' in params:
             query_params.append(('tags', params['tags']))  # noqa: E501
             collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
 
@@ -1206,20 +1258,24 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def get_public_user_invitations(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a list of user invitations.  # noqa: E501
+        """Get a list of Public User Invitations   # noqa: E501
 
-        Get a list of objects which contain the specific information about each user who visited the invitation link.  # noqa: E501
+        Returns a list of users who have visited the public invitation link.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_user_invitations(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param bool include_registration_report:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str invitation_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_report: Optional flag to include basic registration information
         :return: UserInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1232,26 +1288,30 @@ class InvitationsApi(object):
             return data
 
     def get_public_user_invitations_with_http_info(self, invitation_id, **kwargs):  # noqa: E501
-        """Get a list of user invitations.  # noqa: E501
+        """Get a list of Public User Invitations   # noqa: E501
 
-        Get a list of objects which contain the specific information about each user who visited the invitation link.  # noqa: E501
+        Returns a list of users who have visited the public invitation link.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_user_invitations_with_http_info(invitation_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param bool include_registration_report:
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str invitation_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_report: Optional flag to include basic registration information
         :return: UserInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['invitation_id', 'since', 'until', 'include_registration_report', 'more']  # noqa: E501
+        all_params = ['invitation_id', 'since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more', 'include_registration_report']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1282,10 +1342,18 @@ class InvitationsApi(object):
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
-        if 'include_registration_report' in params:
-            query_params.append(('includeRegistrationReport', params['include_registration_report']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_registration_report' in params:
+            query_params.append(('includeRegistrationReport', params['include_registration_report']))  # noqa: E501
 
         header_params = {}
 
@@ -1321,16 +1389,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def put_invitation_tags(self, invitation_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this invitation   # noqa: E501
+        """Add tags to an Invitation   # noqa: E501
 
-        Set the tags for this invitation   # noqa: E501
+        Applies the provided tags to the invitation.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetInvitations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_invitation_tags(invitation_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1344,16 +1412,16 @@ class InvitationsApi(object):
             return data
 
     def put_invitation_tags_with_http_info(self, invitation_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this invitation   # noqa: E501
+        """Add tags to an Invitation   # noqa: E501
 
-        Set the tags for this invitation   # noqa: E501
+        Applies the provided tags to the invitation.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetInvitations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_invitation_tags_with_http_info(invitation_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
+        :param str invitation_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1428,16 +1496,16 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def put_invitation_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided invitations   # noqa: E501
+        """Add a group of tags to a group of Invitations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided invitations   # noqa: E501
+        Applies all of the provided tags on all of the provided invitations.  Both public and private invitations may be tagged via this operation.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetInvitations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_invitation_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1450,16 +1518,16 @@ class InvitationsApi(object):
             return data
 
     def put_invitation_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided invitations   # noqa: E501
+        """Add a group of tags to a group of Invitations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided invitations   # noqa: E501
+        Applies all of the provided tags on all of the provided invitations.  Both public and private invitations may be tagged via this operation.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetInvitations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_invitation_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1527,17 +1595,17 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def update_private_invitation(self, invitation_id, invitation_update_schema, **kwargs):  # noqa: E501
-        """Update attributes of this invitation.  # noqa: E501
+        """Update information about a Private Invitation   # noqa: E501
 
-        Updates certain attributes of this invitation, and returns the invitation its new state.  The following attributes can be updated: - allowLaunch - invitationEmail - postBack - expirationDate NOTE: Any attributes not in the above list will not be considered for update.  # noqa: E501
+        Updates information about the private invitation, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_private_invitation(invitation_id, invitation_update_schema, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param PrivateInvitationSchema invitation_update_schema: A PrivateInvitationSchema with values to update.  This can be a sparse schema only containing the values to be updated.  Any value not allowed for update will be ignored. (required)
+        :param str invitation_id: (required)
+        :param PrivateInvitationUpdateSchema invitation_update_schema: Object with values to be updated.  Any value not specified above will be ignored.  (required)
         :return: PrivateInvitationSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1550,17 +1618,17 @@ class InvitationsApi(object):
             return data
 
     def update_private_invitation_with_http_info(self, invitation_id, invitation_update_schema, **kwargs):  # noqa: E501
-        """Update attributes of this invitation.  # noqa: E501
+        """Update information about a Private Invitation   # noqa: E501
 
-        Updates certain attributes of this invitation, and returns the invitation its new state.  The following attributes can be updated: - allowLaunch - invitationEmail - postBack - expirationDate NOTE: Any attributes not in the above list will not be considered for update.  # noqa: E501
+        Updates information about the private invitation, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_private_invitation_with_http_info(invitation_id, invitation_update_schema, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param PrivateInvitationSchema invitation_update_schema: A PrivateInvitationSchema with values to update.  This can be a sparse schema only containing the values to be updated.  Any value not allowed for update will be ignored. (required)
+        :param str invitation_id: (required)
+        :param PrivateInvitationUpdateSchema invitation_update_schema: Object with values to be updated.  Any value not specified above will be ignored.  (required)
         :return: PrivateInvitationSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1634,17 +1702,17 @@ class InvitationsApi(object):
             collection_formats=collection_formats)
 
     def update_public_invitation(self, invitation_id, invitation_update_schema, **kwargs):  # noqa: E501
-        """Update attributes of this invitation.  # noqa: E501
+        """Update information about a Public Invitation   # noqa: E501
 
-        Updates certain attributes of this invitation, and returns the invitation its new state.  The following attributes can be updated: - allowLaunch - allowNewRegistrations - postBack - expirationDate - registrationCap NOTE: Any attributes not in the above list will not be considered for update.  # noqa: E501
+        Updates information about the public invitation, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_public_invitation(invitation_id, invitation_update_schema, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param PublicInvitationSchema invitation_update_schema: A PublicInvitationSchema with values to update.  This can be a sparse schema only containing the values to be updated.  Any value not allowed for update will be ignored. (required)
+        :param str invitation_id: (required)
+        :param PublicInvitationUpdateSchema invitation_update_schema: Object with values to be updated.  Any value not specified above will be ignored.  (required)
         :return: PublicInvitationSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1657,17 +1725,17 @@ class InvitationsApi(object):
             return data
 
     def update_public_invitation_with_http_info(self, invitation_id, invitation_update_schema, **kwargs):  # noqa: E501
-        """Update attributes of this invitation.  # noqa: E501
+        """Update information about a Public Invitation   # noqa: E501
 
-        Updates certain attributes of this invitation, and returns the invitation its new state.  The following attributes can be updated: - allowLaunch - allowNewRegistrations - postBack - expirationDate - registrationCap NOTE: Any attributes not in the above list will not be considered for update.  # noqa: E501
+        Updates information about the public invitation, such as the expiration date and registration cap.  Only non-null values that are provided will be updated.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_public_invitation_with_http_info(invitation_id, invitation_update_schema, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str invitation_id: invitation id (required)
-        :param PublicInvitationSchema invitation_update_schema: A PublicInvitationSchema with values to update.  This can be a sparse schema only containing the values to be updated.  Any value not allowed for update will be ignored. (required)
+        :param str invitation_id: (required)
+        :param PublicInvitationUpdateSchema invitation_update_schema: Object with values to be updated.  Any value not specified above will be ignored.  (required)
         :return: PublicInvitationSchema
                  If the method is called asynchronously,
                  returns the request thread.

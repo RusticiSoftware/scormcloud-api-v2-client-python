@@ -101,7 +101,6 @@ class RuntimeInteractionSchema(object):
     def id(self):
         """Gets the id of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The id of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -110,7 +109,6 @@ class RuntimeInteractionSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this RuntimeInteractionSchema.
-
 
         :param id: The id of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -122,6 +120,7 @@ class RuntimeInteractionSchema(object):
     def type(self):
         """Gets the type of this RuntimeInteractionSchema.  # noqa: E501
 
+        allowed_values = ["TrueFalse", "Choice", "FillIn", "LongFillIn", "Likert", "Matching", "Performance", "Sequencing", "Numeric", "Other"]  # noqa: E501
 
         :return: The type of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
@@ -132,23 +131,17 @@ class RuntimeInteractionSchema(object):
     def type(self, type):
         """Sets the type of this RuntimeInteractionSchema.
 
+        allowed_values = ["TrueFalse", "Choice", "FillIn", "LongFillIn", "Likert", "Matching", "Performance", "Sequencing", "Numeric", "Other"]  # noqa: E501
 
         :param type: The type of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["TrueFalse", "Choice", "FillIn", "LongFillIn", "Likert", "Matching", "Performance", "Sequencing", "Numeric", "Other"]  # noqa: E501
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
 
         self._type = type
 
     @property
     def objectives(self):
         """Gets the objectives of this RuntimeInteractionSchema.  # noqa: E501
-
 
         :return: The objectives of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: list[str]
@@ -158,7 +151,6 @@ class RuntimeInteractionSchema(object):
     @objectives.setter
     def objectives(self, objectives):
         """Sets the objectives of this RuntimeInteractionSchema.
-
 
         :param objectives: The objectives of this RuntimeInteractionSchema.  # noqa: E501
         :type: list[str]
@@ -170,7 +162,6 @@ class RuntimeInteractionSchema(object):
     def timestamp(self):
         """Gets the timestamp of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The timestamp of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -179,7 +170,6 @@ class RuntimeInteractionSchema(object):
     @timestamp.setter
     def timestamp(self, timestamp):
         """Sets the timestamp of this RuntimeInteractionSchema.
-
 
         :param timestamp: The timestamp of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -191,7 +181,6 @@ class RuntimeInteractionSchema(object):
     def timestamp_utc(self):
         """Gets the timestamp_utc of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The timestamp_utc of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -200,7 +189,6 @@ class RuntimeInteractionSchema(object):
     @timestamp_utc.setter
     def timestamp_utc(self, timestamp_utc):
         """Sets the timestamp_utc of this RuntimeInteractionSchema.
-
 
         :param timestamp_utc: The timestamp_utc of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -212,7 +200,6 @@ class RuntimeInteractionSchema(object):
     def correct_responses(self):
         """Gets the correct_responses of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The correct_responses of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -221,7 +208,6 @@ class RuntimeInteractionSchema(object):
     @correct_responses.setter
     def correct_responses(self, correct_responses):
         """Sets the correct_responses of this RuntimeInteractionSchema.
-
 
         :param correct_responses: The correct_responses of this RuntimeInteractionSchema.  # noqa: E501
         :type: list[str]
@@ -233,7 +219,6 @@ class RuntimeInteractionSchema(object):
     def weighting(self):
         """Gets the weighting of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The weighting of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -242,7 +227,6 @@ class RuntimeInteractionSchema(object):
     @weighting.setter
     def weighting(self, weighting):
         """Sets the weighting of this RuntimeInteractionSchema.
-
 
         :param weighting: The weighting of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -254,7 +238,6 @@ class RuntimeInteractionSchema(object):
     def learner_response(self):
         """Gets the learner_response of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The learner_response of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -263,7 +246,6 @@ class RuntimeInteractionSchema(object):
     @learner_response.setter
     def learner_response(self, learner_response):
         """Sets the learner_response of this RuntimeInteractionSchema.
-
 
         :param learner_response: The learner_response of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -275,7 +257,6 @@ class RuntimeInteractionSchema(object):
     def result(self):
         """Gets the result of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The result of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -284,7 +265,6 @@ class RuntimeInteractionSchema(object):
     @result.setter
     def result(self, result):
         """Sets the result of this RuntimeInteractionSchema.
-
 
         :param result: The result of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -296,7 +276,6 @@ class RuntimeInteractionSchema(object):
     def latency(self):
         """Gets the latency of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The latency of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -305,7 +284,6 @@ class RuntimeInteractionSchema(object):
     @latency.setter
     def latency(self, latency):
         """Sets the latency of this RuntimeInteractionSchema.
-
 
         :param latency: The latency of this RuntimeInteractionSchema.  # noqa: E501
         :type: str
@@ -317,7 +295,6 @@ class RuntimeInteractionSchema(object):
     def description(self):
         """Gets the description of this RuntimeInteractionSchema.  # noqa: E501
 
-
         :return: The description of this RuntimeInteractionSchema.  # noqa: E501
         :rtype: str
         """
@@ -326,7 +303,6 @@ class RuntimeInteractionSchema(object):
     @description.setter
     def description(self, description):
         """Sets the description of this RuntimeInteractionSchema.
-
 
         :param description: The description of this RuntimeInteractionSchema.  # noqa: E501
         :type: str

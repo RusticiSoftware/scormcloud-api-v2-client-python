@@ -106,7 +106,6 @@ class XapiActivityDefinition(object):
     def name(self):
         """Gets the name of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The name of this XapiActivityDefinition.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -115,7 +114,6 @@ class XapiActivityDefinition(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiActivityDefinition.
-
 
         :param name: The name of this XapiActivityDefinition.  # noqa: E501
         :type: dict(str, str)
@@ -127,7 +125,6 @@ class XapiActivityDefinition(object):
     def description(self):
         """Gets the description of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The description of this XapiActivityDefinition.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -136,7 +133,6 @@ class XapiActivityDefinition(object):
     @description.setter
     def description(self, description):
         """Sets the description of this XapiActivityDefinition.
-
 
         :param description: The description of this XapiActivityDefinition.  # noqa: E501
         :type: dict(str, str)
@@ -148,7 +144,6 @@ class XapiActivityDefinition(object):
     def type(self):
         """Gets the type of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The type of this XapiActivityDefinition.  # noqa: E501
         :rtype: str
         """
@@ -157,7 +152,6 @@ class XapiActivityDefinition(object):
     @type.setter
     def type(self, type):
         """Sets the type of this XapiActivityDefinition.
-
 
         :param type: The type of this XapiActivityDefinition.  # noqa: E501
         :type: str
@@ -169,7 +163,6 @@ class XapiActivityDefinition(object):
     def more_info(self):
         """Gets the more_info of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The more_info of this XapiActivityDefinition.  # noqa: E501
         :rtype: str
         """
@@ -178,7 +171,6 @@ class XapiActivityDefinition(object):
     @more_info.setter
     def more_info(self, more_info):
         """Sets the more_info of this XapiActivityDefinition.
-
 
         :param more_info: The more_info of this XapiActivityDefinition.  # noqa: E501
         :type: str
@@ -190,7 +182,6 @@ class XapiActivityDefinition(object):
     def interaction_type(self):
         """Gets the interaction_type of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The interaction_type of this XapiActivityDefinition.  # noqa: E501
         :rtype: str
         """
@@ -199,7 +190,6 @@ class XapiActivityDefinition(object):
     @interaction_type.setter
     def interaction_type(self, interaction_type):
         """Sets the interaction_type of this XapiActivityDefinition.
-
 
         :param interaction_type: The interaction_type of this XapiActivityDefinition.  # noqa: E501
         :type: str
@@ -211,7 +201,6 @@ class XapiActivityDefinition(object):
     def correct_responses_pattern(self):
         """Gets the correct_responses_pattern of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The correct_responses_pattern of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[str]
         """
@@ -220,7 +209,6 @@ class XapiActivityDefinition(object):
     @correct_responses_pattern.setter
     def correct_responses_pattern(self, correct_responses_pattern):
         """Sets the correct_responses_pattern of this XapiActivityDefinition.
-
 
         :param correct_responses_pattern: The correct_responses_pattern of this XapiActivityDefinition.  # noqa: E501
         :type: list[str]
@@ -232,7 +220,6 @@ class XapiActivityDefinition(object):
     def choices(self):
         """Gets the choices of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The choices of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[XapiInteractionComponent]
         """
@@ -241,7 +228,6 @@ class XapiActivityDefinition(object):
     @choices.setter
     def choices(self, choices):
         """Sets the choices of this XapiActivityDefinition.
-
 
         :param choices: The choices of this XapiActivityDefinition.  # noqa: E501
         :type: list[XapiInteractionComponent]
@@ -253,7 +239,6 @@ class XapiActivityDefinition(object):
     def scale(self):
         """Gets the scale of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The scale of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[XapiInteractionComponent]
         """
@@ -262,7 +247,6 @@ class XapiActivityDefinition(object):
     @scale.setter
     def scale(self, scale):
         """Sets the scale of this XapiActivityDefinition.
-
 
         :param scale: The scale of this XapiActivityDefinition.  # noqa: E501
         :type: list[XapiInteractionComponent]
@@ -274,7 +258,6 @@ class XapiActivityDefinition(object):
     def source(self):
         """Gets the source of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The source of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[XapiInteractionComponent]
         """
@@ -283,7 +266,6 @@ class XapiActivityDefinition(object):
     @source.setter
     def source(self, source):
         """Sets the source of this XapiActivityDefinition.
-
 
         :param source: The source of this XapiActivityDefinition.  # noqa: E501
         :type: list[XapiInteractionComponent]
@@ -295,7 +277,6 @@ class XapiActivityDefinition(object):
     def target(self):
         """Gets the target of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The target of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[XapiInteractionComponent]
         """
@@ -304,7 +285,6 @@ class XapiActivityDefinition(object):
     @target.setter
     def target(self, target):
         """Sets the target of this XapiActivityDefinition.
-
 
         :param target: The target of this XapiActivityDefinition.  # noqa: E501
         :type: list[XapiInteractionComponent]
@@ -316,7 +296,6 @@ class XapiActivityDefinition(object):
     def steps(self):
         """Gets the steps of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The steps of this XapiActivityDefinition.  # noqa: E501
         :rtype: list[XapiInteractionComponent]
         """
@@ -325,7 +304,6 @@ class XapiActivityDefinition(object):
     @steps.setter
     def steps(self, steps):
         """Sets the steps of this XapiActivityDefinition.
-
 
         :param steps: The steps of this XapiActivityDefinition.  # noqa: E501
         :type: list[XapiInteractionComponent]
@@ -337,7 +315,6 @@ class XapiActivityDefinition(object):
     def extensions(self):
         """Gets the extensions of this XapiActivityDefinition.  # noqa: E501
 
-
         :return: The extensions of this XapiActivityDefinition.  # noqa: E501
         :rtype: dict(str, object)
         """
@@ -346,7 +323,6 @@ class XapiActivityDefinition(object):
     @extensions.setter
     def extensions(self, extensions):
         """Sets the extensions of this XapiActivityDefinition.
-
 
         :param extensions: The extensions of this XapiActivityDefinition.  # noqa: E501
         :type: dict(str, object)

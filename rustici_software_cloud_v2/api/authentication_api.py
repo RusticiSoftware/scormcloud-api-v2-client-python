@@ -34,17 +34,17 @@ class AuthenticationApi(object):
         self.api_client = api_client
 
     def get_app_token(self, scope, **kwargs):  # noqa: E501
-        """Authenticates for a oauth token  # noqa: E501
+        """Obtain an OAuth token for scoped access to an Application   # noqa: E501
 
-        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >Note:  >The token is not stored and therefore can not be modified or deleted. The requested permissions are encoded in the token which is then signed. As long as the secret used to create it is not changed the token will be valid until it expires.   # noqa: E501
+        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >**Note:** >The token is not stored and therefore can not be modified or deleted.  The requested permissions are encoded in the token which is then signed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_app_token(scope, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str scope: (required)
-        :param int expiration:
+        :param str scope: Space separated string of OAuth scopes, e.g. \"write:course read:registration\".  (required)
+        :param int expiration: Amount of seconds until the OAuth token expires. 
         :return: ApplicationToken
                  If the method is called asynchronously,
                  returns the request thread.
@@ -57,17 +57,17 @@ class AuthenticationApi(object):
             return data
 
     def get_app_token_with_http_info(self, scope, **kwargs):  # noqa: E501
-        """Authenticates for a oauth token  # noqa: E501
+        """Obtain an OAuth token for scoped access to an Application   # noqa: E501
 
-        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >Note:  >The token is not stored and therefore can not be modified or deleted. The requested permissions are encoded in the token which is then signed. As long as the secret used to create it is not changed the token will be valid until it expires.   # noqa: E501
+        Creates, signs and returns an OAuth2 token based on the provided permissions, if the credentials used to request the token have the permissions being requested.  >**Note:** >The token is not stored and therefore can not be modified or deleted.  The requested permissions are encoded in the token which is then signed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_app_token_with_http_info(scope, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str scope: (required)
-        :param int expiration:
+        :param str scope: Space separated string of OAuth scopes, e.g. \"write:course read:registration\".  (required)
+        :param int expiration: Amount of seconds until the OAuth token expires. 
         :return: ApplicationToken
                  If the method is called asynchronously,
                  returns the request thread.
@@ -93,10 +93,6 @@ class AuthenticationApi(object):
                 params['scope'] is None):
             raise ValueError("Missing the required parameter `scope` when calling `get_app_token`")  # noqa: E501
 
-        if 'expiration' in params and params['expiration'] > 43200:  # noqa: E501
-            raise ValueError("Invalid value for parameter `expiration` when calling `get_app_token`, must be a value less than or equal to `43200`")  # noqa: E501
-        if 'expiration' in params and params['expiration'] < 60:  # noqa: E501
-            raise ValueError("Invalid value for parameter `expiration` when calling `get_app_token`, must be a value greater than or equal to `60`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

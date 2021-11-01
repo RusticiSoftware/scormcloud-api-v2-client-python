@@ -34,17 +34,17 @@ class LearnerApi(object):
         self.api_client = api_client
 
     def delete_all_learner_data(self, learner_id, user_email, **kwargs):  # noqa: E501
-        """Deletes all of the information associated with a learner in an application, by learner id.   # noqa: E501
+        """Deletes all PII for a learnerId   # noqa: E501
 
-        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners.   # noqa: E501
+        Deletes all of the PII information for the learner.  This is meant for use with complying with GDPR requests from learners.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the deletion of PII information takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_all_learner_data(learner_id, user_email, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
-        :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in. (required)
+        :param str learner_id: The id of the learner (required)
+        :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in.  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -57,17 +57,17 @@ class LearnerApi(object):
             return data
 
     def delete_all_learner_data_with_http_info(self, learner_id, user_email, **kwargs):  # noqa: E501
-        """Deletes all of the information associated with a learner in an application, by learner id.   # noqa: E501
+        """Deletes all PII for a learnerId   # noqa: E501
 
-        Deletes all of the information associated with a learner in an application, by learner id. This is meant for use with complying with GDPR requests from learners.   # noqa: E501
+        Deletes all of the PII information for the learner.  This is meant for use with complying with GDPR requests from learners.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the deletion of PII information takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_all_learner_data_with_http_info(learner_id, user_email, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
-        :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in. (required)
+        :param str learner_id: The id of the learner (required)
+        :param str user_email: The email of the user initiating this request on behalf of the learner being deleted. This must be a valid primary email address for a SCORM Cloud realm which this application is in.  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -141,16 +141,16 @@ class LearnerApi(object):
             collection_formats=collection_formats)
 
     def delete_learner_tags(self, learner_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this learner   # noqa: E501
+        """Delete tags from a learnerId   # noqa: E501
 
-        Delete the tags for this learner   # noqa: E501
+        Delete the specified tags from the learner.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_learner_tags(learner_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -164,16 +164,16 @@ class LearnerApi(object):
             return data
 
     def delete_learner_tags_with_http_info(self, learner_id, tags, **kwargs):  # noqa: E501
-        """Delete the tags for this learner   # noqa: E501
+        """Delete tags from a learnerId   # noqa: E501
 
-        Delete the tags for this learner   # noqa: E501
+        Delete the specified tags from the learner.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_learner_tags_with_http_info(learner_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -248,16 +248,16 @@ class LearnerApi(object):
             collection_formats=collection_formats)
 
     def get_learner_tags(self, learner_id, **kwargs):  # noqa: E501
-        """Get the tags for this learner   # noqa: E501
+        """Get tags for a learnerId   # noqa: E501
 
-        Get the tags for this learner   # noqa: E501
+        Returns the tags for the learner.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_learner_tags(learner_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -270,16 +270,16 @@ class LearnerApi(object):
             return data
 
     def get_learner_tags_with_http_info(self, learner_id, **kwargs):  # noqa: E501
-        """Get the tags for this learner   # noqa: E501
+        """Get tags for a learnerId   # noqa: E501
 
-        Get the tags for this learner   # noqa: E501
+        Returns the tags for the learner.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_learner_tags_with_http_info(learner_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -347,16 +347,16 @@ class LearnerApi(object):
             collection_formats=collection_formats)
 
     def put_learner_tags(self, learner_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this learner   # noqa: E501
+        """Add tags to a learnerId   # noqa: E501
 
-        Set the tags for this learner   # noqa: E501
+        Applies the provided tags to the learner.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when working with Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_learner_tags(learner_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -370,16 +370,16 @@ class LearnerApi(object):
             return data
 
     def put_learner_tags_with_http_info(self, learner_id, tags, **kwargs):  # noqa: E501
-        """Set the tags for this learner   # noqa: E501
+        """Add tags to a learnerId   # noqa: E501
 
-        Set the tags for this learner   # noqa: E501
+        Applies the provided tags to the learner.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when working with Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_learner_tags_with_http_info(learner_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner for which to remove all data from an application (required)
+        :param str learner_id: The id of the learner (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -454,16 +454,16 @@ class LearnerApi(object):
             collection_formats=collection_formats)
 
     def put_learner_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided learners  # noqa: E501
+        """Add a group of tags to a group of learnerIds   # noqa: E501
 
-        Sets all of the provided tags on all of the provided learners   # noqa: E501
+        Applies all of the provided tags on all of the provided learners.  Tags are used to easily identify resources. Adding tags can enable more refined searches when working with Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_learner_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -476,16 +476,16 @@ class LearnerApi(object):
             return data
 
     def put_learner_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Sets all of the provided tags on all of the provided learners  # noqa: E501
+        """Add a group of tags to a group of learnerIds   # noqa: E501
 
-        Sets all of the provided tags on all of the provided learners   # noqa: E501
+        Applies all of the provided tags on all of the provided learners.  Tags are used to easily identify resources. Adding tags can enable more refined searches when working with Reportage.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_learner_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -553,16 +553,16 @@ class LearnerApi(object):
             collection_formats=collection_formats)
 
     def update_learner_info(self, learner_id, learner_info, **kwargs):  # noqa: E501
-        """Update a learner's info on all of their registrations.  # noqa: E501
+        """Update all Registrations for a learnerId   # noqa: E501
 
-        A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations. This method will update the information on each of the registrations that the provided `learnerId` is attached to.  You may update any of the values available in the LearnerSchema which is posted.  Any values you do not wish to alter, omit from the post.  Depending on the field, providing something like an empty string may have unintended consequences.  Lastly, it's important to note that this method is asynchronous.  A success status will be returned, and that signifies that a background process has been spun up to alter the learner's info.  As such, you may find a short period of delay in seeing the changes shown on all registrations.   # noqa: E501
+        Updates information about a group of registrations, such as learner email and name.  A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations.  This method will update the information on each of the registrations that the provided `learnerId` is attached to.  >**Caution:** >Providing an empty string will cause the value in SCORM Cloud to be set to empty.  This may have unintended consequences with regards to functionality.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the changes on the registrations take place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_learner_info(learner_id, learner_info, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner to be updated (required)
+        :param str learner_id: The id of the learner (required)
         :param LearnerSchema learner_info: (required)
         :return: None
                  If the method is called asynchronously,
@@ -576,16 +576,16 @@ class LearnerApi(object):
             return data
 
     def update_learner_info_with_http_info(self, learner_id, learner_info, **kwargs):  # noqa: E501
-        """Update a learner's info on all of their registrations.  # noqa: E501
+        """Update all Registrations for a learnerId   # noqa: E501
 
-        A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations. This method will update the information on each of the registrations that the provided `learnerId` is attached to.  You may update any of the values available in the LearnerSchema which is posted.  Any values you do not wish to alter, omit from the post.  Depending on the field, providing something like an empty string may have unintended consequences.  Lastly, it's important to note that this method is asynchronous.  A success status will be returned, and that signifies that a background process has been spun up to alter the learner's info.  As such, you may find a short period of delay in seeing the changes shown on all registrations.   # noqa: E501
+        Updates information about a group of registrations, such as learner email and name.  A learner in SCORM Cloud is not an entity on its own.  In fact, learners only exist as information on individual registrations.  This method will update the information on each of the registrations that the provided `learnerId` is attached to.  >**Caution:** >Providing an empty string will cause the value in SCORM Cloud to be set to empty.  This may have unintended consequences with regards to functionality.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the changes on the registrations take place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_learner_info_with_http_info(learner_id, learner_info, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str learner_id: The id of the learner to be updated (required)
+        :param str learner_id: The id of the learner (required)
         :param LearnerSchema learner_info: (required)
         :return: None
                  If the method is called asynchronously,

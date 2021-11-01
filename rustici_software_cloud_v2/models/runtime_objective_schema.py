@@ -91,7 +91,6 @@ class RuntimeObjectiveSchema(object):
     def id(self):
         """Gets the id of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The id of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -100,7 +99,6 @@ class RuntimeObjectiveSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this RuntimeObjectiveSchema.
-
 
         :param id: The id of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -112,7 +110,6 @@ class RuntimeObjectiveSchema(object):
     def score_scaled(self):
         """Gets the score_scaled of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The score_scaled of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -121,7 +118,6 @@ class RuntimeObjectiveSchema(object):
     @score_scaled.setter
     def score_scaled(self, score_scaled):
         """Sets the score_scaled of this RuntimeObjectiveSchema.
-
 
         :param score_scaled: The score_scaled of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -133,7 +129,6 @@ class RuntimeObjectiveSchema(object):
     def score_min(self):
         """Gets the score_min of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The score_min of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -142,7 +137,6 @@ class RuntimeObjectiveSchema(object):
     @score_min.setter
     def score_min(self, score_min):
         """Sets the score_min of this RuntimeObjectiveSchema.
-
 
         :param score_min: The score_min of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -154,7 +148,6 @@ class RuntimeObjectiveSchema(object):
     def score_max(self):
         """Gets the score_max of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The score_max of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -163,7 +156,6 @@ class RuntimeObjectiveSchema(object):
     @score_max.setter
     def score_max(self, score_max):
         """Sets the score_max of this RuntimeObjectiveSchema.
-
 
         :param score_max: The score_max of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -175,7 +167,6 @@ class RuntimeObjectiveSchema(object):
     def score_raw(self):
         """Gets the score_raw of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The score_raw of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -184,7 +175,6 @@ class RuntimeObjectiveSchema(object):
     @score_raw.setter
     def score_raw(self, score_raw):
         """Sets the score_raw of this RuntimeObjectiveSchema.
-
 
         :param score_raw: The score_raw of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -196,6 +186,7 @@ class RuntimeObjectiveSchema(object):
     def runtime_objective_success_status(self):
         """Gets the runtime_objective_success_status of this RuntimeObjectiveSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The runtime_objective_success_status of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -206,16 +197,11 @@ class RuntimeObjectiveSchema(object):
     def runtime_objective_success_status(self, runtime_objective_success_status):
         """Sets the runtime_objective_success_status of this RuntimeObjectiveSchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param runtime_objective_success_status: The runtime_objective_success_status of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if runtime_objective_success_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `runtime_objective_success_status` ({0}), must be one of {1}"  # noqa: E501
-                .format(runtime_objective_success_status, allowed_values)
-            )
 
         self._runtime_objective_success_status = runtime_objective_success_status
 
@@ -223,6 +209,7 @@ class RuntimeObjectiveSchema(object):
     def runtime_objective_completion_status(self):
         """Gets the runtime_objective_completion_status of this RuntimeObjectiveSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE", "NOT_ATTEMPTED", "BROWSED"]  # noqa: E501
 
         :return: The runtime_objective_completion_status of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -233,23 +220,17 @@ class RuntimeObjectiveSchema(object):
     def runtime_objective_completion_status(self, runtime_objective_completion_status):
         """Sets the runtime_objective_completion_status of this RuntimeObjectiveSchema.
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE", "NOT_ATTEMPTED", "BROWSED"]  # noqa: E501
 
         :param runtime_objective_completion_status: The runtime_objective_completion_status of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE", "NOT_ATTEMPTED", "BROWSED"]  # noqa: E501
-        if runtime_objective_completion_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `runtime_objective_completion_status` ({0}), must be one of {1}"  # noqa: E501
-                .format(runtime_objective_completion_status, allowed_values)
-            )
 
         self._runtime_objective_completion_status = runtime_objective_completion_status
 
     @property
     def progress_measure(self):
         """Gets the progress_measure of this RuntimeObjectiveSchema.  # noqa: E501
-
 
         :return: The progress_measure of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -259,7 +240,6 @@ class RuntimeObjectiveSchema(object):
     @progress_measure.setter
     def progress_measure(self, progress_measure):
         """Sets the progress_measure of this RuntimeObjectiveSchema.
-
 
         :param progress_measure: The progress_measure of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str
@@ -271,7 +251,6 @@ class RuntimeObjectiveSchema(object):
     def description(self):
         """Gets the description of this RuntimeObjectiveSchema.  # noqa: E501
 
-
         :return: The description of this RuntimeObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -280,7 +259,6 @@ class RuntimeObjectiveSchema(object):
     @description.setter
     def description(self, description):
         """Sets the description of this RuntimeObjectiveSchema.
-
 
         :param description: The description of this RuntimeObjectiveSchema.  # noqa: E501
         :type: str

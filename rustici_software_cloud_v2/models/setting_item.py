@@ -71,7 +71,6 @@ class SettingItem(object):
     def id(self):
         """Gets the id of this SettingItem.  # noqa: E501
 
-
         :return: The id of this SettingItem.  # noqa: E501
         :rtype: str
         """
@@ -80,7 +79,6 @@ class SettingItem(object):
     @id.setter
     def id(self, id):
         """Sets the id of this SettingItem.
-
 
         :param id: The id of this SettingItem.  # noqa: E501
         :type: str
@@ -117,6 +115,8 @@ class SettingItem(object):
 
         The source of this effective value, default, fallback, or the level the value was set at.  # noqa: E501
 
+        allowed_values = ["default", "application", "learningStandardForApplication", "dispatchDestination", "course", "dispatch", "registration"]  # noqa: E501
+
         :return: The effective_value_source of this SettingItem.  # noqa: E501
         :rtype: str
         """
@@ -128,15 +128,11 @@ class SettingItem(object):
 
         The source of this effective value, default, fallback, or the level the value was set at.  # noqa: E501
 
+        allowed_values = ["default", "application", "learningStandardForApplication", "dispatchDestination", "course", "dispatch", "registration"]  # noqa: E501
+
         :param effective_value_source: The effective_value_source of this SettingItem.  # noqa: E501
         :type: str
         """
-        allowed_values = ["default", "application", "learningStandardForApplication", "dispatchDestination", "course", "dispatch", "registration"]  # noqa: E501
-        if effective_value_source not in allowed_values:
-            raise ValueError(
-                "Invalid value for `effective_value_source` ({0}), must be one of {1}"  # noqa: E501
-                .format(effective_value_source, allowed_values)
-            )
 
         self._effective_value_source = effective_value_source
 
@@ -167,7 +163,6 @@ class SettingItem(object):
     def metadata(self):
         """Gets the metadata of this SettingItem.  # noqa: E501
 
-
         :return: The metadata of this SettingItem.  # noqa: E501
         :rtype: SettingMetadata
         """
@@ -176,7 +171,6 @@ class SettingItem(object):
     @metadata.setter
     def metadata(self, metadata):
         """Sets the metadata of this SettingItem.
-
 
         :param metadata: The metadata of this SettingItem.  # noqa: E501
         :type: SettingMetadata

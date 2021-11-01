@@ -71,7 +71,6 @@ class XapiCredentialPostSchema(object):
     def name(self):
         """Gets the name of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The name of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: str
         """
@@ -80,7 +79,6 @@ class XapiCredentialPostSchema(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiCredentialPostSchema.
-
 
         :param name: The name of this XapiCredentialPostSchema.  # noqa: E501
         :type: str
@@ -94,7 +92,6 @@ class XapiCredentialPostSchema(object):
     def info(self):
         """Gets the info of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The info of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: str
         """
@@ -103,7 +100,6 @@ class XapiCredentialPostSchema(object):
     @info.setter
     def info(self, info):
         """Sets the info of this XapiCredentialPostSchema.
-
 
         :param info: The info of this XapiCredentialPostSchema.  # noqa: E501
         :type: str
@@ -115,7 +111,6 @@ class XapiCredentialPostSchema(object):
     def secret(self):
         """Gets the secret of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The secret of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: str
         """
@@ -124,7 +119,6 @@ class XapiCredentialPostSchema(object):
     @secret.setter
     def secret(self, secret):
         """Sets the secret of this XapiCredentialPostSchema.
-
 
         :param secret: The secret of this XapiCredentialPostSchema.  # noqa: E501
         :type: str
@@ -138,7 +132,6 @@ class XapiCredentialPostSchema(object):
     def is_enabled(self):
         """Gets the is_enabled of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The is_enabled of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: bool
         """
@@ -147,7 +140,6 @@ class XapiCredentialPostSchema(object):
     @is_enabled.setter
     def is_enabled(self, is_enabled):
         """Sets the is_enabled of this XapiCredentialPostSchema.
-
 
         :param is_enabled: The is_enabled of this XapiCredentialPostSchema.  # noqa: E501
         :type: bool
@@ -161,7 +153,6 @@ class XapiCredentialPostSchema(object):
     def auth(self):
         """Gets the auth of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The auth of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: XapiCredentialAuthTypeSchema
         """
@@ -170,7 +161,6 @@ class XapiCredentialPostSchema(object):
     @auth.setter
     def auth(self, auth):
         """Sets the auth of this XapiCredentialPostSchema.
-
 
         :param auth: The auth of this XapiCredentialPostSchema.  # noqa: E501
         :type: XapiCredentialAuthTypeSchema
@@ -184,7 +174,6 @@ class XapiCredentialPostSchema(object):
     def permissions_level(self):
         """Gets the permissions_level of this XapiCredentialPostSchema.  # noqa: E501
 
-
         :return: The permissions_level of this XapiCredentialPostSchema.  # noqa: E501
         :rtype: XapiCredentialPermissionsLevelSchema
         """
@@ -193,7 +182,6 @@ class XapiCredentialPostSchema(object):
     @permissions_level.setter
     def permissions_level(self, permissions_level):
         """Sets the permissions_level of this XapiCredentialPostSchema.
-
 
         :param permissions_level: The permissions_level of this XapiCredentialPostSchema.  # noqa: E501
         :type: XapiCredentialPermissionsLevelSchema

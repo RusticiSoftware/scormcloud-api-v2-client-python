@@ -50,7 +50,6 @@ class MessageSchema(object):
     def message(self):
         """Gets the message of this MessageSchema.  # noqa: E501
 
-
         :return: The message of this MessageSchema.  # noqa: E501
         :rtype: str
         """
@@ -59,7 +58,6 @@ class MessageSchema(object):
     @message.setter
     def message(self, message):
         """Sets the message of this MessageSchema.
-
 
         :param message: The message of this MessageSchema.  # noqa: E501
         :type: str

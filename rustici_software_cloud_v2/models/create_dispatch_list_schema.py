@@ -51,7 +51,6 @@ class CreateDispatchListSchema(object):
     def dispatches(self):
         """Gets the dispatches of this CreateDispatchListSchema.  # noqa: E501
 
-
         :return: The dispatches of this CreateDispatchListSchema.  # noqa: E501
         :rtype: list[CreateDispatchIdSchema]
         """
@@ -60,7 +59,6 @@ class CreateDispatchListSchema(object):
     @dispatches.setter
     def dispatches(self, dispatches):
         """Sets the dispatches of this CreateDispatchListSchema.
-
 
         :param dispatches: The dispatches of this CreateDispatchListSchema.  # noqa: E501
         :type: list[CreateDispatchIdSchema]

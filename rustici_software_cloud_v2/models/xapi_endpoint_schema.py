@@ -61,7 +61,6 @@ class XapiEndpointSchema(object):
     def url(self):
         """Gets the url of this XapiEndpointSchema.  # noqa: E501
 
-
         :return: The url of this XapiEndpointSchema.  # noqa: E501
         :rtype: str
         """
@@ -70,7 +69,6 @@ class XapiEndpointSchema(object):
     @url.setter
     def url(self, url):
         """Sets the url of this XapiEndpointSchema.
-
 
         :param url: The url of this XapiEndpointSchema.  # noqa: E501
         :type: str
@@ -82,7 +80,6 @@ class XapiEndpointSchema(object):
     def user_name(self):
         """Gets the user_name of this XapiEndpointSchema.  # noqa: E501
 
-
         :return: The user_name of this XapiEndpointSchema.  # noqa: E501
         :rtype: str
         """
@@ -91,7 +88,6 @@ class XapiEndpointSchema(object):
     @user_name.setter
     def user_name(self, user_name):
         """Sets the user_name of this XapiEndpointSchema.
-
 
         :param user_name: The user_name of this XapiEndpointSchema.  # noqa: E501
         :type: str
@@ -103,7 +99,6 @@ class XapiEndpointSchema(object):
     def password(self):
         """Gets the password of this XapiEndpointSchema.  # noqa: E501
 
-
         :return: The password of this XapiEndpointSchema.  # noqa: E501
         :rtype: str
         """
@@ -112,7 +107,6 @@ class XapiEndpointSchema(object):
     @password.setter
     def password(self, password):
         """Sets the password of this XapiEndpointSchema.
-
 
         :param password: The password of this XapiEndpointSchema.  # noqa: E501
         :type: str

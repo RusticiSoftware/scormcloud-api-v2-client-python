@@ -51,7 +51,6 @@ class CredentialListSchema(object):
     def credentials(self):
         """Gets the credentials of this CredentialListSchema.  # noqa: E501
 
-
         :return: The credentials of this CredentialListSchema.  # noqa: E501
         :rtype: list[CredentialSchema]
         """
@@ -60,7 +59,6 @@ class CredentialListSchema(object):
     @credentials.setter
     def credentials(self, credentials):
         """Sets the credentials of this CredentialListSchema.
-
 
         :param credentials: The credentials of this CredentialListSchema.  # noqa: E501
         :type: list[CredentialSchema]

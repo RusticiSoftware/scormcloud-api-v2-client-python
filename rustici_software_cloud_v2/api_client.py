@@ -74,7 +74,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.0.2/python'
+        self.user_agent = 'Swagger-Codegen/2.0.0/python'
 
     def __del__(self):
         if self._pool is not None:
@@ -533,8 +533,14 @@ class ApiClient(object):
                                  content_disposition).group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
-        with open(path, "wb") as f:
-            f.write(response.data)
+        # Try loading the file as text
+        try:
+            with open(path, "w") as f:
+                f.write(response.data)
+        # If it's not text, load it as binary
+        except TypeError:
+            with open(path, "wb") as f:
+                f.write(response.data)
 
         return path
 

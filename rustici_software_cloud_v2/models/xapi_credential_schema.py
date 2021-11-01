@@ -76,7 +76,6 @@ class XapiCredentialSchema(object):
     def id(self):
         """Gets the id of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The id of this XapiCredentialSchema.  # noqa: E501
         :rtype: str
         """
@@ -85,7 +84,6 @@ class XapiCredentialSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiCredentialSchema.
-
 
         :param id: The id of this XapiCredentialSchema.  # noqa: E501
         :type: str
@@ -97,7 +95,6 @@ class XapiCredentialSchema(object):
     def name(self):
         """Gets the name of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The name of this XapiCredentialSchema.  # noqa: E501
         :rtype: str
         """
@@ -106,7 +103,6 @@ class XapiCredentialSchema(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiCredentialSchema.
-
 
         :param name: The name of this XapiCredentialSchema.  # noqa: E501
         :type: str
@@ -120,7 +116,6 @@ class XapiCredentialSchema(object):
     def info(self):
         """Gets the info of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The info of this XapiCredentialSchema.  # noqa: E501
         :rtype: str
         """
@@ -129,7 +124,6 @@ class XapiCredentialSchema(object):
     @info.setter
     def info(self, info):
         """Sets the info of this XapiCredentialSchema.
-
 
         :param info: The info of this XapiCredentialSchema.  # noqa: E501
         :type: str
@@ -141,7 +135,6 @@ class XapiCredentialSchema(object):
     def secret(self):
         """Gets the secret of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The secret of this XapiCredentialSchema.  # noqa: E501
         :rtype: str
         """
@@ -150,7 +143,6 @@ class XapiCredentialSchema(object):
     @secret.setter
     def secret(self, secret):
         """Sets the secret of this XapiCredentialSchema.
-
 
         :param secret: The secret of this XapiCredentialSchema.  # noqa: E501
         :type: str
@@ -164,7 +156,6 @@ class XapiCredentialSchema(object):
     def is_enabled(self):
         """Gets the is_enabled of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The is_enabled of this XapiCredentialSchema.  # noqa: E501
         :rtype: bool
         """
@@ -173,7 +164,6 @@ class XapiCredentialSchema(object):
     @is_enabled.setter
     def is_enabled(self, is_enabled):
         """Sets the is_enabled of this XapiCredentialSchema.
-
 
         :param is_enabled: The is_enabled of this XapiCredentialSchema.  # noqa: E501
         :type: bool
@@ -187,7 +177,6 @@ class XapiCredentialSchema(object):
     def auth(self):
         """Gets the auth of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The auth of this XapiCredentialSchema.  # noqa: E501
         :rtype: XapiCredentialAuthTypeSchema
         """
@@ -196,7 +185,6 @@ class XapiCredentialSchema(object):
     @auth.setter
     def auth(self, auth):
         """Sets the auth of this XapiCredentialSchema.
-
 
         :param auth: The auth of this XapiCredentialSchema.  # noqa: E501
         :type: XapiCredentialAuthTypeSchema
@@ -210,7 +198,6 @@ class XapiCredentialSchema(object):
     def permissions_level(self):
         """Gets the permissions_level of this XapiCredentialSchema.  # noqa: E501
 
-
         :return: The permissions_level of this XapiCredentialSchema.  # noqa: E501
         :rtype: XapiCredentialPermissionsLevelSchema
         """
@@ -219,7 +206,6 @@ class XapiCredentialSchema(object):
     @permissions_level.setter
     def permissions_level(self, permissions_level):
         """Sets the permissions_level of this XapiCredentialSchema.
-
 
         :param permissions_level: The permissions_level of this XapiCredentialSchema.  # noqa: E501
         :type: XapiCredentialPermissionsLevelSchema

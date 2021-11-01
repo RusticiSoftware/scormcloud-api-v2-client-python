@@ -111,7 +111,6 @@ class XapiStatement(object):
     def id(self):
         """Gets the id of this XapiStatement.  # noqa: E501
 
-
         :return: The id of this XapiStatement.  # noqa: E501
         :rtype: str
         """
@@ -120,7 +119,6 @@ class XapiStatement(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiStatement.
-
 
         :param id: The id of this XapiStatement.  # noqa: E501
         :type: str
@@ -132,7 +130,6 @@ class XapiStatement(object):
     def actor(self):
         """Gets the actor of this XapiStatement.  # noqa: E501
 
-
         :return: The actor of this XapiStatement.  # noqa: E501
         :rtype: XapiAgentGroup
         """
@@ -141,7 +138,6 @@ class XapiStatement(object):
     @actor.setter
     def actor(self, actor):
         """Sets the actor of this XapiStatement.
-
 
         :param actor: The actor of this XapiStatement.  # noqa: E501
         :type: XapiAgentGroup
@@ -153,7 +149,6 @@ class XapiStatement(object):
     def verb(self):
         """Gets the verb of this XapiStatement.  # noqa: E501
 
-
         :return: The verb of this XapiStatement.  # noqa: E501
         :rtype: XapiVerb
         """
@@ -162,7 +157,6 @@ class XapiStatement(object):
     @verb.setter
     def verb(self, verb):
         """Sets the verb of this XapiStatement.
-
 
         :param verb: The verb of this XapiStatement.  # noqa: E501
         :type: XapiVerb
@@ -174,7 +168,6 @@ class XapiStatement(object):
     def object_activity(self):
         """Gets the object_activity of this XapiStatement.  # noqa: E501
 
-
         :return: The object_activity of this XapiStatement.  # noqa: E501
         :rtype: XapiActivity
         """
@@ -183,7 +176,6 @@ class XapiStatement(object):
     @object_activity.setter
     def object_activity(self, object_activity):
         """Sets the object_activity of this XapiStatement.
-
 
         :param object_activity: The object_activity of this XapiStatement.  # noqa: E501
         :type: XapiActivity
@@ -195,7 +187,6 @@ class XapiStatement(object):
     def object_agent_group(self):
         """Gets the object_agent_group of this XapiStatement.  # noqa: E501
 
-
         :return: The object_agent_group of this XapiStatement.  # noqa: E501
         :rtype: XapiAgentGroup
         """
@@ -204,7 +195,6 @@ class XapiStatement(object):
     @object_agent_group.setter
     def object_agent_group(self, object_agent_group):
         """Sets the object_agent_group of this XapiStatement.
-
 
         :param object_agent_group: The object_agent_group of this XapiStatement.  # noqa: E501
         :type: XapiAgentGroup
@@ -216,7 +206,6 @@ class XapiStatement(object):
     def object_statement_reference(self):
         """Gets the object_statement_reference of this XapiStatement.  # noqa: E501
 
-
         :return: The object_statement_reference of this XapiStatement.  # noqa: E501
         :rtype: XapiStatementReference
         """
@@ -225,7 +214,6 @@ class XapiStatement(object):
     @object_statement_reference.setter
     def object_statement_reference(self, object_statement_reference):
         """Sets the object_statement_reference of this XapiStatement.
-
 
         :param object_statement_reference: The object_statement_reference of this XapiStatement.  # noqa: E501
         :type: XapiStatementReference
@@ -237,7 +225,6 @@ class XapiStatement(object):
     def object_sub_statement(self):
         """Gets the object_sub_statement of this XapiStatement.  # noqa: E501
 
-
         :return: The object_sub_statement of this XapiStatement.  # noqa: E501
         :rtype: XapiStatement
         """
@@ -246,7 +233,6 @@ class XapiStatement(object):
     @object_sub_statement.setter
     def object_sub_statement(self, object_sub_statement):
         """Sets the object_sub_statement of this XapiStatement.
-
 
         :param object_sub_statement: The object_sub_statement of this XapiStatement.  # noqa: E501
         :type: XapiStatement
@@ -258,7 +244,6 @@ class XapiStatement(object):
     def result(self):
         """Gets the result of this XapiStatement.  # noqa: E501
 
-
         :return: The result of this XapiStatement.  # noqa: E501
         :rtype: XapiResult
         """
@@ -267,7 +252,6 @@ class XapiStatement(object):
     @result.setter
     def result(self, result):
         """Sets the result of this XapiStatement.
-
 
         :param result: The result of this XapiStatement.  # noqa: E501
         :type: XapiResult
@@ -279,7 +263,6 @@ class XapiStatement(object):
     def context(self):
         """Gets the context of this XapiStatement.  # noqa: E501
 
-
         :return: The context of this XapiStatement.  # noqa: E501
         :rtype: XapiContext
         """
@@ -288,7 +271,6 @@ class XapiStatement(object):
     @context.setter
     def context(self, context):
         """Sets the context of this XapiStatement.
-
 
         :param context: The context of this XapiStatement.  # noqa: E501
         :type: XapiContext
@@ -300,7 +282,6 @@ class XapiStatement(object):
     def timestamp(self):
         """Gets the timestamp of this XapiStatement.  # noqa: E501
 
-
         :return: The timestamp of this XapiStatement.  # noqa: E501
         :rtype: datetime
         """
@@ -309,7 +290,6 @@ class XapiStatement(object):
     @timestamp.setter
     def timestamp(self, timestamp):
         """Sets the timestamp of this XapiStatement.
-
 
         :param timestamp: The timestamp of this XapiStatement.  # noqa: E501
         :type: datetime
@@ -321,7 +301,6 @@ class XapiStatement(object):
     def stored(self):
         """Gets the stored of this XapiStatement.  # noqa: E501
 
-
         :return: The stored of this XapiStatement.  # noqa: E501
         :rtype: datetime
         """
@@ -330,7 +309,6 @@ class XapiStatement(object):
     @stored.setter
     def stored(self, stored):
         """Sets the stored of this XapiStatement.
-
 
         :param stored: The stored of this XapiStatement.  # noqa: E501
         :type: datetime
@@ -342,7 +320,6 @@ class XapiStatement(object):
     def authority(self):
         """Gets the authority of this XapiStatement.  # noqa: E501
 
-
         :return: The authority of this XapiStatement.  # noqa: E501
         :rtype: XapiAgentGroup
         """
@@ -351,7 +328,6 @@ class XapiStatement(object):
     @authority.setter
     def authority(self, authority):
         """Sets the authority of this XapiStatement.
-
 
         :param authority: The authority of this XapiStatement.  # noqa: E501
         :type: XapiAgentGroup
@@ -363,7 +339,6 @@ class XapiStatement(object):
     def attachments(self):
         """Gets the attachments of this XapiStatement.  # noqa: E501
 
-
         :return: The attachments of this XapiStatement.  # noqa: E501
         :rtype: list[XapiAttachment]
         """
@@ -372,7 +347,6 @@ class XapiStatement(object):
     @attachments.setter
     def attachments(self, attachments):
         """Sets the attachments of this XapiStatement.
-
 
         :param attachments: The attachments of this XapiStatement.  # noqa: E501
         :type: list[XapiAttachment]

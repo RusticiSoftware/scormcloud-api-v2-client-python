@@ -32,7 +32,11 @@ class DispatchSchema(object):
     """
     swagger_types = {
         'destination_id': 'str',
+        'destination_name': 'str',
         'course_id': 'str',
+        'course_title': 'str',
+        'updated': 'datetime',
+        'created': 'datetime',
         'allow_new_registrations': 'bool',
         'enabled': 'bool',
         'instanced': 'bool',
@@ -46,7 +50,11 @@ class DispatchSchema(object):
 
     attribute_map = {
         'destination_id': 'destinationId',
+        'destination_name': 'destinationName',
         'course_id': 'courseId',
+        'course_title': 'courseTitle',
+        'updated': 'updated',
+        'created': 'created',
         'allow_new_registrations': 'allowNewRegistrations',
         'enabled': 'enabled',
         'instanced': 'instanced',
@@ -58,11 +66,15 @@ class DispatchSchema(object):
         'notes': 'notes'
     }
 
-    def __init__(self, destination_id=None, course_id=None, allow_new_registrations=None, enabled=None, instanced=None, registration_cap=None, registration_count=None, expiration_date=None, tags=None, email=None, notes=None):  # noqa: E501
+    def __init__(self, destination_id=None, destination_name=None, course_id=None, course_title=None, updated=None, created=None, allow_new_registrations=None, enabled=None, instanced=None, registration_cap=None, registration_count=None, expiration_date=None, tags=None, email=None, notes=None):  # noqa: E501
         """DispatchSchema - a model defined in Swagger"""  # noqa: E501
 
         self._destination_id = None
+        self._destination_name = None
         self._course_id = None
+        self._course_title = None
+        self._updated = None
+        self._created = None
         self._allow_new_registrations = None
         self._enabled = None
         self._instanced = None
@@ -76,8 +88,16 @@ class DispatchSchema(object):
 
         if destination_id is not None:
             self.destination_id = destination_id
+        if destination_name is not None:
+            self.destination_name = destination_name
         if course_id is not None:
             self.course_id = course_id
+        if course_title is not None:
+            self.course_title = course_title
+        if updated is not None:
+            self.updated = updated
+        if created is not None:
+            self.created = created
         if allow_new_registrations is not None:
             self.allow_new_registrations = allow_new_registrations
         if enabled is not None:
@@ -121,6 +141,29 @@ class DispatchSchema(object):
         self._destination_id = destination_id
 
     @property
+    def destination_name(self):
+        """Gets the destination_name of this DispatchSchema.  # noqa: E501
+
+        Name of the destination housing this dispatch  # noqa: E501
+
+        :return: The destination_name of this DispatchSchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._destination_name
+
+    @destination_name.setter
+    def destination_name(self, destination_name):
+        """Sets the destination_name of this DispatchSchema.
+
+        Name of the destination housing this dispatch  # noqa: E501
+
+        :param destination_name: The destination_name of this DispatchSchema.  # noqa: E501
+        :type: str
+        """
+
+        self._destination_name = destination_name
+
+    @property
     def course_id(self):
         """Gets the course_id of this DispatchSchema.  # noqa: E501
 
@@ -142,6 +185,67 @@ class DispatchSchema(object):
         """
 
         self._course_id = course_id
+
+    @property
+    def course_title(self):
+        """Gets the course_title of this DispatchSchema.  # noqa: E501
+
+        Title of this dispatched course  # noqa: E501
+
+        :return: The course_title of this DispatchSchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._course_title
+
+    @course_title.setter
+    def course_title(self, course_title):
+        """Sets the course_title of this DispatchSchema.
+
+        Title of this dispatched course  # noqa: E501
+
+        :param course_title: The course_title of this DispatchSchema.  # noqa: E501
+        :type: str
+        """
+
+        self._course_title = course_title
+
+    @property
+    def updated(self):
+        """Gets the updated of this DispatchSchema.  # noqa: E501
+
+        :return: The updated of this DispatchSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated
+
+    @updated.setter
+    def updated(self, updated):
+        """Sets the updated of this DispatchSchema.
+
+        :param updated: The updated of this DispatchSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated = updated
+
+    @property
+    def created(self):
+        """Gets the created of this DispatchSchema.  # noqa: E501
+
+        :return: The created of this DispatchSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        """Sets the created of this DispatchSchema.
+
+        :param created: The created of this DispatchSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created = created
 
     @property
     def allow_new_registrations(self):
@@ -262,7 +366,7 @@ class DispatchSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this DispatchSchema.  # noqa: E501
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or 'none' for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this DispatchSchema.  # noqa: E501
         :rtype: datetime
@@ -273,7 +377,7 @@ class DispatchSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this DispatchSchema.
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or 'none' for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this DispatchSchema.  # noqa: E501
         :type: datetime
