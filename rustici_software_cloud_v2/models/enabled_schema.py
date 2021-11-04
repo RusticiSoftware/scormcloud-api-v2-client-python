@@ -51,7 +51,6 @@ class EnabledSchema(object):
     def enabled(self):
         """Gets the enabled of this EnabledSchema.  # noqa: E501
 
-
         :return: The enabled of this EnabledSchema.  # noqa: E501
         :rtype: bool
         """
@@ -60,7 +59,6 @@ class EnabledSchema(object):
     @enabled.setter
     def enabled(self, enabled):
         """Sets the enabled of this EnabledSchema.
-
 
         :param enabled: The enabled of this EnabledSchema.  # noqa: E501
         :type: bool

@@ -68,6 +68,8 @@ class InvitationJobStatusSchema(object):
 
         The status of the job.  # noqa: E501
 
+        allowed_values = ["STARTED", "CANCELLED", "COMPLETE", "ERROR"]  # noqa: E501
+
         :return: The status of this InvitationJobStatusSchema.  # noqa: E501
         :rtype: str
         """
@@ -79,15 +81,11 @@ class InvitationJobStatusSchema(object):
 
         The status of the job.  # noqa: E501
 
+        allowed_values = ["STARTED", "CANCELLED", "COMPLETE", "ERROR"]  # noqa: E501
+
         :param status: The status of this InvitationJobStatusSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["STARTED", "CANCELLED", "COMPLETE", "ERROR"]  # noqa: E501
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

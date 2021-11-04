@@ -76,7 +76,6 @@ class XapiResult(object):
     def score(self):
         """Gets the score of this XapiResult.  # noqa: E501
 
-
         :return: The score of this XapiResult.  # noqa: E501
         :rtype: XapiScore
         """
@@ -85,7 +84,6 @@ class XapiResult(object):
     @score.setter
     def score(self, score):
         """Sets the score of this XapiResult.
-
 
         :param score: The score of this XapiResult.  # noqa: E501
         :type: XapiScore
@@ -97,7 +95,6 @@ class XapiResult(object):
     def success(self):
         """Gets the success of this XapiResult.  # noqa: E501
 
-
         :return: The success of this XapiResult.  # noqa: E501
         :rtype: bool
         """
@@ -106,7 +103,6 @@ class XapiResult(object):
     @success.setter
     def success(self, success):
         """Sets the success of this XapiResult.
-
 
         :param success: The success of this XapiResult.  # noqa: E501
         :type: bool
@@ -118,7 +114,6 @@ class XapiResult(object):
     def completion(self):
         """Gets the completion of this XapiResult.  # noqa: E501
 
-
         :return: The completion of this XapiResult.  # noqa: E501
         :rtype: bool
         """
@@ -127,7 +122,6 @@ class XapiResult(object):
     @completion.setter
     def completion(self, completion):
         """Sets the completion of this XapiResult.
-
 
         :param completion: The completion of this XapiResult.  # noqa: E501
         :type: bool
@@ -139,7 +133,6 @@ class XapiResult(object):
     def response(self):
         """Gets the response of this XapiResult.  # noqa: E501
 
-
         :return: The response of this XapiResult.  # noqa: E501
         :rtype: str
         """
@@ -148,7 +141,6 @@ class XapiResult(object):
     @response.setter
     def response(self, response):
         """Sets the response of this XapiResult.
-
 
         :param response: The response of this XapiResult.  # noqa: E501
         :type: str
@@ -160,7 +152,6 @@ class XapiResult(object):
     def duration(self):
         """Gets the duration of this XapiResult.  # noqa: E501
 
-
         :return: The duration of this XapiResult.  # noqa: E501
         :rtype: str
         """
@@ -169,7 +160,6 @@ class XapiResult(object):
     @duration.setter
     def duration(self, duration):
         """Sets the duration of this XapiResult.
-
 
         :param duration: The duration of this XapiResult.  # noqa: E501
         :type: str
@@ -181,7 +171,6 @@ class XapiResult(object):
     def extensions(self):
         """Gets the extensions of this XapiResult.  # noqa: E501
 
-
         :return: The extensions of this XapiResult.  # noqa: E501
         :rtype: dict(str, object)
         """
@@ -190,7 +179,6 @@ class XapiResult(object):
     @extensions.setter
     def extensions(self, extensions):
         """Sets the extensions of this XapiResult.
-
 
         :param extensions: The extensions of this XapiResult.  # noqa: E501
         :type: dict(str, object)

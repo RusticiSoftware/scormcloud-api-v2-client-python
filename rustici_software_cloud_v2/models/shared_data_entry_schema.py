@@ -56,7 +56,6 @@ class SharedDataEntrySchema(object):
     def id(self):
         """Gets the id of this SharedDataEntrySchema.  # noqa: E501
 
-
         :return: The id of this SharedDataEntrySchema.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class SharedDataEntrySchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this SharedDataEntrySchema.
-
 
         :param id: The id of this SharedDataEntrySchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class SharedDataEntrySchema(object):
     def value(self):
         """Gets the value of this SharedDataEntrySchema.  # noqa: E501
 
-
         :return: The value of this SharedDataEntrySchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class SharedDataEntrySchema(object):
     @value.setter
     def value(self, value):
         """Sets the value of this SharedDataEntrySchema.
-
 
         :param value: The value of this SharedDataEntrySchema.  # noqa: E501
         :type: str

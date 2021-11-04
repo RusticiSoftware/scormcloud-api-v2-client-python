@@ -61,7 +61,6 @@ class CourseReferenceSchema(object):
     def id(self):
         """Gets the id of this CourseReferenceSchema.  # noqa: E501
 
-
         :return: The id of this CourseReferenceSchema.  # noqa: E501
         :rtype: str
         """
@@ -70,7 +69,6 @@ class CourseReferenceSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this CourseReferenceSchema.
-
 
         :param id: The id of this CourseReferenceSchema.  # noqa: E501
         :type: str
@@ -82,7 +80,6 @@ class CourseReferenceSchema(object):
     def title(self):
         """Gets the title of this CourseReferenceSchema.  # noqa: E501
 
-
         :return: The title of this CourseReferenceSchema.  # noqa: E501
         :rtype: str
         """
@@ -91,7 +88,6 @@ class CourseReferenceSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this CourseReferenceSchema.
-
 
         :param title: The title of this CourseReferenceSchema.  # noqa: E501
         :type: str
@@ -103,7 +99,6 @@ class CourseReferenceSchema(object):
     def version(self):
         """Gets the version of this CourseReferenceSchema.  # noqa: E501
 
-
         :return: The version of this CourseReferenceSchema.  # noqa: E501
         :rtype: int
         """
@@ -112,7 +107,6 @@ class CourseReferenceSchema(object):
     @version.setter
     def version(self, version):
         """Sets the version of this CourseReferenceSchema.
-
 
         :param version: The version of this CourseReferenceSchema.  # noqa: E501
         :type: int

@@ -51,7 +51,6 @@ class TagListSchema(object):
     def tags(self):
         """Gets the tags of this TagListSchema.  # noqa: E501
 
-
         :return: The tags of this TagListSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -60,7 +59,6 @@ class TagListSchema(object):
     @tags.setter
     def tags(self, tags):
         """Sets the tags of this TagListSchema.
-
 
         :param tags: The tags of this TagListSchema.  # noqa: E501
         :type: list[str]

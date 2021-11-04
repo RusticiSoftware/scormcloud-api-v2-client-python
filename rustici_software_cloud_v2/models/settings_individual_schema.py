@@ -61,7 +61,6 @@ class SettingsIndividualSchema(object):
     def setting_id(self):
         """Gets the setting_id of this SettingsIndividualSchema.  # noqa: E501
 
-
         :return: The setting_id of this SettingsIndividualSchema.  # noqa: E501
         :rtype: str
         """
@@ -70,7 +69,6 @@ class SettingsIndividualSchema(object):
     @setting_id.setter
     def setting_id(self, setting_id):
         """Sets the setting_id of this SettingsIndividualSchema.
-
 
         :param setting_id: The setting_id of this SettingsIndividualSchema.  # noqa: E501
         :type: str
@@ -82,7 +80,6 @@ class SettingsIndividualSchema(object):
     def value(self):
         """Gets the value of this SettingsIndividualSchema.  # noqa: E501
 
-
         :return: The value of this SettingsIndividualSchema.  # noqa: E501
         :rtype: str
         """
@@ -91,7 +88,6 @@ class SettingsIndividualSchema(object):
     @value.setter
     def value(self, value):
         """Sets the value of this SettingsIndividualSchema.
-
 
         :param value: The value of this SettingsIndividualSchema.  # noqa: E501
         :type: str
@@ -103,7 +99,6 @@ class SettingsIndividualSchema(object):
     def explicit(self):
         """Gets the explicit of this SettingsIndividualSchema.  # noqa: E501
 
-
         :return: The explicit of this SettingsIndividualSchema.  # noqa: E501
         :rtype: bool
         """
@@ -112,7 +107,6 @@ class SettingsIndividualSchema(object):
     @explicit.setter
     def explicit(self, explicit):
         """Sets the explicit of this SettingsIndividualSchema.
-
 
         :param explicit: The explicit of this SettingsIndividualSchema.  # noqa: E501
         :type: bool

@@ -157,6 +157,8 @@ class CourseActivitySchema(object):
 
         The type of activity this is  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "AGGREGATION", "SCO", "ASSET", "OBJECTIVE"]  # noqa: E501
+
         :return: The activity_type of this CourseActivitySchema.  # noqa: E501
         :rtype: str
         """
@@ -168,15 +170,11 @@ class CourseActivitySchema(object):
 
         The type of activity this is  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "AGGREGATION", "SCO", "ASSET", "OBJECTIVE"]  # noqa: E501
+
         :param activity_type: The activity_type of this CourseActivitySchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "AGGREGATION", "SCO", "ASSET", "OBJECTIVE"]  # noqa: E501
-        if activity_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `activity_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(activity_type, allowed_values)
-            )
 
         self._activity_type = activity_type
 
@@ -253,7 +251,6 @@ class CourseActivitySchema(object):
     def children(self):
         """Gets the children of this CourseActivitySchema.  # noqa: E501
 
-
         :return: The children of this CourseActivitySchema.  # noqa: E501
         :rtype: list[CourseActivitySchema]
         """
@@ -262,7 +259,6 @@ class CourseActivitySchema(object):
     @children.setter
     def children(self, children):
         """Sets the children of this CourseActivitySchema.
-
 
         :param children: The children of this CourseActivitySchema.  # noqa: E501
         :type: list[CourseActivitySchema]

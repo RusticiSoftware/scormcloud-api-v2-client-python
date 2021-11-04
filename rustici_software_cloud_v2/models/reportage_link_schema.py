@@ -51,7 +51,6 @@ class ReportageLinkSchema(object):
     def reportage_link(self):
         """Gets the reportage_link of this ReportageLinkSchema.  # noqa: E501
 
-
         :return: The reportage_link of this ReportageLinkSchema.  # noqa: E501
         :rtype: str
         """
@@ -60,7 +59,6 @@ class ReportageLinkSchema(object):
     @reportage_link.setter
     def reportage_link(self, reportage_link):
         """Sets the reportage_link of this ReportageLinkSchema.
-
 
         :param reportage_link: The reportage_link of this ReportageLinkSchema.  # noqa: E501
         :type: str

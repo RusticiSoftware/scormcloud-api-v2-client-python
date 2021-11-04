@@ -56,7 +56,6 @@ class PingSchema(object):
     def api_message(self):
         """Gets the api_message of this PingSchema.  # noqa: E501
 
-
         :return: The api_message of this PingSchema.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class PingSchema(object):
     @api_message.setter
     def api_message(self, api_message):
         """Sets the api_message of this PingSchema.
-
 
         :param api_message: The api_message of this PingSchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class PingSchema(object):
     def current_time(self):
         """Gets the current_time of this PingSchema.  # noqa: E501
 
-
         :return: The current_time of this PingSchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class PingSchema(object):
     @current_time.setter
     def current_time(self, current_time):
         """Sets the current_time of this PingSchema.
-
 
         :param current_time: The current_time of this PingSchema.  # noqa: E501
         :type: str

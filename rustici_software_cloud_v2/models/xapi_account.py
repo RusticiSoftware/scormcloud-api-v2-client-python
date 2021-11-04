@@ -54,7 +54,6 @@ class XapiAccount(object):
     def home_page(self):
         """Gets the home_page of this XapiAccount.  # noqa: E501
 
-
         :return: The home_page of this XapiAccount.  # noqa: E501
         :rtype: str
         """
@@ -63,7 +62,6 @@ class XapiAccount(object):
     @home_page.setter
     def home_page(self, home_page):
         """Sets the home_page of this XapiAccount.
-
 
         :param home_page: The home_page of this XapiAccount.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class XapiAccount(object):
     def name(self):
         """Gets the name of this XapiAccount.  # noqa: E501
 
-
         :return: The name of this XapiAccount.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class XapiAccount(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiAccount.
-
 
         :param name: The name of this XapiAccount.  # noqa: E501
         :type: str

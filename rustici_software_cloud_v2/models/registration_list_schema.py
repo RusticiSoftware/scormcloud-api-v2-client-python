@@ -55,7 +55,6 @@ class RegistrationListSchema(object):
     def registrations(self):
         """Gets the registrations of this RegistrationListSchema.  # noqa: E501
 
-
         :return: The registrations of this RegistrationListSchema.  # noqa: E501
         :rtype: list[RegistrationSchema]
         """
@@ -64,7 +63,6 @@ class RegistrationListSchema(object):
     @registrations.setter
     def registrations(self, registrations):
         """Sets the registrations of this RegistrationListSchema.
-
 
         :param registrations: The registrations of this RegistrationListSchema.  # noqa: E501
         :type: list[RegistrationSchema]
@@ -78,6 +76,7 @@ class RegistrationListSchema(object):
     def more(self):
         """Gets the more of this RegistrationListSchema.  # noqa: E501
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :return: The more of this RegistrationListSchema.  # noqa: E501
         :rtype: str
@@ -88,6 +87,7 @@ class RegistrationListSchema(object):
     def more(self, more):
         """Sets the more of this RegistrationListSchema.
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :param more: The more of this RegistrationListSchema.  # noqa: E501
         :type: str

@@ -50,7 +50,6 @@ class XapiStatementPipeListSchema(object):
     def xapi_statement_pipes(self):
         """Gets the xapi_statement_pipes of this XapiStatementPipeListSchema.  # noqa: E501
 
-
         :return: The xapi_statement_pipes of this XapiStatementPipeListSchema.  # noqa: E501
         :rtype: list[XapiStatementPipeSchema]
         """
@@ -59,7 +58,6 @@ class XapiStatementPipeListSchema(object):
     @xapi_statement_pipes.setter
     def xapi_statement_pipes(self, xapi_statement_pipes):
         """Sets the xapi_statement_pipes of this XapiStatementPipeListSchema.
-
 
         :param xapi_statement_pipes: The xapi_statement_pipes of this XapiStatementPipeListSchema.  # noqa: E501
         :type: list[XapiStatementPipeSchema]

@@ -93,7 +93,6 @@ class CreateRegistrationSchema(object):
     def course_id(self):
         """Gets the course_id of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The course_id of this CreateRegistrationSchema.  # noqa: E501
         :rtype: str
         """
@@ -102,7 +101,6 @@ class CreateRegistrationSchema(object):
     @course_id.setter
     def course_id(self, course_id):
         """Sets the course_id of this CreateRegistrationSchema.
-
 
         :param course_id: The course_id of this CreateRegistrationSchema.  # noqa: E501
         :type: str
@@ -116,7 +114,6 @@ class CreateRegistrationSchema(object):
     def learner(self):
         """Gets the learner of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The learner of this CreateRegistrationSchema.  # noqa: E501
         :rtype: LearnerSchema
         """
@@ -125,7 +122,6 @@ class CreateRegistrationSchema(object):
     @learner.setter
     def learner(self, learner):
         """Sets the learner of this CreateRegistrationSchema.
-
 
         :param learner: The learner of this CreateRegistrationSchema.  # noqa: E501
         :type: LearnerSchema
@@ -139,7 +135,6 @@ class CreateRegistrationSchema(object):
     def registration_id(self):
         """Gets the registration_id of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The registration_id of this CreateRegistrationSchema.  # noqa: E501
         :rtype: str
         """
@@ -148,7 +143,6 @@ class CreateRegistrationSchema(object):
     @registration_id.setter
     def registration_id(self, registration_id):
         """Sets the registration_id of this CreateRegistrationSchema.
-
 
         :param registration_id: The registration_id of this CreateRegistrationSchema.  # noqa: E501
         :type: str
@@ -185,7 +179,6 @@ class CreateRegistrationSchema(object):
     def learner_tags(self):
         """Gets the learner_tags of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The learner_tags of this CreateRegistrationSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -194,7 +187,6 @@ class CreateRegistrationSchema(object):
     @learner_tags.setter
     def learner_tags(self, learner_tags):
         """Sets the learner_tags of this CreateRegistrationSchema.
-
 
         :param learner_tags: The learner_tags of this CreateRegistrationSchema.  # noqa: E501
         :type: list[str]
@@ -206,7 +198,6 @@ class CreateRegistrationSchema(object):
     def course_tags(self):
         """Gets the course_tags of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The course_tags of this CreateRegistrationSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -215,7 +206,6 @@ class CreateRegistrationSchema(object):
     @course_tags.setter
     def course_tags(self, course_tags):
         """Sets the course_tags of this CreateRegistrationSchema.
-
 
         :param course_tags: The course_tags of this CreateRegistrationSchema.  # noqa: E501
         :type: list[str]
@@ -227,7 +217,6 @@ class CreateRegistrationSchema(object):
     def registration_tags(self):
         """Gets the registration_tags of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The registration_tags of this CreateRegistrationSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -236,7 +225,6 @@ class CreateRegistrationSchema(object):
     @registration_tags.setter
     def registration_tags(self, registration_tags):
         """Sets the registration_tags of this CreateRegistrationSchema.
-
 
         :param registration_tags: The registration_tags of this CreateRegistrationSchema.  # noqa: E501
         :type: list[str]
@@ -271,7 +259,6 @@ class CreateRegistrationSchema(object):
     def initial_registration_state(self):
         """Gets the initial_registration_state of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The initial_registration_state of this CreateRegistrationSchema.  # noqa: E501
         :rtype: RegistrationSchema
         """
@@ -280,7 +267,6 @@ class CreateRegistrationSchema(object):
     @initial_registration_state.setter
     def initial_registration_state(self, initial_registration_state):
         """Sets the initial_registration_state of this CreateRegistrationSchema.
-
 
         :param initial_registration_state: The initial_registration_state of this CreateRegistrationSchema.  # noqa: E501
         :type: RegistrationSchema
@@ -292,7 +278,6 @@ class CreateRegistrationSchema(object):
     def initial_settings(self):
         """Gets the initial_settings of this CreateRegistrationSchema.  # noqa: E501
 
-
         :return: The initial_settings of this CreateRegistrationSchema.  # noqa: E501
         :rtype: SettingsPostSchema
         """
@@ -301,7 +286,6 @@ class CreateRegistrationSchema(object):
     @initial_settings.setter
     def initial_settings(self, initial_settings):
         """Sets the initial_settings of this CreateRegistrationSchema.
-
 
         :param initial_settings: The initial_settings of this CreateRegistrationSchema.  # noqa: E501
         :type: SettingsPostSchema

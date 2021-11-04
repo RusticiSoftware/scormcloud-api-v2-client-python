@@ -56,7 +56,6 @@ class SettingValidValue(object):
     def value(self):
         """Gets the value of this SettingValidValue.  # noqa: E501
 
-
         :return: The value of this SettingValidValue.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class SettingValidValue(object):
     @value.setter
     def value(self, value):
         """Sets the value of this SettingValidValue.
-
 
         :param value: The value of this SettingValidValue.  # noqa: E501
         :type: str

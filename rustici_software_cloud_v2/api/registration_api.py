@@ -34,16 +34,16 @@ class RegistrationApi(object):
         self.api_client = api_client
 
     def build_registration_launch_link(self, registration_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get registration launch link.   # noqa: E501
+        """Get a launch link for a Registration   # noqa: E501
 
-        Returns the link to use to launch this registration.   # noqa: E501
+        Returns the launch link to use to launch the course for the registration.   Launch links are meant as a way to provide access to your content.  When a learner visits the link, the course will be launched and registration progress will start to be tracked.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_registration_launch_link(registration_id, launch_link_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
@@ -57,16 +57,16 @@ class RegistrationApi(object):
             return data
 
     def build_registration_launch_link_with_http_info(self, registration_id, launch_link_request, **kwargs):  # noqa: E501
-        """Get registration launch link.   # noqa: E501
+        """Get a launch link for a Registration   # noqa: E501
 
-        Returns the link to use to launch this registration.   # noqa: E501
+        Returns the launch link to use to launch the course for the registration.   Launch links are meant as a way to provide access to your content.  When a learner visits the link, the course will be launched and registration progress will start to be tracked.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.build_registration_launch_link_with_http_info(registration_id, launch_link_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param LaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
@@ -141,16 +141,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def create_new_registration_instance(self, registration_id, **kwargs):  # noqa: E501
-        """create_new_registration_instance  # noqa: E501
+        """Create a Registration Instance   # noqa: E501
 
-        Create a new instance for this registration specified by the registration ID.   # noqa: E501
+        Creates a new instance of the registration.  Registration instances will be automatically created when a learner launches a new version of the course.  This allows for tracking registration progress for each of the versions of the course the learner has taken.  When the created registration instance is \"launched\", the course specified at creation time will be launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_new_registration_instance(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -163,16 +163,16 @@ class RegistrationApi(object):
             return data
 
     def create_new_registration_instance_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """create_new_registration_instance  # noqa: E501
+        """Create a Registration Instance   # noqa: E501
 
-        Create a new instance for this registration specified by the registration ID.   # noqa: E501
+        Creates a new instance of the registration.  Registration instances will be automatically created when a learner launches a new version of the course.  This allows for tracking registration progress for each of the versions of the course the learner has taken.  When the created registration instance is \"launched\", the course specified at creation time will be launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_new_registration_instance_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -240,9 +240,9 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def create_registration(self, registration, **kwargs):  # noqa: E501
-        """Create a registration.   # noqa: E501
+        """Create a Registration   # noqa: E501
 
-        This method is used to create a new registration. A registration will contain a few pieces of information such as a learner name, a learner id, and optionally, information about where activity data should be posted (for client consumption), as well as a way to specify simple authentication schemes for posting said data. A registration must be tied to a specific course at creation time. When the created registration is “launched”, the course specified at creation time will be launched.   # noqa: E501
+        Creates a new registration.  Registrations are the billable unit in SCORM Cloud, and represent a link between a learner and a course.  A registration will contain a few pieces of information such as learner identifiers, the id of the course being registered for, and several other optional fields. A registration must be tied to a specific course at creation time.  When the created registration is \"launched\", the course specified at creation time will be launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_registration(registration, async_req=True)
@@ -250,7 +250,7 @@ class RegistrationApi(object):
 
         :param async_req bool
         :param CreateRegistrationSchema registration: (required)
-        :param int course_version: The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to.
+        :param int course_version: Unless you have a reason for using this you probably do not need to. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -263,9 +263,9 @@ class RegistrationApi(object):
             return data
 
     def create_registration_with_http_info(self, registration, **kwargs):  # noqa: E501
-        """Create a registration.   # noqa: E501
+        """Create a Registration   # noqa: E501
 
-        This method is used to create a new registration. A registration will contain a few pieces of information such as a learner name, a learner id, and optionally, information about where activity data should be posted (for client consumption), as well as a way to specify simple authentication schemes for posting said data. A registration must be tied to a specific course at creation time. When the created registration is “launched”, the course specified at creation time will be launched.   # noqa: E501
+        Creates a new registration.  Registrations are the billable unit in SCORM Cloud, and represent a link between a learner and a course.  A registration will contain a few pieces of information such as learner identifiers, the id of the course being registered for, and several other optional fields. A registration must be tied to a specific course at creation time.  When the created registration is \"launched\", the course specified at creation time will be launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_registration_with_http_info(registration, async_req=True)
@@ -273,7 +273,7 @@ class RegistrationApi(object):
 
         :param async_req bool
         :param CreateRegistrationSchema registration: (required)
-        :param int course_version: The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to.
+        :param int course_version: Unless you have a reason for using this you probably do not need to. 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -343,16 +343,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration(self, registration_id, **kwargs):  # noqa: E501
-        """Delete a registration.   # noqa: E501
+        """Delete a Registration   # noqa: E501
 
-        Delete `registrationId`.  This includes all instances of this registration.   # noqa: E501
+        Deletes the specified registration.  >**Caution:** >This will also delete all instances of the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -365,16 +365,16 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Delete a registration.   # noqa: E501
+        """Delete a Registration   # noqa: E501
 
-        Delete `registrationId`.  This includes all instances of this registration.   # noqa: E501
+        Deletes the specified registration.  >**Caution:** >This will also delete all instances of the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -442,16 +442,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_configuration_setting(self, registration_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a registration configuration.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Registration   # noqa: E501
 
-        Clears the `settingId` value for this registration. The effective value will become the value at the next level which has an explicit value set.  Possibilities are course, application, or default.   # noqa: E501
+        Clears the specified setting from the registration.  This causes the setting to inherit a value from a higher level (e.g. course).  If the configuration setting was not set at the registration level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_configuration_setting(registration_id, setting_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -465,16 +465,16 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_configuration_setting_with_http_info(self, registration_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a registration configuration.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Registration   # noqa: E501
 
-        Clears the `settingId` value for this registration. The effective value will become the value at the next level which has an explicit value set.  Possibilities are course, application, or default.   # noqa: E501
+        Clears the specified setting from the registration.  This causes the setting to inherit a value from a higher level (e.g. course).  If the configuration setting was not set at the registration level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_configuration_setting_with_http_info(registration_id, setting_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -549,16 +549,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_global_data(self, registration_id, **kwargs):  # noqa: E501
-        """Delete the global data of a registration.   # noqa: E501
+        """Reset global data for a Registration   # noqa: E501
 
-        Delete global data associated with `registrationId`'.  Calling this method will reset all global objectives associated with this registration, if any exist.   # noqa: E501
+        Deletes the global data associated with the registration, but the registration itself will remain.  This means any progress towards the global objectives will be removed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_global_data(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -571,16 +571,16 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_global_data_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Delete the global data of a registration.   # noqa: E501
+        """Reset global data for a Registration   # noqa: E501
 
-        Delete global data associated with `registrationId`'.  Calling this method will reset all global objectives associated with this registration, if any exist.   # noqa: E501
+        Deletes the global data associated with the registration, but the registration itself will remain.  This means any progress towards the global objectives will be removed.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_global_data_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -648,17 +648,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_instance(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Delete instance `instanceId` of `registrationId`.   # noqa: E501
+        """Delete a Registration Instance   # noqa: E501
 
-        Delete instance `instanceId` of `registrationId`.  If this is the only existing instance of this registration, the registration will be deleted in its entirety along with any associated data.   # noqa: E501
+        Deletes the specified instance of the registration.  If deleting the last remaining instance of the registration, the registration itself will be deleted along with any associated data.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_instance(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -671,17 +671,17 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_instance_with_http_info(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Delete instance `instanceId` of `registrationId`.   # noqa: E501
+        """Delete a Registration Instance   # noqa: E501
 
-        Delete instance `instanceId` of `registrationId`.  If this is the only existing instance of this registration, the registration will be deleted in its entirety along with any associated data.   # noqa: E501
+        Deletes the specified instance of the registration.  If deleting the last remaining instance of the registration, the registration itself will be deleted along with any associated data.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_instance_with_http_info(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -711,8 +711,6 @@ class RegistrationApi(object):
                 params['instance_id'] is None):
             raise ValueError("Missing the required parameter `instance_id` when calling `delete_registration_instance`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `delete_registration_instance`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -757,17 +755,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_instance_configuration_setting(self, registration_id, instance_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a configuration for an instance of a registration.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Registration Instance   # noqa: E501
 
-        Clears the `settingId` value for this registration instance.   # noqa: E501
+        Clears the specified setting from the registration instance.  This causes the setting to inherit a value from a higher level (e.g. course).  If the configuration setting was not set at the registration level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_instance_configuration_setting(registration_id, instance_id, setting_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -781,17 +779,17 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_instance_configuration_setting_with_http_info(self, registration_id, instance_id, setting_id, **kwargs):  # noqa: E501
-        """Clear a configuration for an instance of a registration.   # noqa: E501
+        """Delete a configuration setting explicitly set for a Registration Instance   # noqa: E501
 
-        Clears the `settingId` value for this registration instance.   # noqa: E501
+        Clears the specified setting from the registration instance.  This causes the setting to inherit a value from a higher level (e.g. course).  If the configuration setting was not set at the registration level it will continue to persist and will require deletion from the level it was set.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_instance_configuration_setting_with_http_info(registration_id, instance_id, setting_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param str setting_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -826,8 +824,6 @@ class RegistrationApi(object):
                 params['setting_id'] is None):
             raise ValueError("Missing the required parameter `setting_id` when calling `delete_registration_instance_configuration_setting`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `delete_registration_instance_configuration_setting`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -874,16 +870,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_progress(self, registration_id, **kwargs):  # noqa: E501
-        """Reset a registration.   # noqa: E501
+        """Reset a Registration   # noqa: E501
 
-        This method will reset the specified registration. This is essentially the same as deleting and recreating the registration, and as such, will delete all the data associated with the registration (including launch history, etc.). If the course for which the registration is registered has multiple versions, the registration being reset will automatically be registered for the latest version.   # noqa: E501
+        Deletes the data associated with the registration, but the registration itself will remain.  This means any of the launch history, and progress will be removed.  After the data has been deleted, the registration will automatically register itself for the latest version of the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_progress(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -896,16 +892,16 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_progress_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Reset a registration.   # noqa: E501
+        """Reset a Registration   # noqa: E501
 
-        This method will reset the specified registration. This is essentially the same as deleting and recreating the registration, and as such, will delete all the data associated with the registration (including launch history, etc.). If the course for which the registration is registered has multiple versions, the registration being reset will automatically be registered for the latest version.   # noqa: E501
+        Deletes the data associated with the registration, but the registration itself will remain.  This means any of the launch history, and progress will be removed.  After the data has been deleted, the registration will automatically register itself for the latest version of the course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_progress_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -973,16 +969,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def delete_registration_tags(self, registration_id, tags, **kwargs):  # noqa: E501
-        """Delete tags from a registration.   # noqa: E501
+        """Delete tags from a Registration   # noqa: E501
 
-        Delete the provided tags for this registration.   # noqa: E501
+        Deletes the specified tags from the registration.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_tags(registration_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -996,16 +992,16 @@ class RegistrationApi(object):
             return data
 
     def delete_registration_tags_with_http_info(self, registration_id, tags, **kwargs):  # noqa: E501
-        """Delete tags from a registration.   # noqa: E501
+        """Delete tags from a Registration   # noqa: E501
 
-        Delete the provided tags for this registration.   # noqa: E501
+        Deletes the specified tags from the registration.  Deleting tags that do not exist will still result in a success.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_registration_tags_with_http_info(registration_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1080,16 +1076,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration(self, registration_id, **kwargs):  # noqa: E501
-        """See if a registration exists.   # noqa: E501
+        """Check that a Registration exists   # noqa: E501
 
-        This method is meant to check if a registration with `registrationId` exists in the system.   # noqa: E501
+        Checks that the registration exists within SCORM Cloud.  >**Info:** >No registration data will be returned for this call. A successful `200` response indicates that the registration exists. If the registration does not exist, a `404` error will be returned instead. If you are looking for information about the registration, try calling `GetRegistrationProgress` instead.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1102,16 +1098,16 @@ class RegistrationApi(object):
             return data
 
     def get_registration_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """See if a registration exists.   # noqa: E501
+        """Check that a Registration exists   # noqa: E501
 
-        This method is meant to check if a registration with `registrationId` exists in the system.   # noqa: E501
+        Checks that the registration exists within SCORM Cloud.  >**Info:** >No registration data will be returned for this call. A successful `200` response indicates that the registration exists. If the registration does not exist, a `404` error will be returned instead. If you are looking for information about the registration, try calling `GetRegistrationProgress` instead.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1179,16 +1175,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_configuration(self, registration_id, **kwargs):  # noqa: E501
-        """Get registration configuration.   # noqa: E501
+        """Get effective configuration settings for a Registration   # noqa: E501
 
-        Returns all configuration settings for this registration.   # noqa: E501
+        Returns the effective configuration settings for the registration.  If not set at the registration level, the setting will inherit a value from a higher level (e.g. course).  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_configuration(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1202,16 +1198,16 @@ class RegistrationApi(object):
             return data
 
     def get_registration_configuration_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get registration configuration.   # noqa: E501
+        """Get effective configuration settings for a Registration   # noqa: E501
 
-        Returns all configuration settings for this registration.   # noqa: E501
+        Returns the effective configuration settings for the registration.  If not set at the registration level, the setting will inherit a value from a higher level (e.g. course).  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_configuration_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1282,17 +1278,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_instance_configuration(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get configuration for instance of registration.   # noqa: E501
+        """Get effective configuration settings for a Registration Instance   # noqa: E501
 
-        Returns all configuration settings for this registration instance.   # noqa: E501
+        Returns the effective configuration settings for the registration instance.  If not set at the registration level, the setting will inherit a value from a higher level (e.g. course).  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_configuration(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1306,17 +1302,17 @@ class RegistrationApi(object):
             return data
 
     def get_registration_instance_configuration_with_http_info(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get configuration for instance of registration.   # noqa: E501
+        """Get effective configuration settings for a Registration Instance   # noqa: E501
 
-        Returns all configuration settings for this registration instance.   # noqa: E501
+        Returns the effective configuration settings for the registration instance.  If not set at the registration level, the setting will inherit a value from a higher level (e.g. course).  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_configuration_with_http_info(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_metadata:
         :return: SettingListSchema
                  If the method is called asynchronously,
@@ -1347,8 +1343,6 @@ class RegistrationApi(object):
                 params['instance_id'] is None):
             raise ValueError("Missing the required parameter `instance_id` when calling `get_registration_instance_configuration`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `get_registration_instance_configuration`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1395,17 +1389,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_instance_launch_history(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get launch history for an instance of a registration.   # noqa: E501
+        """Get launch history for a Registration Instance   # noqa: E501
 
-        Returns history of the launches of the specified instance of this registration.   # noqa: E501
+        Returns the launch history of the registration instance.  This includes completion status, time taken, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_launch_history(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_history_log: Whether to include the history log in the launch history
         :return: LaunchHistoryListSchema
                  If the method is called asynchronously,
@@ -1419,17 +1413,17 @@ class RegistrationApi(object):
             return data
 
     def get_registration_instance_launch_history_with_http_info(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get launch history for an instance of a registration.   # noqa: E501
+        """Get launch history for a Registration Instance   # noqa: E501
 
-        Returns history of the launches of the specified instance of this registration.   # noqa: E501
+        Returns the launch history of the registration instance.  This includes completion status, time taken, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_launch_history_with_http_info(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_history_log: Whether to include the history log in the launch history
         :return: LaunchHistoryListSchema
                  If the method is called asynchronously,
@@ -1460,8 +1454,6 @@ class RegistrationApi(object):
                 params['instance_id'] is None):
             raise ValueError("Missing the required parameter `instance_id` when calling `get_registration_instance_launch_history`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `get_registration_instance_launch_history`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1508,17 +1500,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_instance_progress(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get details of an instance of a registration.   # noqa: E501
+        """Get detailed information about a Registration Instance   # noqa: E501
 
-        Get registration progress for instance `instanceId` of `registrationId`'   # noqa: E501
+        Returns detailed information about the registration instance.  This includes completion status, time taken, score, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_progress(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -1534,17 +1526,17 @@ class RegistrationApi(object):
             return data
 
     def get_registration_instance_progress_with_http_info(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get details of an instance of a registration.   # noqa: E501
+        """Get detailed information about a Registration Instance   # noqa: E501
 
-        Get registration progress for instance `instanceId` of `registrationId`'   # noqa: E501
+        Returns detailed information about the registration instance.  This includes completion status, time taken, score, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_progress_with_http_info(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -1577,8 +1569,6 @@ class RegistrationApi(object):
                 params['instance_id'] is None):
             raise ValueError("Missing the required parameter `instance_id` when calling `get_registration_instance_progress`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `get_registration_instance_progress`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1629,20 +1619,20 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_instance_statements(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for an instance of a registration.   # noqa: E501
+        """Get xAPI statements for a Registration Instance   # noqa: E501
 
-        Get xAPI statements for instance `instanceId` of `registrationId`.   # noqa: E501
+        Returns xAPI statements for the registration instance.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_statements(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param int instance_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1655,20 +1645,20 @@ class RegistrationApi(object):
             return data
 
     def get_registration_instance_statements_with_http_info(self, registration_id, instance_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for an instance of a registration.   # noqa: E501
+        """Get xAPI statements for a Registration Instance   # noqa: E501
 
-        Get xAPI statements for instance `instanceId` of `registrationId`.   # noqa: E501
+        Returns xAPI statements for the registration instance.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instance_statements_with_http_info(registration_id, instance_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param int instance_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1698,8 +1688,6 @@ class RegistrationApi(object):
                 params['instance_id'] is None):
             raise ValueError("Missing the required parameter `instance_id` when calling `get_registration_instance_statements`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `get_registration_instance_statements`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1750,19 +1738,19 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_instances(self, registration_id, **kwargs):  # noqa: E501
-        """Get all instances of a registration.   # noqa: E501
+        """Get a list of a Registration's Instances   # noqa: E501
 
-        Get all the instances of this the registration specified by the registration ID   # noqa: E501
+        Returns information about all instances of the registration.  This can be useful to see information such as registration progress across versions of a course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instances(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -1778,19 +1766,19 @@ class RegistrationApi(object):
             return data
 
     def get_registration_instances_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get all instances of a registration.   # noqa: E501
+        """Get a list of a Registration's Instances   # noqa: E501
 
-        Get all the instances of this the registration specified by the registration ID   # noqa: E501
+        Returns information about all instances of the registration.  This can be useful to see information such as registration progress across versions of a course.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_instances_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -1873,16 +1861,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_launch_history(self, registration_id, **kwargs):  # noqa: E501
-        """Get launch history for a registration.   # noqa: E501
+        """Get launch history for a Registration   # noqa: E501
 
-        Returns history of this registration's launches.   # noqa: E501
+        Returns the launch history of the registration.  This includes completion status, time taken, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_launch_history(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_history_log: Whether to include the history log in the launch history
         :return: LaunchHistoryListSchema
                  If the method is called asynchronously,
@@ -1896,16 +1884,16 @@ class RegistrationApi(object):
             return data
 
     def get_registration_launch_history_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get launch history for a registration.   # noqa: E501
+        """Get launch history for a Registration   # noqa: E501
 
-        Returns history of this registration's launches.   # noqa: E501
+        Returns the launch history of the registration.  This includes completion status, time taken, and pass/fail status.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_launch_history_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_history_log: Whether to include the history log in the launch history
         :return: LaunchHistoryListSchema
                  If the method is called asynchronously,
@@ -1976,16 +1964,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_progress(self, registration_id, **kwargs):  # noqa: E501
-        """Get details of a registration.   # noqa: E501
+        """Get detailed information about a Registration   # noqa: E501
 
-        Get detailed information about the latest instance of `registrationId`. Additional detail may be obtained by using the optional query parameters.   # noqa: E501
+        Returns detailed information about the registration.  This includes completion status, time taken, score, and pass/fail status.  >**Info:** >If you find yourself making multiple calls to this endpoint, it may be worthwhile to utilize our [postback mechanism](https://cloud.scorm.com/docs/v2/guides/postback/) instead.  The main premise is that you would set up an endpoint on your end, and when we detect a change to the registration progress: completion status, time taken, score, or pass/fail status, we would send a message to your system with the registration progress.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_progress(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -2001,16 +1989,16 @@ class RegistrationApi(object):
             return data
 
     def get_registration_progress_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get details of a registration.   # noqa: E501
+        """Get detailed information about a Registration   # noqa: E501
 
-        Get detailed information about the latest instance of `registrationId`. Additional detail may be obtained by using the optional query parameters.   # noqa: E501
+        Returns detailed information about the registration.  This includes completion status, time taken, score, and pass/fail status.  >**Info:** >If you find yourself making multiple calls to this endpoint, it may be worthwhile to utilize our [postback mechanism](https://cloud.scorm.com/docs/v2/guides/postback/) instead.  The main premise is that you would set up an endpoint on your end, and when we detect a change to the registration progress: completion status, time taken, score, or pass/fail status, we would send a message to your system with the registration progress.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_progress_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
@@ -2087,19 +2075,19 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_statements(self, registration_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for a registration.   # noqa: E501
+        """Get xAPI statements for a Registration   # noqa: E501
 
-        Get xAPI statements for `registrationId`.   # noqa: E501
+        Returns xAPI statements for the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_statements(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2112,19 +2100,19 @@ class RegistrationApi(object):
             return data
 
     def get_registration_statements_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get xAPI statements for a registration.   # noqa: E501
+        """Get xAPI statements for a Registration   # noqa: E501
 
-        Get xAPI statements for `registrationId`.   # noqa: E501
+        Returns xAPI statements for the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_statements_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str registration_id: (required)
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiStatementResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2198,16 +2186,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registration_tags(self, registration_id, **kwargs):  # noqa: E501
-        """Get tags for a registration.   # noqa: E501
+        """Get tags for a Registration   # noqa: E501
 
-        Get a list of the tags applied to this registration.   # noqa: E501
+        Returns the tags for the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_tags(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2220,16 +2208,16 @@ class RegistrationApi(object):
             return data
 
     def get_registration_tags_with_http_info(self, registration_id, **kwargs):  # noqa: E501
-        """Get tags for a registration.   # noqa: E501
+        """Get tags for a Registration   # noqa: E501
 
-        Get a list of the tags applied to this registration.   # noqa: E501
+        Returns the tags for the registration.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registration_tags_with_http_info(registration_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :return: TagListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2297,24 +2285,28 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def get_registrations(self, **kwargs):  # noqa: E501
-        """Get a list of all registrations.   # noqa: E501
+        """Get a list of Registrations   # noqa: E501
 
-        Gets a list of registrations including a summary of the status of each registration.   # noqa: E501
+        Returns a list of registrations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >If you find yourself making multiple calls to this endpoint, it may be worthwhile to utilize our [postback mechanism](https://cloud.scorm.com/docs/v2/guides/postback/) instead.  The main premise is that you would set up an endpoint on your end, and when we detect a change to the registration progress: completion status, time taken, score, or pass/fail status, we would send a message to your system with the registration progress.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registrations(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only registrations for the specified course id will be included.
-        :param str learner_id: Only registrations for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param str learner_id: Only retrieve resources having `learnerId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
-        :param list[str] tags:
         :return: RegistrationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2327,30 +2319,34 @@ class RegistrationApi(object):
             return data
 
     def get_registrations_with_http_info(self, **kwargs):  # noqa: E501
-        """Get a list of all registrations.   # noqa: E501
+        """Get a list of Registrations   # noqa: E501
 
-        Gets a list of registrations including a summary of the status of each registration.   # noqa: E501
+        Returns a list of registrations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >If you find yourself making multiple calls to this endpoint, it may be worthwhile to utilize our [postback mechanism](https://cloud.scorm.com/docs/v2/guides/postback/) instead.  The main premise is that you would set up an endpoint on your end, and when we detect a change to the registration progress: completion status, time taken, score, or pass/fail status, we would send a message to your system with the registration progress.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_registrations_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str course_id: Only registrations for the specified course id will be included.
-        :param str learner_id: Only registrations for the specified learner id will be included.
-        :param datetime since: Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param datetime until: Only items updated before the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of registration lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param str course_id: Only retrieve resources having `courseId`
+        :param str learner_id: Only retrieve resources having `learnerId`
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param list[str] tags: Filter items matching any tag provided (not all)
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
-        :param list[str] tags:
         :return: RegistrationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'learner_id', 'since', 'until', 'more', 'include_child_results', 'include_interactions_and_objectives', 'include_runtime', 'tags']  # noqa: E501
+        all_params = ['course_id', 'learner_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_child_results', 'include_interactions_and_objectives', 'include_runtime']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2379,6 +2375,17 @@ class RegistrationApi(object):
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
             query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
         if 'include_child_results' in params:
@@ -2387,9 +2394,6 @@ class RegistrationApi(object):
             query_params.append(('includeInteractionsAndObjectives', params['include_interactions_and_objectives']))  # noqa: E501
         if 'include_runtime' in params:
             query_params.append(('includeRuntime', params['include_runtime']))  # noqa: E501
-        if 'tags' in params:
-            query_params.append(('tags', params['tags']))  # noqa: E501
-            collection_formats['tags'] = 'csv'  # noqa: E501
 
         header_params = {}
 
@@ -2425,16 +2429,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def put_registration_tags(self, registration_id, tags, **kwargs):  # noqa: E501
-        """Set tags on a registration.   # noqa: E501
+        """Add tags to a Registration   # noqa: E501
 
-        Set the tags for this registration. Note: any tags currently on this registration will be overwritten with the new array of tags.   # noqa: E501
+        Applies the provided tags to the registration.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetRegistrations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_registration_tags(registration_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2448,16 +2452,16 @@ class RegistrationApi(object):
             return data
 
     def put_registration_tags_with_http_info(self, registration_id, tags, **kwargs):  # noqa: E501
-        """Set tags on a registration.   # noqa: E501
+        """Add tags to a Registration   # noqa: E501
 
-        Set the tags for this registration. Note: any tags currently on this registration will be overwritten with the new array of tags.   # noqa: E501
+        Applies the provided tags to the registration.  Tags are used to easily identify resources.  Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetRegistrations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_registration_tags_with_http_info(registration_id, tags, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param TagListSchema tags: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2532,16 +2536,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def put_registration_tags_batch(self, batch, **kwargs):  # noqa: E501
-        """Set tags on registrations.   # noqa: E501
+        """Add a group of tags to a group of Registrations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided registrations.   # noqa: E501
+        Applies all of the provided tags on all of the provided registrations.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetRegistrations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_registration_tags_batch(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2554,16 +2558,16 @@ class RegistrationApi(object):
             return data
 
     def put_registration_tags_batch_with_http_info(self, batch, **kwargs):  # noqa: E501
-        """Set tags on registrations.   # noqa: E501
+        """Add a group of tags to a group of Registrations   # noqa: E501
 
-        Sets all of the provided tags on all of the provided registrations.   # noqa: E501
+        Applies all of the provided tags on all of the provided registrations.  Tags are used to easily identify resources. Adding tags can enable more refined searches when making calls to certain endpoints (e.g. GetRegistrations).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.put_registration_tags_batch_with_http_info(batch, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BatchTagsSchema batch: Object representing an array of ids to apply an array of tags to. (required)
+        :param BatchTagsSchema batch: Array of ids, and array of tags for bulk tag operations (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2631,16 +2635,16 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def set_registration_configuration(self, registration_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set registration configuration.   # noqa: E501
+        """Update configuration settings for a Registration   # noqa: E501
 
-        Set configuration settings for this registration.   # noqa: E501
+        Updates configuration settings at the registration level.  This will explicitly set a value at the registration level and override any settings from a higher level.  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_registration_configuration(registration_id, configuration_settings, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2654,16 +2658,16 @@ class RegistrationApi(object):
             return data
 
     def set_registration_configuration_with_http_info(self, registration_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set registration configuration.   # noqa: E501
+        """Update configuration settings for a Registration   # noqa: E501
 
-        Set configuration settings for this registration.   # noqa: E501
+        Updates configuration settings at the registration level.  This will explicitly set a value at the registration level and override any settings from a higher level.  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_registration_configuration_with_http_info(registration_id, configuration_settings, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
+        :param str registration_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2738,17 +2742,17 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def set_registration_instance_configuration(self, registration_id, instance_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set configuration for instance of registration.   # noqa: E501
+        """Update configuration settings for a Registration Instance   # noqa: E501
 
-        Set configuration settings for this registration instance.   # noqa: E501
+        Updates configuration settings at the registration level.  This will explicitly set a value at the registration level and override any settings from a higher level.  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_registration_instance_configuration(registration_id, instance_id, configuration_settings, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2762,17 +2766,17 @@ class RegistrationApi(object):
             return data
 
     def set_registration_instance_configuration_with_http_info(self, registration_id, instance_id, configuration_settings, **kwargs):  # noqa: E501
-        """Set configuration for instance of registration.   # noqa: E501
+        """Update configuration settings for a Registration Instance   # noqa: E501
 
-        Set configuration settings for this registration instance.   # noqa: E501
+        Updates configuration settings at the registration level.  This will explicitly set a value at the registration level and override any settings from a higher level.  Registrations are the bottom most level in the configuration hierarchy, so the values present at the registration level will be what are used when a course is launched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_registration_instance_configuration_with_http_info(registration_id, instance_id, configuration_settings, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str registration_id: id for this registration (required)
-        :param int instance_id: The instance of this registration (required)
+        :param str registration_id: (required)
+        :param int instance_id: (required)
         :param SettingsPostSchema configuration_settings: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2807,8 +2811,6 @@ class RegistrationApi(object):
                 params['configuration_settings'] is None):
             raise ValueError("Missing the required parameter `configuration_settings` when calling `set_registration_instance_configuration`")  # noqa: E501
 
-        if 'instance_id' in params and params['instance_id'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `instance_id` when calling `set_registration_instance_configuration`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -2855,9 +2857,9 @@ class RegistrationApi(object):
             collection_formats=collection_formats)
 
     def test_registration_postback(self, post_back, **kwargs):  # noqa: E501
-        """Send a test postback with a provided configuration.   # noqa: E501
+        """Send a test postback with the provided configuration   # noqa: E501
 
-        This method will allow testing a postback configuration that you provide by sending dummy data to the url specified, with the format you specify.   # noqa: E501
+        Sends a postback with dummy data to the url specified.  The postback will use additional information from the configuration provided with the request (e.g. a provided username/password will be sent along with the postback to allow for logging in to a secure page.  The format of the data sent will differ depending on whether `httpbasic` or `form` is passed for `authType`.  - With httpbasic, an authorization header will be sent with the base64 encoded credentials.  The body will be JSON formatted data. - With form, the username and password will be sent in the body of the request along with the data.  The whole body will be url encoded.  >**Note:** >The data that will be sent to the provided url is the same format as the output of the GetRegistrationProgress endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_registration_postback(post_back, async_req=True)
@@ -2877,9 +2879,9 @@ class RegistrationApi(object):
             return data
 
     def test_registration_postback_with_http_info(self, post_back, **kwargs):  # noqa: E501
-        """Send a test postback with a provided configuration.   # noqa: E501
+        """Send a test postback with the provided configuration   # noqa: E501
 
-        This method will allow testing a postback configuration that you provide by sending dummy data to the url specified, with the format you specify.   # noqa: E501
+        Sends a postback with dummy data to the url specified.  The postback will use additional information from the configuration provided with the request (e.g. a provided username/password will be sent along with the postback to allow for logging in to a secure page.  The format of the data sent will differ depending on whether `httpbasic` or `form` is passed for `authType`.  - With httpbasic, an authorization header will be sent with the base64 encoded credentials.  The body will be JSON formatted data. - With form, the username and password will be sent in the body of the request along with the data.  The whole body will be url encoded.  >**Note:** >The data that will be sent to the provided url is the same format as the output of the GetRegistrationProgress endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_registration_postback_with_http_info(post_back, async_req=True)

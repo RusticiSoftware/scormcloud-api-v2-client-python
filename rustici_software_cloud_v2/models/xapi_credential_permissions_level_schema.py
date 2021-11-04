@@ -51,6 +51,7 @@ class XapiCredentialPermissionsLevelSchema(object):
     def xapi_credential_permissions_level(self):
         """Gets the xapi_credential_permissions_level of this XapiCredentialPermissionsLevelSchema.  # noqa: E501
 
+        allowed_values = ["DEFAULT", "USER", "ROOT", "READONLY", "WRITEONLY"]  # noqa: E501
 
         :return: The xapi_credential_permissions_level of this XapiCredentialPermissionsLevelSchema.  # noqa: E501
         :rtype: str
@@ -61,16 +62,11 @@ class XapiCredentialPermissionsLevelSchema(object):
     def xapi_credential_permissions_level(self, xapi_credential_permissions_level):
         """Sets the xapi_credential_permissions_level of this XapiCredentialPermissionsLevelSchema.
 
+        allowed_values = ["DEFAULT", "USER", "ROOT", "READONLY", "WRITEONLY"]  # noqa: E501
 
         :param xapi_credential_permissions_level: The xapi_credential_permissions_level of this XapiCredentialPermissionsLevelSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["DEFAULT", "USER", "ROOT", "READONLY", "WRITEONLY"]  # noqa: E501
-        if xapi_credential_permissions_level not in allowed_values:
-            raise ValueError(
-                "Invalid value for `xapi_credential_permissions_level` ({0}), must be one of {1}"  # noqa: E501
-                .format(xapi_credential_permissions_level, allowed_values)
-            )
 
         self._xapi_credential_permissions_level = xapi_credential_permissions_level
 

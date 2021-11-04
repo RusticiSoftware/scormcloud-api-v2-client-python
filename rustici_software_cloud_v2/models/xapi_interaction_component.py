@@ -55,7 +55,6 @@ class XapiInteractionComponent(object):
     def id(self):
         """Gets the id of this XapiInteractionComponent.  # noqa: E501
 
-
         :return: The id of this XapiInteractionComponent.  # noqa: E501
         :rtype: str
         """
@@ -64,7 +63,6 @@ class XapiInteractionComponent(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiInteractionComponent.
-
 
         :param id: The id of this XapiInteractionComponent.  # noqa: E501
         :type: str
@@ -78,7 +76,6 @@ class XapiInteractionComponent(object):
     def description(self):
         """Gets the description of this XapiInteractionComponent.  # noqa: E501
 
-
         :return: The description of this XapiInteractionComponent.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -87,7 +84,6 @@ class XapiInteractionComponent(object):
     @description.setter
     def description(self, description):
         """Sets the description of this XapiInteractionComponent.
-
 
         :param description: The description of this XapiInteractionComponent.  # noqa: E501
         :type: dict(str, str)

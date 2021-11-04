@@ -163,7 +163,6 @@ class CredentialSchema(object):
     def status(self):
         """Gets the status of this CredentialSchema.  # noqa: E501
 
-
         :return: The status of this CredentialSchema.  # noqa: E501
         :rtype: str
         """
@@ -172,7 +171,6 @@ class CredentialSchema(object):
     @status.setter
     def status(self, status):
         """Sets the status of this CredentialSchema.
-
 
         :param status: The status of this CredentialSchema.  # noqa: E501
         :type: str

@@ -170,7 +170,7 @@ class CreatePublicInvitationSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this CreatePublicInvitationSchema.  # noqa: E501
 
-        The date this invitation will expire and can no longer be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this CreatePublicInvitationSchema.  # noqa: E501
         :rtype: datetime
@@ -181,7 +181,7 @@ class CreatePublicInvitationSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this CreatePublicInvitationSchema.
 
-        The date this invitation will expire and can no longer be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this CreatePublicInvitationSchema.  # noqa: E501
         :type: datetime

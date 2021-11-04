@@ -51,7 +51,6 @@ class LaunchHistoryListSchema(object):
     def launch_history(self):
         """Gets the launch_history of this LaunchHistoryListSchema.  # noqa: E501
 
-
         :return: The launch_history of this LaunchHistoryListSchema.  # noqa: E501
         :rtype: list[LaunchHistorySchema]
         """
@@ -60,7 +59,6 @@ class LaunchHistoryListSchema(object):
     @launch_history.setter
     def launch_history(self, launch_history):
         """Sets the launch_history of this LaunchHistoryListSchema.
-
 
         :param launch_history: The launch_history of this LaunchHistoryListSchema.  # noqa: E501
         :type: list[LaunchHistorySchema]

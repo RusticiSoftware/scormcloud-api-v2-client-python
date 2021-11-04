@@ -34,9 +34,9 @@ class XapiApi(object):
         self.api_client = api_client
 
     def create_statement_pipe(self, xapi_statement_pipe, **kwargs):  # noqa: E501
-        """Create an xAPI statement pipe.  # noqa: E501
+        """Create an xAPI Statement Pipe   # noqa: E501
 
-        Create an xAPI statement pipe.  # noqa: E501
+        Creates an xAPI statement pipe.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the creation of the xAPI statement pipe takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_statement_pipe(xapi_statement_pipe, async_req=True)
@@ -56,9 +56,9 @@ class XapiApi(object):
             return data
 
     def create_statement_pipe_with_http_info(self, xapi_statement_pipe, **kwargs):  # noqa: E501
-        """Create an xAPI statement pipe.  # noqa: E501
+        """Create an xAPI Statement Pipe   # noqa: E501
 
-        Create an xAPI statement pipe.  # noqa: E501
+        Creates an xAPI statement pipe.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the creation of the xAPI statement pipe takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_statement_pipe_with_http_info(xapi_statement_pipe, async_req=True)
@@ -133,9 +133,9 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def create_xapi_credential(self, xapi_credential, **kwargs):  # noqa: E501
-        """Create a xAPI credential.  # noqa: E501
+        """Create xAPI Credentials   # noqa: E501
 
-        Create a xAPI credential.  # noqa: E501
+        Creates an xAPI credential combination from the provided secret and a generated ID.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_xapi_credential(xapi_credential, async_req=True)
@@ -155,9 +155,9 @@ class XapiApi(object):
             return data
 
     def create_xapi_credential_with_http_info(self, xapi_credential, **kwargs):  # noqa: E501
-        """Create a xAPI credential.  # noqa: E501
+        """Create xAPI Credentials   # noqa: E501
 
-        Create a xAPI credential.  # noqa: E501
+        Creates an xAPI credential combination from the provided secret and a generated ID.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_xapi_credential_with_http_info(xapi_credential, async_req=True)
@@ -232,16 +232,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def delete_statement_pipe(self, statement_pipe_id, **kwargs):  # noqa: E501
-        """Deletes this xAPI pipe.  # noqa: E501
+        """Delete an xAPI Statement Pipe   # noqa: E501
 
-        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor.   # noqa: E501
+        Deletes the specified xAPI statement pipe  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the deletion takes place.  Recreating a statement pipe with the same ID too quickly could cause the statement pipe to end up in a faulty state.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_statement_pipe(statement_pipe_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -254,16 +254,16 @@ class XapiApi(object):
             return data
 
     def delete_statement_pipe_with_http_info(self, statement_pipe_id, **kwargs):  # noqa: E501
-        """Deletes this xAPI pipe.  # noqa: E501
+        """Delete an xAPI Statement Pipe   # noqa: E501
 
-        Caution: avoid re-creating a pipe with the same ID quickly after a delete. The old version could still be processing, in which case the new pipe could be updated improperly by the processor.   # noqa: E501
+        Deletes the specified xAPI statement pipe  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the deletion takes place.  Recreating a statement pipe with the same ID too quickly could cause the statement pipe to end up in a faulty state.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_statement_pipe_with_http_info(statement_pipe_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -331,16 +331,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def delete_xapi_credential(self, xapi_credential_id, **kwargs):  # noqa: E501
-        """Deletes the xAPI credentials specified by the xAPI credentials id  # noqa: E501
+        """Delete xAPI Credentials   # noqa: E501
 
-        Deletes the xAPI credentials specified by the xAPI credentials id  # noqa: E501
+        Deletes the specified xAPI credentials.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_xapi_credential(xapi_credential_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -353,16 +353,16 @@ class XapiApi(object):
             return data
 
     def delete_xapi_credential_with_http_info(self, xapi_credential_id, **kwargs):  # noqa: E501
-        """Deletes the xAPI credentials specified by the xAPI credentials id  # noqa: E501
+        """Delete xAPI Credentials   # noqa: E501
 
-        Deletes the xAPI credentials specified by the xAPI credentials id  # noqa: E501
+        Deletes the specified xAPI credentials.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_xapi_credential_with_http_info(xapi_credential_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -430,16 +430,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def get_statement_pipe(self, statement_pipe_id, **kwargs):  # noqa: E501
-        """Retrieves xAPI pipe for `xapiPipeId`  # noqa: E501
+        """Get detailed information about an xAPI Statement Pipe   # noqa: E501
 
-        Retrieves xAPI pipe for `xapiPipeId`  # noqa: E501
+        Returns detailed information about the xAPI pipe.  This includes source and target urls, the last time a statement was successfully forwarded, and how many attempts have been made to send data to the target url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_statement_pipe(statement_pipe_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :return: XapiStatementPipeSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -452,16 +452,16 @@ class XapiApi(object):
             return data
 
     def get_statement_pipe_with_http_info(self, statement_pipe_id, **kwargs):  # noqa: E501
-        """Retrieves xAPI pipe for `xapiPipeId`  # noqa: E501
+        """Get detailed information about an xAPI Statement Pipe   # noqa: E501
 
-        Retrieves xAPI pipe for `xapiPipeId`  # noqa: E501
+        Returns detailed information about the xAPI pipe.  This includes source and target urls, the last time a statement was successfully forwarded, and how many attempts have been made to send data to the target url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_statement_pipe_with_http_info(statement_pipe_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :return: XapiStatementPipeSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -529,9 +529,9 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def get_statement_pipes(self, **kwargs):  # noqa: E501
-        """Get all of the xapiPipes for `appId`  # noqa: E501
+        """Get a list of xAPI Statement Pipes   # noqa: E501
 
-        Get all of the xapiPipes for `appId`  # noqa: E501
+        Returns a list of all xAPI statement pipes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_statement_pipes(async_req=True)
@@ -550,9 +550,9 @@ class XapiApi(object):
             return data
 
     def get_statement_pipes_with_http_info(self, **kwargs):  # noqa: E501
-        """Get all of the xapiPipes for `appId`  # noqa: E501
+        """Get a list of xAPI Statement Pipes   # noqa: E501
 
-        Get all of the xapiPipes for `appId`  # noqa: E501
+        Returns a list of all xAPI statement pipes.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_statement_pipes_with_http_info(async_req=True)
@@ -620,16 +620,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def get_xapi_credential(self, xapi_credential_id, **kwargs):  # noqa: E501
-        """Retrieves the xAPI credentials specified by the xAPI credentials id.  # noqa: E501
+        """Get detailed information about the xAPI Credentials   # noqa: E501
 
-        Retrieves the xAPI credentials specified by the xAPI credentials id.  # noqa: E501
+        Returns detailed information about the xAPI credentials.  This includes the id (username), secret (password), permissions, and whether or not the credentials are enabled.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_xapi_credential(xapi_credential_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :return: XapiCredentialSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -642,16 +642,16 @@ class XapiApi(object):
             return data
 
     def get_xapi_credential_with_http_info(self, xapi_credential_id, **kwargs):  # noqa: E501
-        """Retrieves the xAPI credentials specified by the xAPI credentials id.  # noqa: E501
+        """Get detailed information about the xAPI Credentials   # noqa: E501
 
-        Retrieves the xAPI credentials specified by the xAPI credentials id.  # noqa: E501
+        Returns detailed information about the xAPI credentials.  This includes the id (username), secret (password), permissions, and whether or not the credentials are enabled.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_xapi_credential_with_http_info(xapi_credential_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :return: XapiCredentialSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -719,17 +719,22 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def get_xapi_credentials(self, **kwargs):  # noqa: E501
-        """Get the list of xapiCredentials  # noqa: E501
+        """Get a list of xAPI Credentials   # noqa: E501
 
-        Get the list of xapiCredentials  # noqa: E501
+        Returns a list of xAPI credentials.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_xapi_credentials(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param datetime since: Only <<resourcePathName>> updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of <<resourcePathName>> lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiCredentialsListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -742,23 +747,28 @@ class XapiApi(object):
             return data
 
     def get_xapi_credentials_with_http_info(self, **kwargs):  # noqa: E501
-        """Get the list of xapiCredentials  # noqa: E501
+        """Get a list of xAPI Credentials   # noqa: E501
 
-        Get the list of xapiCredentials  # noqa: E501
+        Returns a list of xAPI credentials.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_xapi_credentials_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param datetime since: Only <<resourcePathName>> updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-        :param str more: Value for this parameter will be provided in the 'more' property of <<resourcePathName>> lists, where needed. An opaque value, construction and parsing may change without notice.
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
         :return: XapiCredentialsListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['since', 'more']  # noqa: E501
+        all_params = ['since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -781,6 +791,16 @@ class XapiApi(object):
         query_params = []
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
+        if 'until' in params:
+            query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
 
@@ -818,16 +838,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def set_statement_pipe(self, statement_pipe_id, xapi_statement_pipe, **kwargs):  # noqa: E501
-        """Edit an existing xAPI pipe or create a new one.  # noqa: E501
+        """Create or update an xAPI Statement Pipe   # noqa: E501
 
-        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409.   # noqa: E501
+        Creates or updates information about the xAPI statement pipe.  - If the xAPI statement pipe is instead being updated, the pipe will start over and forward any statements it finds, even if it had already forwarded those statements.  If the pipe being edited is currently being processed, then this request will fail with a status code of 409.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the creation of the xAPI statement pipe takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_statement_pipe(statement_pipe_id, xapi_statement_pipe, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :param XapiStatementPipePutSchema xapi_statement_pipe: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
@@ -841,16 +861,16 @@ class XapiApi(object):
             return data
 
     def set_statement_pipe_with_http_info(self, statement_pipe_id, xapi_statement_pipe, **kwargs):  # noqa: E501
-        """Edit an existing xAPI pipe or create a new one.  # noqa: E501
+        """Create or update an xAPI Statement Pipe   # noqa: E501
 
-        Editing a pipe will cause it to start over and forward any statements it finds, even if the prior version of the pipe had already forwarded those statements. If the pipe being edited is currently being processed, the this request will fail with a status code of 409.   # noqa: E501
+        Creates or updates information about the xAPI statement pipe.  - If the xAPI statement pipe is instead being updated, the pipe will start over and forward any statements it finds, even if it had already forwarded those statements.  If the pipe being edited is currently being processed, then this request will fail with a status code of 409.  >**Note:** >This method is asynchronous.  A returned success status indicates a background process has been started, but there will still be a delay before the creation of the xAPI statement pipe takes place.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_statement_pipe_with_http_info(statement_pipe_id, xapi_statement_pipe, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str statement_pipe_id: id for this xAPI statement pipe (required)
+        :param str statement_pipe_id: (required)
         :param XapiStatementPipePutSchema xapi_statement_pipe: (required)
         :return: StringResultSchema
                  If the method is called asynchronously,
@@ -925,16 +945,16 @@ class XapiApi(object):
             collection_formats=collection_formats)
 
     def set_xapi_credential(self, xapi_credential_id, xapi_credential, **kwargs):  # noqa: E501
-        """Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id  # noqa: E501
+        """Create or update xAPI Credentials   # noqa: E501
 
-        Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id  # noqa: E501
+        Creates or updates information about the xAPI credentials.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_xapi_credential(xapi_credential_id, xapi_credential, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :param XapiCredentialPostSchema xapi_credential: (required)
         :return: None
                  If the method is called asynchronously,
@@ -948,16 +968,16 @@ class XapiApi(object):
             return data
 
     def set_xapi_credential_with_http_info(self, xapi_credential_id, xapi_credential, **kwargs):  # noqa: E501
-        """Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id  # noqa: E501
+        """Create or update xAPI Credentials   # noqa: E501
 
-        Edit an existing xAPI credential or create a new one, specified by the xAPI credentials id  # noqa: E501
+        Creates or updates information about the xAPI credentials.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_xapi_credential_with_http_info(xapi_credential_id, xapi_credential, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str xapi_credential_id: id for this xAPI credential (required)
+        :param str xapi_credential_id: (required)
         :param XapiCredentialPostSchema xapi_credential: (required)
         :return: None
                  If the method is called asynchronously,

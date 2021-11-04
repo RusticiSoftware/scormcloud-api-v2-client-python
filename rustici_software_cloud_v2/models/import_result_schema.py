@@ -89,7 +89,6 @@ class ImportResultSchema(object):
     def parser_warnings(self):
         """Gets the parser_warnings of this ImportResultSchema.  # noqa: E501
 
-
         :return: The parser_warnings of this ImportResultSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -98,7 +97,6 @@ class ImportResultSchema(object):
     @parser_warnings.setter
     def parser_warnings(self, parser_warnings):
         """Sets the parser_warnings of this ImportResultSchema.
-
 
         :param parser_warnings: The parser_warnings of this ImportResultSchema.  # noqa: E501
         :type: list[str]
@@ -110,7 +108,6 @@ class ImportResultSchema(object):
     def course_languages(self):
         """Gets the course_languages of this ImportResultSchema.  # noqa: E501
 
-
         :return: The course_languages of this ImportResultSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -119,7 +116,6 @@ class ImportResultSchema(object):
     @course_languages.setter
     def course_languages(self, course_languages):
         """Sets the course_languages of this ImportResultSchema.
-
 
         :param course_languages: The course_languages of this ImportResultSchema.  # noqa: E501
         :type: list[str]
@@ -131,7 +127,6 @@ class ImportResultSchema(object):
     def course(self):
         """Gets the course of this ImportResultSchema.  # noqa: E501
 
-
         :return: The course of this ImportResultSchema.  # noqa: E501
         :rtype: CourseSchema
         """
@@ -140,7 +135,6 @@ class ImportResultSchema(object):
     @course.setter
     def course(self, course):
         """Sets the course of this ImportResultSchema.
-
 
         :param course: The course of this ImportResultSchema.  # noqa: E501
         :type: CourseSchema

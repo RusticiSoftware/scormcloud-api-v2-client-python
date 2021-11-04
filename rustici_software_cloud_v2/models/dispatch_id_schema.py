@@ -56,7 +56,6 @@ class DispatchIdSchema(object):
     def id(self):
         """Gets the id of this DispatchIdSchema.  # noqa: E501
 
-
         :return: The id of this DispatchIdSchema.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class DispatchIdSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this DispatchIdSchema.
-
 
         :param id: The id of this DispatchIdSchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class DispatchIdSchema(object):
     def data(self):
         """Gets the data of this DispatchIdSchema.  # noqa: E501
 
-
         :return: The data of this DispatchIdSchema.  # noqa: E501
         :rtype: DispatchSchema
         """
@@ -86,7 +83,6 @@ class DispatchIdSchema(object):
     @data.setter
     def data(self, data):
         """Sets the data of this DispatchIdSchema.
-
 
         :param data: The data of this DispatchIdSchema.  # noqa: E501
         :type: DispatchSchema

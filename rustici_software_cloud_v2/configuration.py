@@ -252,7 +252,7 @@ class Configuration(object):
                     'type': 'oauth2',
                     'in': 'header',
                     'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token if len(self.access_token)>0 else None
+                    'value': 'Bearer ' + self.access_token if len(self.access_token) > 0 else None
                 },
 
         }
@@ -266,5 +266,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.0\n"\
-               "SDK Package Version: 1.0.2".\
+               "SDK Package Version: 2.0.0".\
                format(env=sys.platform, pyversion=sys.version)

@@ -66,7 +66,6 @@ class UserInvitationSchemaRegistrationReport(object):
     def complete(self):
         """Gets the complete of this UserInvitationSchemaRegistrationReport.  # noqa: E501
 
-
         :return: The complete of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :rtype: RegistrationCompletion
         """
@@ -75,7 +74,6 @@ class UserInvitationSchemaRegistrationReport(object):
     @complete.setter
     def complete(self, complete):
         """Sets the complete of this UserInvitationSchemaRegistrationReport.
-
 
         :param complete: The complete of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :type: RegistrationCompletion
@@ -87,7 +85,6 @@ class UserInvitationSchemaRegistrationReport(object):
     def success(self):
         """Gets the success of this UserInvitationSchemaRegistrationReport.  # noqa: E501
 
-
         :return: The success of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :rtype: RegistrationSuccess
         """
@@ -96,7 +93,6 @@ class UserInvitationSchemaRegistrationReport(object):
     @success.setter
     def success(self, success):
         """Sets the success of this UserInvitationSchemaRegistrationReport.
-
 
         :param success: The success of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :type: RegistrationSuccess
@@ -108,7 +104,6 @@ class UserInvitationSchemaRegistrationReport(object):
     def total_seconds_tracked(self):
         """Gets the total_seconds_tracked of this UserInvitationSchemaRegistrationReport.  # noqa: E501
 
-
         :return: The total_seconds_tracked of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :rtype: float
         """
@@ -117,7 +112,6 @@ class UserInvitationSchemaRegistrationReport(object):
     @total_seconds_tracked.setter
     def total_seconds_tracked(self, total_seconds_tracked):
         """Sets the total_seconds_tracked of this UserInvitationSchemaRegistrationReport.
-
 
         :param total_seconds_tracked: The total_seconds_tracked of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :type: float
@@ -129,7 +123,6 @@ class UserInvitationSchemaRegistrationReport(object):
     def score(self):
         """Gets the score of this UserInvitationSchemaRegistrationReport.  # noqa: E501
 
-
         :return: The score of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :rtype: ScoreSchema
         """
@@ -138,7 +131,6 @@ class UserInvitationSchemaRegistrationReport(object):
     @score.setter
     def score(self, score):
         """Sets the score of this UserInvitationSchemaRegistrationReport.
-
 
         :param score: The score of this UserInvitationSchemaRegistrationReport.  # noqa: E501
         :type: ScoreSchema

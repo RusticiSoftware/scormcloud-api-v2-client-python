@@ -51,7 +51,6 @@ class SettingsPostSchema(object):
     def settings(self):
         """Gets the settings of this SettingsPostSchema.  # noqa: E501
 
-
         :return: The settings of this SettingsPostSchema.  # noqa: E501
         :rtype: list[SettingsIndividualSchema]
         """
@@ -60,7 +59,6 @@ class SettingsPostSchema(object):
     @settings.setter
     def settings(self, settings):
         """Sets the settings of this SettingsPostSchema.
-
 
         :param settings: The settings of this SettingsPostSchema.  # noqa: E501
         :type: list[SettingsIndividualSchema]

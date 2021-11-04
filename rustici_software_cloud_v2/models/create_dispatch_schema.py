@@ -218,7 +218,7 @@ class CreateDispatchSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this CreateDispatchSchema.  # noqa: E501
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or not present for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this CreateDispatchSchema.  # noqa: E501
         :rtype: datetime
@@ -229,7 +229,7 @@ class CreateDispatchSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this CreateDispatchSchema.
 
-        The date after which this dispatch will be disabled as an ISO 8601 string, or not present for no expiration date.   # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this dispatch will be disabled. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this CreateDispatchSchema.  # noqa: E501
         :type: datetime

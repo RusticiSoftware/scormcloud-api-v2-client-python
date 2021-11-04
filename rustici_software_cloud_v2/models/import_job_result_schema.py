@@ -66,7 +66,6 @@ class ImportJobResultSchema(object):
     def job_id(self):
         """Gets the job_id of this ImportJobResultSchema.  # noqa: E501
 
-
         :return: The job_id of this ImportJobResultSchema.  # noqa: E501
         :rtype: str
         """
@@ -75,7 +74,6 @@ class ImportJobResultSchema(object):
     @job_id.setter
     def job_id(self, job_id):
         """Sets the job_id of this ImportJobResultSchema.
-
 
         :param job_id: The job_id of this ImportJobResultSchema.  # noqa: E501
         :type: str
@@ -87,6 +85,7 @@ class ImportJobResultSchema(object):
     def status(self):
         """Gets the status of this ImportJobResultSchema.  # noqa: E501
 
+        allowed_values = ["RUNNING", "COMPLETE", "ERROR"]  # noqa: E501
 
         :return: The status of this ImportJobResultSchema.  # noqa: E501
         :rtype: str
@@ -97,23 +96,17 @@ class ImportJobResultSchema(object):
     def status(self, status):
         """Sets the status of this ImportJobResultSchema.
 
+        allowed_values = ["RUNNING", "COMPLETE", "ERROR"]  # noqa: E501
 
         :param status: The status of this ImportJobResultSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["RUNNING", "COMPLETE", "ERROR"]  # noqa: E501
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
     @property
     def message(self):
         """Gets the message of this ImportJobResultSchema.  # noqa: E501
-
 
         :return: The message of this ImportJobResultSchema.  # noqa: E501
         :rtype: str
@@ -123,7 +116,6 @@ class ImportJobResultSchema(object):
     @message.setter
     def message(self, message):
         """Sets the message of this ImportJobResultSchema.
-
 
         :param message: The message of this ImportJobResultSchema.  # noqa: E501
         :type: str
@@ -135,7 +127,6 @@ class ImportJobResultSchema(object):
     def import_result(self):
         """Gets the import_result of this ImportJobResultSchema.  # noqa: E501
 
-
         :return: The import_result of this ImportJobResultSchema.  # noqa: E501
         :rtype: ImportResultSchema
         """
@@ -144,7 +135,6 @@ class ImportJobResultSchema(object):
     @import_result.setter
     def import_result(self, import_result):
         """Sets the import_result of this ImportJobResultSchema.
-
 
         :param import_result: The import_result of this ImportJobResultSchema.  # noqa: E501
         :type: ImportResultSchema

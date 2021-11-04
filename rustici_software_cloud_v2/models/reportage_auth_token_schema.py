@@ -56,7 +56,6 @@ class ReportageAuthTokenSchema(object):
     def auth_enabled(self):
         """Gets the auth_enabled of this ReportageAuthTokenSchema.  # noqa: E501
 
-
         :return: The auth_enabled of this ReportageAuthTokenSchema.  # noqa: E501
         :rtype: bool
         """
@@ -65,7 +64,6 @@ class ReportageAuthTokenSchema(object):
     @auth_enabled.setter
     def auth_enabled(self, auth_enabled):
         """Sets the auth_enabled of this ReportageAuthTokenSchema.
-
 
         :param auth_enabled: The auth_enabled of this ReportageAuthTokenSchema.  # noqa: E501
         :type: bool
@@ -77,7 +75,6 @@ class ReportageAuthTokenSchema(object):
     def query_string(self):
         """Gets the query_string of this ReportageAuthTokenSchema.  # noqa: E501
 
-
         :return: The query_string of this ReportageAuthTokenSchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class ReportageAuthTokenSchema(object):
     @query_string.setter
     def query_string(self, query_string):
         """Sets the query_string of this ReportageAuthTokenSchema.
-
 
         :param query_string: The query_string of this ReportageAuthTokenSchema.  # noqa: E501
         :type: str

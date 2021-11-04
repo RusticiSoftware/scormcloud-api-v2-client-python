@@ -56,7 +56,6 @@ class XapiStatementPipePutSchema(object):
     def source(self):
         """Gets the source of this XapiStatementPipePutSchema.  # noqa: E501
 
-
         :return: The source of this XapiStatementPipePutSchema.  # noqa: E501
         :rtype: XapiEndpointSchema
         """
@@ -65,7 +64,6 @@ class XapiStatementPipePutSchema(object):
     @source.setter
     def source(self, source):
         """Sets the source of this XapiStatementPipePutSchema.
-
 
         :param source: The source of this XapiStatementPipePutSchema.  # noqa: E501
         :type: XapiEndpointSchema
@@ -77,7 +75,6 @@ class XapiStatementPipePutSchema(object):
     def target(self):
         """Gets the target of this XapiStatementPipePutSchema.  # noqa: E501
 
-
         :return: The target of this XapiStatementPipePutSchema.  # noqa: E501
         :rtype: XapiEndpointSchema
         """
@@ -86,7 +83,6 @@ class XapiStatementPipePutSchema(object):
     @target.setter
     def target(self, target):
         """Sets the target of this XapiStatementPipePutSchema.
-
 
         :param target: The target of this XapiStatementPipePutSchema.  # noqa: E501
         :type: XapiEndpointSchema

@@ -146,7 +146,6 @@ class RuntimeSchema(object):
     def completion_status(self):
         """Gets the completion_status of this RuntimeSchema.  # noqa: E501
 
-
         :return: The completion_status of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -155,7 +154,6 @@ class RuntimeSchema(object):
     @completion_status.setter
     def completion_status(self, completion_status):
         """Sets the completion_status of this RuntimeSchema.
-
 
         :param completion_status: The completion_status of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -167,7 +165,6 @@ class RuntimeSchema(object):
     def credit(self):
         """Gets the credit of this RuntimeSchema.  # noqa: E501
 
-
         :return: The credit of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -176,7 +173,6 @@ class RuntimeSchema(object):
     @credit.setter
     def credit(self, credit):
         """Sets the credit of this RuntimeSchema.
-
 
         :param credit: The credit of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -188,7 +184,6 @@ class RuntimeSchema(object):
     def entry(self):
         """Gets the entry of this RuntimeSchema.  # noqa: E501
 
-
         :return: The entry of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -197,7 +192,6 @@ class RuntimeSchema(object):
     @entry.setter
     def entry(self, entry):
         """Sets the entry of this RuntimeSchema.
-
 
         :param entry: The entry of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -209,7 +203,6 @@ class RuntimeSchema(object):
     def exit(self):
         """Gets the exit of this RuntimeSchema.  # noqa: E501
 
-
         :return: The exit of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -218,7 +211,6 @@ class RuntimeSchema(object):
     @exit.setter
     def exit(self, exit):
         """Sets the exit of this RuntimeSchema.
-
 
         :param exit: The exit of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -230,7 +222,6 @@ class RuntimeSchema(object):
     def learner_preference(self):
         """Gets the learner_preference of this RuntimeSchema.  # noqa: E501
 
-
         :return: The learner_preference of this RuntimeSchema.  # noqa: E501
         :rtype: LearnerPreferenceSchema
         """
@@ -239,7 +230,6 @@ class RuntimeSchema(object):
     @learner_preference.setter
     def learner_preference(self, learner_preference):
         """Sets the learner_preference of this RuntimeSchema.
-
 
         :param learner_preference: The learner_preference of this RuntimeSchema.  # noqa: E501
         :type: LearnerPreferenceSchema
@@ -251,7 +241,6 @@ class RuntimeSchema(object):
     def location(self):
         """Gets the location of this RuntimeSchema.  # noqa: E501
 
-
         :return: The location of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -260,7 +249,6 @@ class RuntimeSchema(object):
     @location.setter
     def location(self, location):
         """Sets the location of this RuntimeSchema.
-
 
         :param location: The location of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -272,7 +260,6 @@ class RuntimeSchema(object):
     def mode(self):
         """Gets the mode of this RuntimeSchema.  # noqa: E501
 
-
         :return: The mode of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -281,7 +268,6 @@ class RuntimeSchema(object):
     @mode.setter
     def mode(self, mode):
         """Sets the mode of this RuntimeSchema.
-
 
         :param mode: The mode of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -293,7 +279,6 @@ class RuntimeSchema(object):
     def progress_measure(self):
         """Gets the progress_measure of this RuntimeSchema.  # noqa: E501
 
-
         :return: The progress_measure of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -302,7 +287,6 @@ class RuntimeSchema(object):
     @progress_measure.setter
     def progress_measure(self, progress_measure):
         """Sets the progress_measure of this RuntimeSchema.
-
 
         :param progress_measure: The progress_measure of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -314,7 +298,6 @@ class RuntimeSchema(object):
     def score_scaled(self):
         """Gets the score_scaled of this RuntimeSchema.  # noqa: E501
 
-
         :return: The score_scaled of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -323,7 +306,6 @@ class RuntimeSchema(object):
     @score_scaled.setter
     def score_scaled(self, score_scaled):
         """Sets the score_scaled of this RuntimeSchema.
-
 
         :param score_scaled: The score_scaled of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -335,7 +317,6 @@ class RuntimeSchema(object):
     def score_raw(self):
         """Gets the score_raw of this RuntimeSchema.  # noqa: E501
 
-
         :return: The score_raw of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -344,7 +325,6 @@ class RuntimeSchema(object):
     @score_raw.setter
     def score_raw(self, score_raw):
         """Sets the score_raw of this RuntimeSchema.
-
 
         :param score_raw: The score_raw of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -356,7 +336,6 @@ class RuntimeSchema(object):
     def score_min(self):
         """Gets the score_min of this RuntimeSchema.  # noqa: E501
 
-
         :return: The score_min of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -365,7 +344,6 @@ class RuntimeSchema(object):
     @score_min.setter
     def score_min(self, score_min):
         """Sets the score_min of this RuntimeSchema.
-
 
         :param score_min: The score_min of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -377,7 +355,6 @@ class RuntimeSchema(object):
     def score_max(self):
         """Gets the score_max of this RuntimeSchema.  # noqa: E501
 
-
         :return: The score_max of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -386,7 +363,6 @@ class RuntimeSchema(object):
     @score_max.setter
     def score_max(self, score_max):
         """Sets the score_max of this RuntimeSchema.
-
 
         :param score_max: The score_max of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -398,7 +374,6 @@ class RuntimeSchema(object):
     def total_time(self):
         """Gets the total_time of this RuntimeSchema.  # noqa: E501
 
-
         :return: The total_time of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -407,7 +382,6 @@ class RuntimeSchema(object):
     @total_time.setter
     def total_time(self, total_time):
         """Sets the total_time of this RuntimeSchema.
-
 
         :param total_time: The total_time of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -419,7 +393,6 @@ class RuntimeSchema(object):
     def time_tracked(self):
         """Gets the time_tracked of this RuntimeSchema.  # noqa: E501
 
-
         :return: The time_tracked of this RuntimeSchema.  # noqa: E501
         :rtype: str
         """
@@ -428,7 +401,6 @@ class RuntimeSchema(object):
     @time_tracked.setter
     def time_tracked(self, time_tracked):
         """Sets the time_tracked of this RuntimeSchema.
-
 
         :param time_tracked: The time_tracked of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -440,6 +412,7 @@ class RuntimeSchema(object):
     def runtime_success_status(self):
         """Gets the runtime_success_status of this RuntimeSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The runtime_success_status of this RuntimeSchema.  # noqa: E501
         :rtype: str
@@ -450,23 +423,17 @@ class RuntimeSchema(object):
     def runtime_success_status(self, runtime_success_status):
         """Sets the runtime_success_status of this RuntimeSchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param runtime_success_status: The runtime_success_status of this RuntimeSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if runtime_success_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `runtime_success_status` ({0}), must be one of {1}"  # noqa: E501
-                .format(runtime_success_status, allowed_values)
-            )
 
         self._runtime_success_status = runtime_success_status
 
     @property
     def suspend_data(self):
         """Gets the suspend_data of this RuntimeSchema.  # noqa: E501
-
 
         :return: The suspend_data of this RuntimeSchema.  # noqa: E501
         :rtype: str
@@ -476,7 +443,6 @@ class RuntimeSchema(object):
     @suspend_data.setter
     def suspend_data(self, suspend_data):
         """Sets the suspend_data of this RuntimeSchema.
-
 
         :param suspend_data: The suspend_data of this RuntimeSchema.  # noqa: E501
         :type: str
@@ -488,7 +454,6 @@ class RuntimeSchema(object):
     def learner_comments(self):
         """Gets the learner_comments of this RuntimeSchema.  # noqa: E501
 
-
         :return: The learner_comments of this RuntimeSchema.  # noqa: E501
         :rtype: list[CommentSchema]
         """
@@ -497,7 +462,6 @@ class RuntimeSchema(object):
     @learner_comments.setter
     def learner_comments(self, learner_comments):
         """Sets the learner_comments of this RuntimeSchema.
-
 
         :param learner_comments: The learner_comments of this RuntimeSchema.  # noqa: E501
         :type: list[CommentSchema]
@@ -509,7 +473,6 @@ class RuntimeSchema(object):
     def lms_comments(self):
         """Gets the lms_comments of this RuntimeSchema.  # noqa: E501
 
-
         :return: The lms_comments of this RuntimeSchema.  # noqa: E501
         :rtype: list[CommentSchema]
         """
@@ -518,7 +481,6 @@ class RuntimeSchema(object):
     @lms_comments.setter
     def lms_comments(self, lms_comments):
         """Sets the lms_comments of this RuntimeSchema.
-
 
         :param lms_comments: The lms_comments of this RuntimeSchema.  # noqa: E501
         :type: list[CommentSchema]
@@ -530,7 +492,6 @@ class RuntimeSchema(object):
     def runtime_interactions(self):
         """Gets the runtime_interactions of this RuntimeSchema.  # noqa: E501
 
-
         :return: The runtime_interactions of this RuntimeSchema.  # noqa: E501
         :rtype: list[RuntimeInteractionSchema]
         """
@@ -539,7 +500,6 @@ class RuntimeSchema(object):
     @runtime_interactions.setter
     def runtime_interactions(self, runtime_interactions):
         """Sets the runtime_interactions of this RuntimeSchema.
-
 
         :param runtime_interactions: The runtime_interactions of this RuntimeSchema.  # noqa: E501
         :type: list[RuntimeInteractionSchema]
@@ -551,7 +511,6 @@ class RuntimeSchema(object):
     def runtime_objectives(self):
         """Gets the runtime_objectives of this RuntimeSchema.  # noqa: E501
 
-
         :return: The runtime_objectives of this RuntimeSchema.  # noqa: E501
         :rtype: list[RuntimeObjectiveSchema]
         """
@@ -560,7 +519,6 @@ class RuntimeSchema(object):
     @runtime_objectives.setter
     def runtime_objectives(self, runtime_objectives):
         """Sets the runtime_objectives of this RuntimeSchema.
-
 
         :param runtime_objectives: The runtime_objectives of this RuntimeSchema.  # noqa: E501
         :type: list[RuntimeObjectiveSchema]

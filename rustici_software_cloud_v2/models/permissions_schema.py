@@ -56,7 +56,6 @@ class PermissionsSchema(object):
     def scopes(self):
         """Gets the scopes of this PermissionsSchema.  # noqa: E501
 
-
         :return: The scopes of this PermissionsSchema.  # noqa: E501
         :rtype: list[str]
         """
@@ -65,7 +64,6 @@ class PermissionsSchema(object):
     @scopes.setter
     def scopes(self, scopes):
         """Sets the scopes of this PermissionsSchema.
-
 
         :param scopes: The scopes of this PermissionsSchema.  # noqa: E501
         :type: list[str]

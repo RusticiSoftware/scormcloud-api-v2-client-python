@@ -54,7 +54,6 @@ class XapiStatementReference(object):
     def object_type(self):
         """Gets the object_type of this XapiStatementReference.  # noqa: E501
 
-
         :return: The object_type of this XapiStatementReference.  # noqa: E501
         :rtype: str
         """
@@ -63,7 +62,6 @@ class XapiStatementReference(object):
     @object_type.setter
     def object_type(self, object_type):
         """Sets the object_type of this XapiStatementReference.
-
 
         :param object_type: The object_type of this XapiStatementReference.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class XapiStatementReference(object):
     def id(self):
         """Gets the id of this XapiStatementReference.  # noqa: E501
 
-
         :return: The id of this XapiStatementReference.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class XapiStatementReference(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiStatementReference.
-
 
         :param id: The id of this XapiStatementReference.  # noqa: E501
         :type: str

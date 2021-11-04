@@ -55,7 +55,6 @@ class XapiStatementResult(object):
     def statements(self):
         """Gets the statements of this XapiStatementResult.  # noqa: E501
 
-
         :return: The statements of this XapiStatementResult.  # noqa: E501
         :rtype: list[XapiStatement]
         """
@@ -64,7 +63,6 @@ class XapiStatementResult(object):
     @statements.setter
     def statements(self, statements):
         """Sets the statements of this XapiStatementResult.
-
 
         :param statements: The statements of this XapiStatementResult.  # noqa: E501
         :type: list[XapiStatement]
@@ -78,7 +76,6 @@ class XapiStatementResult(object):
     def more(self):
         """Gets the more of this XapiStatementResult.  # noqa: E501
 
-
         :return: The more of this XapiStatementResult.  # noqa: E501
         :rtype: str
         """
@@ -87,7 +84,6 @@ class XapiStatementResult(object):
     @more.setter
     def more(self, more):
         """Sets the more of this XapiStatementResult.
-
 
         :param more: The more of this XapiStatementResult.  # noqa: E501
         :type: str

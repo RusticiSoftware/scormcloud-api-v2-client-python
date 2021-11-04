@@ -163,7 +163,6 @@ class DestinationSchema(object):
     def launch_auth(self):
         """Gets the launch_auth of this DestinationSchema.  # noqa: E501
 
-
         :return: The launch_auth of this DestinationSchema.  # noqa: E501
         :rtype: LaunchAuthSchema
         """
@@ -172,7 +171,6 @@ class DestinationSchema(object):
     @launch_auth.setter
     def launch_auth(self, launch_auth):
         """Sets the launch_auth of this DestinationSchema.
-
 
         :param launch_auth: The launch_auth of this DestinationSchema.  # noqa: E501
         :type: LaunchAuthSchema

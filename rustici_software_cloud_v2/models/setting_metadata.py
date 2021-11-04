@@ -203,6 +203,8 @@ class SettingMetadata(object):
 
         Does this setting apply to only single-SCO packages, only multi-SCO, or either?  # noqa: E501
 
+        allowed_values = ["singleScoOnly", "multiScoOnly", "either"]  # noqa: E501
+
         :return: The learning_standard_variant of this SettingMetadata.  # noqa: E501
         :rtype: str
         """
@@ -214,15 +216,11 @@ class SettingMetadata(object):
 
         Does this setting apply to only single-SCO packages, only multi-SCO, or either?  # noqa: E501
 
+        allowed_values = ["singleScoOnly", "multiScoOnly", "either"]  # noqa: E501
+
         :param learning_standard_variant: The learning_standard_variant of this SettingMetadata.  # noqa: E501
         :type: str
         """
-        allowed_values = ["singleScoOnly", "multiScoOnly", "either"]  # noqa: E501
-        if learning_standard_variant not in allowed_values:
-            raise ValueError(
-                "Invalid value for `learning_standard_variant` ({0}), must be one of {1}"  # noqa: E501
-                .format(learning_standard_variant, allowed_values)
-            )
 
         self._learning_standard_variant = learning_standard_variant
 

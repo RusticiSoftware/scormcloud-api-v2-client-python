@@ -55,7 +55,6 @@ class XapiVerb(object):
     def id(self):
         """Gets the id of this XapiVerb.  # noqa: E501
 
-
         :return: The id of this XapiVerb.  # noqa: E501
         :rtype: str
         """
@@ -64,7 +63,6 @@ class XapiVerb(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiVerb.
-
 
         :param id: The id of this XapiVerb.  # noqa: E501
         :type: str
@@ -78,7 +76,6 @@ class XapiVerb(object):
     def display(self):
         """Gets the display of this XapiVerb.  # noqa: E501
 
-
         :return: The display of this XapiVerb.  # noqa: E501
         :rtype: dict(str, str)
         """
@@ -87,7 +84,6 @@ class XapiVerb(object):
     @display.setter
     def display(self, display):
         """Sets the display of this XapiVerb.
-
 
         :param display: The display of this XapiVerb.  # noqa: E501
         :type: dict(str, str)

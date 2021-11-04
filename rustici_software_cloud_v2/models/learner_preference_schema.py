@@ -66,7 +66,6 @@ class LearnerPreferenceSchema(object):
     def audio_level(self):
         """Gets the audio_level of this LearnerPreferenceSchema.  # noqa: E501
 
-
         :return: The audio_level of this LearnerPreferenceSchema.  # noqa: E501
         :rtype: float
         """
@@ -75,7 +74,6 @@ class LearnerPreferenceSchema(object):
     @audio_level.setter
     def audio_level(self, audio_level):
         """Sets the audio_level of this LearnerPreferenceSchema.
-
 
         :param audio_level: The audio_level of this LearnerPreferenceSchema.  # noqa: E501
         :type: float
@@ -87,7 +85,6 @@ class LearnerPreferenceSchema(object):
     def language(self):
         """Gets the language of this LearnerPreferenceSchema.  # noqa: E501
 
-
         :return: The language of this LearnerPreferenceSchema.  # noqa: E501
         :rtype: str
         """
@@ -96,7 +93,6 @@ class LearnerPreferenceSchema(object):
     @language.setter
     def language(self, language):
         """Sets the language of this LearnerPreferenceSchema.
-
 
         :param language: The language of this LearnerPreferenceSchema.  # noqa: E501
         :type: str
@@ -108,7 +104,6 @@ class LearnerPreferenceSchema(object):
     def delivery_speed(self):
         """Gets the delivery_speed of this LearnerPreferenceSchema.  # noqa: E501
 
-
         :return: The delivery_speed of this LearnerPreferenceSchema.  # noqa: E501
         :rtype: float
         """
@@ -117,7 +112,6 @@ class LearnerPreferenceSchema(object):
     @delivery_speed.setter
     def delivery_speed(self, delivery_speed):
         """Sets the delivery_speed of this LearnerPreferenceSchema.
-
 
         :param delivery_speed: The delivery_speed of this LearnerPreferenceSchema.  # noqa: E501
         :type: float
@@ -129,7 +123,6 @@ class LearnerPreferenceSchema(object):
     def audio_captioning(self):
         """Gets the audio_captioning of this LearnerPreferenceSchema.  # noqa: E501
 
-
         :return: The audio_captioning of this LearnerPreferenceSchema.  # noqa: E501
         :rtype: int
         """
@@ -138,7 +131,6 @@ class LearnerPreferenceSchema(object):
     @audio_captioning.setter
     def audio_captioning(self, audio_captioning):
         """Sets the audio_captioning of this LearnerPreferenceSchema.
-
 
         :param audio_captioning: The audio_captioning of this LearnerPreferenceSchema.  # noqa: E501
         :type: int

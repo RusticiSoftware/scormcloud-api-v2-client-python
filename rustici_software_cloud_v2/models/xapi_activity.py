@@ -60,7 +60,6 @@ class XapiActivity(object):
     def object_type(self):
         """Gets the object_type of this XapiActivity.  # noqa: E501
 
-
         :return: The object_type of this XapiActivity.  # noqa: E501
         :rtype: str
         """
@@ -69,7 +68,6 @@ class XapiActivity(object):
     @object_type.setter
     def object_type(self, object_type):
         """Sets the object_type of this XapiActivity.
-
 
         :param object_type: The object_type of this XapiActivity.  # noqa: E501
         :type: str
@@ -81,7 +79,6 @@ class XapiActivity(object):
     def id(self):
         """Gets the id of this XapiActivity.  # noqa: E501
 
-
         :return: The id of this XapiActivity.  # noqa: E501
         :rtype: str
         """
@@ -90,7 +87,6 @@ class XapiActivity(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiActivity.
-
 
         :param id: The id of this XapiActivity.  # noqa: E501
         :type: str
@@ -104,7 +100,6 @@ class XapiActivity(object):
     def definition(self):
         """Gets the definition of this XapiActivity.  # noqa: E501
 
-
         :return: The definition of this XapiActivity.  # noqa: E501
         :rtype: XapiActivityDefinition
         """
@@ -113,7 +108,6 @@ class XapiActivity(object):
     @definition.setter
     def definition(self, definition):
         """Sets the definition of this XapiActivity.
-
 
         :param definition: The definition of this XapiActivity.  # noqa: E501
         :type: XapiActivityDefinition

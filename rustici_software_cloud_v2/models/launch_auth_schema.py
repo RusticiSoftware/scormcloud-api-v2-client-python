@@ -56,6 +56,7 @@ class LaunchAuthSchema(object):
     def type(self):
         """Gets the type of this LaunchAuthSchema.  # noqa: E501
 
+        allowed_values = ["cookies", "vault"]  # noqa: E501
 
         :return: The type of this LaunchAuthSchema.  # noqa: E501
         :rtype: str
@@ -66,23 +67,17 @@ class LaunchAuthSchema(object):
     def type(self, type):
         """Sets the type of this LaunchAuthSchema.
 
+        allowed_values = ["cookies", "vault"]  # noqa: E501
 
         :param type: The type of this LaunchAuthSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["cookies", "vault"]  # noqa: E501
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
 
         self._type = type
 
     @property
     def options(self):
         """Gets the options of this LaunchAuthSchema.  # noqa: E501
-
 
         :return: The options of this LaunchAuthSchema.  # noqa: E501
         :rtype: LaunchAuthOptionsSchema
@@ -92,7 +87,6 @@ class LaunchAuthSchema(object):
     @options.setter
     def options(self, options):
         """Sets the options of this LaunchAuthSchema.
-
 
         :param options: The options of this LaunchAuthSchema.  # noqa: E501
         :type: LaunchAuthOptionsSchema

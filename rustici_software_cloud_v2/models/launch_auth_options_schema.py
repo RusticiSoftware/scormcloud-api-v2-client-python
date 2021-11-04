@@ -66,7 +66,6 @@ class LaunchAuthOptionsSchema(object):
     def ip_address(self):
         """Gets the ip_address of this LaunchAuthOptionsSchema.  # noqa: E501
 
-
         :return: The ip_address of this LaunchAuthOptionsSchema.  # noqa: E501
         :rtype: bool
         """
@@ -75,7 +74,6 @@ class LaunchAuthOptionsSchema(object):
     @ip_address.setter
     def ip_address(self, ip_address):
         """Sets the ip_address of this LaunchAuthOptionsSchema.
-
 
         :param ip_address: The ip_address of this LaunchAuthOptionsSchema.  # noqa: E501
         :type: bool
@@ -87,7 +85,6 @@ class LaunchAuthOptionsSchema(object):
     def fingerprint(self):
         """Gets the fingerprint of this LaunchAuthOptionsSchema.  # noqa: E501
 
-
         :return: The fingerprint of this LaunchAuthOptionsSchema.  # noqa: E501
         :rtype: bool
         """
@@ -96,7 +93,6 @@ class LaunchAuthOptionsSchema(object):
     @fingerprint.setter
     def fingerprint(self, fingerprint):
         """Sets the fingerprint of this LaunchAuthOptionsSchema.
-
 
         :param fingerprint: The fingerprint of this LaunchAuthOptionsSchema.  # noqa: E501
         :type: bool
@@ -108,7 +104,6 @@ class LaunchAuthOptionsSchema(object):
     def expiry(self):
         """Gets the expiry of this LaunchAuthOptionsSchema.  # noqa: E501
 
-
         :return: The expiry of this LaunchAuthOptionsSchema.  # noqa: E501
         :rtype: int
         """
@@ -117,7 +112,6 @@ class LaunchAuthOptionsSchema(object):
     @expiry.setter
     def expiry(self, expiry):
         """Sets the expiry of this LaunchAuthOptionsSchema.
-
 
         :param expiry: The expiry of this LaunchAuthOptionsSchema.  # noqa: E501
         :type: int
@@ -129,7 +123,6 @@ class LaunchAuthOptionsSchema(object):
     def sliding_expiry(self):
         """Gets the sliding_expiry of this LaunchAuthOptionsSchema.  # noqa: E501
 
-
         :return: The sliding_expiry of this LaunchAuthOptionsSchema.  # noqa: E501
         :rtype: int
         """
@@ -138,7 +131,6 @@ class LaunchAuthOptionsSchema(object):
     @sliding_expiry.setter
     def sliding_expiry(self, sliding_expiry):
         """Sets the sliding_expiry of this LaunchAuthOptionsSchema.
-
 
         :param sliding_expiry: The sliding_expiry of this LaunchAuthOptionsSchema.  # noqa: E501
         :type: int

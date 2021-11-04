@@ -123,7 +123,6 @@ class CreatePrivateInvitationSchema(object):
     def invitation_email(self):
         """Gets the invitation_email of this CreatePrivateInvitationSchema.  # noqa: E501
 
-
         :return: The invitation_email of this CreatePrivateInvitationSchema.  # noqa: E501
         :rtype: InvitationEmailSchema
         """
@@ -132,7 +131,6 @@ class CreatePrivateInvitationSchema(object):
     @invitation_email.setter
     def invitation_email(self, invitation_email):
         """Sets the invitation_email of this CreatePrivateInvitationSchema.
-
 
         :param invitation_email: The invitation_email of this CreatePrivateInvitationSchema.  # noqa: E501
         :type: InvitationEmailSchema
@@ -169,7 +167,7 @@ class CreatePrivateInvitationSchema(object):
     def expiration_date(self):
         """Gets the expiration_date of this CreatePrivateInvitationSchema.  # noqa: E501
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :return: The expiration_date of this CreatePrivateInvitationSchema.  # noqa: E501
         :rtype: datetime
@@ -180,7 +178,7 @@ class CreatePrivateInvitationSchema(object):
     def expiration_date(self, expiration_date):
         """Sets the expiration_date of this CreatePrivateInvitationSchema.
 
-        The date this invitation will expire and can not be launched (formatted yyyyMMddHHmmss in UTC time).  # noqa: E501
+        The ISO 8601 TimeStamp (defaults to UTC) after which this invitation will expire and can no longer be launched. An empty value will represent no expiration date.   # noqa: E501
 
         :param expiration_date: The expiration_date of this CreatePrivateInvitationSchema.  # noqa: E501
         :type: datetime

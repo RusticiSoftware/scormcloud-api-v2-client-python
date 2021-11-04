@@ -66,7 +66,6 @@ class MediaFileMetadataSchema(object):
     def title(self):
         """Gets the title of this MediaFileMetadataSchema.  # noqa: E501
 
-
         :return: The title of this MediaFileMetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -75,7 +74,6 @@ class MediaFileMetadataSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this MediaFileMetadataSchema.
-
 
         :param title: The title of this MediaFileMetadataSchema.  # noqa: E501
         :type: str
@@ -87,7 +85,6 @@ class MediaFileMetadataSchema(object):
     def description(self):
         """Gets the description of this MediaFileMetadataSchema.  # noqa: E501
 
-
         :return: The description of this MediaFileMetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -96,7 +93,6 @@ class MediaFileMetadataSchema(object):
     @description.setter
     def description(self, description):
         """Sets the description of this MediaFileMetadataSchema.
-
 
         :param description: The description of this MediaFileMetadataSchema.  # noqa: E501
         :type: str
@@ -108,7 +104,6 @@ class MediaFileMetadataSchema(object):
     def content_language(self):
         """Gets the content_language of this MediaFileMetadataSchema.  # noqa: E501
 
-
         :return: The content_language of this MediaFileMetadataSchema.  # noqa: E501
         :rtype: str
         """
@@ -117,7 +112,6 @@ class MediaFileMetadataSchema(object):
     @content_language.setter
     def content_language(self, content_language):
         """Sets the content_language of this MediaFileMetadataSchema.
-
 
         :param content_language: The content_language of this MediaFileMetadataSchema.  # noqa: E501
         :type: str
@@ -129,7 +123,6 @@ class MediaFileMetadataSchema(object):
     def estimated_duration(self):
         """Gets the estimated_duration of this MediaFileMetadataSchema.  # noqa: E501
 
-
         :return: The estimated_duration of this MediaFileMetadataSchema.  # noqa: E501
         :rtype: int
         """
@@ -138,7 +131,6 @@ class MediaFileMetadataSchema(object):
     @estimated_duration.setter
     def estimated_duration(self, estimated_duration):
         """Sets the estimated_duration of this MediaFileMetadataSchema.
-
 
         :param estimated_duration: The estimated_duration of this MediaFileMetadataSchema.  # noqa: E501
         :type: int

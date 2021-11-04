@@ -54,7 +54,6 @@ class ZoomiCourseOptionsSchema(object):
     def nti(self):
         """Gets the nti of this ZoomiCourseOptionsSchema.  # noqa: E501
 
-
         :return: The nti of this ZoomiCourseOptionsSchema.  # noqa: E501
         :rtype: str
         """
@@ -63,7 +62,6 @@ class ZoomiCourseOptionsSchema(object):
     @nti.setter
     def nti(self, nti):
         """Sets the nti of this ZoomiCourseOptionsSchema.
-
 
         :param nti: The nti of this ZoomiCourseOptionsSchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class ZoomiCourseOptionsSchema(object):
     def cta(self):
         """Gets the cta of this ZoomiCourseOptionsSchema.  # noqa: E501
 
-
         :return: The cta of this ZoomiCourseOptionsSchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class ZoomiCourseOptionsSchema(object):
     @cta.setter
     def cta(self, cta):
         """Sets the cta of this ZoomiCourseOptionsSchema.
-
 
         :param cta: The cta of this ZoomiCourseOptionsSchema.  # noqa: E501
         :type: str

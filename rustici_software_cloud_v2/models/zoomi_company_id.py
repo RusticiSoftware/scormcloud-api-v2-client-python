@@ -51,7 +51,6 @@ class ZoomiCompanyId(object):
     def zoomi_company_id(self):
         """Gets the zoomi_company_id of this ZoomiCompanyId.  # noqa: E501
 
-
         :return: The zoomi_company_id of this ZoomiCompanyId.  # noqa: E501
         :rtype: str
         """
@@ -60,7 +59,6 @@ class ZoomiCompanyId(object):
     @zoomi_company_id.setter
     def zoomi_company_id(self, zoomi_company_id):
         """Sets the zoomi_company_id of this ZoomiCompanyId.
-
 
         :param zoomi_company_id: The zoomi_company_id of this ZoomiCompanyId.  # noqa: E501
         :type: str

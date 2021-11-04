@@ -54,7 +54,6 @@ class TokenRequestSchema(object):
     def permissions(self):
         """Gets the permissions of this TokenRequestSchema.  # noqa: E501
 
-
         :return: The permissions of this TokenRequestSchema.  # noqa: E501
         :rtype: PermissionsSchema
         """
@@ -63,7 +62,6 @@ class TokenRequestSchema(object):
     @permissions.setter
     def permissions(self, permissions):
         """Sets the permissions of this TokenRequestSchema.
-
 
         :param permissions: The permissions of this TokenRequestSchema.  # noqa: E501
         :type: PermissionsSchema

@@ -76,7 +76,6 @@ class PostBackSchema(object):
     def url(self):
         """Gets the url of this PostBackSchema.  # noqa: E501
 
-
         :return: The url of this PostBackSchema.  # noqa: E501
         :rtype: str
         """
@@ -85,7 +84,6 @@ class PostBackSchema(object):
     @url.setter
     def url(self, url):
         """Sets the url of this PostBackSchema.
-
 
         :param url: The url of this PostBackSchema.  # noqa: E501
         :type: str
@@ -99,6 +97,8 @@ class PostBackSchema(object):
 
         Optional parameter to specify how to authorize against the given postbackurl, can be 'form' or 'httpbasic'. If form authentication, the username and password for authentication are submitted as form fields 'username' and 'password', and the registration data as the form field 'data'. If httpbasic authentication is used, the username and password are placed in the standard Authorization HTTP header, and the registration data is the body of the message (sent as text/xml content type). This field is set to 'form' by default.  # noqa: E501
 
+        allowed_values = ["UNDEFINED", "FORM", "HTTPBASIC"]  # noqa: E501
+
         :return: The auth_type of this PostBackSchema.  # noqa: E501
         :rtype: str
         """
@@ -110,15 +110,11 @@ class PostBackSchema(object):
 
         Optional parameter to specify how to authorize against the given postbackurl, can be 'form' or 'httpbasic'. If form authentication, the username and password for authentication are submitted as form fields 'username' and 'password', and the registration data as the form field 'data'. If httpbasic authentication is used, the username and password are placed in the standard Authorization HTTP header, and the registration data is the body of the message (sent as text/xml content type). This field is set to 'form' by default.  # noqa: E501
 
+        allowed_values = ["UNDEFINED", "FORM", "HTTPBASIC"]  # noqa: E501
+
         :param auth_type: The auth_type of this PostBackSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNDEFINED", "FORM", "HTTPBASIC"]  # noqa: E501
-        if auth_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `auth_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(auth_type, allowed_values)
-            )
 
         self._auth_type = auth_type
 
@@ -174,6 +170,8 @@ class PostBackSchema(object):
 
         This parameter allows you to specify a level of detail in the information that is posted back while the course is being taken. It may be one of three values: 'course' (course summary), 'activity' (activity summary, or 'full' (full detail), and is set to 'course' by default. The information will be posted as xml, and the format of that xml is specified below under the method 'getRegistrationResult'  # noqa: E501
 
+        allowed_values = ["UNDEFINED", "COURSE", "ACTIVITY", "FULL"]  # noqa: E501
+
         :return: The results_format of this PostBackSchema.  # noqa: E501
         :rtype: str
         """
@@ -185,15 +183,11 @@ class PostBackSchema(object):
 
         This parameter allows you to specify a level of detail in the information that is posted back while the course is being taken. It may be one of three values: 'course' (course summary), 'activity' (activity summary, or 'full' (full detail), and is set to 'course' by default. The information will be posted as xml, and the format of that xml is specified below under the method 'getRegistrationResult'  # noqa: E501
 
+        allowed_values = ["UNDEFINED", "COURSE", "ACTIVITY", "FULL"]  # noqa: E501
+
         :param results_format: The results_format of this PostBackSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNDEFINED", "COURSE", "ACTIVITY", "FULL"]  # noqa: E501
-        if results_format not in allowed_values:
-            raise ValueError(
-                "Invalid value for `results_format` ({0}), must be one of {1}"  # noqa: E501
-                .format(results_format, allowed_values)
-            )
 
         self._results_format = results_format
 

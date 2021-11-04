@@ -81,7 +81,6 @@ class XapiCredentialPutSchema(object):
     def id(self):
         """Gets the id of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The id of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: str
         """
@@ -90,7 +89,6 @@ class XapiCredentialPutSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this XapiCredentialPutSchema.
-
 
         :param id: The id of this XapiCredentialPutSchema.  # noqa: E501
         :type: str
@@ -102,7 +100,6 @@ class XapiCredentialPutSchema(object):
     def name(self):
         """Gets the name of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The name of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: str
         """
@@ -111,7 +108,6 @@ class XapiCredentialPutSchema(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiCredentialPutSchema.
-
 
         :param name: The name of this XapiCredentialPutSchema.  # noqa: E501
         :type: str
@@ -123,7 +119,6 @@ class XapiCredentialPutSchema(object):
     def info(self):
         """Gets the info of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The info of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: str
         """
@@ -132,7 +127,6 @@ class XapiCredentialPutSchema(object):
     @info.setter
     def info(self, info):
         """Sets the info of this XapiCredentialPutSchema.
-
 
         :param info: The info of this XapiCredentialPutSchema.  # noqa: E501
         :type: str
@@ -144,7 +138,6 @@ class XapiCredentialPutSchema(object):
     def secret(self):
         """Gets the secret of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The secret of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: str
         """
@@ -153,7 +146,6 @@ class XapiCredentialPutSchema(object):
     @secret.setter
     def secret(self, secret):
         """Sets the secret of this XapiCredentialPutSchema.
-
 
         :param secret: The secret of this XapiCredentialPutSchema.  # noqa: E501
         :type: str
@@ -165,7 +157,6 @@ class XapiCredentialPutSchema(object):
     def is_enabled(self):
         """Gets the is_enabled of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The is_enabled of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: bool
         """
@@ -174,7 +165,6 @@ class XapiCredentialPutSchema(object):
     @is_enabled.setter
     def is_enabled(self, is_enabled):
         """Sets the is_enabled of this XapiCredentialPutSchema.
-
 
         :param is_enabled: The is_enabled of this XapiCredentialPutSchema.  # noqa: E501
         :type: bool
@@ -186,7 +176,6 @@ class XapiCredentialPutSchema(object):
     def auth(self):
         """Gets the auth of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The auth of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: XapiCredentialAuthTypeSchema
         """
@@ -195,7 +184,6 @@ class XapiCredentialPutSchema(object):
     @auth.setter
     def auth(self, auth):
         """Sets the auth of this XapiCredentialPutSchema.
-
 
         :param auth: The auth of this XapiCredentialPutSchema.  # noqa: E501
         :type: XapiCredentialAuthTypeSchema
@@ -207,7 +195,6 @@ class XapiCredentialPutSchema(object):
     def permissions_level(self):
         """Gets the permissions_level of this XapiCredentialPutSchema.  # noqa: E501
 
-
         :return: The permissions_level of this XapiCredentialPutSchema.  # noqa: E501
         :rtype: XapiCredentialPermissionsLevelSchema
         """
@@ -216,7 +203,6 @@ class XapiCredentialPutSchema(object):
     @permissions_level.setter
     def permissions_level(self, permissions_level):
         """Sets the permissions_level of this XapiCredentialPutSchema.
-
 
         :param permissions_level: The permissions_level of this XapiCredentialPutSchema.  # noqa: E501
         :type: XapiCredentialPermissionsLevelSchema

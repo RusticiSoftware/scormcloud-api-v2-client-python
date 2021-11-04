@@ -50,7 +50,6 @@ class SettingListSchema(object):
     def setting_items(self):
         """Gets the setting_items of this SettingListSchema.  # noqa: E501
 
-
         :return: The setting_items of this SettingListSchema.  # noqa: E501
         :rtype: list[SettingItem]
         """
@@ -59,7 +58,6 @@ class SettingListSchema(object):
     @setting_items.setter
     def setting_items(self, setting_items):
         """Sets the setting_items of this SettingListSchema.
-
 
         :param setting_items: The setting_items of this SettingListSchema.  # noqa: E501
         :type: list[SettingItem]

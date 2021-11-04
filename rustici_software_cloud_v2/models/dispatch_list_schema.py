@@ -56,7 +56,6 @@ class DispatchListSchema(object):
     def dispatches(self):
         """Gets the dispatches of this DispatchListSchema.  # noqa: E501
 
-
         :return: The dispatches of this DispatchListSchema.  # noqa: E501
         :rtype: list[DispatchIdSchema]
         """
@@ -65,7 +64,6 @@ class DispatchListSchema(object):
     @dispatches.setter
     def dispatches(self, dispatches):
         """Sets the dispatches of this DispatchListSchema.
-
 
         :param dispatches: The dispatches of this DispatchListSchema.  # noqa: E501
         :type: list[DispatchIdSchema]
@@ -77,6 +75,7 @@ class DispatchListSchema(object):
     def more(self):
         """Gets the more of this DispatchListSchema.  # noqa: E501
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :return: The more of this DispatchListSchema.  # noqa: E501
         :rtype: str
@@ -87,6 +86,7 @@ class DispatchListSchema(object):
     def more(self, more):
         """Sets the more of this DispatchListSchema.
 
+        Token for getting the next set of results, from the prior set of results.  # noqa: E501
 
         :param more: The more of this DispatchListSchema.  # noqa: E501
         :type: str

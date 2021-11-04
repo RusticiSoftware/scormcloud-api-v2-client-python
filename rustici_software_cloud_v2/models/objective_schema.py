@@ -111,7 +111,6 @@ class ObjectiveSchema(object):
     def id(self):
         """Gets the id of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The id of this ObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -120,7 +119,6 @@ class ObjectiveSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this ObjectiveSchema.
-
 
         :param id: The id of this ObjectiveSchema.  # noqa: E501
         :type: str
@@ -132,7 +130,6 @@ class ObjectiveSchema(object):
     def primary(self):
         """Gets the primary of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The primary of this ObjectiveSchema.  # noqa: E501
         :rtype: bool
         """
@@ -141,7 +138,6 @@ class ObjectiveSchema(object):
     @primary.setter
     def primary(self, primary):
         """Sets the primary of this ObjectiveSchema.
-
 
         :param primary: The primary of this ObjectiveSchema.  # noqa: E501
         :type: bool
@@ -153,7 +149,6 @@ class ObjectiveSchema(object):
     def score(self):
         """Gets the score of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The score of this ObjectiveSchema.  # noqa: E501
         :rtype: ScoreSchema
         """
@@ -162,7 +157,6 @@ class ObjectiveSchema(object):
     @score.setter
     def score(self, score):
         """Sets the score of this ObjectiveSchema.
-
 
         :param score: The score of this ObjectiveSchema.  # noqa: E501
         :type: ScoreSchema
@@ -174,7 +168,6 @@ class ObjectiveSchema(object):
     def score_max(self):
         """Gets the score_max of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The score_max of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -183,7 +176,6 @@ class ObjectiveSchema(object):
     @score_max.setter
     def score_max(self, score_max):
         """Sets the score_max of this ObjectiveSchema.
-
 
         :param score_max: The score_max of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -195,7 +187,6 @@ class ObjectiveSchema(object):
     def score_min(self):
         """Gets the score_min of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The score_min of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -204,7 +195,6 @@ class ObjectiveSchema(object):
     @score_min.setter
     def score_min(self, score_min):
         """Sets the score_min of this ObjectiveSchema.
-
 
         :param score_min: The score_min of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -216,7 +206,6 @@ class ObjectiveSchema(object):
     def score_raw(self):
         """Gets the score_raw of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The score_raw of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -225,7 +214,6 @@ class ObjectiveSchema(object):
     @score_raw.setter
     def score_raw(self, score_raw):
         """Sets the score_raw of this ObjectiveSchema.
-
 
         :param score_raw: The score_raw of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -237,7 +225,6 @@ class ObjectiveSchema(object):
     def previous_score_scaled(self):
         """Gets the previous_score_scaled of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The previous_score_scaled of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -246,7 +233,6 @@ class ObjectiveSchema(object):
     @previous_score_scaled.setter
     def previous_score_scaled(self, previous_score_scaled):
         """Sets the previous_score_scaled of this ObjectiveSchema.
-
 
         :param previous_score_scaled: The previous_score_scaled of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -258,7 +244,6 @@ class ObjectiveSchema(object):
     def first_score_scaled(self):
         """Gets the first_score_scaled of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The first_score_scaled of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -267,7 +252,6 @@ class ObjectiveSchema(object):
     @first_score_scaled.setter
     def first_score_scaled(self, first_score_scaled):
         """Sets the first_score_scaled of this ObjectiveSchema.
-
 
         :param first_score_scaled: The first_score_scaled of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -279,7 +263,6 @@ class ObjectiveSchema(object):
     def progress_measure(self):
         """Gets the progress_measure of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The progress_measure of this ObjectiveSchema.  # noqa: E501
         :rtype: float
         """
@@ -288,7 +271,6 @@ class ObjectiveSchema(object):
     @progress_measure.setter
     def progress_measure(self, progress_measure):
         """Sets the progress_measure of this ObjectiveSchema.
-
 
         :param progress_measure: The progress_measure of this ObjectiveSchema.  # noqa: E501
         :type: float
@@ -300,7 +282,6 @@ class ObjectiveSchema(object):
     def first_success_time_stamp(self):
         """Gets the first_success_time_stamp of this ObjectiveSchema.  # noqa: E501
 
-
         :return: The first_success_time_stamp of this ObjectiveSchema.  # noqa: E501
         :rtype: str
         """
@@ -309,7 +290,6 @@ class ObjectiveSchema(object):
     @first_success_time_stamp.setter
     def first_success_time_stamp(self, first_success_time_stamp):
         """Sets the first_success_time_stamp of this ObjectiveSchema.
-
 
         :param first_success_time_stamp: The first_success_time_stamp of this ObjectiveSchema.  # noqa: E501
         :type: str
@@ -321,6 +301,7 @@ class ObjectiveSchema(object):
     def objective_completion(self):
         """Gets the objective_completion of this ObjectiveSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :return: The objective_completion of this ObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -331,16 +312,11 @@ class ObjectiveSchema(object):
     def objective_completion(self, objective_completion):
         """Sets the objective_completion of this ObjectiveSchema.
 
+        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
 
         :param objective_completion: The objective_completion of this ObjectiveSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "COMPLETED", "INCOMPLETE"]  # noqa: E501
-        if objective_completion not in allowed_values:
-            raise ValueError(
-                "Invalid value for `objective_completion` ({0}), must be one of {1}"  # noqa: E501
-                .format(objective_completion, allowed_values)
-            )
 
         self._objective_completion = objective_completion
 
@@ -348,6 +324,7 @@ class ObjectiveSchema(object):
     def objective_success(self):
         """Gets the objective_success of this ObjectiveSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The objective_success of this ObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -358,16 +335,11 @@ class ObjectiveSchema(object):
     def objective_success(self, objective_success):
         """Sets the objective_success of this ObjectiveSchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param objective_success: The objective_success of this ObjectiveSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if objective_success not in allowed_values:
-            raise ValueError(
-                "Invalid value for `objective_success` ({0}), must be one of {1}"  # noqa: E501
-                .format(objective_success, allowed_values)
-            )
 
         self._objective_success = objective_success
 
@@ -375,6 +347,7 @@ class ObjectiveSchema(object):
     def previous_objective_success(self):
         """Gets the previous_objective_success of this ObjectiveSchema.  # noqa: E501
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :return: The previous_objective_success of this ObjectiveSchema.  # noqa: E501
         :rtype: str
@@ -385,16 +358,11 @@ class ObjectiveSchema(object):
     def previous_objective_success(self, previous_objective_success):
         """Sets the previous_objective_success of this ObjectiveSchema.
 
+        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
 
         :param previous_objective_success: The previous_objective_success of this ObjectiveSchema.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UNKNOWN", "PASSED", "FAILED"]  # noqa: E501
-        if previous_objective_success not in allowed_values:
-            raise ValueError(
-                "Invalid value for `previous_objective_success` ({0}), must be one of {1}"  # noqa: E501
-                .format(previous_objective_success, allowed_values)
-            )
 
         self._previous_objective_success = previous_objective_success
 

@@ -65,7 +65,6 @@ class LearnerSchema(object):
     def id(self):
         """Gets the id of this LearnerSchema.  # noqa: E501
 
-
         :return: The id of this LearnerSchema.  # noqa: E501
         :rtype: str
         """
@@ -74,7 +73,6 @@ class LearnerSchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this LearnerSchema.
-
 
         :param id: The id of this LearnerSchema.  # noqa: E501
         :type: str
@@ -111,7 +109,6 @@ class LearnerSchema(object):
     def first_name(self):
         """Gets the first_name of this LearnerSchema.  # noqa: E501
 
-
         :return: The first_name of this LearnerSchema.  # noqa: E501
         :rtype: str
         """
@@ -120,7 +117,6 @@ class LearnerSchema(object):
     @first_name.setter
     def first_name(self, first_name):
         """Sets the first_name of this LearnerSchema.
-
 
         :param first_name: The first_name of this LearnerSchema.  # noqa: E501
         :type: str
@@ -132,7 +128,6 @@ class LearnerSchema(object):
     def last_name(self):
         """Gets the last_name of this LearnerSchema.  # noqa: E501
 
-
         :return: The last_name of this LearnerSchema.  # noqa: E501
         :rtype: str
         """
@@ -141,7 +136,6 @@ class LearnerSchema(object):
     @last_name.setter
     def last_name(self, last_name):
         """Sets the last_name of this LearnerSchema.
-
 
         :param last_name: The last_name of this LearnerSchema.  # noqa: E501
         :type: str

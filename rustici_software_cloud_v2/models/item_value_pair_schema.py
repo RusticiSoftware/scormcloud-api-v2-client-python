@@ -56,7 +56,6 @@ class ItemValuePairSchema(object):
     def item(self):
         """Gets the item of this ItemValuePairSchema.  # noqa: E501
 
-
         :return: The item of this ItemValuePairSchema.  # noqa: E501
         :rtype: str
         """
@@ -65,7 +64,6 @@ class ItemValuePairSchema(object):
     @item.setter
     def item(self, item):
         """Sets the item of this ItemValuePairSchema.
-
 
         :param item: The item of this ItemValuePairSchema.  # noqa: E501
         :type: str
@@ -77,7 +75,6 @@ class ItemValuePairSchema(object):
     def value(self):
         """Gets the value of this ItemValuePairSchema.  # noqa: E501
 
-
         :return: The value of this ItemValuePairSchema.  # noqa: E501
         :rtype: str
         """
@@ -86,7 +83,6 @@ class ItemValuePairSchema(object):
     @value.setter
     def value(self, value):
         """Sets the value of this ItemValuePairSchema.
-
 
         :param value: The value of this ItemValuePairSchema.  # noqa: E501
         :type: str

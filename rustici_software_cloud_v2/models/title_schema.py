@@ -51,7 +51,6 @@ class TitleSchema(object):
     def title(self):
         """Gets the title of this TitleSchema.  # noqa: E501
 
-
         :return: The title of this TitleSchema.  # noqa: E501
         :rtype: str
         """
@@ -60,7 +59,6 @@ class TitleSchema(object):
     @title.setter
     def title(self, title):
         """Sets the title of this TitleSchema.
-
 
         :param title: The title of this TitleSchema.  # noqa: E501
         :type: str

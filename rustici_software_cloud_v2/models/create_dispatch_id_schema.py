@@ -54,7 +54,6 @@ class CreateDispatchIdSchema(object):
     def id(self):
         """Gets the id of this CreateDispatchIdSchema.  # noqa: E501
 
-
         :return: The id of this CreateDispatchIdSchema.  # noqa: E501
         :rtype: str
         """
@@ -64,21 +63,17 @@ class CreateDispatchIdSchema(object):
     def id(self, id):
         """Sets the id of this CreateDispatchIdSchema.
 
-
         :param id: The id of this CreateDispatchIdSchema.  # noqa: E501
         :type: str
         """
         if id is None:
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
-        if id is not None and len(id) < 9:
-            raise ValueError("Invalid value for `id`, length must be greater than or equal to `9`")  # noqa: E501
 
         self._id = id
 
     @property
     def data(self):
         """Gets the data of this CreateDispatchIdSchema.  # noqa: E501
-
 
         :return: The data of this CreateDispatchIdSchema.  # noqa: E501
         :rtype: CreateDispatchSchema
@@ -88,7 +83,6 @@ class CreateDispatchIdSchema(object):
     @data.setter
     def data(self, data):
         """Sets the data of this CreateDispatchIdSchema.
-
 
         :param data: The data of this CreateDispatchIdSchema.  # noqa: E501
         :type: CreateDispatchSchema

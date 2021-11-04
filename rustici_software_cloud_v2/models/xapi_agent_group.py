@@ -80,6 +80,7 @@ class XapiAgentGroup(object):
     def object_type(self):
         """Gets the object_type of this XapiAgentGroup.  # noqa: E501
 
+        allowed_values = ["Agent", "Group"]  # noqa: E501
 
         :return: The object_type of this XapiAgentGroup.  # noqa: E501
         :rtype: str
@@ -90,25 +91,19 @@ class XapiAgentGroup(object):
     def object_type(self, object_type):
         """Sets the object_type of this XapiAgentGroup.
 
+        allowed_values = ["Agent", "Group"]  # noqa: E501
 
         :param object_type: The object_type of this XapiAgentGroup.  # noqa: E501
         :type: str
         """
         if object_type is None:
             raise ValueError("Invalid value for `object_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["Agent", "Group"]  # noqa: E501
-        if object_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `object_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(object_type, allowed_values)
-            )
 
         self._object_type = object_type
 
     @property
     def name(self):
         """Gets the name of this XapiAgentGroup.  # noqa: E501
-
 
         :return: The name of this XapiAgentGroup.  # noqa: E501
         :rtype: str
@@ -118,7 +113,6 @@ class XapiAgentGroup(object):
     @name.setter
     def name(self, name):
         """Sets the name of this XapiAgentGroup.
-
 
         :param name: The name of this XapiAgentGroup.  # noqa: E501
         :type: str
@@ -130,7 +124,6 @@ class XapiAgentGroup(object):
     def mbox(self):
         """Gets the mbox of this XapiAgentGroup.  # noqa: E501
 
-
         :return: The mbox of this XapiAgentGroup.  # noqa: E501
         :rtype: str
         """
@@ -139,7 +132,6 @@ class XapiAgentGroup(object):
     @mbox.setter
     def mbox(self, mbox):
         """Sets the mbox of this XapiAgentGroup.
-
 
         :param mbox: The mbox of this XapiAgentGroup.  # noqa: E501
         :type: str
@@ -151,7 +143,6 @@ class XapiAgentGroup(object):
     def mbox_sha1sum(self):
         """Gets the mbox_sha1sum of this XapiAgentGroup.  # noqa: E501
 
-
         :return: The mbox_sha1sum of this XapiAgentGroup.  # noqa: E501
         :rtype: str
         """
@@ -160,7 +151,6 @@ class XapiAgentGroup(object):
     @mbox_sha1sum.setter
     def mbox_sha1sum(self, mbox_sha1sum):
         """Sets the mbox_sha1sum of this XapiAgentGroup.
-
 
         :param mbox_sha1sum: The mbox_sha1sum of this XapiAgentGroup.  # noqa: E501
         :type: str
@@ -172,7 +162,6 @@ class XapiAgentGroup(object):
     def openid(self):
         """Gets the openid of this XapiAgentGroup.  # noqa: E501
 
-
         :return: The openid of this XapiAgentGroup.  # noqa: E501
         :rtype: str
         """
@@ -181,7 +170,6 @@ class XapiAgentGroup(object):
     @openid.setter
     def openid(self, openid):
         """Sets the openid of this XapiAgentGroup.
-
 
         :param openid: The openid of this XapiAgentGroup.  # noqa: E501
         :type: str
@@ -193,7 +181,6 @@ class XapiAgentGroup(object):
     def account(self):
         """Gets the account of this XapiAgentGroup.  # noqa: E501
 
-
         :return: The account of this XapiAgentGroup.  # noqa: E501
         :rtype: XapiAccount
         """
@@ -202,7 +189,6 @@ class XapiAgentGroup(object):
     @account.setter
     def account(self, account):
         """Sets the account of this XapiAgentGroup.
-
 
         :param account: The account of this XapiAgentGroup.  # noqa: E501
         :type: XapiAccount
@@ -214,7 +200,6 @@ class XapiAgentGroup(object):
     def member(self):
         """Gets the member of this XapiAgentGroup.  # noqa: E501
 
-
         :return: The member of this XapiAgentGroup.  # noqa: E501
         :rtype: list[XapiAgentGroup]
         """
@@ -223,7 +208,6 @@ class XapiAgentGroup(object):
     @member.setter
     def member(self, member):
         """Sets the member of this XapiAgentGroup.
-
 
         :param member: The member of this XapiAgentGroup.  # noqa: E501
         :type: list[XapiAgentGroup]

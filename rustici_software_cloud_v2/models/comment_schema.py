@@ -61,7 +61,6 @@ class CommentSchema(object):
     def value(self):
         """Gets the value of this CommentSchema.  # noqa: E501
 
-
         :return: The value of this CommentSchema.  # noqa: E501
         :rtype: str
         """
@@ -70,7 +69,6 @@ class CommentSchema(object):
     @value.setter
     def value(self, value):
         """Sets the value of this CommentSchema.
-
 
         :param value: The value of this CommentSchema.  # noqa: E501
         :type: str
@@ -82,7 +80,6 @@ class CommentSchema(object):
     def location(self):
         """Gets the location of this CommentSchema.  # noqa: E501
 
-
         :return: The location of this CommentSchema.  # noqa: E501
         :rtype: str
         """
@@ -91,7 +88,6 @@ class CommentSchema(object):
     @location.setter
     def location(self, location):
         """Sets the location of this CommentSchema.
-
 
         :param location: The location of this CommentSchema.  # noqa: E501
         :type: str
@@ -103,7 +99,6 @@ class CommentSchema(object):
     def date_time(self):
         """Gets the date_time of this CommentSchema.  # noqa: E501
 
-
         :return: The date_time of this CommentSchema.  # noqa: E501
         :rtype: str
         """
@@ -112,7 +107,6 @@ class CommentSchema(object):
     @date_time.setter
     def date_time(self, date_time):
         """Sets the date_time of this CommentSchema.
-
 
         :param date_time: The date_time of this CommentSchema.  # noqa: E501
         :type: str

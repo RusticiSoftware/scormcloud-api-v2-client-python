@@ -34,9 +34,9 @@ class AboutApi(object):
         self.api_client = api_client
 
     def get_about(self, **kwargs):  # noqa: E501
-        """Get back the API version and application name.   # noqa: E501
+        """Get back the API version and Application name   # noqa: E501
 
-        Get back the API version and application name.   # noqa: E501
+        Get back the API version and application name.  The return value for this method will never change. This method largely exists for API parity with our on-premise or Managed Hosting products, which may return different release numbers from this endpoint.  For SCORM Cloud, this is effectively equal to the `/ping` resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_about(async_req=True)
@@ -55,9 +55,9 @@ class AboutApi(object):
             return data
 
     def get_about_with_http_info(self, **kwargs):  # noqa: E501
-        """Get back the API version and application name.   # noqa: E501
+        """Get back the API version and Application name   # noqa: E501
 
-        Get back the API version and application name.   # noqa: E501
+        Get back the API version and application name.  The return value for this method will never change. This method largely exists for API parity with our on-premise or Managed Hosting products, which may return different release numbers from this endpoint.  For SCORM Cloud, this is effectively equal to the `/ping` resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_about_with_http_info(async_req=True)
