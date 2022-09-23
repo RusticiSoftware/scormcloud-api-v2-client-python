@@ -34,6 +34,7 @@ class PublicInvitationSchema(object):
         'id': 'str',
         'course_id': 'str',
         'allow_launch': 'bool',
+        'invitation_email': 'InvitationEmailSchema',
         'allow_new_registrations': 'bool',
         'url': 'str',
         'create_date': 'datetime',
@@ -48,6 +49,7 @@ class PublicInvitationSchema(object):
         'id': 'id',
         'course_id': 'courseId',
         'allow_launch': 'allowLaunch',
+        'invitation_email': 'invitationEmail',
         'allow_new_registrations': 'allowNewRegistrations',
         'url': 'url',
         'create_date': 'createDate',
@@ -58,12 +60,13 @@ class PublicInvitationSchema(object):
         'registration_count': 'registrationCount'
     }
 
-    def __init__(self, id=None, course_id=None, allow_launch=None, allow_new_registrations=None, url=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_cap=0, registration_count=None):  # noqa: E501
+    def __init__(self, id=None, course_id=None, allow_launch=None, invitation_email=None, allow_new_registrations=None, url=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_cap=0, registration_count=None):  # noqa: E501
         """PublicInvitationSchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._course_id = None
         self._allow_launch = None
+        self._invitation_email = None
         self._allow_new_registrations = None
         self._url = None
         self._create_date = None
@@ -80,6 +83,8 @@ class PublicInvitationSchema(object):
             self.course_id = course_id
         if allow_launch is not None:
             self.allow_launch = allow_launch
+        if invitation_email is not None:
+            self.invitation_email = invitation_email
         if allow_new_registrations is not None:
             self.allow_new_registrations = allow_new_registrations
         if url is not None:
@@ -165,6 +170,25 @@ class PublicInvitationSchema(object):
         """
 
         self._allow_launch = allow_launch
+
+    @property
+    def invitation_email(self):
+        """Gets the invitation_email of this PublicInvitationSchema.  # noqa: E501
+
+        :return: The invitation_email of this PublicInvitationSchema.  # noqa: E501
+        :rtype: InvitationEmailSchema
+        """
+        return self._invitation_email
+
+    @invitation_email.setter
+    def invitation_email(self, invitation_email):
+        """Sets the invitation_email of this PublicInvitationSchema.
+
+        :param invitation_email: The invitation_email of this PublicInvitationSchema.  # noqa: E501
+        :type: InvitationEmailSchema
+        """
+
+        self._invitation_email = invitation_email
 
     @property
     def allow_new_registrations(self):

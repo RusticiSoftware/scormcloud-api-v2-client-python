@@ -373,7 +373,7 @@ class CourseApi(object):
     def create_no_upload_and_import_course_job(self, course_id, import_request, **kwargs):  # noqa: E501
         """Create a Course from a fetched or referenced external media file   # noqa: E501
 
-        Creates a course from one of two methods, fetchRequest or mediaFileReferenceRequest.  In either case, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
+        Creates a course from one of the following methods: fetchRequest, mediaFileReferenceRequest, or connectorReferenceRequest. In all cases, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url. - A connectorReferenceRequest is used to import content from an external content connector, for example an LTI 1.3 tool.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_no_upload_and_import_course_job(course_id, import_request, async_req=True)
@@ -398,7 +398,7 @@ class CourseApi(object):
     def create_no_upload_and_import_course_job_with_http_info(self, course_id, import_request, **kwargs):  # noqa: E501
         """Create a Course from a fetched or referenced external media file   # noqa: E501
 
-        Creates a course from one of two methods, fetchRequest or mediaFileReferenceRequest.  In either case, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
+        Creates a course from one of the following methods: fetchRequest, mediaFileReferenceRequest, or connectorReferenceRequest. In all cases, an import job ID will be returned, which can be used with GetImportJobStatus to view the status of the import.  Courses represent the learning material a learner will progress through.  - A fetchRequest performs the same actions as CreateFetchAndImportCourseJob.  A course will be created from a package fetched from the provided url.  The package will be downloaded from the url and stored in SCORM Cloud. - A mediaFileReferenceRequest will not store the file in SCORM Cloud.  Instead it will reference the media file at the time the learner needs to view the file from the provided url. - A connectorReferenceRequest is used to import content from an external content connector, for example an LTI 1.3 tool.  >**Note:** >The import job ID used for calls to GetImportJobStatus are only valid for one week after the course import finishes.  >**Info:** >Unless working with media files, it is typical to use one of the other two import methods. >- CreateUploadAndImportCourseJob would be used if the course is in your local file system. >- CreateFetchAndImportCourseJob would be better suited for situations where the course is uploaded remotely but is accessible via a public url.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_no_upload_and_import_course_job_with_http_info(course_id, import_request, async_req=True)
@@ -2677,6 +2677,105 @@ class CourseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_course_zip(self, course_id, **kwargs):  # noqa: E501
+        """Download a zip package for a Course   # noqa: E501
+
+        Downloads a zip package for the course.  The course zip package contains all of the files (assets) needed for a learner to take the course.  The returned zip will contain all of the files orginally uploaded with the course, as well as any modifications made through updating/ adding new assets.  >**Info:** >If looking to retrieve a specific file from a course, use `GetCourseAsset` instead.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_zip(course_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_course_zip_with_http_info(course_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_course_zip_with_http_info(course_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_course_zip_with_http_info(self, course_id, **kwargs):  # noqa: E501
+        """Download a zip package for a Course   # noqa: E501
+
+        Downloads a zip package for the course.  The course zip package contains all of the files (assets) needed for a learner to take the course.  The returned zip will contain all of the files orginally uploaded with the course, as well as any modifications made through updating/ adding new assets.  >**Info:** >If looking to retrieve a specific file from a course, use `GetCourseAsset` instead.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_course_zip_with_http_info(course_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_course_zip" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_course_zip`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/zip', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='file',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_courses(self, **kwargs):  # noqa: E501
         """Get a list of Courses   # noqa: E501
 
@@ -2901,6 +3000,113 @@ class CourseApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ImportJobResultSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_versioned_course_zip(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Download a zip package for a Course Version   # noqa: E501
+
+        Downloads a zip package for the course version.  The course zip package contains all of the files (assets) needed for a learner to take the course.  The returned zip will contain all of the files orginally uploaded with the course, as well as any modifications made through updating/ adding new assets.  >**Info:** >If looking to retrieve a specific file from a course version, use `GetCourseVersionAsset` instead.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_versioned_course_zip(course_id, version_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_versioned_course_zip_with_http_info(course_id, version_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_versioned_course_zip_with_http_info(course_id, version_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_versioned_course_zip_with_http_info(self, course_id, version_id, **kwargs):  # noqa: E501
+        """Download a zip package for a Course Version   # noqa: E501
+
+        Downloads a zip package for the course version.  The course zip package contains all of the files (assets) needed for a learner to take the course.  The returned zip will contain all of the files orginally uploaded with the course, as well as any modifications made through updating/ adding new assets.  >**Info:** >If looking to retrieve a specific file from a course version, use `GetCourseVersionAsset` instead.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_versioned_course_zip_with_http_info(course_id, version_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str course_id: (required)
+        :param int version_id: (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['course_id', 'version_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_versioned_course_zip" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'course_id' is set
+        if ('course_id' not in params or
+                params['course_id'] is None):
+            raise ValueError("Missing the required parameter `course_id` when calling `get_versioned_course_zip`")  # noqa: E501
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `get_versioned_course_zip`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'course_id' in params:
+            path_params['courseId'] = params['course_id']  # noqa: E501
+        if 'version_id' in params:
+            path_params['versionId'] = params['version_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/courses/{courseId}/versions/{versionId}/zip', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='file',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

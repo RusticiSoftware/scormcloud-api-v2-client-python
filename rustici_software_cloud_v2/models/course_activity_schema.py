@@ -86,7 +86,7 @@ class CourseActivitySchema(object):
     def external_identifier(self):
         """Gets the external_identifier of this CourseActivitySchema.  # noqa: E501
 
-        An arbitrary identifier that the external LMS system can associate with this LearningObject to track it as it isreused across courses   # noqa: E501
+        An arbitrary identifier that the external LMS system can associate with this LearningObject to track it as it is reused across courses   # noqa: E501
 
         :return: The external_identifier of this CourseActivitySchema.  # noqa: E501
         :rtype: str
@@ -97,7 +97,7 @@ class CourseActivitySchema(object):
     def external_identifier(self, external_identifier):
         """Sets the external_identifier of this CourseActivitySchema.
 
-        An arbitrary identifier that the external LMS system can associate with this LearningObject to track it as it isreused across courses   # noqa: E501
+        An arbitrary identifier that the external LMS system can associate with this LearningObject to track it as it is reused across courses   # noqa: E501
 
         :param external_identifier: The external_identifier of this CourseActivitySchema.  # noqa: E501
         :type: str
