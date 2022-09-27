@@ -2570,9 +2570,321 @@ class DispatchApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_lti13_dispatch(self, dispatch_id, **kwargs):  # noqa: E501
+        """Get the information necessary to import this dispatch as a resource link according to the IMS LTI 1.3 specification.   # noqa: E501
+
+        Get the information necessary to import this dispatch as a resource link according to the IMS LTI 1.3 specification. The information from this call will be provided to the platform during the configuration step.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_dispatch(dispatch_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :return: DispatchLti13InfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_lti13_dispatch_with_http_info(dispatch_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_lti13_dispatch_with_http_info(dispatch_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_lti13_dispatch_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
+        """Get the information necessary to import this dispatch as a resource link according to the IMS LTI 1.3 specification.   # noqa: E501
+
+        Get the information necessary to import this dispatch as a resource link according to the IMS LTI 1.3 specification. The information from this call will be provided to the platform during the configuration step.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_dispatch_with_http_info(dispatch_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :return: DispatchLti13InfoSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['dispatch_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_lti13_dispatch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'dispatch_id' is set
+        if ('dispatch_id' not in params or
+                params['dispatch_id'] is None):
+            raise ValueError("Missing the required parameter `dispatch_id` when calling `get_lti13_dispatch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'dispatch_id' in params:
+            path_params['dispatchId'] = params['dispatch_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/dispatches/{dispatchId}/lti13', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DispatchLti13InfoSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_lti13_dispatch_launch(self, dispatch_id, external_config, jwt, **kwargs):  # noqa: E501
+        """Launch this dispatch using the IMS LTI 1.3 specification.   # noqa: E501
+
+        Launch this dispatch using the IMS LTI 1.3 specification. This is the final step in the LTI 1.3 launch process, and is the request that redirects to the resource link (i.e. course).   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_dispatch_launch(dispatch_id, external_config, jwt, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :param str external_config: External configuration object (required)
+        :param str jwt: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_lti13_dispatch_launch_with_http_info(dispatch_id, external_config, jwt, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_lti13_dispatch_launch_with_http_info(dispatch_id, external_config, jwt, **kwargs)  # noqa: E501
+            return data
+
+    def get_lti13_dispatch_launch_with_http_info(self, dispatch_id, external_config, jwt, **kwargs):  # noqa: E501
+        """Launch this dispatch using the IMS LTI 1.3 specification.   # noqa: E501
+
+        Launch this dispatch using the IMS LTI 1.3 specification. This is the final step in the LTI 1.3 launch process, and is the request that redirects to the resource link (i.e. course).   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_dispatch_launch_with_http_info(dispatch_id, external_config, jwt, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str dispatch_id: Identifier for the dispatch (required)
+        :param str external_config: External configuration object (required)
+        :param str jwt: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['dispatch_id', 'external_config', 'jwt']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_lti13_dispatch_launch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'dispatch_id' is set
+        if ('dispatch_id' not in params or
+                params['dispatch_id'] is None):
+            raise ValueError("Missing the required parameter `dispatch_id` when calling `get_lti13_dispatch_launch`")  # noqa: E501
+        # verify the required parameter 'external_config' is set
+        if ('external_config' not in params or
+                params['external_config'] is None):
+            raise ValueError("Missing the required parameter `external_config` when calling `get_lti13_dispatch_launch`")  # noqa: E501
+        # verify the required parameter 'jwt' is set
+        if ('jwt' not in params or
+                params['jwt'] is None):
+            raise ValueError("Missing the required parameter `jwt` when calling `get_lti13_dispatch_launch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'dispatch_id' in params:
+            path_params['dispatchId'] = params['dispatch_id']  # noqa: E501
+
+        query_params = []
+        if 'external_config' in params:
+            query_params.append(('externalConfig', params['external_config']))  # noqa: E501
+        if 'jwt' in params:
+            query_params.append(('jwt', params['jwt']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['UNSECURED']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/dispatches/{dispatchId}/launches', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_lti13_tool_configuration_schema(self, destination_id, **kwargs):  # noqa: E501
+        """Get the information needed to configure a LTI 1.3 platform with the destination id `destinationId`   # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_tool_configuration_schema(destination_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str destination_id: Identifier for the destination (required)
+        :return: Lti13ToolConfigurationSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_lti13_tool_configuration_schema_with_http_info(destination_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_lti13_tool_configuration_schema_with_http_info(destination_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_lti13_tool_configuration_schema_with_http_info(self, destination_id, **kwargs):  # noqa: E501
+        """Get the information needed to configure a LTI 1.3 platform with the destination id `destinationId`   # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_lti13_tool_configuration_schema_with_http_info(destination_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str destination_id: Identifier for the destination (required)
+        :return: Lti13ToolConfigurationSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['destination_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_lti13_tool_configuration_schema" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'destination_id' is set
+        if ('destination_id' not in params or
+                params['destination_id'] is None):
+            raise ValueError("Missing the required parameter `destination_id` when calling `get_lti13_tool_configuration_schema`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'destination_id' in params:
+            path_params['destinationId'] = params['destination_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_NORMAL', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/dispatch/destinations/{destinationId}/lti13', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Lti13ToolConfigurationSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_lti_dispatch(self, dispatch_id, **kwargs):  # noqa: E501
         """Get the information necessary to launch this dispatch using the IMS LTI 1.1 specification.   # noqa: E501
 
+        Retrieve the information needed to launch this dispatch using the IMS LTI 1.1 specification. This information is then provided to the platform so it can launch this dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_lti_dispatch(dispatch_id, async_req=True)
@@ -2594,6 +2906,7 @@ class DispatchApi(object):
     def get_lti_dispatch_with_http_info(self, dispatch_id, **kwargs):  # noqa: E501
         """Get the information necessary to launch this dispatch using the IMS LTI 1.1 specification.   # noqa: E501
 
+        Retrieve the information needed to launch this dispatch using the IMS LTI 1.1 specification. This information is then provided to the platform so it can launch this dispatch.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_lti_dispatch_with_http_info(dispatch_id, async_req=True)
@@ -3280,7 +3593,7 @@ class DispatchApi(object):
     def set_destination(self, destination_id, destination, **kwargs):  # noqa: E501
         """Create or update a Destination   # noqa: E501
 
-        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.   # noqa: E501
+        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.  >**Note:** >While the \"updated\" and \"created\" values are present in the destination schema, any attempts to manually change those values with SetDestination will be ignored.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination(destination_id, destination, async_req=True)
@@ -3303,7 +3616,7 @@ class DispatchApi(object):
     def set_destination_with_http_info(self, destination_id, destination, **kwargs):  # noqa: E501
         """Create or update a Destination   # noqa: E501
 
-        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.   # noqa: E501
+        Creates or updates information about the destination.  -If the destination is being created, a name should be provided in the DestinationSchema.  If one is not present in the request an error will be thrown. -If the destination is instead being updated, only non-null values that are provided will be updated.  You may also optionally supply the e-mail address of the user to be associated with this destination.  This e-mail address should correspond to a SCORM Cloud user account.  >**Note:** >While the \"updated\" and \"created\" values are present in the destination schema, any attempts to manually change those values with SetDestination will be ignored.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.set_destination_with_http_info(destination_id, destination, async_req=True)

@@ -267,7 +267,7 @@ class CourseSchema(object):
     def course_learning_standard(self):
         """Gets the course_learning_standard of this CourseSchema.  # noqa: E501
 
-        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5"]  # noqa: E501
+        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5", "LTI13"]  # noqa: E501
 
         :return: The course_learning_standard of this CourseSchema.  # noqa: E501
         :rtype: str
@@ -278,7 +278,7 @@ class CourseSchema(object):
     def course_learning_standard(self, course_learning_standard):
         """Sets the course_learning_standard of this CourseSchema.
 
-        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5"]  # noqa: E501
+        allowed_values = ["UNKNOWN", "SCORM11", "SCORM12", "SCORM20042NDEDITION", "SCORM20043RDEDITION", "SCORM20044THEDITION", "AICC", "XAPI", "CMI5", "LTI13"]  # noqa: E501
 
         :param course_learning_standard: The course_learning_standard of this CourseSchema.  # noqa: E501
         :type: str

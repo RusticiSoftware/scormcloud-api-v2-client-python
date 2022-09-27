@@ -32,25 +32,30 @@ class ImportRequestSchema(object):
     """
     swagger_types = {
         'fetch_request': 'ImportFetchRequestSchema',
-        'media_file_reference_request': 'ImportMediaFileReferenceRequestSchema'
+        'media_file_reference_request': 'ImportMediaFileReferenceRequestSchema',
+        'connector_reference_request': 'ImportConnectorRequestSchema'
     }
 
     attribute_map = {
         'fetch_request': 'fetchRequest',
-        'media_file_reference_request': 'mediaFileReferenceRequest'
+        'media_file_reference_request': 'mediaFileReferenceRequest',
+        'connector_reference_request': 'connectorReferenceRequest'
     }
 
-    def __init__(self, fetch_request=None, media_file_reference_request=None):  # noqa: E501
+    def __init__(self, fetch_request=None, media_file_reference_request=None, connector_reference_request=None):  # noqa: E501
         """ImportRequestSchema - a model defined in Swagger"""  # noqa: E501
 
         self._fetch_request = None
         self._media_file_reference_request = None
+        self._connector_reference_request = None
         self.discriminator = None
 
         if fetch_request is not None:
             self.fetch_request = fetch_request
         if media_file_reference_request is not None:
             self.media_file_reference_request = media_file_reference_request
+        if connector_reference_request is not None:
+            self.connector_reference_request = connector_reference_request
 
     @property
     def fetch_request(self):
@@ -89,6 +94,25 @@ class ImportRequestSchema(object):
         """
 
         self._media_file_reference_request = media_file_reference_request
+
+    @property
+    def connector_reference_request(self):
+        """Gets the connector_reference_request of this ImportRequestSchema.  # noqa: E501
+
+        :return: The connector_reference_request of this ImportRequestSchema.  # noqa: E501
+        :rtype: ImportConnectorRequestSchema
+        """
+        return self._connector_reference_request
+
+    @connector_reference_request.setter
+    def connector_reference_request(self, connector_reference_request):
+        """Sets the connector_reference_request of this ImportRequestSchema.
+
+        :param connector_reference_request: The connector_reference_request of this ImportRequestSchema.  # noqa: E501
+        :type: ImportConnectorRequestSchema
+        """
+
+        self._connector_reference_request = connector_reference_request
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,32 +32,45 @@ class DestinationSchema(object):
     """
     swagger_types = {
         'name': 'str',
+        'updated': 'datetime',
+        'created': 'datetime',
         'tags': 'list[str]',
         'email': 'str',
         'notes': 'str',
-        'launch_auth': 'LaunchAuthSchema'
+        'launch_auth': 'LaunchAuthSchema',
+        'lti13_data': 'Lti13PlatformConfigurationSchema'
     }
 
     attribute_map = {
         'name': 'name',
+        'updated': 'updated',
+        'created': 'created',
         'tags': 'tags',
         'email': 'email',
         'notes': 'notes',
-        'launch_auth': 'launchAuth'
+        'launch_auth': 'launchAuth',
+        'lti13_data': 'lti13Data'
     }
 
-    def __init__(self, name=None, tags=None, email=None, notes=None, launch_auth=None):  # noqa: E501
+    def __init__(self, name=None, updated=None, created=None, tags=None, email=None, notes=None, launch_auth=None, lti13_data=None):  # noqa: E501
         """DestinationSchema - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
+        self._updated = None
+        self._created = None
         self._tags = None
         self._email = None
         self._notes = None
         self._launch_auth = None
+        self._lti13_data = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
+        if updated is not None:
+            self.updated = updated
+        if created is not None:
+            self.created = created
         if tags is not None:
             self.tags = tags
         if email is not None:
@@ -66,6 +79,8 @@ class DestinationSchema(object):
             self.notes = notes
         if launch_auth is not None:
             self.launch_auth = launch_auth
+        if lti13_data is not None:
+            self.lti13_data = lti13_data
 
     @property
     def name(self):
@@ -89,6 +104,44 @@ class DestinationSchema(object):
         """
 
         self._name = name
+
+    @property
+    def updated(self):
+        """Gets the updated of this DestinationSchema.  # noqa: E501
+
+        :return: The updated of this DestinationSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated
+
+    @updated.setter
+    def updated(self, updated):
+        """Sets the updated of this DestinationSchema.
+
+        :param updated: The updated of this DestinationSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated = updated
+
+    @property
+    def created(self):
+        """Gets the created of this DestinationSchema.  # noqa: E501
+
+        :return: The created of this DestinationSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        """Sets the created of this DestinationSchema.
+
+        :param created: The created of this DestinationSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created = created
 
     @property
     def tags(self):
@@ -177,6 +230,25 @@ class DestinationSchema(object):
         """
 
         self._launch_auth = launch_auth
+
+    @property
+    def lti13_data(self):
+        """Gets the lti13_data of this DestinationSchema.  # noqa: E501
+
+        :return: The lti13_data of this DestinationSchema.  # noqa: E501
+        :rtype: Lti13PlatformConfigurationSchema
+        """
+        return self._lti13_data
+
+    @lti13_data.setter
+    def lti13_data(self, lti13_data):
+        """Sets the lti13_data of this DestinationSchema.
+
+        :param lti13_data: The lti13_data of this DestinationSchema.  # noqa: E501
+        :type: Lti13PlatformConfigurationSchema
+        """
+
+        self._lti13_data = lti13_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""
