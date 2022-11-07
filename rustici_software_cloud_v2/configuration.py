@@ -254,13 +254,6 @@ class Configuration(object):
                     'key': 'Authorization',
                     'value': 'Bearer ' + self.access_token if len(self.access_token) > 0 else None
                 },
-            'UNSECURED':
-                {
-                    'type': 'basic',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': self.get_basic_auth_token()
-                },
 
         }
 
@@ -273,5 +266,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.0\n"\
-               "SDK Package Version: 2.1.0".\
+               "SDK Package Version: 3.0.0".\
                format(env=sys.platform, pyversion=sys.version)

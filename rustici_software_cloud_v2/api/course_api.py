@@ -12,6 +12,7 @@
 
 
 from __future__ import absolute_import
+from deprecated import deprecated
 
 import re  # noqa: F401
 
@@ -2796,6 +2797,7 @@ class CourseApi(object):
         :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :param bool include_registration_count: Include the registration count in the results
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: CourseListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2827,12 +2829,13 @@ class CourseApi(object):
         :param str more: Pagination token returned as `more` property of multi page list requests
         :param bool include_course_metadata: Include course metadata in the results. If the course has no metadata, adding this parameter has no effect.
         :param bool include_registration_count: Include the registration count in the results
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: CourseListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_course_metadata', 'include_registration_count']  # noqa: E501
+        all_params = ['since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_course_metadata', 'include_registration_count', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2874,6 +2877,8 @@ class CourseApi(object):
             query_params.append(('includeCourseMetadata', params['include_course_metadata']))  # noqa: E501
         if 'include_registration_count' in params:
             query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 

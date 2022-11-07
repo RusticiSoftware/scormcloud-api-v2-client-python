@@ -34,6 +34,7 @@ class ApplicationInfoSchema(object):
         'id': 'str',
         'name': 'str',
         'create_date': 'datetime',
+        'update_date': 'datetime',
         'allow_delete': 'bool',
         'course_count': 'int',
         'registration_count': 'int'
@@ -43,17 +44,19 @@ class ApplicationInfoSchema(object):
         'id': 'id',
         'name': 'name',
         'create_date': 'createDate',
+        'update_date': 'updateDate',
         'allow_delete': 'allowDelete',
         'course_count': 'courseCount',
         'registration_count': 'registrationCount'
     }
 
-    def __init__(self, id=None, name=None, create_date=None, allow_delete=None, course_count=None, registration_count=None):  # noqa: E501
+    def __init__(self, id=None, name=None, create_date=None, update_date=None, allow_delete=None, course_count=None, registration_count=None):  # noqa: E501
         """ApplicationInfoSchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._create_date = None
+        self._update_date = None
         self._allow_delete = None
         self._course_count = None
         self._registration_count = None
@@ -65,6 +68,8 @@ class ApplicationInfoSchema(object):
             self.name = name
         if create_date is not None:
             self.create_date = create_date
+        if update_date is not None:
+            self.update_date = update_date
         if allow_delete is not None:
             self.allow_delete = allow_delete
         if course_count is not None:
@@ -140,6 +145,29 @@ class ApplicationInfoSchema(object):
         """
 
         self._create_date = create_date
+
+    @property
+    def update_date(self):
+        """Gets the update_date of this ApplicationInfoSchema.  # noqa: E501
+
+        The time the application was last updated in UTC  # noqa: E501
+
+        :return: The update_date of this ApplicationInfoSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._update_date
+
+    @update_date.setter
+    def update_date(self, update_date):
+        """Sets the update_date of this ApplicationInfoSchema.
+
+        The time the application was last updated in UTC  # noqa: E501
+
+        :param update_date: The update_date of this ApplicationInfoSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._update_date = update_date
 
     @property
     def allow_delete(self):
