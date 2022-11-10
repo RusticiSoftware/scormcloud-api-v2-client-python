@@ -12,6 +12,7 @@
 
 
 from __future__ import absolute_import
+from deprecated import deprecated
 
 import re  # noqa: F401
 
@@ -735,6 +736,7 @@ class XapiApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: XapiCredentialsListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -763,12 +765,13 @@ class XapiApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: XapiCredentialsListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
+        all_params = ['since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -803,6 +806,8 @@ class XapiApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 

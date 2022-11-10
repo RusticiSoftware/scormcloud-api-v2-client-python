@@ -12,6 +12,7 @@
 
 
 from __future__ import absolute_import
+from deprecated import deprecated
 
 import re  # noqa: F401
 
@@ -2307,6 +2308,7 @@ class RegistrationApi(object):
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: RegistrationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2341,12 +2343,13 @@ class RegistrationApi(object):
         :param bool include_child_results: Include information about each learning object, not just the top level in the results
         :param bool include_interactions_and_objectives: Include interactions and objectives in the results
         :param bool include_runtime: Include runtime details in the results
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: RegistrationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'learner_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_child_results', 'include_interactions_and_objectives', 'include_runtime']  # noqa: E501
+        all_params = ['course_id', 'learner_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_child_results', 'include_interactions_and_objectives', 'include_runtime', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2394,6 +2397,8 @@ class RegistrationApi(object):
             query_params.append(('includeInteractionsAndObjectives', params['include_interactions_and_objectives']))  # noqa: E501
         if 'include_runtime' in params:
             query_params.append(('includeRuntime', params['include_runtime']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 

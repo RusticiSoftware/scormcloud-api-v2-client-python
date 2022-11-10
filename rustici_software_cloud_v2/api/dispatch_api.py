@@ -12,6 +12,7 @@
 
 
 from __future__ import absolute_import
+from deprecated import deprecated
 
 import re  # noqa: F401
 
@@ -1398,6 +1399,7 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1429,12 +1431,13 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['destination_id', 'course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
+        all_params = ['destination_id', 'course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1480,6 +1483,8 @@ class DispatchApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 
@@ -1731,6 +1736,7 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DestinationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1761,12 +1767,13 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DestinationListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1806,6 +1813,8 @@ class DispatchApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 
@@ -2461,6 +2470,7 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2491,12 +2501,13 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: DispatchListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2536,6 +2547,8 @@ class DispatchApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
         header_params = {}
 
@@ -2766,7 +2779,7 @@ class DispatchApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['UNSECURED']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/dispatch/dispatches/{dispatchId}/launches', 'GET',

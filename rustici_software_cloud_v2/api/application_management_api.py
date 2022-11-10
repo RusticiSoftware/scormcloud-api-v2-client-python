@@ -12,6 +12,7 @@
 
 
 from __future__ import absolute_import
+from deprecated import deprecated
 
 import re  # noqa: F401
 
@@ -861,10 +862,11 @@ class ApplicationManagementApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    @deprecated(reason="Use GetApplications instead.")
     def get_application_list(self, **kwargs):  # noqa: E501
-        """Use the Application Management App to get a list of Applications   # noqa: E501
+        """(Deprecated) Use the Application Management App to get basic data about all Applications in a Realm   # noqa: E501
 
-        Returns a list of all applications which are in this Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        Returns a list of all applications which are in this Realm.  >**Deprecated:** >It is advised to use GetApplications instead of this endpoint, as this one now exists for backwards  compatibility.  This endpoint returns very limited data about **all** applications in a Realm and is not  paginated.  Because of this, this endpoint can run into issues and have very slow performance when attempting to  pull data for accounts with many applications.  The GetApplications endpoint alleviates this problem by using pagination to return a limited amount of applications at once, while also providing much more detail about every  application present in a Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_list(async_req=True)
@@ -882,10 +884,11 @@ class ApplicationManagementApi(object):
             (data) = self.get_application_list_with_http_info(**kwargs)  # noqa: E501
             return data
 
+    @deprecated(reason="Use GetApplicationsWithHttpInfo instead.")
     def get_application_list_with_http_info(self, **kwargs):  # noqa: E501
-        """Use the Application Management App to get a list of Applications   # noqa: E501
+        """(Deprecated) Use the Application Management App to get basic data about all Applications in a Realm   # noqa: E501
 
-        Returns a list of all applications which are in this Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
+        Returns a list of all applications which are in this Realm.  >**Deprecated:** >It is advised to use GetApplications instead of this endpoint, as this one now exists for backwards  compatibility.  This endpoint returns very limited data about **all** applications in a Realm and is not  paginated.  Because of this, this endpoint can run into issues and have very slow performance when attempting to  pull data for accounts with many applications.  The GetApplications endpoint alleviates this problem by using pagination to return a limited amount of applications at once, while also providing much more detail about every  application present in a Realm.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_application_list_with_http_info(async_req=True)
@@ -945,6 +948,137 @@ class ApplicationManagementApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ApplicationListSchema',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_applications(self, **kwargs):  # noqa: E501
+        """Use the Application Management App to get a detailed list of Applications   # noqa: E501
+
+        Returns a list of applications. Can be filtered using the request parameters to provide a subset of results.  This endpoint caches the course and registration counts of an application for 24 hours if either  `includeCourseCount` or `includeRegistrationCount` parameters, respectively, are set to `true`. Since these values are cached for an extended period, any changes made to the number of courses or  registrations in an application will not be reflected in the results of this endpoint until the caching period has passed.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time. If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results. When passing this token, no other filter parameters can be sent as part of the request. The resources will continue to respect the filters passed in by the original request.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.  >**Info:** >If you want to get an up-to-date value of the course or registration count for a single application within the caching period, use the GetApplicationInfo endpoint with `includeCourseCount` and/or `includeRegistrationCount` set to `true`.  GetApplicationInfo *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that application.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_applications(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_course_count: Include a count of courses for the application.
+        :param bool include_registration_count: Include a count of registrations created for the application during the current billing period.
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
+        :return: ApplicationInfoListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_applications_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_applications_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_applications_with_http_info(self, **kwargs):  # noqa: E501
+        """Use the Application Management App to get a detailed list of Applications   # noqa: E501
+
+        Returns a list of applications. Can be filtered using the request parameters to provide a subset of results.  This endpoint caches the course and registration counts of an application for 24 hours if either  `includeCourseCount` or `includeRegistrationCount` parameters, respectively, are set to `true`. Since these values are cached for an extended period, any changes made to the number of courses or  registrations in an application will not be reflected in the results of this endpoint until the caching period has passed.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time. If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results. When passing this token, no other filter parameters can be sent as part of the request. The resources will continue to respect the filters passed in by the original request.  >**Note:** >Each Realm has a special application called the **Application Management Application**.  When using this special application's credentials to authenticate with the API, you are able to perform actions on all the other applications within that Realm (and only those actions, this isn't a general purpose credential).  You can list, add, update, and delete both applications and credentials with this API resource.  >**Info:** >If you want to get an up-to-date value of the course or registration count for a single application within the caching period, use the GetApplicationInfo endpoint with `includeCourseCount` and/or `includeRegistrationCount` set to `true`.  GetApplicationInfo *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that application.   # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_applications_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
+        :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
+        :param str filter: Optional string which filters results by a specified field (described by filterBy).
+        :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
+        :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
+        :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_course_count: Include a count of courses for the application.
+        :param bool include_registration_count: Include a count of registrations created for the application during the current billing period.
+        :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
+        :return: ApplicationInfoListSchema
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['since', 'until', 'datetime_filter', 'filter', 'filter_by', 'order_by', 'more', 'include_course_count', 'include_registration_count', 'include_total_count']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_applications" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'since' in params:
+            query_params.append(('since', params['since']))  # noqa: E501
+        if 'until' in params:
+            query_params.append(('until', params['until']))  # noqa: E501
+        if 'datetime_filter' in params:
+            query_params.append(('datetimeFilter', params['datetime_filter']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+        if 'filter_by' in params:
+            query_params.append(('filterBy', params['filter_by']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
+        if 'more' in params:
+            query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_course_count' in params:
+            query_params.append(('includeCourseCount', params['include_course_count']))  # noqa: E501
+        if 'include_registration_count' in params:
+            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
+        if 'include_total_count' in params:
+            query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APP_MANAGEMENT', 'OAUTH']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/appManagement/applicationList', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ApplicationInfoListSchema',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

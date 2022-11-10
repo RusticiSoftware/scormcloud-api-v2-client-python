@@ -36,6 +36,7 @@ from rustici_software_cloud_v2.configuration import Configuration
 # import models into sdk package
 from rustici_software_cloud_v2.models.about_schema import AboutSchema
 from rustici_software_cloud_v2.models.activity_result_schema import ActivityResultSchema
+from rustici_software_cloud_v2.models.application_info_list_schema import ApplicationInfoListSchema
 from rustici_software_cloud_v2.models.application_info_schema import ApplicationInfoSchema
 from rustici_software_cloud_v2.models.application_list_schema import ApplicationListSchema
 from rustici_software_cloud_v2.models.application_request_schema import ApplicationRequestSchema
@@ -102,6 +103,7 @@ from rustici_software_cloud_v2.models.media_file_metadata_schema import MediaFil
 from rustici_software_cloud_v2.models.message_schema import MessageSchema
 from rustici_software_cloud_v2.models.metadata_schema import MetadataSchema
 from rustici_software_cloud_v2.models.objective_schema import ObjectiveSchema
+from rustici_software_cloud_v2.models.paginated_list import PaginatedList
 from rustici_software_cloud_v2.models.permissions_schema import PermissionsSchema
 from rustici_software_cloud_v2.models.ping_schema import PingSchema
 from rustici_software_cloud_v2.models.post_back_schema import PostBackSchema
