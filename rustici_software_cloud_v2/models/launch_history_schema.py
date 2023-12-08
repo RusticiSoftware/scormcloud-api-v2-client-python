@@ -40,7 +40,8 @@ class LaunchHistorySchema(object):
         'total_seconds_tracked': 'float',
         'launch_time': 'datetime',
         'exit_time': 'datetime',
-        'last_runtime_update': 'datetime'
+        'last_runtime_update': 'datetime',
+        'launch_history_id': 'str'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class LaunchHistorySchema(object):
         'total_seconds_tracked': 'totalSecondsTracked',
         'launch_time': 'launchTime',
         'exit_time': 'exitTime',
-        'last_runtime_update': 'lastRuntimeUpdate'
+        'last_runtime_update': 'lastRuntimeUpdate',
+        'launch_history_id': 'launchHistoryId'
     }
 
-    def __init__(self, id=None, instance=None, score=None, completion_status='UNKNOWN', success_status='UNKNOWN', history_log=None, total_seconds_tracked=None, launch_time=None, exit_time=None, last_runtime_update=None):  # noqa: E501
+    def __init__(self, id=None, instance=None, score=None, completion_status='UNKNOWN', success_status='UNKNOWN', history_log=None, total_seconds_tracked=None, launch_time=None, exit_time=None, last_runtime_update=None, launch_history_id=None):  # noqa: E501
         """LaunchHistorySchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -69,6 +71,7 @@ class LaunchHistorySchema(object):
         self._launch_time = None
         self._exit_time = None
         self._last_runtime_update = None
+        self._launch_history_id = None
         self.discriminator = None
 
         if id is not None:
@@ -91,10 +94,14 @@ class LaunchHistorySchema(object):
             self.exit_time = exit_time
         if last_runtime_update is not None:
             self.last_runtime_update = last_runtime_update
+        if launch_history_id is not None:
+            self.launch_history_id = launch_history_id
 
     @property
     def id(self):
         """Gets the id of this LaunchHistorySchema.  # noqa: E501
+
+        Identifier for the registration associated with this record  # noqa: E501
 
         :return: The id of this LaunchHistorySchema.  # noqa: E501
         :rtype: str
@@ -104,6 +111,8 @@ class LaunchHistorySchema(object):
     @id.setter
     def id(self, id):
         """Sets the id of this LaunchHistorySchema.
+
+        Identifier for the registration associated with this record  # noqa: E501
 
         :param id: The id of this LaunchHistorySchema.  # noqa: E501
         :type: str
@@ -301,6 +310,29 @@ class LaunchHistorySchema(object):
         """
 
         self._last_runtime_update = last_runtime_update
+
+    @property
+    def launch_history_id(self):
+        """Gets the launch_history_id of this LaunchHistorySchema.  # noqa: E501
+
+        A unique identifier for this launch history record  # noqa: E501
+
+        :return: The launch_history_id of this LaunchHistorySchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._launch_history_id
+
+    @launch_history_id.setter
+    def launch_history_id(self, launch_history_id):
+        """Sets the launch_history_id of this LaunchHistorySchema.
+
+        A unique identifier for this launch history record  # noqa: E501
+
+        :param launch_history_id: The launch_history_id of this LaunchHistorySchema.  # noqa: E501
+        :type: str
+        """
+
+        self._launch_history_id = launch_history_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

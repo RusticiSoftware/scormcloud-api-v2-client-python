@@ -45,7 +45,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param LaunchLinkRequestSchema launch_link_request: (required)
+        :param PreviewLaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -68,7 +68,7 @@ class CourseApi(object):
 
         :param async_req bool
         :param str course_id: (required)
-        :param LaunchLinkRequestSchema launch_link_request: (required)
+        :param PreviewLaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -153,7 +153,7 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param int version_id: (required)
-        :param LaunchLinkRequestSchema launch_link_request: (required)
+        :param PreviewLaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -177,7 +177,7 @@ class CourseApi(object):
         :param async_req bool
         :param str course_id: (required)
         :param int version_id: (required)
-        :param LaunchLinkRequestSchema launch_link_request: (required)
+        :param PreviewLaunchLinkRequestSchema launch_link_request: (required)
         :return: LaunchLinkSchema
                  If the method is called asynchronously,
                  returns the request thread.

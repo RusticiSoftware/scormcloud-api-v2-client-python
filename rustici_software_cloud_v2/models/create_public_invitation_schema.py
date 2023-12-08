@@ -124,7 +124,7 @@ class CreatePublicInvitationSchema(object):
     def registration_cap(self):
         """Gets the registration_cap of this CreatePublicInvitationSchema.  # noqa: E501
 
-        Integer value that limits the amount of registrations a public invitation can generate.  # noqa: E501
+        Integer value that represents the maximum number of registrations that can be created for a public invitation. Setting this value to '0' allows an unlimited amount of registrations to be created for the invitation.   # noqa: E501
 
         :return: The registration_cap of this CreatePublicInvitationSchema.  # noqa: E501
         :rtype: int
@@ -135,7 +135,7 @@ class CreatePublicInvitationSchema(object):
     def registration_cap(self, registration_cap):
         """Sets the registration_cap of this CreatePublicInvitationSchema.
 
-        Integer value that limits the amount of registrations a public invitation can generate.  # noqa: E501
+        Integer value that represents the maximum number of registrations that can be created for a public invitation. Setting this value to '0' allows an unlimited amount of registrations to be created for the invitation.   # noqa: E501
 
         :param registration_cap: The registration_cap of this CreatePublicInvitationSchema.  # noqa: E501
         :type: int

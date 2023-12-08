@@ -35,7 +35,9 @@ class CredentialSchema(object):
         'name': 'str',
         'credential': 'str',
         'pens_credential': 'str',
-        'status': 'str'
+        'status': 'str',
+        'created': 'datetime',
+        'updated': 'datetime'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class CredentialSchema(object):
         'name': 'name',
         'credential': 'credential',
         'pens_credential': 'pensCredential',
-        'status': 'status'
+        'status': 'status',
+        'created': 'created',
+        'updated': 'updated'
     }
 
-    def __init__(self, id=None, name=None, credential=None, pens_credential=None, status=None):  # noqa: E501
+    def __init__(self, id=None, name=None, credential=None, pens_credential=None, status=None, created=None, updated=None):  # noqa: E501
         """CredentialSchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -54,6 +58,8 @@ class CredentialSchema(object):
         self._credential = None
         self._pens_credential = None
         self._status = None
+        self._created = None
+        self._updated = None
         self.discriminator = None
 
         if id is not None:
@@ -66,6 +72,10 @@ class CredentialSchema(object):
             self.pens_credential = pens_credential
         if status is not None:
             self.status = status
+        if created is not None:
+            self.created = created
+        if updated is not None:
+            self.updated = updated
 
     @property
     def id(self):
@@ -177,6 +187,52 @@ class CredentialSchema(object):
         """
 
         self._status = status
+
+    @property
+    def created(self):
+        """Gets the created of this CredentialSchema.  # noqa: E501
+
+        The time the API credential was created in UTC  # noqa: E501
+
+        :return: The created of this CredentialSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        """Sets the created of this CredentialSchema.
+
+        The time the API credential was created in UTC  # noqa: E501
+
+        :param created: The created of this CredentialSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created = created
+
+    @property
+    def updated(self):
+        """Gets the updated of this CredentialSchema.  # noqa: E501
+
+        The time the API credential was last updated in UTC  # noqa: E501
+
+        :return: The updated of this CredentialSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated
+
+    @updated.setter
+    def updated(self, updated):
+        """Sets the updated of this CredentialSchema.
+
+        The time the API credential was last updated in UTC  # noqa: E501
+
+        :param updated: The updated of this CredentialSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated = updated
 
     def to_dict(self):
         """Returns the model properties as a dict"""

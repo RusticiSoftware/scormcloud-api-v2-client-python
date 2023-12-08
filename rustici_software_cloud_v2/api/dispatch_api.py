@@ -1080,7 +1080,8 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :return: DestinationSchema
+        :param bool include_dispatch_count: Include a count of dispatches for the destination.
+        :return: DestinationInfoSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1102,12 +1103,13 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
-        :return: DestinationSchema
+        :param bool include_dispatch_count: Include a count of dispatches for the destination.
+        :return: DestinationInfoSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['destination_id']  # noqa: E501
+        all_params = ['destination_id', 'include_dispatch_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1134,6 +1136,8 @@ class DispatchApi(object):
             path_params['destinationId'] = params['destination_id']  # noqa: E501
 
         query_params = []
+        if 'include_dispatch_count' in params:
+            query_params.append(('includeDispatchCount', params['include_dispatch_count']))  # noqa: E501
 
         header_params = {}
 
@@ -1160,7 +1164,7 @@ class DispatchApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DestinationSchema',  # noqa: E501
+            response_type='DestinationInfoSchema',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1720,7 +1724,7 @@ class DispatchApi(object):
     def get_destinations(self, **kwargs):  # noqa: E501
         """Get a list of Destinations   # noqa: E501
 
-        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the dispatch count of a destination for 24 hours if the `includeDispatchCount` parameter is set to `true`.  Since this value is cached for an extended period, any changes made to the number of dispatches for a destination will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get an up-to-date value of the dispatch count for a single destination within the caching period, use the GetDestination endpoint with `includeDispatchCount` set to `true`.  GetDestination *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destinations(async_req=True)
@@ -1736,8 +1740,9 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_dispatch_count: Include a count of dispatches for each destination.
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
-        :return: DestinationListSchema
+        :return: DestinationInfoListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1751,7 +1756,7 @@ class DispatchApi(object):
     def get_destinations_with_http_info(self, **kwargs):  # noqa: E501
         """Get a list of Destinations   # noqa: E501
 
-        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of destinations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the dispatch count of a destination for 24 hours if the `includeDispatchCount` parameter is set to `true`.  Since this value is cached for an extended period, any changes made to the number of dispatches for a destination will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get an up-to-date value of the dispatch count for a single destination within the caching period, use the GetDestination endpoint with `includeDispatchCount` set to `true`.  GetDestination *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that destination.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_destinations_with_http_info(async_req=True)
@@ -1767,13 +1772,14 @@ class DispatchApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_dispatch_count: Include a count of dispatches for each destination.
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
-        :return: DestinationListSchema
+        :return: DestinationInfoListSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_dispatch_count', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1813,6 +1819,8 @@ class DispatchApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_dispatch_count' in params:
+            query_params.append(('includeDispatchCount', params['include_dispatch_count']))  # noqa: E501
         if 'include_total_count' in params:
             query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
@@ -1841,7 +1849,7 @@ class DispatchApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DestinationListSchema',  # noqa: E501
+            response_type='DestinationInfoListSchema',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
