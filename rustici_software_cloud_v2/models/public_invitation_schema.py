@@ -152,7 +152,7 @@ class PublicInvitationSchema(object):
     def allow_launch(self):
         """Gets the allow_launch of this PublicInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if learners are allowed to launch the invitation. If false, the invitation is disabled and no new or existing learners are allowed to launch it.   # noqa: E501
 
         :return: The allow_launch of this PublicInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -163,7 +163,7 @@ class PublicInvitationSchema(object):
     def allow_launch(self, allow_launch):
         """Sets the allow_launch of this PublicInvitationSchema.
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if learners are allowed to launch the invitation. If false, the invitation is disabled and no new or existing learners are allowed to launch it.   # noqa: E501
 
         :param allow_launch: The allow_launch of this PublicInvitationSchema.  # noqa: E501
         :type: bool
@@ -194,7 +194,7 @@ class PublicInvitationSchema(object):
     def allow_new_registrations(self):
         """Gets the allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if new registrations can be created for this public invitation. If false, no new registrations can be created for the invitation, so only learners with existing registrations can access the invitation.   # noqa: E501
 
         :return: The allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -205,7 +205,7 @@ class PublicInvitationSchema(object):
     def allow_new_registrations(self, allow_new_registrations):
         """Sets the allow_new_registrations of this PublicInvitationSchema.
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if new registrations can be created for this public invitation. If false, no new registrations can be created for the invitation, so only learners with existing registrations can access the invitation.   # noqa: E501
 
         :param allow_new_registrations: The allow_new_registrations of this PublicInvitationSchema.  # noqa: E501
         :type: bool
@@ -328,7 +328,7 @@ class PublicInvitationSchema(object):
     def registration_cap(self):
         """Gets the registration_cap of this PublicInvitationSchema.  # noqa: E501
 
-        Integer value that limits the amount of registrations a public invitation can generate.  # noqa: E501
+        Integer value that represents the maximum number of registrations that can be created for a public invitation. Setting this value to '0' allows an unlimited amount of registrations to be created for the invitation.   # noqa: E501
 
         :return: The registration_cap of this PublicInvitationSchema.  # noqa: E501
         :rtype: int
@@ -339,7 +339,7 @@ class PublicInvitationSchema(object):
     def registration_cap(self, registration_cap):
         """Sets the registration_cap of this PublicInvitationSchema.
 
-        Integer value that limits the amount of registrations a public invitation can generate.  # noqa: E501
+        Integer value that represents the maximum number of registrations that can be created for a public invitation. Setting this value to '0' allows an unlimited amount of registrations to be created for the invitation.   # noqa: E501
 
         :param registration_cap: The registration_cap of this PublicInvitationSchema.  # noqa: E501
         :type: int

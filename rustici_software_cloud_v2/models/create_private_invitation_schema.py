@@ -36,7 +36,8 @@ class CreatePrivateInvitationSchema(object):
         'invitation_email': 'InvitationEmailSchema',
         'post_back': 'PostBackSchema',
         'expiration_date': 'datetime',
-        'tags': 'list[str]'
+        'tags': 'list[str]',
+        'duplicate_registration_option': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class CreatePrivateInvitationSchema(object):
         'invitation_email': 'invitationEmail',
         'post_back': 'postBack',
         'expiration_date': 'expirationDate',
-        'tags': 'tags'
+        'tags': 'tags',
+        'duplicate_registration_option': 'duplicateRegistrationOption'
     }
 
-    def __init__(self, course_id=None, creating_user_email=None, invitation_email=None, post_back=None, expiration_date=None, tags=None):  # noqa: E501
+    def __init__(self, course_id=None, creating_user_email=None, invitation_email=None, post_back=None, expiration_date=None, tags=None, duplicate_registration_option='SEND_EXISTING'):  # noqa: E501
         """CreatePrivateInvitationSchema - a model defined in Swagger"""  # noqa: E501
 
         self._course_id = None
@@ -57,6 +59,7 @@ class CreatePrivateInvitationSchema(object):
         self._post_back = None
         self._expiration_date = None
         self._tags = None
+        self._duplicate_registration_option = None
         self.discriminator = None
 
         self.course_id = course_id
@@ -68,6 +71,8 @@ class CreatePrivateInvitationSchema(object):
             self.expiration_date = expiration_date
         if tags is not None:
             self.tags = tags
+        if duplicate_registration_option is not None:
+            self.duplicate_registration_option = duplicate_registration_option
 
     @property
     def course_id(self):
@@ -208,6 +213,33 @@ class CreatePrivateInvitationSchema(object):
         """
 
         self._tags = tags
+
+    @property
+    def duplicate_registration_option(self):
+        """Gets the duplicate_registration_option of this CreatePrivateInvitationSchema.  # noqa: E501
+
+        Represents the possible values that determine how existing registrations will be handled when an invitation is sent to an email address that has already received an invitation:   - `FAIL`: Do not create a new invitation, do not send an email, and do nothing with registrations   - `INSTANCE_EXISTING`: Create a new instance of the existing registration and send it with the invitation   - `SEND_EXISTING`: Re-send the existing registration with the new invitation   - `CREATE_NEW`: Create a new registration for the invitation   # noqa: E501
+
+        allowed_values = ["FAIL", "INSTANCE_EXISTING", "SEND_EXISTING", "CREATE_NEW"]  # noqa: E501
+
+        :return: The duplicate_registration_option of this CreatePrivateInvitationSchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._duplicate_registration_option
+
+    @duplicate_registration_option.setter
+    def duplicate_registration_option(self, duplicate_registration_option):
+        """Sets the duplicate_registration_option of this CreatePrivateInvitationSchema.
+
+        Represents the possible values that determine how existing registrations will be handled when an invitation is sent to an email address that has already received an invitation:   - `FAIL`: Do not create a new invitation, do not send an email, and do nothing with registrations   - `INSTANCE_EXISTING`: Create a new instance of the existing registration and send it with the invitation   - `SEND_EXISTING`: Re-send the existing registration with the new invitation   - `CREATE_NEW`: Create a new registration for the invitation   # noqa: E501
+
+        allowed_values = ["FAIL", "INSTANCE_EXISTING", "SEND_EXISTING", "CREATE_NEW"]  # noqa: E501
+
+        :param duplicate_registration_option: The duplicate_registration_option of this CreatePrivateInvitationSchema.  # noqa: E501
+        :type: str
+        """
+
+        self._duplicate_registration_option = duplicate_registration_option
 
     def to_dict(self):
         """Returns the model properties as a dict"""

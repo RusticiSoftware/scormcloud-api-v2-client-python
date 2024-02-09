@@ -137,7 +137,7 @@ class PrivateInvitationSchema(object):
     def allow_launch(self):
         """Gets the allow_launch of this PrivateInvitationSchema.  # noqa: E501
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if learners are allowed to launch the invitation. If false, the invitation is disabled and no new or existing learners are allowed to launch it.   # noqa: E501
 
         :return: The allow_launch of this PrivateInvitationSchema.  # noqa: E501
         :rtype: bool
@@ -148,7 +148,7 @@ class PrivateInvitationSchema(object):
     def allow_launch(self, allow_launch):
         """Sets the allow_launch of this PrivateInvitationSchema.
 
-        If true, then new registrations can be created for this invitation.  # noqa: E501
+        Determines if learners are allowed to launch the invitation. If false, the invitation is disabled and no new or existing learners are allowed to launch it.   # noqa: E501
 
         :param allow_launch: The allow_launch of this PrivateInvitationSchema.  # noqa: E501
         :type: bool
