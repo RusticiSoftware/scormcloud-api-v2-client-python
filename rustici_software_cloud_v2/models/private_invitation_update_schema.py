@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class PrivateInvitationUpdateSchema(object):
@@ -32,7 +31,7 @@ class PrivateInvitationUpdateSchema(object):
     """
     swagger_types = {
         'allow_launch': 'bool',
-        'invitation_email': 'InvitationEmailSchema',
+        'invitation_email': 'InvitationEmailUpdateSchema',
         'post_back': 'PostBackSchema',
         'expiration_date': 'datetime'
     }
@@ -90,7 +89,7 @@ class PrivateInvitationUpdateSchema(object):
         """Gets the invitation_email of this PrivateInvitationUpdateSchema.  # noqa: E501
 
         :return: The invitation_email of this PrivateInvitationUpdateSchema.  # noqa: E501
-        :rtype: InvitationEmailSchema
+        :rtype: InvitationEmailUpdateSchema
         """
         return self._invitation_email
 
@@ -99,7 +98,7 @@ class PrivateInvitationUpdateSchema(object):
         """Sets the invitation_email of this PrivateInvitationUpdateSchema.
 
         :param invitation_email: The invitation_email of this PrivateInvitationUpdateSchema.  # noqa: E501
-        :type: InvitationEmailSchema
+        :type: InvitationEmailUpdateSchema
         """
 
         self._invitation_email = invitation_email
@@ -154,7 +153,7 @@ class PrivateInvitationUpdateSchema(object):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

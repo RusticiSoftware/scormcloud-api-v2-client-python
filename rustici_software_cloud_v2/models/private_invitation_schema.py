@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class PrivateInvitationSchema(object):
@@ -33,32 +32,37 @@ class PrivateInvitationSchema(object):
     swagger_types = {
         'id': 'str',
         'course_id': 'str',
+        'course_title': 'str',
         'allow_launch': 'bool',
         'invitation_email': 'InvitationEmailSchema',
         'create_date': 'datetime',
         'updated': 'datetime',
         'post_back': 'PostBackSchema',
         'expiration_date': 'datetime',
-        'registration_count': 'int'
+        'registration_count': 'int',
+        'launched_registration_count': 'int'
     }
 
     attribute_map = {
         'id': 'id',
         'course_id': 'courseId',
+        'course_title': 'courseTitle',
         'allow_launch': 'allowLaunch',
         'invitation_email': 'invitationEmail',
         'create_date': 'createDate',
         'updated': 'updated',
         'post_back': 'postBack',
         'expiration_date': 'expirationDate',
-        'registration_count': 'registrationCount'
+        'registration_count': 'registrationCount',
+        'launched_registration_count': 'launchedRegistrationCount'
     }
 
-    def __init__(self, id=None, course_id=None, allow_launch=None, invitation_email=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_count=None):  # noqa: E501
+    def __init__(self, id=None, course_id=None, course_title=None, allow_launch=None, invitation_email=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_count=None, launched_registration_count=None):  # noqa: E501
         """PrivateInvitationSchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._course_id = None
+        self._course_title = None
         self._allow_launch = None
         self._invitation_email = None
         self._create_date = None
@@ -66,12 +70,15 @@ class PrivateInvitationSchema(object):
         self._post_back = None
         self._expiration_date = None
         self._registration_count = None
+        self._launched_registration_count = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         if course_id is not None:
             self.course_id = course_id
+        if course_title is not None:
+            self.course_title = course_title
         if allow_launch is not None:
             self.allow_launch = allow_launch
         if invitation_email is not None:
@@ -86,6 +93,8 @@ class PrivateInvitationSchema(object):
             self.expiration_date = expiration_date
         if registration_count is not None:
             self.registration_count = registration_count
+        if launched_registration_count is not None:
+            self.launched_registration_count = launched_registration_count
 
     @property
     def id(self):
@@ -132,6 +141,29 @@ class PrivateInvitationSchema(object):
         """
 
         self._course_id = course_id
+
+    @property
+    def course_title(self):
+        """Gets the course_title of this PrivateInvitationSchema.  # noqa: E501
+
+        Title of the course associated with this invitation.  # noqa: E501
+
+        :return: The course_title of this PrivateInvitationSchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._course_title
+
+    @course_title.setter
+    def course_title(self, course_title):
+        """Sets the course_title of this PrivateInvitationSchema.
+
+        Title of the course associated with this invitation.  # noqa: E501
+
+        :param course_title: The course_title of this PrivateInvitationSchema.  # noqa: E501
+        :type: str
+        """
+
+        self._course_title = course_title
 
     @property
     def allow_launch(self):
@@ -286,11 +318,34 @@ class PrivateInvitationSchema(object):
 
         self._registration_count = registration_count
 
+    @property
+    def launched_registration_count(self):
+        """Gets the launched_registration_count of this PrivateInvitationSchema.  # noqa: E501
+
+        The count of launched registrations for this invitation  # noqa: E501
+
+        :return: The launched_registration_count of this PrivateInvitationSchema.  # noqa: E501
+        :rtype: int
+        """
+        return self._launched_registration_count
+
+    @launched_registration_count.setter
+    def launched_registration_count(self, launched_registration_count):
+        """Sets the launched_registration_count of this PrivateInvitationSchema.
+
+        The count of launched registrations for this invitation  # noqa: E501
+
+        :param launched_registration_count: The launched_registration_count of this PrivateInvitationSchema.  # noqa: E501
+        :type: int
+        """
+
+        self._launched_registration_count = launched_registration_count
+
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

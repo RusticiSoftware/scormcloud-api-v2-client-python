@@ -28,7 +28,6 @@ from rustici_software_cloud_v2.api.ping_api import PingApi
 from rustici_software_cloud_v2.api.registration_api import RegistrationApi
 from rustici_software_cloud_v2.api.reporting_api import ReportingApi
 from rustici_software_cloud_v2.api.xapi_api import XapiApi
-from rustici_software_cloud_v2.api.zoomi_api import ZoomiApi
 
 # import ApiClient
 from rustici_software_cloud_v2.api_client import ApiClient
@@ -87,6 +86,7 @@ from rustici_software_cloud_v2.models.import_request_schema import ImportRequest
 from rustici_software_cloud_v2.models.import_result_schema import ImportResultSchema
 from rustici_software_cloud_v2.models.integer_result_schema import IntegerResultSchema
 from rustici_software_cloud_v2.models.invitation_email_schema import InvitationEmailSchema
+from rustici_software_cloud_v2.models.invitation_email_update_schema import InvitationEmailUpdateSchema
 from rustici_software_cloud_v2.models.invitation_job_status_schema import InvitationJobStatusSchema
 from rustici_software_cloud_v2.models.invitation_summary_list import InvitationSummaryList
 from rustici_software_cloud_v2.models.invitation_summary_schema import InvitationSummarySchema
@@ -172,5 +172,3 @@ from rustici_software_cloud_v2.models.xapi_statement_pipe_schema import XapiStat
 from rustici_software_cloud_v2.models.xapi_statement_reference import XapiStatementReference
 from rustici_software_cloud_v2.models.xapi_statement_result import XapiStatementResult
 from rustici_software_cloud_v2.models.xapi_verb import XapiVerb
-from rustici_software_cloud_v2.models.zoomi_company_id import ZoomiCompanyId
-from rustici_software_cloud_v2.models.zoomi_course_options_schema import ZoomiCourseOptionsSchema

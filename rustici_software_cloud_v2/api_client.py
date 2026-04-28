@@ -19,9 +19,7 @@ import os
 import re
 import tempfile
 
-# python 2 and python 3 compatibility library
-import six
-from six.moves.urllib.parse import quote
+from urllib.parse import quote
 
 from rustici_software_cloud_v2.configuration import Configuration
 import rustici_software_cloud_v2.models
@@ -48,10 +46,10 @@ class ApiClient(object):
         to the API
     """
 
-    PRIMITIVE_TYPES = (float, bool, bytes, six.text_type) + six.integer_types
+    PRIMITIVE_TYPES = (float, bool, bytes, str, int)
     NATIVE_TYPES_MAPPING = {
         'int': int,
-        'long': int if six.PY3 else long,  # noqa: F821
+        'long': int,
         'float': float,
         'str': str,
         'bool': bool,
@@ -74,7 +72,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/4.0.0/python'
+        self.user_agent = 'Swagger-Codegen/5.0.0/python'
 
     def __del__(self):
         if self._pool is not None:
@@ -212,11 +210,11 @@ class ApiClient(object):
             # Convert attribute name to json key in
             # model definition for request.
             obj_dict = {obj.attribute_map[attr]: getattr(obj, attr)
-                        for attr, _ in six.iteritems(obj.swagger_types)
+                        for attr, _ in obj.swagger_types.items()
                         if getattr(obj, attr) is not None}
 
         return {key: self.sanitize_for_serialization(val)
-                for key, val in six.iteritems(obj_dict)}
+                for key, val in obj_dict.items()}
 
     def deserialize(self, response, response_type):
         """Deserializes response into an object.
@@ -260,7 +258,7 @@ class ApiClient(object):
             if klass.startswith('dict('):
                 sub_kls = re.match(r'dict\(([^,]*), (.*)\)', klass).group(2)
                 return {k: self.__deserialize(v, sub_kls)
-                        for k, v in six.iteritems(data)}
+                        for k, v in data.items()}
 
             # convert str to class
             if klass in self.NATIVE_TYPES_MAPPING:
@@ -410,7 +408,7 @@ class ApiClient(object):
         new_params = []
         if collection_formats is None:
             collection_formats = {}
-        for k, v in six.iteritems(params) if isinstance(params, dict) else params:  # noqa: E501
+        for k, v in (params.items() if isinstance(params, dict) else params):  # noqa: E501
             if k in collection_formats:
                 collection_format = collection_formats[k]
                 if collection_format == 'multi':
@@ -443,7 +441,7 @@ class ApiClient(object):
             params = post_params
 
         if files:
-            for k, v in six.iteritems(files):
+            for k, v in files.items():
                 if not v:
                     continue
                 file_names = v if type(v) is list else [v]
@@ -555,7 +553,7 @@ class ApiClient(object):
         try:
             return klass(data)
         except UnicodeEncodeError:
-            return six.text_type(data)
+            return str(data)
         except TypeError:
             return data
 
@@ -622,7 +620,7 @@ class ApiClient(object):
 
         kwargs = {}
         if klass.swagger_types is not None:
-            for attr, attr_type in six.iteritems(klass.swagger_types):
+            for attr, attr_type in klass.swagger_types.items():
                 if (data is not None and
                         klass.attribute_map[attr] in data and
                         isinstance(data, (list, dict))):

@@ -15,4 +15,3 @@ from rustici_software_cloud_v2.api.ping_api import PingApi
 from rustici_software_cloud_v2.api.registration_api import RegistrationApi
 from rustici_software_cloud_v2.api.reporting_api import ReportingApi
 from rustici_software_cloud_v2.api.xapi_api import XapiApi
-from rustici_software_cloud_v2.api.zoomi_api import ZoomiApi

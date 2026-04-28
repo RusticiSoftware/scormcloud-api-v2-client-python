@@ -16,9 +16,6 @@ from deprecated import deprecated
 
 import re  # noqa: F401
 
-# python 2 and python 3 compatibility library
-import six
-
 from rustici_software_cloud_v2.api_client import ApiClient
 
 
@@ -79,7 +76,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -178,7 +175,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -277,7 +274,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -376,7 +373,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -475,7 +472,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -572,7 +569,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -665,7 +662,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -778,7 +775,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -889,7 +886,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -996,7 +993,7 @@ class XapiApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
