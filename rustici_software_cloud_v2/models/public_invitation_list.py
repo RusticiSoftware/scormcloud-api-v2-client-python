@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 from rustici_software_cloud_v2.models.paginated_list import PaginatedList  # noqa: F401,E501
 
 
@@ -79,7 +78,7 @@ class PublicInvitationList(PaginatedList):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

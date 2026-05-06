@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class PublicInvitationSchema(object):
@@ -33,8 +32,8 @@ class PublicInvitationSchema(object):
     swagger_types = {
         'id': 'str',
         'course_id': 'str',
+        'course_title': 'str',
         'allow_launch': 'bool',
-        'invitation_email': 'InvitationEmailSchema',
         'allow_new_registrations': 'bool',
         'url': 'str',
         'create_date': 'datetime',
@@ -48,8 +47,8 @@ class PublicInvitationSchema(object):
     attribute_map = {
         'id': 'id',
         'course_id': 'courseId',
+        'course_title': 'courseTitle',
         'allow_launch': 'allowLaunch',
-        'invitation_email': 'invitationEmail',
         'allow_new_registrations': 'allowNewRegistrations',
         'url': 'url',
         'create_date': 'createDate',
@@ -60,13 +59,13 @@ class PublicInvitationSchema(object):
         'registration_count': 'registrationCount'
     }
 
-    def __init__(self, id=None, course_id=None, allow_launch=None, invitation_email=None, allow_new_registrations=None, url=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_cap=0, registration_count=None):  # noqa: E501
+    def __init__(self, id=None, course_id=None, course_title=None, allow_launch=None, allow_new_registrations=None, url=None, create_date=None, updated=None, post_back=None, expiration_date=None, registration_cap=None, registration_count=None):  # noqa: E501
         """PublicInvitationSchema - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._course_id = None
+        self._course_title = None
         self._allow_launch = None
-        self._invitation_email = None
         self._allow_new_registrations = None
         self._url = None
         self._create_date = None
@@ -81,10 +80,10 @@ class PublicInvitationSchema(object):
             self.id = id
         if course_id is not None:
             self.course_id = course_id
+        if course_title is not None:
+            self.course_title = course_title
         if allow_launch is not None:
             self.allow_launch = allow_launch
-        if invitation_email is not None:
-            self.invitation_email = invitation_email
         if allow_new_registrations is not None:
             self.allow_new_registrations = allow_new_registrations
         if url is not None:
@@ -149,6 +148,29 @@ class PublicInvitationSchema(object):
         self._course_id = course_id
 
     @property
+    def course_title(self):
+        """Gets the course_title of this PublicInvitationSchema.  # noqa: E501
+
+        Title of the course associated with this invitation.  # noqa: E501
+
+        :return: The course_title of this PublicInvitationSchema.  # noqa: E501
+        :rtype: str
+        """
+        return self._course_title
+
+    @course_title.setter
+    def course_title(self, course_title):
+        """Sets the course_title of this PublicInvitationSchema.
+
+        Title of the course associated with this invitation.  # noqa: E501
+
+        :param course_title: The course_title of this PublicInvitationSchema.  # noqa: E501
+        :type: str
+        """
+
+        self._course_title = course_title
+
+    @property
     def allow_launch(self):
         """Gets the allow_launch of this PublicInvitationSchema.  # noqa: E501
 
@@ -170,25 +192,6 @@ class PublicInvitationSchema(object):
         """
 
         self._allow_launch = allow_launch
-
-    @property
-    def invitation_email(self):
-        """Gets the invitation_email of this PublicInvitationSchema.  # noqa: E501
-
-        :return: The invitation_email of this PublicInvitationSchema.  # noqa: E501
-        :rtype: InvitationEmailSchema
-        """
-        return self._invitation_email
-
-    @invitation_email.setter
-    def invitation_email(self, invitation_email):
-        """Sets the invitation_email of this PublicInvitationSchema.
-
-        :param invitation_email: The invitation_email of this PublicInvitationSchema.  # noqa: E501
-        :type: InvitationEmailSchema
-        """
-
-        self._invitation_email = invitation_email
 
     @property
     def allow_new_registrations(self):
@@ -374,7 +377,7 @@ class PublicInvitationSchema(object):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

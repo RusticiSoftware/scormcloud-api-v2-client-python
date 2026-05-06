@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "rustici_software_cloud_v2"
-VERSION = "4.0.0"
+VERSION = "5.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,16 +23,16 @@ VERSION = "4.0.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-     "certifi>=2017.4.17",
-     "python-dateutil>=2.1",
-     "six>=1.10",
-     "urllib3>=1.23",
+     "certifi>=2024.2.28",
+     "python-dateutil>=2.8.2",
+     "urllib3>=2.6.0",
      "Deprecated>=1.2.13"
  ]
 
 setup(
     name=NAME,
     version=VERSION,
+    python_requires=">=3.10",
     description="SCORM Cloud Rest API",
     author_email="systems@rusticisoftware.com",
     url="https://github.com/RusticiSoftware/scormcloud-api-v2-client-python",

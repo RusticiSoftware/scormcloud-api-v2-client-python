@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class PublicInvitationUpdateSchema(object):
@@ -46,7 +45,7 @@ class PublicInvitationUpdateSchema(object):
         'registration_cap': 'registrationCap'
     }
 
-    def __init__(self, allow_launch=None, allow_new_registrations=None, post_back=None, expiration_date=None, registration_cap=0):  # noqa: E501
+    def __init__(self, allow_launch=None, allow_new_registrations=None, post_back=None, expiration_date=None, registration_cap=None):  # noqa: E501
         """PublicInvitationUpdateSchema - a model defined in Swagger"""  # noqa: E501
 
         self._allow_launch = None
@@ -186,7 +185,7 @@ class PublicInvitationUpdateSchema(object):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

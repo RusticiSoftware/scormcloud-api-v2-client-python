@@ -16,9 +16,6 @@ from deprecated import deprecated
 
 import re  # noqa: F401
 
-# python 2 and python 3 compatibility library
-import six
-
 from rustici_software_cloud_v2.api_client import ApiClient
 
 
@@ -79,7 +76,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -178,7 +175,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -277,7 +274,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -376,7 +373,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -477,7 +474,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -582,7 +579,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -681,7 +678,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -782,7 +779,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -899,7 +896,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1009,7 +1006,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1116,7 +1113,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1217,7 +1214,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1322,7 +1319,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1395,6 +1392,7 @@ class DispatchApi(object):
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
         :param str course_id: Only retrieve resources having `courseId`
+        :param bool is_enabled: Optional boolean parameter used to filter the list of dispatches so that only enabled or disabled dispatches are retrieved. 
         :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
@@ -1427,6 +1425,7 @@ class DispatchApi(object):
         :param async_req bool
         :param str destination_id: Identifier for the destination (required)
         :param str course_id: Only retrieve resources having `courseId`
+        :param bool is_enabled: Optional boolean parameter used to filter the list of dispatches so that only enabled or disabled dispatches are retrieved. 
         :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
@@ -1441,14 +1440,14 @@ class DispatchApi(object):
                  returns the request thread.
         """
 
-        all_params = ['destination_id', 'course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
+        all_params = ['destination_id', 'course_id', 'is_enabled', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1470,6 +1469,8 @@ class DispatchApi(object):
         query_params = []
         if 'course_id' in params:
             query_params.append(('courseId', params['course_id']))  # noqa: E501
+        if 'is_enabled' in params:
+            query_params.append(('isEnabled', params['is_enabled']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
@@ -1568,7 +1569,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1667,7 +1668,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1786,7 +1787,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1902,7 +1903,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2001,7 +2002,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2100,7 +2101,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2199,7 +2200,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2298,7 +2299,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2401,7 +2402,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2470,6 +2471,7 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str course_id: Only retrieve resources having `courseId`
+        :param bool is_enabled: Optional boolean parameter used to filter the list of dispatches so that only enabled or disabled dispatches are retrieved. 
         :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
@@ -2501,6 +2503,7 @@ class DispatchApi(object):
 
         :param async_req bool
         :param str course_id: Only retrieve resources having `courseId`
+        :param bool is_enabled: Optional boolean parameter used to filter the list of dispatches so that only enabled or disabled dispatches are retrieved. 
         :param datetime since: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param datetime until: Filter by ISO 8601 TimeStamp inclusive (defaults to UTC)
         :param str datetime_filter: Specifies field that `since` and `until` parameters are applied against
@@ -2515,14 +2518,14 @@ class DispatchApi(object):
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
+        all_params = ['course_id', 'is_enabled', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2538,6 +2541,8 @@ class DispatchApi(object):
         query_params = []
         if 'course_id' in params:
             query_params.append(('courseId', params['course_id']))  # noqa: E501
+        if 'is_enabled' in params:
+            query_params.append(('isEnabled', params['is_enabled']))  # noqa: E501
         if 'since' in params:
             query_params.append(('since', params['since']))  # noqa: E501
         if 'until' in params:
@@ -2636,7 +2641,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2739,7 +2744,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2848,7 +2853,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2947,7 +2952,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3048,7 +3053,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3153,7 +3158,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3254,7 +3259,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3359,7 +3364,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3458,7 +3463,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3557,7 +3562,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3658,7 +3663,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3765,7 +3770,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3872,7 +3877,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3979,7 +3984,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -4086,7 +4091,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -4193,7 +4198,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -4312,7 +4317,7 @@ class DispatchApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"

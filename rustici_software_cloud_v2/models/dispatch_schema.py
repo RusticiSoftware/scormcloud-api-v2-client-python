@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class DispatchSchema(object):
@@ -42,6 +41,7 @@ class DispatchSchema(object):
         'instanced': 'bool',
         'registration_cap': 'int',
         'registration_count': 'int',
+        'registration_reset_date': 'datetime',
         'expiration_date': 'datetime',
         'tags': 'list[str]',
         'email': 'str',
@@ -60,13 +60,14 @@ class DispatchSchema(object):
         'instanced': 'instanced',
         'registration_cap': 'registrationCap',
         'registration_count': 'registrationCount',
+        'registration_reset_date': 'registrationResetDate',
         'expiration_date': 'expirationDate',
         'tags': 'tags',
         'email': 'email',
         'notes': 'notes'
     }
 
-    def __init__(self, destination_id=None, destination_name=None, course_id=None, course_title=None, updated=None, created=None, allow_new_registrations=None, enabled=None, instanced=None, registration_cap=None, registration_count=None, expiration_date=None, tags=None, email=None, notes=None):  # noqa: E501
+    def __init__(self, destination_id=None, destination_name=None, course_id=None, course_title=None, updated=None, created=None, allow_new_registrations=None, enabled=None, instanced=None, registration_cap=None, registration_count=None, registration_reset_date=None, expiration_date=None, tags=None, email=None, notes=None):  # noqa: E501
         """DispatchSchema - a model defined in Swagger"""  # noqa: E501
 
         self._destination_id = None
@@ -80,6 +81,7 @@ class DispatchSchema(object):
         self._instanced = None
         self._registration_cap = None
         self._registration_count = None
+        self._registration_reset_date = None
         self._expiration_date = None
         self._tags = None
         self._email = None
@@ -108,6 +110,8 @@ class DispatchSchema(object):
             self.registration_cap = registration_cap
         if registration_count is not None:
             self.registration_count = registration_count
+        if registration_reset_date is not None:
+            self.registration_reset_date = registration_reset_date
         if expiration_date is not None:
             self.expiration_date = expiration_date
         if tags is not None:
@@ -363,6 +367,29 @@ class DispatchSchema(object):
         self._registration_count = registration_count
 
     @property
+    def registration_reset_date(self):
+        """Gets the registration_reset_date of this DispatchSchema.  # noqa: E501
+
+        The ISO 8601 TimeStamp (defaults to UTC) at which the registration count for this dispatch was reset.   # noqa: E501
+
+        :return: The registration_reset_date of this DispatchSchema.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._registration_reset_date
+
+    @registration_reset_date.setter
+    def registration_reset_date(self, registration_reset_date):
+        """Sets the registration_reset_date of this DispatchSchema.
+
+        The ISO 8601 TimeStamp (defaults to UTC) at which the registration count for this dispatch was reset.   # noqa: E501
+
+        :param registration_reset_date: The registration_reset_date of this DispatchSchema.  # noqa: E501
+        :type: datetime
+        """
+
+        self._registration_reset_date = registration_reset_date
+
+    @property
     def expiration_date(self):
         """Gets the expiration_date of this DispatchSchema.  # noqa: E501
 
@@ -458,7 +485,7 @@ class DispatchSchema(object):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

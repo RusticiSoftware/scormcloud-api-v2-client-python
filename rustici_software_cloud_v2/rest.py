@@ -20,9 +20,7 @@ import re
 import ssl
 
 import certifi
-# python 2 and python 3 compatibility library
-import six
-from six.moves.urllib.parse import urlencode
+from urllib.parse import urlencode
 
 try:
     import urllib3
@@ -43,11 +41,11 @@ class RESTResponse(io.IOBase):
 
     def getheaders(self):
         """Returns a dictionary of the response headers."""
-        return self.urllib3_response.getheaders()
+        return self.urllib3_response.headers
 
     def getheader(self, name, default=None):
         """Returns a given response header."""
-        return self.urllib3_response.getheader(name, default)
+        return self.urllib3_response.headers.get(name, default)
 
 
 class RESTClientObject(object):
@@ -140,7 +138,7 @@ class RESTClientObject(object):
 
         timeout = None
         if _request_timeout:
-            if isinstance(_request_timeout, (int, ) if six.PY3 else (int, long)):  # noqa: E501,F821
+            if isinstance(_request_timeout, int):
                 timeout = urllib3.Timeout(total=_request_timeout)
             elif (isinstance(_request_timeout, tuple) and
                   len(_request_timeout) == 2):
@@ -216,10 +214,9 @@ class RESTClientObject(object):
         if _preload_content:
             r = RESTResponse(r)
 
-            # In the python 3, the response.data is bytes.
-            # we need to decode it to string, unless it's a zip file
+            # response.data is bytes; decode to str unless it's a zip file
             content_type = r.getheader("Content-Type")
-            if six.PY3 and content_type != "application/zip":
+            if content_type != "application/zip":
                 r.data = r.data.decode('utf8')
 
             # log response body

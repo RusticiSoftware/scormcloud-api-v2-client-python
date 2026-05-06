@@ -14,7 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
 
 
 class DispatchRegistrationCountSchema(object):
@@ -75,6 +74,8 @@ class DispatchRegistrationCountSchema(object):
     def last_reset_date(self):
         """Gets the last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
 
+        The ISO 8601 TimeStamp (defaults to UTC) at which the registration count for this dispatch was reset.   # noqa: E501
+
         :return: The last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
         :rtype: datetime
         """
@@ -83,6 +84,8 @@ class DispatchRegistrationCountSchema(object):
     @last_reset_date.setter
     def last_reset_date(self, last_reset_date):
         """Sets the last_reset_date of this DispatchRegistrationCountSchema.
+
+        The ISO 8601 TimeStamp (defaults to UTC) at which the registration count for this dispatch was reset.   # noqa: E501
 
         :param last_reset_date: The last_reset_date of this DispatchRegistrationCountSchema.  # noqa: E501
         :type: datetime
@@ -94,7 +97,7 @@ class DispatchRegistrationCountSchema(object):
         """Returns the model properties as a dict"""
         result = {}
 
-        for attr, _ in six.iteritems(self.swagger_types):
+        for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

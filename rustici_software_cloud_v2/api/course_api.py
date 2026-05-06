@@ -16,9 +16,6 @@ from deprecated import deprecated
 
 import re  # noqa: F401
 
-# python 2 and python 3 compatibility library
-import six
-
 from rustici_software_cloud_v2.api_client import ApiClient
 
 
@@ -81,7 +78,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -190,7 +187,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -270,6 +267,7 @@ class CourseApi(object):
         :param ImportFetchRequestSchema import_request: (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -295,19 +293,20 @@ class CourseApi(object):
         :param ImportFetchRequestSchema import_request: (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'import_request', 'may_create_new_version', 'postback_url']  # noqa: E501
+        all_params = ['course_id', 'import_request', 'may_create_new_version', 'postback_url', 'tags']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -335,6 +334,9 @@ class CourseApi(object):
             query_params.append(('mayCreateNewVersion', params['may_create_new_version']))  # noqa: E501
         if 'postback_url' in params:
             query_params.append(('postbackUrl', params['postback_url']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
 
         header_params = {}
 
@@ -385,6 +387,7 @@ class CourseApi(object):
         :param ImportRequestSchema import_request: (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
@@ -410,19 +413,20 @@ class CourseApi(object):
         :param ImportRequestSchema import_request: (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :return: StringResultSchema
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'import_request', 'may_create_new_version', 'postback_url']  # noqa: E501
+        all_params = ['course_id', 'import_request', 'may_create_new_version', 'postback_url', 'tags']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -450,6 +454,9 @@ class CourseApi(object):
             query_params.append(('mayCreateNewVersion', params['may_create_new_version']))  # noqa: E501
         if 'postback_url' in params:
             query_params.append(('postbackUrl', params['postback_url']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
 
         header_params = {}
 
@@ -499,6 +506,7 @@ class CourseApi(object):
         :param str course_id: A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :param str uploaded_content_type: The MIME type identifier for the content to be uploaded. This is required if uploading a media file (.pdf, .mp3, or .mp4).
         :param str content_metadata: Serialized 'mediaFileMetadata' schema.
         :param file file: The zip file of the course contents to import. 
@@ -526,6 +534,7 @@ class CourseApi(object):
         :param str course_id: A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
         :param bool may_create_new_version: Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
         :param str postback_url: An optional parameter that specifies a URL to send a postback to when the course has finished uploading.
+        :param list[str] tags: A list of tags to apply, allowing for more refined filtering of resources
         :param str uploaded_content_type: The MIME type identifier for the content to be uploaded. This is required if uploading a media file (.pdf, .mp3, or .mp4).
         :param str content_metadata: Serialized 'mediaFileMetadata' schema.
         :param file file: The zip file of the course contents to import. 
@@ -534,14 +543,14 @@ class CourseApi(object):
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'may_create_new_version', 'postback_url', 'uploaded_content_type', 'content_metadata', 'file']  # noqa: E501
+        all_params = ['course_id', 'may_create_new_version', 'postback_url', 'tags', 'uploaded_content_type', 'content_metadata', 'file']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -565,6 +574,9 @@ class CourseApi(object):
             query_params.append(('mayCreateNewVersion', params['may_create_new_version']))  # noqa: E501
         if 'postback_url' in params:
             query_params.append(('postbackUrl', params['postback_url']))  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'csv'  # noqa: E501
 
         header_params = {}
         if 'uploaded_content_type' in params:
@@ -650,7 +662,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -751,7 +763,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -858,7 +870,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -965,7 +977,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1072,7 +1084,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1181,7 +1193,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1296,7 +1308,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1411,7 +1423,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1516,7 +1528,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1623,7 +1635,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1724,7 +1736,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1831,7 +1843,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1938,7 +1950,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2041,7 +2053,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2156,7 +2168,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2265,7 +2277,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2376,7 +2388,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2495,7 +2507,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2616,7 +2628,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2723,7 +2735,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2842,7 +2854,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -2958,7 +2970,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3059,7 +3071,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3168,7 +3180,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3281,7 +3293,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3396,7 +3408,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3501,7 +3513,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3602,7 +3614,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3709,7 +3721,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3818,7 +3830,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -3935,7 +3947,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -4052,7 +4064,7 @@ class CourseApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"

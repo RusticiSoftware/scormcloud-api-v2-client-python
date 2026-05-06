@@ -16,9 +16,6 @@ from deprecated import deprecated
 
 import re  # noqa: F401
 
-# python 2 and python 3 compatibility library
-import six
-
 from rustici_software_cloud_v2.api_client import ApiClient
 
 
@@ -79,7 +76,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -178,7 +175,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -279,7 +276,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -402,7 +399,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -516,7 +513,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -617,7 +614,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -718,7 +715,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -775,7 +772,7 @@ class InvitationsApi(object):
     def get_private_invitations(self, **kwargs):  # noqa: E501
         """Get a list of Private Invitations   # noqa: E501
 
-        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the launched registration count and total registration count of all private invitations for 24 hours if the `includeRegistrationCount` parameter is set to `true`.  Since these values are cached for an extended period, any changes made to the number of launched registrations for a private invitation will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get up-to-date values of the launched or total registration counts for a single private invitation within the caching period, use the GetPrivateInvitation endpoint with `includeRegistrationCount` set to `true`. GetPrivateInvitation *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that private invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitations(async_req=True)
@@ -791,6 +788,7 @@ class InvitationsApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_count: Include the registration count in the results
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: PrivateInvitationList
                  If the method is called asynchronously,
@@ -806,7 +804,7 @@ class InvitationsApi(object):
     def get_private_invitations_with_http_info(self, **kwargs):  # noqa: E501
         """Get a list of Private Invitations   # noqa: E501
 
-        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of private invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the launched registration count and total registration count of all private invitations for 24 hours if the `includeRegistrationCount` parameter is set to `true`.  Since these values are cached for an extended period, any changes made to the number of launched registrations for a private invitation will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get up-to-date values of the launched or total registration counts for a single private invitation within the caching period, use the GetPrivateInvitation endpoint with `includeRegistrationCount` set to `true`. GetPrivateInvitation *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that private invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_private_invitations_with_http_info(async_req=True)
@@ -822,20 +820,21 @@ class InvitationsApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_count: Include the registration count in the results
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: PrivateInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_registration_count', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -868,6 +867,8 @@ class InvitationsApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_registration_count' in params:
+            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
         if 'include_total_count' in params:
             query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
@@ -967,7 +968,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1086,7 +1087,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1145,7 +1146,7 @@ class InvitationsApi(object):
     def get_public_invitations(self, **kwargs):  # noqa: E501
         """Get a list of Public Invitations   # noqa: E501
 
-        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the registration count of all public invitations for 24 hours if the  `includeRegistrationCount` parameter is set to `true`.  Since this value is cached for an extended period, any changes made to the number of registrations for a public invitation will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get an up-to-date value of the registration count for a single public invitation within the  caching period, use the GetPublicInvitation endpoint with `includeRegistrationCount` set to `true`. GetPublicInvitation *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that public invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitations(async_req=True)
@@ -1161,6 +1162,7 @@ class InvitationsApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_count: Include the registration count in the results
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: PublicInvitationList
                  If the method is called asynchronously,
@@ -1176,7 +1178,7 @@ class InvitationsApi(object):
     def get_public_invitations_with_http_info(self, **kwargs):  # noqa: E501
         """Get a list of Public Invitations   # noqa: E501
 
-        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.   # noqa: E501
+        Returns a list of public invitations.  Can be filtered using the request parameters to provide a subset of results.  >**Note:** >This request is paginated and will only provide a limited amount of resources at a time.  If there are more results to be collected, a `more` token provided with the response which can be passed to get the next page of results.  When passing this token, no other filter parameters can be sent as part of the request.  The resources will continue to respect the filters passed in by the original request.  >**Info:** >This endpoint caches the registration count of all public invitations for 24 hours if the  `includeRegistrationCount` parameter is set to `true`.  Since this value is cached for an extended period, any changes made to the number of registrations for a public invitation will not be reflected in the results of this endpoint until the caching period has passed.  >If you want to get an up-to-date value of the registration count for a single public invitation within the  caching period, use the GetPublicInvitation endpoint with `includeRegistrationCount` set to `true`. GetPublicInvitation *always* gathers the most up-to-date values and overwrites them in the cache, resetting the caching period for that public invitation.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_public_invitations_with_http_info(async_req=True)
@@ -1192,20 +1194,21 @@ class InvitationsApi(object):
         :param str filter_by: Optional enum parameter for specifying the field on which to run the filter. 
         :param str order_by: Optional enum parameter for specifying the field and order by which to sort the results. 
         :param str more: Pagination token returned as `more` property of multi page list requests
+        :param bool include_registration_count: Include the registration count in the results
         :param bool include_total_count: Include the total count of results matching the provided filters as a header on the initial request.  The header will not be present on subsequent requests resulting from passing the `more` token. 
         :return: PublicInvitationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_total_count']  # noqa: E501
+        all_params = ['course_id', 'since', 'until', 'datetime_filter', 'tags', 'filter', 'filter_by', 'order_by', 'more', 'include_registration_count', 'include_total_count']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1238,6 +1241,8 @@ class InvitationsApi(object):
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'more' in params:
             query_params.append(('more', params['more']))  # noqa: E501
+        if 'include_registration_count' in params:
+            query_params.append(('includeRegistrationCount', params['include_registration_count']))  # noqa: E501
         if 'include_total_count' in params:
             query_params.append(('includeTotalCount', params['include_total_count']))  # noqa: E501
 
@@ -1337,7 +1342,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1456,7 +1461,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1561,7 +1566,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1662,7 +1667,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
@@ -1769,7 +1774,7 @@ class InvitationsApi(object):
         all_params.append('_request_timeout')
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in params['kwargs'].items():
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
